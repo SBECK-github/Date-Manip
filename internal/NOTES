@@ -1,0 +1,200 @@
+The files in this directory are for primary use by me, the author
+of Date::Manip to prepare a new release.
+
+There is no reason for an end user to need to do this. However, it
+is documented for the sake of completeness, and to remind me of the
+steps I need to do.
+
+It's also available in case someone ever chooses to fork the
+module (though I hope that won't be necessary).
+
+#########################################################################
+Update the windows zones.  Useful information in determining timezone
+mapping may be obtained at:
+
+   http://support.microsoft.com/kb/914387
+
+Go to:
+
+   http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/zone_tzid.html
+
+and copy the contents of the 'Mapping for: windows' table into a file 'windows.new'
+and run the script:
+
+   windows.compare
+
+Currently, ignore the addition:
+   "UTC"                             => "Etc/GMT",
+
+and the suggestions:
+   "Argentina Standard Time"         => "America/Buenos_Aires",
+   "GTB Standard Time"               => "Europe/Bucharest",
+   "India Standard Time"             => "Asia/Calcutta",
+   "Nepal Standard Time"             => "Asia/Katmandu",
+   "US Eastern Standard Time"        => "America/Indianapolis",
+
+Make sure that new and changed zones refer to valid Olsen time zones. Make
+the changes in data.alias.pl .
+
+Then remove windows.new .
+
+#########################################################################
+Get the newest tzdata package.
+
+The tzdata/tzcode archives are obtained from
+
+   ftp://ftp.iana.org/tz/
+
+In order to create the appropriate Date::Manip modules, run the
+following commands:
+
+   ./internal/tzdata -f           : to download the packages
+   ./internal/tzdata -b           : to build the package
+
+Some timezones store information about time changes quite a ways in advance.  We
+need to make sure that we're storing enough information to get to a 'lastrule'.
+
+Run the following:
+
+   cd tzdata
+   grep Rule africa antarctica asia australasia europe northamerica pacificnew \
+             southamerica | \
+      awk '{print $3}' | sort -u | egrep '^[1-9]' | sort -n | tail -1
+   cd ..
+
+Make sure that the value for $keep_years (in internal/data.misc.pl) is greater
+than (MAX_YEAR - CURR_YEAR) where MAX_YEAR is the output from the line above and
+CURR_YEAR is the current year.
+
+   ./internal/tzdata -l           : to get a list of all the zones that need modules
+   ./internal/tzdata -d           : to dump all zones
+   ./internal/tzdata -m           : to create the individual zone modules
+                                    *** see NOTE 3 below ***
+   ./internal/tzdata -o           : to create the individual offset modules
+                                    *** see NOTE 2 below ***
+   ./internal/tzdata -z           : to create the main Zone module
+                                    *** see NOTE 2 below ***
+
+Before cleaning up the tzdata directory, run the following to double
+check every timezone in zoneinfo against the Date::Manip version:
+
+   make install
+   ./internal/dumps
+
+Run the two tzdata tests:
+
+   (cd t; ./runtests tzdata)
+
+Then clean up:
+
+   ./internal/tzdata -c
+
+NOTE 1: although the tzdata script runs on my computer, it is quite possible
+that it will not run on other systems due to differences in what tools are
+available.
+
+Since the tzdata script is designed only to create the modules which are
+then distributed as part of Date::Manip, there is no reason for anyone other
+than me to run the above commands. If you DO choose to run them, please do
+not report problems due to differences in operating systems, or packages that
+are installed on your system. If you discover a bug in tzdata, I am interested
+in knowing about it however.
+
+NOTE 2: These steps often require manual intervention described
+below. After the intervention, rerun the command to make sure no
+output is produced.
+
+The old values of data are stored in the internal/data.* files. This is
+so that I am explicitly notified of every change to the zoneinfo data
+which could impact Date::Manip.  Any output reflects potential changes
+so every entry should be checked to ensure that it acceptable. Then,
+the output needs to be added to the appropriate data.* file, replacing
+any previous value for the entry.  It is especially important that the first
+line in each entry should remain unchanged unless there is good reason
+to change it. The order of remaining lines may change to some extent.
+
+If the '-o' option produces any output, the entries need to be added
+to the data.offset.pl file.
+
+If the '-z' option produces any output, the entries need to be added
+to the data.alias.pl or data.abbrev.pl file.
+
+NOTE 3: If you get a LAST RULE in Jan/Dec line, check it out.  A zone
+is doing time changes in Jan or Dec.  Make sure it won't cause any
+problems.
+
+Currently, Pacific/Fiji warns, but it's safe.
+
+#########################################################################
+Clean up stuff that shouldn't be in the manifest
+
+In internal/benchmarks directory
+    rm -f nytprof.out parse-1.in
+    rm -rf nytprof
+
+#########################################################################
+Set the release version
+
+   v=`pwd | sed -e 's,^.*-,,'`
+   for i in \
+       internal/tzdata \
+       internal/gen_dm5abbrevs \
+       `find lib -name \*.pm` \
+   ;do
+      sed -e "s,VERSION='.*',VERSION='$v'," $i > z
+      mv z $i
+   done
+   chmod +x internal/tzdata internal/gen_dm5abbrevs examples/dm_*
+
+#########################################################################
+Before every release, spellcheck the documents:
+
+   internal/langpod
+
+   for i in `find lib -type f -name \*.pod` ;do
+      podspell $i > $i.txt
+      ispell -p internal/manip.isp $i.txt
+      rm -f $i.txt $i.txt.bak
+   done
+
+#########################################################################
+Update the copyright
+
+   y=`date '+%Y'`
+   for i in `find . -type f | egrep -v '.svn' | xargs egrep -l 'Copyright \(c\) ....\-.... Sullivan Beck'` ;do
+     sed -e "s,\(Copyright (c) ....\)\-.... \(Sullivan Beck\),\1-$y \2," $i > z
+     mv z $i
+   done
+   chmod +x internal/tzdata internal/gen_dm5abbrevs examples/dm_*
+
+#########################################################################
+Switch the system timezone to America/Central and run the tests.
+
+#########################################################################
+Update the Changes5/Changes6 docs with the date. Then update internal/VERSION
+to include the new version.
+
+#########################################################################
+Install the module. Then run the following:
+
+   ./internal/gen_dm5abbrevs > lib/Date/Manip/DM5abbrevs.pm
+
+#########################################################################
+Regenerate the MANIFEST and run the kwalitee tests
+
+#########################################################################
+Run the internal/leak.pl whenever a new version of perl is available to
+see if the leak persists. When it's fixed, note this in the known problems
+section.
+
+A patch for this went in on Dec 13, 2011 when the following versions of
+perl are active:
+   5.16.0  FIXED
+   5.15.6  FIXED
+   5.14.2  maint
+   5.12.4  maint
+   5.10.1  unmaint
+
+so look for it to be corrected in newer versions than this (not sure if
+it'll be applied to the maintenance versions).
+
