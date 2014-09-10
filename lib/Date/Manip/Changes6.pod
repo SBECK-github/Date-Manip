@@ -29,9 +29,23 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.48  (planned 2014-12-01)
 
-=head1 VERSION 6.47  2014-09-01)
+=over 4
 
-=over 5
+=item Put repository on GitHub
+
+Suggested by Gabor Szabo
+
+=item Bug fixes
+
+Fixed a bug in the printf method that would not handle embedded newlines
+correctly (and resulted in an infinite loop if it were preceded by a '%').
+Henrique Martins
+
+=back
+
+=head1 VERSION 6.47  2014-09-01
+
+=over 4
 
 =item Time zone fixes
 

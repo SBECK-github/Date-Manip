@@ -4181,7 +4181,7 @@ BEGIN {
 
             # Normals one-character formats
 
-            $in =~ s/^%(.)//;
+            $in =~ s/^%(.)//s;
             my $f = $1;
 
             if (exists $$self{'data'}{'f'}{$f}) {
