@@ -43,7 +43,7 @@ if ($EU_MM_V < 6.64) {
 
 WriteMakefile(
    NAME             => "Date::Manip",
-   VERSION          => "6.47",
+   VERSION          => "6.48",
    ABSTRACT         => "Date manipulation routines",
    LICENSE          => "perl",
    ($EU_MM_V >= 6.48
@@ -59,8 +59,20 @@ WriteMakefile(
    ($EU_MM_V >= 6.64
     ? (TEST_REQUIRES   => \%test_prereq)
     : ()),
+
+   ($EU_MM_V > 6.45
+    ? (META_MERGE => {
+        resources => {
+           repository => {
+              type => "git",
+              web  => "https://github.com/SBECK-github/Date-Manip",
+              url  => "git://github.com/SBECK-github/Date-Manip.git",
+           }
+        }
+       })
+    : ()),
    EXE_FILES        => [
-                        'examples/dm_zdump',
                         'examples/dm_date',
+                        'examples/dm_zdump',
                        ],
 );

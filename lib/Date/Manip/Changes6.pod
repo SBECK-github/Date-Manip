@@ -27,7 +27,9 @@ For the most part, Date::Manip has remained backward compatible at
 every release, but occasionally, a change is made which is backward
 incompatible. These are marked with an exclamation mark (!).
 
-=head1 VERSION 6.48  (planned 2014-12-01)
+=head1 VERSION 6.49  (planned 2015-03-01)
+
+=head1 VERSION 6.48  2014-12-01
 
 =over 4
 
@@ -35,11 +37,39 @@ incompatible. These are marked with an exclamation mark (!).
 
 Suggested by Gabor Szabo
 
+=item parse_time now parses ISO 8601 times
+
+The parse_time routine wouldn't correctly parse ISO 8601 times.  This
+is now fixed.
+
+=item Parsing special dates with timezones now works
+
+Parsing special date formats with timezones is now supported such as:
+
+   Christmas at noon PST
+   in 3 days at noon PST
+   now PST
+   epoch 3000000 PST
+
+=item dm_zdump modified
+
+To match the newest version of zdump, the gmtoff is now added at the end
+of each line.
+
 =item Bug fixes
 
 Fixed a bug in the printf method that would not handle embedded newlines
 correctly (and resulted in an infinite loop if it were preceded by a '%').
 Henrique Martins
+
+Fixed a bug where '24:00' was not parsed correctly (though '24:00:00' was).
+
+Fixed a bug where fractional values separated by a comma weren't parsed
+correctly.
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2014j)
 
 =back
 

@@ -253,7 +253,7 @@ foreach my $winz (keys %windows_zones) {
                        'America/Indiana/Vincennes'               ,1969,9999,
                        'America/Indiana/Winamac'                 ,1969,9999,
                        'America/Thunder_Bay'                     ,1970,9999,
-                       'America/Grand_Turk'                      ,1979,9999,
+                       'America/Grand_Turk'                      ,1979,2014,
                        'America/Iqaluit'                         ,1980,9999,
                        'America/Pangnirtung'                     ,1995,9999,
                        'America/Kentucky/Monticello'             ,2001,9999,
@@ -542,9 +542,6 @@ foreach my $winz (keys %windows_zones) {
    'EAST7EASST'    => [
                        'Pacific/Easter'                          ,1942,1981,
                       ],
-   'EAT-3EAST'     => [
-                       'Indian/Antananarivo'                     ,1954,1954,
-                      ],
    'EET-2EEST'     => [
                        'EET'                                     ,1977,9999,
                        'Europe/Istanbul'                         ,1916,9999,
@@ -663,9 +660,6 @@ foreach my $winz (keys %windows_zones) {
    'KRAT-7KRAST'   => [
                        'Asia/Krasnoyarsk'                        ,1981,2010,
                        'Asia/Novokuznetsk'                       ,1981,2009,
-                      ],
-   'KST-8KDT'      => [
-                       'Asia/Seoul'                              ,1960,1960,
                       ],
    'KST-9KDT'      => [
                        'Asia/Seoul'                              ,1987,1988,

@@ -142,16 +142,19 @@ if (@zone) {
 
 if ($verbose) {
    foreach my $z (@zone) {
-      my @per = $dmt->periods($z,undef,$cutoff);
+      my @per        = $dmt->periods($z,undef,$cutoff);
       foreach my $per (@per) {
-         my($startUT,$startLT,$offsetstr,$offset,$abbrev,$isdst,$endUT,$endLT) = @$per;
+         my($startUT,$startLT,$offsetstr,$offset,$abbrev,$isdst,$endUT,$endLT)
+           = @$per;
 
-         $startUT = datestr($startUT);
-         $startLT = datestr($startLT);
-         $endUT   = datestr($endUT);
-         $endLT   = datestr($endLT);
-         print "$z  $startUT UT = $startLT $abbrev isdst=$isdst\n";
-         print "$z  $endUT UT = $endLT $abbrev isdst=$isdst\n";
+         $startUT   = datestr($startUT);
+         $startLT   = datestr($startLT);
+         $endUT     = datestr($endUT);
+         $endLT     = datestr($endLT);
+         my $gmtoff = $$offset[0]*3600 + $$offset[1]*60 + $$offset[2];
+
+         print "$z  $startUT UT = $startLT $abbrev isdst=$isdst gmtoff=$gmtoff\n";
+         print "$z  $endUT UT = $endLT $abbrev isdst=$isdst gmtoff=$gmtoff\n";
       }
       print "\n"  if ($#zone != 0);
    }

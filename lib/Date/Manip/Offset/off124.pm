@@ -6,9 +6,9 @@ Date::Manip::Offset::off124;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Aug 21 13:23:30 EDT 2014
-#    Data version: tzdata2014f
-#    Code version: tzcode2014f
+#    Generated on: Fri Nov 21 11:03:45 EST 2014
+#    Data version: tzdata2014j
+#    Code version: tzcode2014j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,49 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+04:02:33';
+$Offset        = '+06:00:00';
 
 %Offset        = (
    0 => [
+      'asia/almaty',
+      'asia/bishkek',
+      'asia/dhaka',
+      'asia/qyzylorda',
+      'asia/thimphu',
+      'indian/chagos',
       'asia/yekaterinburg',
+      'asia/novosibirsk',
+      'asia/novokuznetsk',
+      'asia/omsk',
+      'etc/gmt+6',
+      's',
+      'antarctica/vostok',
+      'asia/colombo',
+      'asia/krasnoyarsk',
+      'asia/dushanbe',
+      'asia/tashkent',
+      'asia/aqtau',
+      'asia/aqtobe',
+      'asia/oral',
+      'asia/samarkand',
+      'asia/urumqi',
+      'asia/hovd',
+      'antarctica/mawson',
+      ],
+   1 => [
+      'asia/yekaterinburg',
+      'asia/karachi',
+      'asia/bishkek',
+      'asia/aqtobe',
+      'asia/aqtau',
+      'asia/samarkand',
+      'asia/dushanbe',
+      'asia/omsk',
+      'asia/tashkent',
+      'asia/ashgabat',
+      'asia/qyzylorda',
+      'asia/oral',
+      'asia/colombo',
       ],
 );
 

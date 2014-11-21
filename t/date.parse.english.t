@@ -79,6 +79,8 @@ $tests="
 
 '4 October 1975 at 4 pm' => 1975100416:00:00
 
+'now PST' => 1997030809:30:00
+
 ";
 
 $t->tests(func  => \&test,

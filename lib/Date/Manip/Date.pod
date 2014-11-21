@@ -327,12 +327,14 @@ object did NOT contain a valid date, a time of 00:00:00 is used.
 
 =item B<parse_time>
 
-   $err = $date->parse_time($string);
+   $err = $date->parse_time($string [,@opts]);
 
 This parses a string and sets the time portion of $date to contain it.
 
 If the object contained a valid date, the Y/M/D portion is left unchanged.
 Otherwise, the current date is used.
+
+@opts can be 'noiso8601' or 'noother'.
 
 =item B<parse_format>
 
@@ -932,11 +934,11 @@ specified using this format during 2009.
 
 The following date formats are truncated:
 
-   CCYY-MM     2       2009-03
+   CCYY-MM     2       2009-03   (2009-03-01)
 
-   CCYY                2009
+   CCYY                2009      (2009-01-01)
 
-   CC          2       20
+   CC          2       20        (2000-01-01)
 
    -YYMM       4       -0903
    -YY-MM              -09-03
@@ -959,9 +961,10 @@ The following date formats are truncated:
 Notes:
 
 1  These formats are considered truncated in the standard, but since
-   they do include (or imply, using the current date for defaults) all of
-   the fields, and since they do not introduce any parsing complexities,
-   the standard is relaxed, and they are treated as complete.
+   they do include (or imply, using the current date for defaults)
+   all of the fields, and since they do not introduce any parsing
+   complexities, the standard is relaxed, and they are treated as
+   complete.
 
 2  These formats are treated differently than in Date::Manip 5.xx as
    described below.
@@ -1039,7 +1042,7 @@ The following date formats are supported:
 
    Format      Notes   Examples
 
-   M/D         1,2     3/5
+   M/D         1,2,3   3/5
    M/D/YY      1       3/5/09
    M/D/YYYY    1       3/5/2009
 
@@ -1104,6 +1107,9 @@ Notes:
 
 2  The dot (.) separator may not be used in the M/D format since it
    will be interpreted as the H12,H+ format described below.
+
+3  The M/D format should not use the period (.) separator as that will
+   incorrectly match the HH,H+ time format.
 
 These formats explicitly set the date, but not the time. The default
 time is determined by the DefaultTime config variable.
@@ -1218,11 +1224,12 @@ Other languages have similar strings.
 
 =item B<Holidays>
 
-You can parse holiday names as dates.  For example:
+You can parse holiday names as dates (including timezones).  For example:
 
    Christmas
    Christmas 2010
    Christmas 2010 at noon
+   Christmas 2010 at noon PST
    Saturday Christmas 2010 at noon
 
 =back
@@ -1338,7 +1345,8 @@ Notes:
    a time in the HH:MN format is very common, and is regarded as complete,
    and might include time zone information.
 
-ISO 8601 times may be followed by a time zone.  Date::Manip relaxes the
+ISO 8601 times may be followed by a time zone unless they are truncated.
+Truncated times may not include a timezone.  Date::Manip relaxes the
 constraints placed on the time zone format and allows any of the
 methods used to specify the time zone including time zone name, abbreviation,
 or offset. The time zone may be separated from the time by a space, but
@@ -1401,11 +1409,10 @@ The following time formats are accepted:
 
    H12 AM              5 PM
 
-The fractional part may be specified using a comma, a period, or
-a colon. A language specific fractional separator may also be
-available for some languages. A colon will only work if the hour,
-minute, and second are all explicitly included, but will not work
-otherwise.
+The fractional part may be specified using a comma or a period.
+Fractional seconds may also be separated using a colon.  A
+language specific fractional separator may also be available for
+some languages.
 
 In other words, the following are equivalent:
 
@@ -1483,7 +1490,8 @@ time. These include the following:
 =item B<ISO 8601 combined date and time>
 
 A combined ISO 8601 date and time is a string containing a complete
-ISO 8601 date and a complete or truncated ISO 8601 time.
+ISO 8601 date and a complete or truncated ISO 8601 time.  It may
+also include a timezone, provided a complete time is included.
 
 Date::Manip relaxes the restrictions on how the two are combined.  The
 time may be separated from the date by space, dash, or the letter T,
@@ -1510,9 +1518,9 @@ whitespace, or it can be immediately adjacent to it (since the ISO
 
 =item B<Non-ISO 8601 combined date and time>
 
-A date from any of the formats above (except for the ISO 8601 formats) may
-be combined with any of the time formats above (except for the ISO 8601 time
-formats) in any combination to form a valid combined date and time.
+A date from any of the non-ISO 8601 formats above may be combined with
+any of the non-ISO 8601 time formats above in any combination to form
+a valid combined date and time.
 
 =item B<Deltas>
 
@@ -1527,6 +1535,7 @@ If the delta itself does not include a time part, the time may be specified
 explicitly. For example:
 
    in 3 days at 12:00:00
+   in 3 days at 12:00:00 PST
 
 will take the delta part "in 3 days" and add it to the current time, then
 set the time to 12:00:00.
@@ -1555,7 +1564,11 @@ the string:
 
    now
 
-=item B<Addition combined date and time formats>
+They may also have a timezone attached:
+
+   now PST
+
+=item B<Additional combined date and time formats>
 
 The following formats are also supported:
 
@@ -1564,6 +1577,10 @@ The following formats are also supported:
       (Jan 1, 1970 00:00:00 GMT). SECS may
       be negative to give time before the
       epoch.
+
+or
+
+   epoch SECS TIMEZONE
 
 =back
 

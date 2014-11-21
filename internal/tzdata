@@ -31,7 +31,8 @@ our $curry = ( localtime(time) )[5] + 1900;
 # GLOBAL VARIABLES
 ###############################################################################
 
-our ($first_date,$last_date,$tzdata_src,$tzdata_dir,$mod_dir,$off_dir,
+our ($first_date,$last_date,$tzdata_src,$tzdata_dir,$tzdata_data,$tzdata_code,
+     $mod_dir,$off_dir,
      $curr_year,$keep_year,$test_year,$zones_pm,$zones_pod,
      %def_off,%nontzdata_zones,%def_alias2,%def_abbrev,%no_last,
      %last_zone_offsets
@@ -47,6 +48,9 @@ $last_date  = "9999123100:00:00";
 
 $tzdata_src = "ftp.iana.org";
 $tzdata_dir = "tz";
+$tzdata_data= "tzdata-latest.tar.gz";
+$tzdata_code= "tzcode-latest.tar.gz";
+
 
 require "data.offset.pl";
 require "data.abbrev.pl";
@@ -138,49 +142,47 @@ do_clean()  if (             $do_clean);
 sub do_ftp {
    print "FTP...\n";
 
-   system("rm -rf tzdata");
+   system("rm -rf tzdata; mkdir tzdata");
+   chdir("tzdata");
 
    #
    # Get the tz*latest.tar.gz links to determine the versions
    #
 
-   system("wget -q 'ftp://$tzdata_src/$tzdata_dir/tz*latest.tar.gz'");
-   if (! -l 'tzdata-latest.tar.gz') {
+   system("wget -q 'ftp://$tzdata_src/$tzdata_dir/$tzdata_data' " .
+          "'ftp://$tzdata_src/$tzdata_dir/$tzdata_code'");
+   if (! -f $tzdata_data) {
       die "ERROR: unable to ftp data.  Try again later.";
    }
+   if (! -f $tzdata_code) {
+      die "ERROR: unable to ftp code.  Try again later.";
+   }
 
-   my $tzdata = readlink("tzdata-latest.tar.gz");
-   my $tzcode = readlink("tzcode-latest.tar.gz");
+   system("tar xzf $tzdata_data");
+   my $tzdata_vers = _release('data');
 
-   $tzdata    =~ /tzdata(.....)/;
-   my $tzdata_vers = $1;
-   $tzcode    =~ /tzcode(.....)/;
-   my $tzcode_vers = $1;
-
-   unlink("tzdata-latest.tar.gz","tzcode-latest.tar.gz");
-
-   #
-   # Get the actual tz*latest.tar.gz files
-   #
-
-   system("wget --retr-symlinks -q 'ftp://$tzdata_src/$tzdata_dir/tz*latest.tar.gz'");
+   system("tar xzf $tzdata_code");
+   my $tzcode_vers = _release('code');
 
    print "  TZdata : $tzdata_vers\n";
    print "  Tzcode : $tzcode_vers\n";
 
-   #
-   # Untar the files
-   #
-
-   system("rm -rf tzdata; " .
-          "mkdir -p tzdata; " .
-          "cd tzdata; " .
-          "tar xzf ../tzdata-latest.tar.gz; " .
-          "tar xzf ../tzcode-latest.tar.gz; " .
-          "echo $tzdata_vers > _version; " .
+   system("echo $tzdata_vers > _version; " .
           "echo $tzcode_vers >> _version; ");
+}
 
-   unlink("tzdata-latest.tar.gz","tzcode-latest.tar.gz");
+sub _release {
+   my($type) = @_;
+   if (! -f 'NEWS') {
+      die "ERROR: unable to determine version (no NEWS): $type\n";
+   }
+   my $vers = `grep Release NEWS | head -1 | awk '{print \$2}'`;
+   chomp($vers);
+   if ($vers !~ /^\d\d\d\d[a-z]$/) {
+      die "ERROR: uknown version format: $type: $vers\n";
+   }
+   system("mv NEWS NEWS.$type");
+   return $vers;
 }
 
 # Build the package
@@ -551,7 +553,7 @@ sub _do_mods_tzdata_check {
    my($time) = '(?:\d\d:\d\d:\d\d)';
    my($year) = '(?:\d\d\d\d)';
    my($drx)  = qr/$dow\s+$mon\s+$dom\s+$time\s+$year/;
-   my($rx)   = qr/\Q$zone\E\s+$drx\s+UT\s+=\s+$drx\s+\S+\s+isdst=[01]$/;
+   my($rx)   = qr/\Q$zone\E\s+$drx\s+UT\s+=\s+$drx\s+\S+\s+isdst=[01]\s+gmtoff=\-?\d+$/;
 
    my($err)  = 0;
    foreach my $line (@lines) {
@@ -1410,7 +1412,7 @@ This module is automatically generated. It contains a complete list of
 time zones specified in the standard zoneinfo (or Olson) databases
 obtained from:
 
-   ftp://$tzdata_src$tzdata_dir/$tzdata_vers.tar.gz
+   ftp://$tzdata_src$tzdata_dir/tzdata_vers.tar.gz
 
 All information is stored in variables, so this module provide no
 routines for dealing with time zone information. For routines related

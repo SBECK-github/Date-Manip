@@ -90,7 +90,7 @@ an alternative calendar, you'll need to look elsewhere.
 The Gregorian calendar is a relatively recent innovation. Prior to it,
 the Julian calendar was in use.  The Julian calendar defined leap years as
 every 4th year.  This led to significant calendar drift over time (since
-a year is NOT 365.24 days long). It was replaced by the Gregorian
+a year is NOT 365.25 days long). It was replaced by the Gregorian
 calendar which improved the definition of leap years, and at that point,
 the calendar was adjusted appropriately.
 
@@ -155,9 +155,9 @@ around 1900 through several thousand years from now.
 
 In one part of the code (calculating week-of-year values), Date::Manip
 references dates one week after and one week before the date actually
-being worked on. As such, the first week in the year 0001 fail
-(because a week before is in the year 1 BC), and the last week in the
-year 9999 fail (because a week later is in 10,000).
+being worked on. As such, dates during the first week in the year 0001
+fail (because a week before is in the year 1 BC), and those in the last
+week in the year 9999 fail (because a week later is in 10,000).
 
 No effort will be made to correct this because the added functionality
 is simply not that important (to me), especially since the Gregorian

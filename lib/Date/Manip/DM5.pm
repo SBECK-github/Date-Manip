@@ -4119,6 +4119,14 @@ sub _Delta_Normalize {
 
   my($y,$mon,$w,$d,$h,$m,$s)=_Delta_Split($delta);
 
+  $y   = 0  if (! $y);
+  $mon = 0  if (! $mon);
+  $w   = 0  if (! $w);
+  $d   = 0  if (! $d);
+  $h   = 0  if (! $h);
+  $m   = 0  if (! $m);
+  $s   = 0  if (! $s);
+
   # We need to make sure that the signs of all parts of a delta are the
   # same.  The easiest way to do this is to convert all of the large
   # components to the smallest ones, then convert the smaller components

@@ -37,10 +37,6 @@ America/Chicago rules 1920 => Chicago 2
 
 America/Chicago rules 1936 => Chicago 2 - 1 Chicago 2
 
-Africa/Gaborone rules 1943 => - 1 01:00:00 3
-
-Africa/Gaborone rules 1944 => 01:00:00 3 - 1
-
 Atlantic/Cape_Verde rules 1975 => - 1 - 1
 
 Asia/Tbilisi rules 1996 => E-EurAsia 2 01:00:00 3

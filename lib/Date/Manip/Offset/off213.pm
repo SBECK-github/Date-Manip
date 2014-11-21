@@ -6,9 +6,9 @@ Date::Manip::Offset::off213;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Aug 21 13:23:30 EDT 2014
-#    Data version: tzdata2014f
-#    Code version: tzcode2014f
+#    Generated on: Fri Nov 21 11:03:45 EST 2014
+#    Data version: tzdata2014j
+#    Code version: tzcode2014j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,43 +28,38 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+10:00:00';
+$Offset        = '+12:00:00';
 
 %Offset        = (
    0 => [
-      'australia/melbourne',
-      'australia/brisbane',
-      'australia/lindeman',
-      'pacific/port_moresby',
-      'australia/currie',
-      'australia/hobart',
-      'australia/sydney',
-      'pacific/chuuk',
-      'pacific/guam',
-      'pacific/saipan',
-      'asia/yakutsk',
-      'asia/vladivostok',
-      'asia/sakhalin',
-      'etc/gmt+10',
-      'w',
-      'antarctica/dumontdurville',
+      'pacific/wake',
+      'pacific/funafuti',
+      'pacific/tarawa',
+      'pacific/wallis',
+      'pacific/fiji',
+      'asia/anadyr',
+      'asia/kamchatka',
+      'pacific/auckland',
+      'pacific/majuro',
+      'pacific/nauru',
+      'pacific/kwajalein',
       'asia/magadan',
-      'australia/lord_howe',
-      'australia/broken_hill',
-      'antarctica/macquarie',
-      'asia/khandyga',
+      'etc/gmt+12',
+      'y',
+      'pacific/kosrae',
       'asia/ust-nera',
-      'asia/chita',
       'asia/srednekolymsk',
       ],
    1 => [
-      'asia/yakutsk',
-      'asia/choibalsan',
-      'asia/vladivostok',
-      'asia/seoul',
-      'asia/tokyo',
-      'asia/khandyga',
-      'asia/chita',
+      'asia/magadan',
+      'asia/anadyr',
+      'asia/kamchatka',
+      'pacific/noumea',
+      'asia/sakhalin',
+      'pacific/efate',
+      'pacific/auckland',
+      'asia/ust-nera',
+      'asia/srednekolymsk',
       ],
 );
 

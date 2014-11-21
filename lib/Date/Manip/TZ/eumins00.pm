@@ -6,9 +6,9 @@ Date::Manip::TZ::eumins00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Aug 21 13:06:02 EDT 2014
-#    Data version: tzdata2014f
-#    Code version: tzcode2014f
+#    Generated on: Fri Nov 21 10:41:44 EST 2014
+#    Data version: tzdata2014j
+#    Code version: tzcode2014j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -347,8 +347,14 @@ END { undef $VERSION; }
    2011 =>
      [
         [ [2011,3,27,0,0,0],[2011,3,27,3,0,0],'+03:00:00',[3,0,0],
-          'FET',0,[9999,12,31,0,0,0],[9999,12,31,3,0,0],
-          '2011032700:00:00','2011032703:00:00','9999123100:00:00','9999123103:00:00' ],
+          'FET',0,[2014,10,25,21,59,59],[2014,10,26,0,59,59],
+          '2011032700:00:00','2011032703:00:00','2014102521:59:59','2014102600:59:59' ],
+     ],
+   2014 =>
+     [
+        [ [2014,10,25,22,0,0],[2014,10,26,1,0,0],'+03:00:00',[3,0,0],
+          'MSK',0,[9999,12,31,0,0,0],[9999,12,31,3,0,0],
+          '2014102522:00:00','2014102601:00:00','9999123100:00:00','9999123103:00:00' ],
      ],
 );
 

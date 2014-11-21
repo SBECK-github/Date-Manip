@@ -47,7 +47,7 @@ my $class = Module::Build->subclass(
 
 my $build = $class->new(
       module_name        => "Date::Manip",
-      dist_version       => "6.47",
+      dist_version       => "6.48",
       dist_abstract      => "Date manipulation routines",
       license            => "perl",
       dist_author        => "Sullivan Beck <sbeck\@cpan.org>",
@@ -62,9 +62,17 @@ my $build = $class->new(
       build_requires     => \%build_prereq,
       recommends         => \%script_prereq,
       sign               => 1,
+
+      ($Module::Build::VERSION >= 0.28
+       ? (meta_merge => {
+             resources => {
+                repository => "https://github.com/SBECK-github/Date-Manip",
+             }
+          })
+       : ()),
       script_files       => [
-                             'examples/dm_zdump',
                              'examples/dm_date',
+                             'examples/dm_zdump',
                             ],
 );
 

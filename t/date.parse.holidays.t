@@ -26,7 +26,8 @@ sub test {
      return $obj->err();
   } else {
      $d1 = $obj->value();
-     return($d1);
+     $d2 = $obj->value("gmt");
+     return($d1,$d2);
   }
 }
 
@@ -36,21 +37,23 @@ $obj->config("ConfigFile","$testdir/Manip.cnf");
 
 $tests="
 
-'Christmas'               => 2000122500:00:00
+'Christmas'               => 2000122500:00:00 2000122505:00:00
 
-'Christmas 2010'          => 2010122400:00:00
+'Christmas 2010'          => 2010122400:00:00 2010122405:00:00
 
-'2010 Christmas'          => 2010122400:00:00
+'2010 Christmas'          => 2010122400:00:00 2010122405:00:00
 
-'Christmas at noon'       => 2000122512:00:00
+'Christmas at noon'       => 2000122512:00:00 2000122517:00:00
 
-'Christmas 2010 at noon'  => 2010122412:00:00
+'Christmas 2010 at noon'  => 2010122412:00:00 2010122417:00:00
 
-'2010 Christmas at noon'  => 2010122412:00:00
+'2010 Christmas at noon'  => 2010122412:00:00 2010122417:00:00
 
-'Mon Christmas'           => 2000122500:00:00
+'Mon Christmas'           => 2000122500:00:00 2000122505:00:00
 
 'Tue Christmas'           => '[parse] Day of week invalid'
+
+'Christmas at noon PST'   => 2000122512:00:00 2000122520:00:00
 
 ";
 
