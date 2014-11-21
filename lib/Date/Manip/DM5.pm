@@ -220,7 +220,7 @@ use IO::File;
 our($Abbrevs);
 use Date::Manip::DM5abbrevs;
 
-$VERSION='6.48';
+$VERSION='6.49';
 our $DM5_VERSION = '5.65';
 
 ########################################################################

@@ -13,7 +13,7 @@ use warnings;
 use utf8;
 
 our($VERSION);
-$VERSION='6.48';
+$VERSION='6.49';
 
 our($Language,@Encodings,$LangName,$YearAdded);
 @Encodings = qw(utf-8 ISO-8859-15 perl);
