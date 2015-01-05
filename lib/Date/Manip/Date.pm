@@ -34,6 +34,10 @@ END { undef $VERSION; }
 # BASE METHODS
 ########################################################################
 
+sub is_date {
+   return 1;
+}
+
 # Call this every time a new date is put in to make sure everything is
 # correctly initialized.
 #
