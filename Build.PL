@@ -47,7 +47,7 @@ my $class = Module::Build->subclass(
 
 my $build = $class->new(
       module_name        => "Date::Manip",
-      dist_version       => "6.49",
+      dist_version       => "6.50",
       dist_abstract      => "Date manipulation routines",
       license            => "perl",
       dist_author        => "Sullivan Beck <sbeck\@cpan.org>",

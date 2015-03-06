@@ -13,7 +13,7 @@ use IO::File;
 use Storable qw(dclone);
 
 our ($VERSION);
-$VERSION='6.49';
+$VERSION='6.50';
 END { undef $VERSION; }
 
 ########################################################################

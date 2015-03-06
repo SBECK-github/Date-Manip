@@ -20,7 +20,7 @@ use strict;
 use warnings;
 
 our $VERSION;
-$VERSION='6.49';
+$VERSION='6.50';
 
 our ($dmb);
 $dmb = new Date::Manip::Base;
@@ -1050,7 +1050,7 @@ END {
 }
 
 our (\$VERSION);
-\$VERSION='6.49';
+\$VERSION='6.50';
 END { undef \$VERSION; }
 
 \%Dates         = (
@@ -1278,7 +1278,7 @@ use warnings;
 require 5.010000;
 
 our (\$VERSION);
-\$VERSION='6.49';
+\$VERSION='6.50';
 END { undef \$VERSION; }
 
 our (\$Offset,\%Offset);
@@ -1358,7 +1358,7 @@ use warnings;
 require 5.010000;
 
 our (\$VERSION);
-\$VERSION='6.49';
+\$VERSION='6.50';
 END { undef \$VERSION; }
 
 our (\$TzdataVersion,\$TzcodeVersion,
