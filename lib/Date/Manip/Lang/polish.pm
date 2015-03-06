@@ -1,5 +1,5 @@
 package Date::Manip::Lang::polish;
-# Copyright (c) 1998-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1998-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 

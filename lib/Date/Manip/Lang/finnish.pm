@@ -1,5 +1,5 @@
 package Date::Manip::Lang::finnish;
-# Copyright (c) 2012-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 2012-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -30,13 +30,13 @@ $Language = {
   day_abb => [['ma'], ['ti'], ['ke'], ['to'], ['pe'], ['la'], ['su']],
   day_char => [['ma'], ['ti'], ['ke'], ['to'], ['pe'], ['la'], ['su']],
   day_name => [
-    ['maanantai'],
-    ['tiistai'],
-    ['keskiviikko'],
-    ['torstai,'],
-    ['perjantai'],
-    ['lauantai'],
-    ['sunnuntai'],
+    ['maanantai', 'maanantaina'],
+    ['tiistai', 'tiistaina'],
+    ['keskiviikko', 'keskiviikkona'],
+    ['torstai', 'torstaina'],
+    ['perjantai', 'perjantaina'],
+    ['lauantai', 'lauantaina'],
+    ['sunnuntai', 'sunnuntaina'],
   ],
   each => ['joka', 'jokainen'],
   fields => [

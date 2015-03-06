@@ -1,9 +1,16 @@
+Add options:
+   onlyiso8601, etc. to parse
+   no-delta-secs   (not delta as a plain number)
+
 ########################################################################
 # Deprecated variables:
 
-12/2015
-   tz (in 12/2014, add a warning)
+03/01/2016
 
+
+Can I reduce the number of timezone modules loaded when parsing a date
+with an abbreviation or offset by loading one and testing it before
+loading a second?
 
 ########################################################################
 # +1 significant release

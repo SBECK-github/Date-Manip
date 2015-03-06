@@ -1,4 +1,4 @@
-# Copyright (c) 1995-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1995-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -131,19 +131,30 @@ my position on this.
 
 =item B<Date::Manip is slow>
 
-NOTE: The following section applies primarily to 5.xx. I'm doing a lot
-of work to optimize Date::Manip and I will rewrite this section to
-take this into account, and to provide performance suggestions. It
-should be noted that initial tests show version 6.xx to be around
-twice as fast as 5.xx (though still considerably slower than some
-of the other modules).
-
 Date::Manip is probably one of the slower Date/Time modules due to the
-fact that it is huge and written entirely in perl.
+fact that it is huge and written entirely in perl.  I have done a lot
+of work optimizing it since 6.xx came out, and additional work is planned,
+but even at it's best, it will probably be slower than other modules.
 
 Some things that will definitely help:
 
-ISO-8601 dates are parsed first and fastest.  Use them whenever possible.
+Date::Manip 5.xx was very slow.  A lot of work went into speeding it up
+as I rewrote it for the 6.xx release, and it should be noted that
+initial tests show version 6.xx to be around twice as fast as 5.xx.
+There is one notable exception to this speedup.  If you use Date::Manip
+to parse dates from a wide variety of timezones, 6.xx will be significantly
+slower than 5.xx.  The reason for this is that each time a new timezone is
+accessed, 6.xx does quite a bit of work to 'initialize' it.  5.xx does not
+have this overhead, so it can parse dates from any number of timezones
+without a speed penalty.  However, 5.xx does NOT handle timezones correctly,
+so many of the dates will be incorrect.  If timezones are imporant to you,
+there is no way to use 5.xx and get accurate results.
+
+If you only parse dates from a single timezone (which is more often what
+you are doing), 6.xx is significantly faster than 5.xx.
+
+ISO-8601 dates are parsed first and fastest.  If you have the flexibility
+to define the date format, use ISO-8601 formats whenever possible.
 
 Avoid parsing dates that are referenced against the current time (in 2
 days, today at noon, etc.).  These take a lot longer to parse.

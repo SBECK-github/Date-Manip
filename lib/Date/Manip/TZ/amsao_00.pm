@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::amsao_00;
-# Copyright (c) 2008-2014 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Nov 21 10:41:46 EST 2014
-#    Data version: tzdata2014j
-#    Code version: tzcode2014j
+#    Generated on: Wed Feb 18 16:55:39 GMT 2015
+#    Data version: tzdata2015a
+#    Code version: tzcode2015a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -865,6 +865,15 @@ END { undef $VERSION; }
         [ [2064,10,19,3,0,0],[2064,10,19,1,0,0],'-02:00:00',[-2,0,0],
           'BRST',1,[2065,2,15,1,59,59],[2065,2,14,23,59,59],
           '2064101903:00:00','2064101901:00:00','2065021501:59:59','2065021423:59:59' ],
+     ],
+   2065 =>
+     [
+        [ [2065,2,15,2,0,0],[2065,2,14,23,0,0],'-03:00:00',[-3,0,0],
+          'BRT',0,[2065,10,18,2,59,59],[2065,10,17,23,59,59],
+          '2065021502:00:00','2065021423:00:00','2065101802:59:59','2065101723:59:59' ],
+        [ [2065,10,18,3,0,0],[2065,10,18,1,0,0],'-02:00:00',[-2,0,0],
+          'BRST',1,[2066,2,21,1,59,59],[2066,2,20,23,59,59],
+          '2065101803:00:00','2065101801:00:00','2066022101:59:59','2066022023:59:59' ],
      ],
 );
 

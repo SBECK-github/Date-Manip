@@ -100,3 +100,16 @@ nytprofhtml
 22646   159ms   Base::::check_time Date::Manip::Base::check_time
 22662   158ms   Base::::_is_int Date::Manip::Base::_is_int
 
+==============
+
+mkdir tz
+cd tz
+perl -d:NYTProf ../dm5dm6_ex3 6o ../dateset3.txt
+nytprofhtml
+
+cd ..
+mkdir notz
+cd notz
+perl -d:NYTProf ../dm5dm6_ex3 6o ../dateset3_notz.txt
+nytprofhtml
+

@@ -1,4 +1,4 @@
-# Copyright (c) 1999-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1999-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -95,39 +95,45 @@ exist including full names and abbreviations.
 
 The following day names may be used:
 
-   Segunda
+   segunda
+   segunda-feira
 
-   Terça
-   Terca
+   terça
+   terca
+   terça-feira
+   terca-feira
 
-   Quarta
+   quarta
+   quarta-feira
 
-   Quinta
+   quinta
+   quinta-feira
 
-   Sexta
+   sexta
+   sexta-feira
 
-   Sábado
-   Sabado
+   sábado
+   sabado
 
-   Domingo
+   domingo
 
 
 The following abbreviations may be used:
 
-   Seg
+   seg
 
-   Ter
+   ter
 
-   Qua
+   qua
 
-   Qui
+   qui
 
-   Sex
+   sex
 
-   Sáb
-   Sab
+   sáb
+   sab
 
-   Dom
+   dom
 
 
 The following short (1-2 characters) abbreviations may be used:

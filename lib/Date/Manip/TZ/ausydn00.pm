@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::ausydn00;
-# Copyright (c) 2008-2014 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Nov 21 10:41:37 EST 2014
-#    Data version: tzdata2014j
-#    Code version: tzcode2014j
+#    Generated on: Wed Feb 18 16:55:36 GMT 2015
+#    Data version: tzdata2015a
+#    Code version: tzcode2015a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -925,6 +925,15 @@ END { undef $VERSION; }
         [ [2064,10,4,16,0,0],[2064,10,5,3,0,0],'+11:00:00',[11,0,0],
           'AEDT',1,[2065,4,4,15,59,59],[2065,4,5,2,59,59],
           '2064100416:00:00','2064100503:00:00','2065040415:59:59','2065040502:59:59' ],
+     ],
+   2065 =>
+     [
+        [ [2065,4,4,16,0,0],[2065,4,5,2,0,0],'+10:00:00',[10,0,0],
+          'AEST',0,[2065,10,3,15,59,59],[2065,10,4,1,59,59],
+          '2065040416:00:00','2065040502:00:00','2065100315:59:59','2065100401:59:59' ],
+        [ [2065,10,3,16,0,0],[2065,10,4,3,0,0],'+11:00:00',[11,0,0],
+          'AEDT',1,[2066,4,3,15,59,59],[2066,4,4,2,59,59],
+          '2065100316:00:00','2065100403:00:00','2066040315:59:59','2066040402:59:59' ],
      ],
 );
 

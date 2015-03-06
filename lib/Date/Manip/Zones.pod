@@ -1,13 +1,13 @@
 
-# Copyright (c) 2008-2014 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Nov 21 11:13:27 EST 2014
-#    Data version: tzdata2014j
-#    Code version: tzcode2014j
+#    Generated on: Wed Feb 18 18:28:12 GMT 2015
+#    Data version: tzdata2015a
+#    Code version: tzcode2015a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -209,7 +209,6 @@ database:
      Antarctica/Syowa                     ansyow00
      Antarctica/Troll                     antrol00
      Antarctica/Vostok                    anvost00
-     Asia/Aden                            asaden00
      Asia/Almaty                          asalma00
      Asia/Amman                           asamma00
      Asia/Anadyr                          asanad00
@@ -217,7 +216,6 @@ database:
      Asia/Aqtobe                          asaqto00
      Asia/Ashgabat                        asashg00
      Asia/Baghdad                         asbagh00
-     Asia/Bahrain                         asbahr00
      Asia/Baku                            asbaku00
      Asia/Bangkok                         asbang00
      Asia/Beirut                          asbeir00
@@ -249,12 +247,10 @@ database:
      Asia/Krasnoyarsk                     askras00
      Asia/Kuala_Lumpur                    askual00
      Asia/Kuching                         askuch00
-     Asia/Kuwait                          askuwa00
      Asia/Macau                           asmaca00
      Asia/Magadan                         asmaga00
      Asia/Makassar                        asmaka00
      Asia/Manila                          asmani00
-     Asia/Muscat                          asmusc00
      Asia/Nicosia                         asnico00
      Asia/Novokuznetsk                    asnovo00
      Asia/Novosibirsk                     asnovo01
@@ -545,7 +541,9 @@ The zoneinfo database provides several standard aliases, including:
      Antarctica/McMurdo                   Pacific/Auckland
      Antarctica/South_Pole                Pacific/Auckland
      Arctic/Longyearbyen                  Europe/Oslo
+     Asia/Aden                            Asia/Riyadh
      Asia/Ashkhabad                       Asia/Ashgabat
+     Asia/Bahrain                         Asia/Qatar
      Asia/Calcutta                        Asia/Kolkata
      Asia/Chongqing                       Asia/Shanghai
      Asia/Chungking                       Asia/Shanghai
@@ -554,7 +552,9 @@ The zoneinfo database provides several standard aliases, including:
      Asia/Istanbul                        Europe/Istanbul
      Asia/Kashgar                         Asia/Urumqi
      Asia/Katmandu                        Asia/Kathmandu
+     Asia/Kuwait                          Asia/Riyadh
      Asia/Macao                           Asia/Macau
+     Asia/Muscat                          Asia/Dubai
      Asia/Phnom_Penh                      Asia/Bangkok
      Asia/Saigon                          Asia/Ho_Chi_Minh
      Asia/Tel_Aviv                        Asia/Jerusalem
@@ -1499,6 +1499,7 @@ Date::Manip::TZ module.
                         America/Santiago
                         America/Chicago
                         America/Moncton
+                        Pacific/Easter
      0      -04:56:16   America/Bogota
      0      -04:56:02   America/New_York
      0      -04:54:16   America/Montreal
@@ -1657,6 +1658,7 @@ Date::Manip::TZ module.
                         Atlantic/Stanley
                         America/Asuncion
                         Antarctica/Palmer
+                        America/Santiago
      0      -02:34:04   America/Bahia
      0      -02:34:00   America/Fortaleza
      0      -02:26:08   Atlantic/South_Georgia
@@ -1673,9 +1675,8 @@ Date::Manip::TZ module.
      0      -01:54:32   Atlantic/Azores
      0      -01:42:40   Atlantic/Azores
      0      -01:34:04   Atlantic/Cape_Verde
+     0      -01:28:00   Atlantic/Reykjavik
      0      -01:27:52   America/Scoresbysund
-     0      -01:27:48   Atlantic/Reykjavik
-     0      -01:27:24   Atlantic/Reykjavik
      0      -01:14:40   America/Danmarkshavn
      0      -01:07:36   Atlantic/Madeira
      0      -01:02:20   Africa/Bissau
@@ -1911,16 +1912,12 @@ Date::Manip::TZ module.
                         Asia/Baghdad
      0      +02:58:00   Asia/Yerevan
      0      +02:59:11   Asia/Tbilisi
-     0      +02:59:54   Asia/Aden
      0      +03:00:00   Asia/Baghdad
                         Africa/Nairobi
                         Europe/Minsk
                         Europe/Kaliningrad
-                        Asia/Aden
-                        Asia/Kuwait
                         Asia/Riyadh
                         Antarctica/Syowa
-                        Asia/Bahrain
                         Asia/Qatar
                         Africa/Khartoum
                         Etc/GMT+3
@@ -1941,11 +1938,9 @@ Date::Manip::TZ module.
                         Europe/Tallinn
                         Europe/Istanbul
      0      +03:06:52   Asia/Riyadh
-     0      +03:11:56   Asia/Kuwait
      0      +03:19:24   Asia/Baku
      0      +03:20:20   Europe/Samara
      0      +03:21:04   Asia/Aqtau
-     0      +03:22:20   Asia/Bahrain
      0      +03:25:24   Asia/Oral
      0      +03:25:44   Asia/Tehran
      0      +03:26:08   Asia/Qatar
@@ -1957,11 +1952,9 @@ Date::Manip::TZ module.
      0      +03:48:40   Asia/Aqtobe
      0      +03:50:00   Indian/Mauritius
      0      +03:53:32   Asia/Ashgabat
-     0      +03:54:24   Asia/Muscat
      0      +04:00:00   Indian/Mauritius
                         Indian/Mahe
                         Indian/Reunion
-                        Asia/Muscat
                         Asia/Dubai
                         Europe/Samara
                         Europe/Volgograd
@@ -1977,7 +1970,6 @@ Date::Manip::TZ module.
                         Asia/Yekaterinburg
                         Asia/Ashgabat
                         Asia/Tehran
-                        Asia/Bahrain
                         Asia/Qatar
                         Asia/Kabul
                         Asia/Qyzylorda
@@ -2895,13 +2887,10 @@ altering the order.
                       Asia/Baghdad
                       Atlantic/Bermuda
                       America/Barbados
-                      Asia/Aden
-                      Asia/Kuwait
                       Asia/Riyadh
                       America/Antigua
                       America/Curacao
                       America/Goose_Bay
-                      Asia/Bahrain
                       Asia/Qatar
                       America/Santo_Domingo
                       America/Pangnirtung
@@ -3429,9 +3418,7 @@ altering the order.
      GMT-9            Etc/GMT-9
      GST              Atlantic/South_Georgia
                       Asia/Dubai
-                      Asia/Muscat
                       Pacific/Guam
-                      Asia/Bahrain
                       Asia/Qatar
      GYT              America/Guyana
      H                H
@@ -3788,7 +3775,6 @@ altering the order.
      RET              Indian/Reunion
      RMT              Europe/Riga
                       Asia/Rangoon
-                      Atlantic/Reykjavik
                       Europe/Rome
      ROTT             Antarctica/Rothera
      S                S

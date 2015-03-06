@@ -249,7 +249,7 @@ W10 => 2000030600:00:00 2000030605:00:00
 
 2004-03-29T11:41:00Z => 2004032911:41:00 2004032911:41:00
 
-'2004-03-29T11:41:00 EDT' => 'Unable to determine timezone'
+'2004-03-29T11:41:00 EDT' => '[parse] Unable to determine timezone'
 
 1992022905:30:61 => '[parse] Invalid date'
 
