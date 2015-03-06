@@ -1,5 +1,5 @@
 package Date::Manip::TZ;
-# Copyright (c) 2008-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -643,7 +643,7 @@ sub _get_curr_zone {
 
          # If we got an offset
 
-         $currzone = $self->zone($zone,$dstflag);
+         $currzone = $self->__zone([],'',$zone,'',$dstflag);
          last METHOD  if ($currzone);
       }
    }
@@ -745,13 +745,14 @@ sub zone {
    # Parse the arguments
 
    my($zone,$abbrev,$offset,$dstflag) = ('','','','');
-   my(@abbrev,$date,$tmp);
+   my $date = [];
+   my $tmp;
    foreach my $arg (@args) {
 
       if (ref($arg) eq 'ARRAY') {
          if ($#$arg == 5) {
             # [Y,M,D,H,Mn,S]
-            return undef  if ($date);
+            return undef  if (@$date);
             $date = $arg;
 
          } elsif ($#$arg == 2) {
@@ -778,14 +779,13 @@ sub zone {
             return undef  if ($zone);
             $zone = $tmp;
 
-         } elsif (exists $$self{'data'}{'MyAbbrev'}{$arg}) {
-            return undef  if (@abbrev);
-            $abbrev = $arg;
-            @abbrev = @{ $$self{'data'}{'MyAbbrev'}{$arg} };
+         } elsif (exists $$self{'data'}{'MyAbbrev'}{$arg}  ||
+                  exists $$self{'data'}{'Abbrev'}{$arg}) {
+            return undef  if ($abbrev);
+            $abbrev       = $arg;
          } elsif (exists $$self{'data'}{'Abbrev'}{$arg}) {
-            return undef  if (@abbrev);
-            $abbrev = $arg;
-            @abbrev = @{ $$self{'data'}{'Abbrev'}{$arg} };
+            return undef  if ($abbrev);
+            $abbrev       = $arg;
 
          } elsif ($tmp = $dmb->split('offset',$arg)) {
             return undef  if ($offset);
@@ -800,6 +800,19 @@ sub zone {
          }
       }
    }
+
+   return $self->__zone($date,$offset,$zone,$abbrev,$dstflag);
+}
+
+# $date   = [Y,M,D,H,Mn,S]
+# $offset = '-HH:Mn:SS'
+# $zone   = 'us/eastern'   (lowercase)
+# $abbrev = 'est'          (lowercase)
+# $dstflag= 'stdonly'      (lowercase)
+#
+sub __zone {
+   my($self,$date,$offset,$zone,$abbrev,$dstflag) = @_;
+   my $dmb          = $$self{'base'};
 
    #
    # Determine the zones that match all data.
@@ -824,7 +837,7 @@ sub zone {
       #    zone is passed in as an offset
       #    date is passed in
 
-      $dstflag = "dst"  if ($offset  &&  $date  &&  ! $dstflag);
+      $dstflag = "dst"  if ($offset  &&  @$date  &&  ! $dstflag);
 
       my(@isdst);
       if      ($dstflag eq 'stdonly') {
@@ -846,9 +859,16 @@ sub zone {
       # $abbrev
 
       if ($abbrev) {
+         my @abbrev_zones;
+         if (exists $$self{'data'}{'MyAbbrev'}{$abbrev}) {
+            @abbrev_zones = @{ $$self{'data'}{'MyAbbrev'}{$abbrev} };
+         } elsif (exists $$self{'data'}{'Abbrev'}{$abbrev}) {
+            @abbrev_zones = @{ $$self{'data'}{'Abbrev'}{$abbrev} };
+         }
+
          my @z;
          foreach my $isdst (@isdst) {
-            my @tmp = $self->_check_abbrev_isdst($abbrev,$isdst,@abbrev);
+            my @tmp = $self->_check_abbrev_isdst($abbrev,$isdst,@abbrev_zones);
             if (@tmp) {
                if (@z) {
                   @z = _list_add(\@z,\@tmp);
@@ -874,14 +894,16 @@ sub zone {
 
          my @z;
          foreach my $isdst (@isdst) {
+            my $tmp = $$self{'data'}{'MyOffsets'}{$offset}{$isdst} ||
+                      $$self{'data'}{'Offsets'}{$offset}{$isdst};
+
             my @tmp;
-            if      (exists $$self{'data'}{'MyOffsets'}{$offset}{$isdst}) {
-               @tmp = @{ $$self{'data'}{'MyOffsets'}{$offset}{$isdst} };
-            } elsif (exists $$self{'data'}{'Offsets'}{$offset}{$isdst}) {
-               @tmp = @{ $$self{'data'}{'Offsets'}{$offset}{$isdst} };
+            if ($abbrev) {
+               @tmp = $self->_check_offset_abbrev_isdst($offset,$abbrev,$isdst,$tmp);
+            } else {
+               @tmp = @$tmp  if ($tmp);
             }
-            @tmp = $self->_check_offset_abbrev_isdst($offset,$abbrev,$isdst,@tmp)
-              if ($abbrev);
+
             if (@tmp) {
                if (@z) {
                   @z = _list_add(\@z,\@tmp);
@@ -901,7 +923,7 @@ sub zone {
 
       # $date
 
-      if ($date) {
+      if (@$date) {
          # Get all periods for the year.
          #
          # Test all periods to make sure that $date is between the
@@ -916,17 +938,16 @@ sub zone {
 
          ZONE:
          foreach my $z (@zone) {
-            $self->_module($z);
+            $self->_module($z)  if (! exists $$self{'data'}{'Zones'}{$z}{'Loaded'});
             my $y       = $$date[0];
             my @periods = $self->_all_periods($z,$y);
 
             foreach my $period (@periods) {
-               my($begUT,$begLT,$off,$offref,$abb,$dst,$endUT,$endLT) = @$period;
-               next  if ($dmb->cmp($date,$begLT) == -1  ||
-                         $dmb->cmp($date,$endLT) == 1 ||
-                         ($offset ne ''  &&  $offset ne $off)  ||
-                         ($isdst  ne ''  &&  $isdst  ne $dst)  ||
-                         ($abbrev ne ''  &&  lc($abbrev) ne lc($abb))
+               next  if (($abbrev ne ''  &&  lc($abbrev) ne lc($$period[4]))  ||
+                         ($offset ne ''  &&  $offset ne $$period[2])  ||
+                         ($isdst  ne ''  &&  $isdst  ne $$period[5])  ||
+                         $dmb->cmp($date,$$period[1]) == -1  ||
+                         $dmb->cmp($date,$$period[7]) == 1
                         );
                push(@tmp,$z);
                next ZONE;
@@ -962,7 +983,7 @@ sub _check_abbrev_isdst {
    my @ret;
    ZONE:
    foreach my $zone (@zones) {
-      $self->_module($zone);
+      $self->_module($zone)  if (! exists $$self{'data'}{'Zones'}{$zone}{'Loaded'});
 
       foreach my $y (sort keys %{ $$self{'data'}{'Zones'}{$zone}{'Dates'} }) {
          my @periods = @{ $$self{'data'}{'Zones'}{$zone}{'Dates'}{$y} };
@@ -983,11 +1004,11 @@ sub _check_abbrev_isdst {
 # abbrev/isdst combination.
 #
 sub _check_offset_abbrev_isdst {
-   my($self,$offset,$abbrev,$isdst,@zones) = @_;
+   my($self,$offset,$abbrev,$isdst,$zones) = @_;
 
    my @ret;
- ZONE: foreach my $zone (@zones) {
-      $self->_module($zone);
+ ZONE: foreach my $zone (@$zones) {
+      $self->_module($zone)  if (! exists $$self{'data'}{'Zones'}{$zone}{'Loaded'});
 
       foreach my $y (sort keys %{ $$self{'data'}{'Zones'}{$zone}{'Dates'} }) {
          my @periods = @{ $$self{'data'}{'Zones'}{$zone}{'Dates'}{$y} };
@@ -1046,9 +1067,19 @@ sub all_periods {
       return;
    }
    $zone = $z;
-   $self->_module($zone);
+   $self->_module($zone)  if (! exists $$self{'data'}{'Zones'}{$zone}{'Loaded'});
 
-   return $self->_all_periods($zone,$year);
+   # Run a faster 'dclone' so we don't return the actual data.
+
+   my @tmp = $self->_all_periods($zone,$year);
+   my @ret;
+   foreach my $ele (@tmp) {
+      push(@ret,
+           [ [ @{$$ele[0]} ],[ @{$$ele[1]} ],$$ele[2],[ @{$$ele[3]} ],$$ele[4],
+             $$ele[5], [ @{$$ele[6]} ],[ @{$$ele[7]} ],$$ele[8],$$ele[9],
+             $$ele[10],$$ele[11] ]);
+   }
+   return @ret;
 }
 
 sub _all_periods {
@@ -1106,14 +1137,7 @@ sub _all_periods {
       $$self{'data'}{'Zones'}{$zone}{'AllDates'}{$year} = [ @periods ];
    }
 
-   # A faster 'dclone' so we don't return the actual data
-   my @ret;
-   foreach my $ele (@{ $$self{'data'}{'Zones'}{$zone}{'AllDates'}{$year} }) {
-      push(@ret,
-           [ [ @{$$ele[0]} ],[ @{$$ele[1]} ],$$ele[2],[ @{$$ele[3]} ],$$ele[4],$$ele[5],
-             [ @{$$ele[6]} ],[ @{$$ele[7]} ],$$ele[8],$$ele[9],$$ele[10],$$ele[11] ]);
-   }
-   return @ret;
+   return @{ $$self{'data'}{'Zones'}{$zone}{'AllDates'}{$year} };
 }
 
 sub periods {
@@ -1125,7 +1149,7 @@ sub periods {
       return;
    }
    $zone = $z;
-   $self->_module($zone);
+   $self->_module($zone)  if (! exists $$self{'data'}{'Zones'}{$zone}{'Loaded'});
 
    if (! defined($year1)) {
       return $self->_periods($zone,$year);
@@ -1191,7 +1215,7 @@ sub date_period {
       return;
    }
    $zone = $z;
-   $self->_module($zone);
+   $self->_module($zone)  if (! exists $$self{'data'}{'Zones'}{$zone}{'Loaded'});
 
    my $dmb  = $$self{'base'};
    my @date = @$date;
@@ -1719,11 +1743,9 @@ sub _config_var_setdate {
 
    if ($zone) {
       my ($err,@args);
-      push(@args,$date)  if ($date);
-      push(@args,$zone);
-      push(@args,$dstflag);
-
-      $zone = $self->zone(@args);
+      my $dmb = $$self{'base'};
+      $date = []  if (! defined $date);
+      $zone = $self->__zone($date,'',lc($zone),'',lc($dstflag));
       if (! $zone) {
          warn "ERROR: [config_var] invalid zone in SetDate: @args\n";
          return 1;

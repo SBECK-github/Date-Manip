@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# Copyright (c) 2008-2014 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -200,13 +200,10 @@
                      'Asia/Baghdad'                              ,1917,9999,
                      'Atlantic/Bermuda'                          ,1930,9999,
                      'America/Barbados'                          ,1932,9999,
-                     'Asia/Aden'                                 ,1949,9999,
-                     'Asia/Kuwait'                               ,1949,9999,
                      'Asia/Riyadh'                               ,1947,9999,
                      'America/Antigua'                           ,1951,9999,
                      'America/Curacao'                           ,1965,9999,
                      'America/Goose_Bay'                         ,1966,9999,
-                     'Asia/Bahrain'                              ,1972,9999,
                      'Asia/Qatar'                                ,1972,9999,
                      'America/Santo_Domingo'                     ,1974,9999,
                      'America/Pangnirtung'                       ,1921,1995,
@@ -375,7 +372,7 @@
                      'America/Monterrey'                         ,1988,9999,
                      'America/North_Dakota/Center'               ,1993,9999,
                      'America/Merida'                            ,1996,9999,
-                     'America/Cancun'                            ,1998,9999,
+                     'America/Cancun'                            ,1998,2014,
                      'America/North_Dakota/New_Salem'            ,2004,9999,
                      'America/Bahia_Banderas'                    ,2010,9999,
                      'America/Indiana/Petersburg'                ,1918,2007,
@@ -520,8 +517,8 @@
                      'Pacific/Rarotonga'                         ,1901,9999,
                     ],
    'CLST'        => [
-                     'America/Santiago'                          ,1927,9999,
-                     'Antarctica/Palmer'                         ,1982,9999,
+                     'America/Santiago'                          ,1927,2015,
+                     'Antarctica/Palmer'                         ,1982,2015,
                     ],
    'CLT'         => [
                      'America/Santiago'                          ,1910,9999,
@@ -582,7 +579,7 @@
                      'America/Costa_Rica'                        ,1921,9999,
                      'America/El_Salvador'                       ,1921,9999,
                      'America/Tegucigalpa'                       ,1921,9999,
-                     'America/Cancun'                            ,1922,9999,
+                     'America/Cancun'                            ,1922,2015,
                      'America/Matamoros'                         ,1922,9999,
                      'America/Merida'                            ,1922,9999,
                      'America/Monterrey'                         ,1922,9999,
@@ -677,7 +674,7 @@
                      'E'                                         ,0001,9999,
                     ],
    'EASST'       => [
-                     'Pacific/Easter'                            ,1932,9999,
+                     'Pacific/Easter'                            ,1932,2015,
                     ],
    'EAST'        => [
                      'Pacific/Easter'                            ,1942,9999,
@@ -825,7 +822,7 @@
                      'America/Rankin_Inlet'                      ,2000,2001,
                      'America/Santo_Domingo'                     ,1933,2000,
                      'America/Cambridge_Bay'                     ,2000,2000,
-                     'America/Cancun'                            ,1981,1998,
+                     'America/Cancun'                            ,1981,9999,
                      'America/Managua'                           ,1973,1997,
                      'America/Merida'                            ,1981,1982,
                      'America/Menominee'                         ,1969,1973,
@@ -1002,9 +999,7 @@
    'GST'         => [
                      'Atlantic/South_Georgia'                    ,1890,9999,
                      'Asia/Dubai'                                ,1919,9999,
-                     'Asia/Muscat'                               ,1919,9999,
                      'Pacific/Guam'                              ,1900,2000,
-                     'Asia/Bahrain'                              ,1919,1972,
                      'Asia/Qatar'                                ,1919,1972,
                     ],
    'GYT'         => [
@@ -1055,7 +1050,7 @@
                      'Asia/Jerusalem'                            ,1948,1948,
                     ],
    'IDT'         => [
-                     'Asia/Jerusalem'                            ,1940,2073,
+                     'Asia/Jerusalem'                            ,1940,2074,
                      'Asia/Gaza'                                 ,1974,1995,
                      'Asia/Hebron'                               ,1974,1995,
                      'Asia/Ho_Chi_Minh'                          ,1942,1975,
@@ -1641,7 +1636,6 @@
    'RMT'         => [
                      'Europe/Riga'                               ,1879,1926,
                      'Asia/Rangoon'                              ,1879,1919,
-                     'Atlantic/Reykjavik'                        ,1837,1908,
                      'Europe/Rome'                               ,1866,1893,
                     ],
    'ROTT'        => [

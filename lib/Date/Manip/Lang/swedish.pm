@@ -1,5 +1,5 @@
 package Date::Manip::Lang::swedish;
-# Copyright (c) 1996-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1996-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -144,6 +144,10 @@ $Language = {
     'igar'    => '-0:0:0:1:0:0:0',
     'igår'    => '-0:0:0:1:0:0:0',
     'imorgon' => '+0:0:0:1:0:0:0',
+    'i dag'    => '0:0:0:0:0:0:0',
+    'i gar'    => '-0:0:0:1:0:0:0',
+    'i går'    => '-0:0:0:1:0:0:0',
+    'i morgon' => '+0:0:0:1:0:0:0',
   },
   offset_time => { nu => '0:0:0:0:0:0:0' },
   on => ['pa', 'på'],

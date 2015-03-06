@@ -1,4 +1,4 @@
-# Copyright (c) 2001-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 2001-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -37,21 +37,21 @@ The following month names may be used:
 
    ocak
 
-   þubat
+   şubat
    subat
 
    mart
 
    nisan
 
-   mayýs
+   mayıs
    mayis
 
    haziran
 
    temmuz
 
-   aðustos
+   ağustos
    agustos
 
    eylül
@@ -59,10 +59,10 @@ The following month names may be used:
 
    ekim
 
-   kasým
+   kasım
    kasim
 
-   aralýk
+   aralık
    aralik
 
 
@@ -70,7 +70,7 @@ The following abbreviations may be used:
 
    oca
 
-   þub
+   şub
    sub
 
    mar
@@ -83,7 +83,7 @@ The following abbreviations may be used:
 
    tem
 
-   aðu
+   ağu
    agu
 
    eyl
@@ -104,13 +104,14 @@ The following day names may be used:
 
    pazartesi
 
-   salý
+   salı
    sali
 
-   çarþamba
+   çarşamba
    carsamba
+   Çarşamba
 
-   perþembe
+   perşembe
    persembe
 
    cuma
@@ -199,7 +200,7 @@ words:
    ögleden önce
    ogleden once
 
-   öðleden sonra
+   öğleden sonra
    ogleden sonra
 
 
@@ -264,7 +265,7 @@ The following words may be used to specify deltas that refer to
 dates in the past or future respectively:
 
    gecmis
-   geçmiþ
+   geçmiş
    gecen
    geçen
 
@@ -284,14 +285,14 @@ The following words may be used:
 
    tam
    yaklasik
-   yaklaþýk
+   yaklaşık
 
 
 The following words may be used to specify a business delta:
 
    is
-   iþ
-   çalýþma
+   iş
+   çalışma
    calisma
 
 
@@ -624,7 +625,7 @@ The following words may be used:
    dun                  -0:0:0:1:0:0:0
    dün                  -0:0:0:1:0:0:0
    yarin                +0:0:0:1:0:0:0
-   yarýn                +0:0:0:1:0:0:0
+   yarın                +0:0:0:1:0:0:0
 
 
 Words that set only the time of day are similar to the English words
@@ -633,11 +634,11 @@ Words that set only the time of day are similar to the English words
 The following words may be used:
 
    gece yarisi          00:00:00
-   gece yarýsý          00:00:00
+   gece yarısı          00:00:00
    oglen                12:00:00
    yarim                12:30:00
-   yarým                12:30:00
-   öðlen                12:00:00
+   yarım                12:30:00
+   öğlen                12:00:00
 
 
 Words that set the entire time and date (relative to the current
@@ -648,7 +649,7 @@ In English, the word 'now' is one of these.
 The following words may be used:
 
    simdi                0:0:0:0:0:0:0
-   þimdi                0:0:0:0:0:0:0
+   şimdi                0:0:0:0:0:0:0
 
 
 =item B<Hour/Minute/Second separators>

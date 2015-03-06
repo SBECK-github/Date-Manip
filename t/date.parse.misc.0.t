@@ -202,7 +202,7 @@ now => 2000012112:00:00 2000012117:00:00
 
 'Monday, 3rd October 2010' => '[parse] Day of week invalid'
 
-'3rd tuesday in Jun 96 at 10:30 pm CET' => 'Invalid timezone'
+'3rd tuesday in Jun 96 at 10:30 pm CET' => 1996061822:30:00 1996061821:30:00
 
 ###
 

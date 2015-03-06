@@ -1,5 +1,5 @@
 package Date::Manip::Date;
-# Copyright (c) 1995-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1995-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -33,6 +33,10 @@ END { undef $VERSION; }
 ########################################################################
 # BASE METHODS
 ########################################################################
+
+sub is_date {
+   return 1;
+}
 
 # Call this every time a new date is put in to make sure everything is
 # correctly initialized.
@@ -516,7 +520,11 @@ sub parse_format {
             $z = $dmt->_zone($zone);
             return 'Invalid zone'  if (! $z);
          } elsif ($abb  ||  $off) {
-            $z = $dmt->zone($off,$abb);
+            my $offset = $dmb->_delta_convert('offset',$off);
+            $z = $dmt->__zone([],$offset,'',$abb,'');
+            if (! $z) {
+               $z = $dmt->__zone([],$offset,$abb,'','');
+            }
             return 'Invalid zone'  if (! $z);
          } else {
             $z = $dmt->_now('tz',$noupdate);
@@ -953,77 +961,103 @@ sub _parse_check {
       $$self{'err'} = "[$caller] Invalid date";
       return 1;
    }
+   my $date   = [$y,$m,$d,$h,$mn,$s];
 
-   # Interpret timezone information and check that date is valid
-   # in the timezone.
+   #
+   # We need to check that the date is valid in a timezone.  The
+   # timezone may be referred to with $zone, $abb, or $off, and
+   # unfortunately, $abb MAY be the name of an abbrevation OR a
+   # zone in a few cases.
+   #
 
-   my ($zonename,$isdst);
+   my $zonename;
+   my $abbrev = (defined $abb ? lc($abb) : '');
+   my $offset = (defined $off ? $dmb->_delta_convert('offset',$off) : '');
+   my @tmp;
+
    if (defined($zone)) {
       $zonename = $dmt->_zone($zone);
-
-      if (! $zonename) {
-         $$self{'err'} = "[$caller] Unable to determine timezone: $zone";
-         return 1;
+      if ($zonename) {
+         @tmp = $self->__parse_check($date,$zonename,$off,$abb);
       }
 
-   } elsif (defined($abb) ||  defined($off)) {
-      my (@tmp,$err);
-      push(@tmp,[$y,$m,$d,$h,$mn,$s]);
-      push(@tmp,$off)     if (defined $off);
-      push(@tmp,$abb)     if (defined $abb);
-      $zonename = $dmt->zone(@tmp);
+   } elsif (defined($abb)  ||  defined($off)) {
 
-      if (! $zonename) {
-         $$self{'err'} = 'Unable to determine timezone';
-         return 1;
+      $zonename = $dmt->__zone($date,$offset,'',$abbrev,'');
+      if ($zonename) {
+         @tmp = $self->__parse_check($date,$zonename,$off,$abb);
       }
 
-      # Figure out $isdst from $abb/$off (for everything else, we'll
-      # try both values).
-
-      if (defined $off  ||  defined $abb) {
-         my @off    = @{ $dmb->split('offset',$off) }  if (defined($off));
-         my $err    = 1;
-         foreach my $i (0,1) {
-            my $per = $dmt->date_period([$y,$m,$d,$h,$mn,$s],$zonename,1,$i);
-            next    if (! $per);
-            my $a   = $$per[4];
-            my $o   = $$per[3];
-            if (defined $abb  &&  lc($a) eq lc($abb)) {
-               $err   = 0;
-               $isdst = $i;
-               $abb   = $a;
-               last;
-            }
-            if (defined ($off)) {
-               if ($off[0] == $$o[0]  &&
-                   $off[1] == $$o[1]  &&
-                   $off[2] == $$o[2]) {
-                  $err = 0;
-                  $isdst = $i;
-                  last;
-               }
-            }
-         }
-         if ($err) {
-            $$self{'err'} = 'Invalid timezone';
-            return 1;
+      if (! @tmp  &&  defined($abb)) {
+         my $tmp = $dmt->_zone($abb);
+         if ($tmp) {
+            $zonename = $tmp;
+            @tmp = $self->__parse_check($date,$zonename,$off,undef);
          }
       }
 
    } else {
       $zonename = $dmt->_now('tz');
+      if ($zonename) {
+         @tmp = $self->__parse_check($date,$zonename,$off,$abb);
+      }
+   }
+
+   if (! $zonename) {
+      if (defined($zone)) {
+         $$self{'err'} = "[$caller] Unable to determine timezone: $zone";
+      } else {
+         $$self{'err'} = "[$caller] Unable to determine timezone";
+      }
+      return 1;
+   }
+
+   if (! @tmp) {
+      $$self{'err'} = "[$caller] Invalid timezone";
+      return 1;
    }
 
    # Store the date
 
-   $self->set('zdate',$zonename,[$y,$m,$d,$h,$mn,$s],$isdst);
+   my($a,$o,$isdst) = @tmp;
+
+   $self->set('zdate',$zonename,$date,$isdst);
    return 1  if ($$self{'err'});
 
    $$self{'data'}{'in'}    = $instring;
    $$self{'data'}{'zin'}   = $zone  if (defined($zone));
 
    return 0;
+}
+
+sub __parse_check {
+   my($self,$date,$zonename,$off,$abb) = @_;
+   my $dmt       = $$self{'tz'};
+   my $dmb       = $$dmt{'base'};
+
+   if (defined ($off)) {
+      $off =  $dmb->split('offset',$off);
+   }
+
+   foreach my $isdst (0,1) {
+      my $per = $dmt->date_period($date,$zonename,1,$isdst);
+      next    if (! $per);
+      my $a   = $$per[4];
+      my $o   = $$per[3];
+
+      # If $abb is defined, it must match.
+      next  if (defined $abb  &&  lc($a) ne lc($abb));
+
+      # If $off is defined, it must match.
+      if (defined ($off)) {
+         next  if ($$off[0] != $$o[0]  ||
+                   $$off[1] != $$o[1]  ||
+                   $$off[2] != $$o[2]);
+      }
+
+      return ($a,$o,$isdst);
+   }
+   return ();
 }
 
 # Set up the regular expressions for ISO 8601 parsing. Returns the
@@ -1868,9 +1902,6 @@ sub _parse_datetime_other {
       my ($special,$epoch,$y,$mmm,$d,$h,$mn,$s,$tzstring,$zone,$abb,$off) =
         @+{qw(special epoch y mmm d h mn s tzstring zone abb off)};
 
-      if ($tzstring) {
-      }
-
       if (defined($special)) {
          my $delta  = $$dmb{'data'}{'wordmatch'}{'offset_time'}{lc($special)};
          my @delta  = @{ $dmb->split('delta',$delta) };
@@ -1884,12 +1915,19 @@ sub _parse_datetime_other {
            $self->__calc_date_delta([@date],[@delta],0,0,$tz,$isdst);
 
          if ($tzstring) {
-            my(@args);
-            push(@args,$zone)  if ($zone);
-            push(@args,$abb)   if ($abb);
-            push(@args,$off)   if ($off);
-            push(@args,$date2);
-            $zone = $dmt->zone(@args);
+
+            $date2     = []  if (! defined $date2);
+            my $offset = (defined $off ? $dmb->_delta_convert('offset',$off) : '');
+            $zone      = (defined $zone ? lc($zone) : '');
+            my $abbrev = (defined $abb  ? lc($abb)  : '');
+
+            # In some cases, a valid abbreviation is also a valid timezone
+            my $tmp    = $dmt->__zone($date2,$offset,$zone,$abbrev,'');
+            if (! $tmp  &&  $abbrev  &&  ! $zone) {
+               $abbrev = $dmt->_zone($abbrev);
+               $tmp    = $dmt->__zone($date2,$offset,$abbrev,'','')  if ($abbrev);
+            }
+            $zone      = $tmp;
 
             return (0)  if (! $zone);
 
@@ -1907,12 +1945,18 @@ sub _parse_datetime_other {
          $date      = $dmb->calc_date_time($date,\@delta);
          my($err);
          if ($tzstring) {
-            my(@args);
-            push(@args,$zone)  if ($zone);
-            push(@args,$abb)   if ($abb);
-            push(@args,$off)   if ($off);
-            push(@args,$date);
-            $zone = $dmt->zone(@args);
+
+            my $offset = (defined $off ? $dmb->_delta_convert('offset',$off) : '');
+            $zone      = (defined $zone ? lc($zone) : '');
+            my $abbrev = (defined $abb  ? lc($abb)  : '');
+
+            # In some cases, a valid abbreviation is also a valid timezone
+            my $tmp    = $dmt->__zone($date,$offset,$zone,$abbrev,'');
+            if (! $tmp  &&  $abbrev  &&  ! $zone) {
+               $abbrev = $dmt->_zone($abbrev);
+               $tmp    = $dmt->__zone($date,$offset,$abbrev,'','')  if ($abbrev);
+            }
+            $zone      = $tmp;
 
             return (0)  if (! $zone);
 
@@ -2472,7 +2516,8 @@ BEGIN {
       # Make sure $self includes a valid date (unless the entire date is
       # being set, in which case it doesn't matter).
 
-      my($date,@def,$tz,$isdst);
+      my $date = [];
+      my(@def,$tz,$isdst);
 
       if ($field eq 'zdate') {
          # If {data}{set} = 2, we want to preserve the defaults. Also, we've
@@ -2606,7 +2651,7 @@ BEGIN {
          return 1;
       }
 
-      # Handle the arguments
+      # Handle the arguments (it can be a zone or an offset)
 
       if ($new_tz) {
          my $tmp = $dmt->_zone($new_tz);
@@ -2616,11 +2661,11 @@ BEGIN {
 
          } else {
             # An offset
-            my ($err,@args);
-            push(@args,$date)  if ($date);
-            push(@args,$new_tz);
-            push(@args,($isdst ? 'dstonly' : 'stdonly'))  if (defined $isdst);
-            $tz = $dmb->zone(@args);
+
+            my $dstflag = '';
+            $dstflag    = ($isdst ? 'dstonly' : 'stdonly')  if (defined $isdst);
+
+            $tz = $dmb->__zone($date,lc($new_tz),'',$dstflag);
 
             if (! $tz) {
                $$self{'err'} = "[set] Invalid timezone argument: $new_tz";

@@ -1,4 +1,4 @@
-# Copyright (c) 1996-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1996-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -189,6 +189,7 @@ The names and abbreviations for these fields are:
    m
 
    semaine
+   semaines
    sem
 
    jours
@@ -261,6 +262,7 @@ Next occurence:
 
    suivant
    suivante
+   prochain
    prochaine
 
 
@@ -658,6 +660,7 @@ day fields).
 The following words may be used:
 
    aujourd'hui          0:0:0:0:0:0:0
+   aujourd’hui          0:0:0:0:0:0:0
    demain               +0:0:0:1:0:0:0
    hier                 -0:0:0:1:0:0:0
 

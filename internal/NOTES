@@ -90,6 +90,9 @@ Then clean up:
 
    ./internal/tzdata -c
 
+*** Make sure that the date command did not get installed.
+
+
 NOTE 1: although the tzdata script runs on my computer, it is quite possible
 that it will not run on other systems due to differences in what tools are
 available.

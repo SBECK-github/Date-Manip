@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# Copyright (c) 2008-2014 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -217,7 +217,7 @@ foreach my $winz (keys %windows_zones) {
                        'America/Monterrey'                       ,1988,9999,
                        'America/North_Dakota/Center'             ,1993,9999,
                        'America/Merida'                          ,1996,9999,
-                       'America/Cancun'                          ,1999,9999,
+                       'America/Cancun'                          ,1999,2014,
                        'America/North_Dakota/New_Salem'          ,2004,9999,
                        'America/Bahia_Banderas'                  ,2010,9999,
                        'America/Managua'                         ,1979,2006,
@@ -504,8 +504,8 @@ foreach my $winz (keys %windows_zones) {
                        'Asia/Choibalsan'                         ,1983,2006,
                       ],
    'CLT4CLST'      => [
-                       'America/Santiago'                        ,1969,9999,
-                       'Antarctica/Palmer'                       ,1982,9999,
+                       'America/Santiago'                        ,1969,2014,
+                       'Antarctica/Palmer'                       ,1982,2014,
                       ],
    'CLT5CLST'      => [
                        'America/Santiago'                        ,1928,1942,
@@ -537,7 +537,7 @@ foreach my $winz (keys %windows_zones) {
                        'Asia/Dushanbe'                           ,1981,1990,
                       ],
    'EAST6EASST'    => [
-                       'Pacific/Easter'                          ,1982,9999,
+                       'Pacific/Easter'                          ,1983,2014,
                       ],
    'EAST7EASST'    => [
                        'Pacific/Easter'                          ,1942,1981,

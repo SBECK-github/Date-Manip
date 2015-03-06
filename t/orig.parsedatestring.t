@@ -153,7 +153,7 @@ overmorrow => $overmorrow
 
 '3rd tuesday in Jun 96 at 10:30 pm GMT' => 1996061818:30:00
 
-'3rd tuesday in Jun 96 at 10:30 pm CET' => __blank__
+'3rd tuesday in Jun 96 at 10:30 pm CET' => 1996061817:30:00
 
 # Tests YYMMDD time
 

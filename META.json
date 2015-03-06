@@ -4,7 +4,7 @@
       "Sullivan Beck <sbeck@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.142060",
+   "generated_by" : "Module::Build version 0.4205",
    "license" : [
       "perl_5"
    ],
@@ -16,9 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Module::Build" : "0.21",
-            "Test::Inter" : "0",
-            "Test::More" : "0"
+            "Module::Build" : "0.21"
          }
       },
       "configure" : {
@@ -34,6 +32,12 @@
             "Storable" : "0",
             "perl" : "5.006",
             "utf8" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Inter" : "0",
+            "Test::More" : "0"
          }
       }
    },

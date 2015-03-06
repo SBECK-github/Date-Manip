@@ -1,5 +1,5 @@
 package Date::Manip::Lang::portugue;
-# Copyright (c) 1999-2014 Sullivan Beck. All rights reserved.
+# Copyright (c) 1999-2015 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -23,16 +23,16 @@ $YearAdded = 1999;
 $Language = {
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['as', 'às'],
-  day_abb => [['Seg'], ['Ter'], ['Qua'], ['Qui'], ['Sex'], ['Sáb', 'Sab'], ['Dom']],
+  day_abb => [['seg'], ['ter'], ['qua'], ['qui'], ['sex'], ['sáb', 'sab'], ['dom']],
   day_char => [['Sg'], ['T'], ['Qa'], ['Qi'], ['Sx'], ['Sb'], ['D']],
   day_name => [
-    ['Segunda'],
-    ['Terça', 'Terca'],
-    ['Quarta'],
-    ['Quinta'],
-    ['Sexta'],
-    ['Sábado', 'Sabado'],
-    ['Domingo'],
+    ['segunda', 'segunda-feira'],
+    ['terça', 'terca', 'terça-feira', 'terca-feira'],
+    ['quarta', 'quarta-feira'],
+    ['quinta', 'quinta-feira'],
+    ['sexta', 'sexta-feira'],
+    ['sábado', 'sabado'],
+    ['domingo'],
   ],
   each => ['cada'],
   fields => [
