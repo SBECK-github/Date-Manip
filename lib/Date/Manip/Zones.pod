@@ -25,7 +25,7 @@ This module is automatically generated. It contains a complete list of
 time zones specified in the standard zoneinfo (or Olson) databases
 obtained from:
 
-   ftp://ftp.iana.orgtz/tzdata_vers.tar.gz
+   ftp://ftp.iana.org/tz/tzdata-latest.tar.gz
 
 All information is stored in variables, so this module provide no
 routines for dealing with time zone information. For routines related
