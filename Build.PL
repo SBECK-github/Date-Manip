@@ -31,7 +31,11 @@ my %config_prereq = (
 
 my %IsWin32 = map { $_ => 1 } qw( MSWin32 NetWare symbian );
 my $IsWin32 = 1   if ($IsWin32{ $^O });
-if (! $IsWin32) {
+if ($IsWin32) {
+   if ($^V >= 5.020) {
+      $module_prereq{'Win32::TieRegistry'} = 0.28;
+   }
+} else {
    delete $module_prereq{'Win32::TieRegistry'};
 }
 
