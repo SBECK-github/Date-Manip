@@ -11,7 +11,7 @@ use strict;
 use Exporter;
 
 our $VERSION;
-$VERSION='6.50';
+$VERSION='6.51';
 
 our (@ISA,@EXPORT);
 
