@@ -58,10 +58,9 @@ sub _init {
       # The date in the parsed timezone
       'date'   => [],        # the parsed date split
       'def'    => [0,0,0,0,0,0],
-
-      # 1 for each field that came from
-      # defaults rather than parsed
-      # '' for an implied field
+                             # 1 for each field that came from
+                             # defaults rather than parsed
+                             # '' for an implied field
       'tz'     => '',        # the timezone of the date
       'isdst'  => '',        # 1 if the date is in DST.
       'offset' => [],        # The offset from GMT
@@ -112,6 +111,7 @@ sub parse {
 
    my $dmt = $$self{'tz'};
    my $dmb = $$dmt{'base'};
+   delete $$self{'data'}{'default_time'};
 
    my($done,$y,$m,$d,$h,$mn,$s,$tzstring,$zone,$abb,$off,$dow,$got_time,
       $default_time,$firsterr);
@@ -305,7 +305,10 @@ sub parse {
 
    if (! $got_time) {
       if ($default_time) {
-         if ($dmb->_config('defaulttime') eq 'midnight') {
+         if (exists $$self{'data'}{'default_time'}) {
+            ($h,$mn,$s) = @{ $$self{'data'}{'default_time'} };
+            delete $$self{'data'}{'default_time'};
+         } elsif ($dmb->_config('defaulttime') eq 'midnight') {
             ($h,$mn,$s) = (0,0,0);
          } else {
             ($h,$mn,$s) = $dmt->_now('time',$noupdate);
@@ -471,6 +474,16 @@ sub _parse_date {
 
       unless (exists $opts{'noother'}) {
          (@tmp) = $self->_parse_date_other($string,$dow,$of,$noupdate);
+         if (@tmp) {
+            ($y,$m,$d,$dow) = @tmp;
+            last PARSE;
+         }
+      }
+
+      # Parse truncated dates
+
+      if (! $dow  &&  ! $of) {
+         (@tmp) = $self->_parse_date_truncated($string,$noupdate);
          if (@tmp) {
             ($y,$m,$d,$dow) = @tmp;
             last PARSE;
@@ -1095,46 +1108,52 @@ sub _iso8601_rx {
       my $yod = '(?<yod>\d)';
       my $cc  = '(?<c>\d\d)';
 
-      my $cdaterx =
-        "${y4}${m}${d}|" .                 # CCYYMMDD
-        "${y4}\\-${m}\\-${d}|" .           # CCYY-MM-DD
-          "\\-${y2}${m}${d}|" .            # -YYMMDD
-          "\\-${y2}\\-${m}\\-${d}|" .      # -YY-MM-DD
-          "\\-?${y2}${m}${d}|" .           # YYMMDD
-          "\\-?${y2}\\-${m}\\-${d}|" .     # YY-MM-DD
-          "\\-\\-${m}\\-?${d}|" .          # --MM-DD   --MMDD
-          "\\-\\-\\-${d}|" .               # ---DD
+      my @cdaterx =
+        (
+         "${y4}${m}${d}",               # CCYYMMDD
+         "${y4}\\-${m}\\-${d}",         # CCYY-MM-DD
+         "\\-${y2}${m}${d}",            # -YYMMDD
+         "\\-${y2}\\-${m}\\-${d}",      # -YY-MM-DD
+         "\\-?${y2}${m}${d}",           # YYMMDD
+         "\\-?${y2}\\-${m}\\-${d}",     # YY-MM-DD
+         "\\-\\-${m}\\-?${d}",          # --MM-DD   --MMDD
+         "\\-\\-\\-${d}",               # ---DD
 
-          "${y4}\\-?${doy}|" .             # CCYY-DoY  CCYYDoY
-          "\\-?${y2}\\-?${doy}|" .         # YY-DoY    -YY-DoY
-                                           # YYDoY     -YYDoY
-          "\\-${doy}|" .                   # -DoY
+         "${y4}\\-?${doy}",             # CCYY-DoY  CCYYDoY
+         "\\-?${y2}\\-?${doy}",         # YY-DoY    -YY-DoY
+                                        # YYDoY     -YYDoY
+         "\\-${doy}",                   # -DoY
 
-          "${y4}W${w}${dow}|" .            # CCYYWwwD
-          "${y4}\\-W${w}\\-${dow}|" .      # CCYY-Www-D
-          "\\-?${y2}W${w}${dow}|" .        # YYWwwD    -YYWwwD
-          "\\-?${y2}\\-W${w}\\-${dow}|" .  # YY-Www-D  -YY-Www-D
+         "${y4}W${w}${dow}",            # CCYYWwwD
+         "${y4}\\-W${w}\\-${dow}",      # CCYY-Www-D
+         "\\-?${y2}W${w}${dow}",        # YYWwwD    -YYWwwD
+         "\\-?${y2}\\-W${w}\\-${dow}",  # YY-Www-D  -YY-Www-D
 
-          "\\-?${yod}W${w}${dow}|" .       # YWwwD     -YWwwD
-          "\\-?${yod}\\-W${w}\\-${dow}|" . # Y-Www-D   -Y-Www-D
-          "\\-W${w}\\-?${dow}|" .          # -Www-D    -WwwD
-          "\\-W\\-${dow}|" .               # -W-D
-          "\\-\\-\\-${dow}";               # ---D
+         "\\-?${yod}W${w}${dow}",       # YWwwD     -YWwwD
+         "\\-?${yod}\\-W${w}\\-${dow}", # Y-Www-D   -Y-Www-D
+         "\\-W${w}\\-?${dow}",          # -Www-D    -WwwD
+         "\\-W\\-${dow}",               # -W-D
+         "\\-\\-\\-${dow}",             # ---D
+        );
+      my $cdaterx = join('|',@cdaterx);
       $cdaterx = qr/(?:$cdaterx)/i;
 
-      my $tdaterx =
-        "${y4}\\-${m}|" .                  # CCYY-MM
-        "${y4}|" .                         # CCYY
-        "\\-${y2}\\-?${m}|" .              # -YY-MM    -YYMM
-        "\\-${y2}|" .                      # -YY
-        "\\-\\-${m}|" .                    # --MM
+      my @tdaterx =
+        (
+         "${y4}\\-${m}",                  # CCYY-MM
+         "${y4}",                         # CCYY
+         "\\-${y2}\\-?${m}",              # -YY-MM    -YYMM
+         "\\-${y2}",                      # -YY
+         "\\-\\-${m}",                    # --MM
 
-        "${y4}\\-?W${w}|" .                # CCYYWww   CCYY-Www
-        "\\-?${y2}\\-?W${w}|" .            # YY-Www    YYWww
-                                           # -YY-Www   -YYWww
-        "\\-?W${w}|" .                     # -Www      Www
+         "${y4}\\-?W${w}",                # CCYYWww   CCYY-Www
+         "\\-?${y2}\\-?W${w}",            # YY-Www    YYWww
+                                          # -YY-Www   -YYWww
+         "\\-?W${w}",                     # -Www      Www
 
-        "${cc}";                           # CC
+         "${cc}",                         # CC
+        );
+      my $tdaterx = join('|',@tdaterx);
       $tdaterx = qr/(?:$tdaterx)/i;
 
       $$dmb{'data'}{'rx'}{'iso'}{'cdate'} = $cdaterx;
@@ -1155,24 +1174,30 @@ sub _iso8601_rx {
 
       my $zrx    = $dmt->_zrx('zrx');
 
-      my $ctimerx =
-        "${hh}${mn}${ss}${fs}?|" .         # HHMNSS[,S+]
-        "${hh}:${mn}:${ss}${fs}?|" .       # HH:MN:SS[,S+]
-        "${hh}:?${mn}${fm}|" .             # HH:MN,M+       HHMN,M+
-        "${hh}${fh}|" .                    # HH,H+
-        "\\-${mn}:?${ss}${fs}?|" .         # -MN:SS[,S+]    -MNSS[,S+]
-        "\\-${mn}${fm}|" .                 # -MN,M+
-        "\\-\\-${ss}${fs}?|" .             # --SS[,S+]
-        "${hh}:?${mn}|" .                  # HH:MN          HHMN
-        "${h24a}|" .                       # 24:00:00       24:00       24
-        "${h24b}|" .                       # 240000         2400
-        "${h}:${mn}:${ss}${fs}?|" .        # H:MN:SS[,S+]
-        "${h}:${mn}${fm}";                 # H:MN,M+
+      my @ctimerx =
+        (
+         "${hh}${mn}${ss}${fs}?",         # HHMNSS[,S+]
+         "${hh}:${mn}:${ss}${fs}?",       # HH:MN:SS[,S+]
+         "${hh}:?${mn}${fm}",             # HH:MN,M+       HHMN,M+
+         "${hh}${fh}",                    # HH,H+
+         "\\-${mn}:?${ss}${fs}?",         # -MN:SS[,S+]    -MNSS[,S+]
+         "\\-${mn}${fm}",                 # -MN,M+
+         "\\-\\-${ss}${fs}?",             # --SS[,S+]
+         "${hh}:?${mn}",                  # HH:MN          HHMN
+         "${h24a}",                       # 24:00:00       24:00       24
+         "${h24b}",                       # 240000         2400
+         "${h}:${mn}:${ss}${fs}?",        # H:MN:SS[,S+]
+         "${h}:${mn}${fm}",               # H:MN,M+
+        );
+      my $ctimerx = join('|',@ctimerx);
       $ctimerx = qr/(?:$ctimerx)(?:\s*$zrx)?/;
 
-      my $ttimerx =
-        "${hh}|" .                         # HH
-        "\\-${mn}";                        # -MN
+      my @ttimerx =
+        (
+         "${hh}",                         # HH
+         "\\-${mn}",                      # -MN
+        );
+      my $ttimerx = join('|',@ttimerx);
       $ttimerx = qr/(?:$ttimerx)/;
 
       $$dmb{'data'}{'rx'}{'iso'}{'ctime'} = $ctimerx;
@@ -1380,41 +1405,51 @@ sub _other_rx {
       # How to express the time
       #  matches = (H, FH, MN, FMN, S, AM, TZSTRING, ZONE, ABB, OFF, ABB)
 
-      my $timerx;
+      my @timerx;
 
       for (my $i=0; $i<=$#hm; $i++) {
          my $hm = $hm[$i];
          my $ms = $ms[$i];
-         $timerx .= "${h12}$hm${mn}$ms${ss}${fs}?${ampm}?|" # H12:MN:SS[,S+] [AM]
-           if ($ampm);
-         $timerx .= "${h24}$hm${mn}$ms${ss}${fs}?|" .       # H24:MN:SS[,S+]
-                    "(?<h>24)$hm(?<mn>00)$ms(?<s>00)|";     # 24:00:00
+         push(@timerx,
+              "${h12}$hm${mn}$ms${ss}${fs}?${ampm}?", # H12:MN:SS[,S+] [AM]
+             )  if ($ampm);
+
+         push(@timerx,
+              "${h24}$hm${mn}$ms${ss}${fs}?",         # H24:MN:SS[,S+]
+              "(?<h>24)$hm(?<mn>00)$ms(?<s>00)",      # 24:00:00
+             );
       }
       for (my $i=0; $i<=$#hm; $i++) {
          my $hm = $hm[$i];
          my $ms = $ms[$i];
-         $timerx .= "${h12}$hm${mn}${fm}${ampm}?|"          # H12:MN,M+ [AM]
-           if ($ampm);
-         $timerx .= "${h24}$hm${mn}${fm}|";                 # H24:MN,M+
+         push(@timerx,
+              "${h12}$hm${mn}${fm}${ampm}?",          # H12:MN,M+ [AM]
+             )  if ($ampm);
+         push(@timerx,
+              "${h24}$hm${mn}${fm}",                  # H24:MN,M+
+             );
       }
       for (my $i=0; $i<=$#hm; $i++) {
          my $hm = $hm[$i];
          my $ms = $ms[$i];
-         $timerx .= "${h12}$hm${mn}${ampm}?|"               # H12:MN [AM]
-           if ($ampm);
-         $timerx .= "${h24}$hm${mn}|" .                     # H24:MN
-                    "(?<h>24)$hm(?<mn>00)|";                # 24:00
+         push(@timerx,
+              "${h12}$hm${mn}${ampm}?",               # H12:MN [AM]
+             )  if ($ampm);
+         push(@timerx,
+              "${h24}$hm${mn}",                       # H24:MN
+              "(?<h>24)$hm(?<mn>00)",                 # 24:00
+             );
       }
 
-      $timerx .= "${h12}${fh}${ampm}|"                      # H12,H+ AM
-        if ($ampm);
+      push(@timerx,
+           "${h12}${fh}${ampm}",                      # H12,H+ AM
+           "${h12}${ampm}",                           # H12 AM
+          )  if ($ampm);
+      push(@timerx,
+           "${h24}${fh}",                             # H24,H+
+          );
 
-      $timerx .= "${h12}${ampm}|"  if ($ampm);              # H12 AM
-
-      $timerx .= "${h24}${fh}|";                            # H24,H+
-
-      chop($timerx);                                        # remove trailing pipe
-
+      my $timerx = join('|',@timerx);
       my $zrx    = $dmt->_zrx('zrx');
       my $at     = $$dmb{'data'}{'rx'}{'at'};
       my $atrx   = qr/(?:^|\s+)(?:$at)\s+/;
@@ -1434,10 +1469,13 @@ sub _other_rx {
       my $d   = '(?<d>\d\d?)';
       my $sep = '(?<sep>[\s\.\/\-])';
 
-      my $daterx =
-        "${m}${sep}${d}\\k<sep>$y4|" .  # M/D/YYYY
-        "${m}${sep}${d}\\k<sep>$y2|" .  # M/D/YY
-        "${m}${sep}${d}";               # M/D
+      my @daterx =
+        (
+         "${m}${sep}${d}\\k<sep>$y4",       # M/D/YYYY
+         "${m}${sep}${d}\\k<sep>$y2",       # M/D/YY
+         "${m}${sep}${d}",                  # M/D
+        );
+      my $daterx = join('|',@daterx);
 
       $daterx = qr/^\s*(?:$daterx)\s*$/;
       $$dmb{'data'}{'rx'}{'other'}{$rx} = $daterx;
@@ -1455,39 +1493,75 @@ sub _other_rx {
       my $mmm = "(?:(?<mmm>$abb)|(?<month>$nam))";
       my $sep = '(?<sep>[\s\.\/\-])';
 
-      my $daterx =
-        "${y4}${sep}${m}\\k<sep>$d|" .        # YYYY/M/D
+      my $format_mmmyyyy = $dmb->_config('format_mmmyyyy');
 
-        "${mmm}\\s*${dd}\\s*${y4}|" .         # mmmDDYYYY
-        "${mmm}\\s*${dd}\\s*${y2}|" .         # mmmDDYY
-        "${mmm}\\s*${d}|" .                   # mmmD
-        "${d}\\s*${mmm}\\s*${y4}|" .          # DmmmYYYY
-        "${d}\\s*${mmm}\\s*${y2}|" .          # DmmmYY
-        "${d}\\s*${mmm}|" .                   # Dmmm
-        "${y4}\\s*${mmm}\\s*${d}|" .          # YYYYmmmD
+      my @daterx = ();
+      push(@daterx,
+           "${y4}${sep}${m}\\k<sep>$d",        # YYYY/M/D
+           "${mmm}\\s*${dd}\\s*${y4}",         # mmmDDYYYY
+          );
+      push(@daterx,
+           "${mmm}\\s*${dd}\\s*${y2}",         # mmmDDYY
+          )  if (! $format_mmmyyyy);
+      push(@daterx,
+           "${mmm}\\s*${d}",                   # mmmD
+           "${d}\\s*${mmm}\\s*${y4}",          # DmmmYYYY
+           "${d}\\s*${mmm}\\s*${y2}",          # DmmmYY
+           "${d}\\s*${mmm}",                   # Dmmm
+           "${y4}\\s*${mmm}\\s*${d}",          # YYYYmmmD
 
-        "${mmm}${sep}${d}\\k<sep>${y4}|" .    # mmm/D/YYYY
-        "${mmm}${sep}${d}\\k<sep>${y2}|" .    # mmm/D/YY
-        "${mmm}${sep}${d}|" .                 # mmm/D
-        "${d}${sep}${mmm}\\k<sep>${y4}|" .    # D/mmm/YYYY
-        "${d}${sep}${mmm}\\k<sep>${y2}|" .    # D/mmm/YY
-        "${d}${sep}${mmm}|" .                 # D/mmm
-        "${y4}${sep}${mmm}\\k<sep>${d}|" .    # YYYY/mmm/D
+           "${mmm}${sep}${d}\\k<sep>${y4}",    # mmm/D/YYYY
+           "${mmm}${sep}${d}\\k<sep>${y2}",    # mmm/D/YY
+           "${mmm}${sep}${d}",                 # mmm/D
+           "${d}${sep}${mmm}\\k<sep>${y4}",    # D/mmm/YYYY
+           "${d}${sep}${mmm}\\k<sep>${y2}",    # D/mmm/YY
+           "${d}${sep}${mmm}",                 # D/mmm
+           "${y4}${sep}${mmm}\\k<sep>${d}",    # YYYY/mmm/D
 
-        "${mmm}${sep}?${d}\\s+${y2}|" .       # mmmD YY      mmm/D YY
-        "${mmm}${sep}?${d}\\s+${y4}|" .       # mmmD YYYY    mmm/D YYYY
-        "${d}${sep}?${mmm}\\s+${y2}|" .       # Dmmm YY      D/mmm YY
-        "${d}${sep}?${mmm}\\s+${y4}|" .       # Dmmm YYYY    D/mmm YYYY
+           "${mmm}${sep}?${d}\\s+${y2}",       # mmmD YY      mmm/D YY
+           "${mmm}${sep}?${d}\\s+${y4}",       # mmmD YYYY    mmm/D YYYY
+           "${d}${sep}?${mmm}\\s+${y2}",       # Dmmm YY      D/mmm YY
+           "${d}${sep}?${mmm}\\s+${y4}",       # Dmmm YYYY    D/mmm YYYY
 
-        "${y2}\\s+${mmm}${sep}?${d}|" .       # YY   mmmD    YY   mmm/D
-        "${y4}\\s+${mmm}${sep}?${d}|" .       # YYYY mmmD    YYYY mmm/D
-        "${y2}\\s+${d}${sep}?${mmm}|" .       # YY   Dmmm    YY   D/mmm
-        "${y4}\\s+${d}${sep}?${mmm}|" .       # YYYY Dmmm    YYYY D/mmm
+           "${y2}\\s+${mmm}${sep}?${d}",       # YY   mmmD    YY   mmm/D
+           "${y4}\\s+${mmm}${sep}?${d}",       # YYYY mmmD    YYYY mmm/D
+           "${y2}\\s+${d}${sep}?${mmm}",       # YY   Dmmm    YY   D/mmm
+           "${y4}\\s+${d}${sep}?${mmm}",       # YYYY Dmmm    YYYY D/mmm
 
-        "${y4}:${m}:${d}";                    # YYYY:MM:DD
+           "${y4}:${m}:${d}",                  # YYYY:MM:DD
+          );
+      my $daterx = join('|',@daterx);
 
       $daterx = qr/^\s*(?:$daterx)\s*$/i;
       $$dmb{'data'}{'rx'}{'other'}{$rx} = $daterx;
+
+   } elsif ($rx eq 'truncated') {
+
+      my $abb = $$dmb{'data'}{'rx'}{'month_abb'}[0];
+      my $nam = $$dmb{'data'}{'rx'}{'month_name'}[0];
+
+      my $y4  = '(?<y>\d\d\d\d)';
+      my $mmm = "(?:(?<mmm>$abb)|(?<month>$nam))";
+      my $sep = '(?<sep>[\s\.\/\-])';
+
+      my $format_mmmyyyy = $dmb->_config('format_mmmyyyy');
+
+      my @daterx = ();
+      push(@daterx,
+           "${mmm}\\s*${y4}",                  # mmmYYYY
+           "${y4}\\s*${mmm}",                  # YYYYmmm
+
+           "${y4}${sep}${mmm}",                # YYYY/mmm
+           "${mmm}${sep}${y4}",                # mmm/YYYY
+          )  if ($format_mmmyyyy);
+
+      if (@daterx) {
+         my $daterx = join('|',@daterx);
+         $daterx = qr/^\s*(?:$daterx)\s*$/i;
+         $$dmb{'data'}{'rx'}{'other'}{$rx} = $daterx;
+      } else {
+         $$dmb{'data'}{'rx'}{'other'}{$rx} = '';
+      }
 
    } elsif ($rx eq 'dow') {
 
@@ -1523,15 +1597,18 @@ sub _other_rx {
       my $offrx    = $dmt->_zrx('offrx');
       my $zrx      = $dmt->_zrx('zrx');
 
-      my $daterx   =
-        "${special}|" .                 # now
-        "${special}\\s+${zrx}|" .       # now EDT
+      my @daterx   =
+        (
+         "${special}",                 # now
+         "${special}\\s+${zrx}",       # now EDT
 
-        "epoch\\s+$secs|" .             # epoch SECS
-        "epoch\\s+$secs\\s+${zrx}|" .   # epoch SECS EDT
+         "epoch\\s+$secs",             # epoch SECS
+         "epoch\\s+$secs\\s+${zrx}",   # epoch SECS EDT
 
-        "${dd}\\/${mmm}\\/${y4}:${h24}:${mn}:${ss}\\s*${offrx}";
+         "${dd}\\/${mmm}\\/${y4}:${h24}:${mn}:${ss}\\s*${offrx}",
                               # Common log format: 10/Oct/2000:13:55:36 -0700
+        );
+      my $daterx   = join('|',@daterx);
 
       $daterx = qr/^\s*(?:$daterx)\s*$/i;
       $$dmb{'data'}{'rx'}{'other'}{$rx} = $daterx;
@@ -1563,38 +1640,40 @@ sub _other_rx {
       $nth_wom     = "(?<nth>$nth_wom)";
       $special     = "(?<special>$special)";
 
-      my $daterx   =
-        "${mmm}\\s+${nth}\\s*$y?|" .    # Dec 1st [1970]
-        "${nth}\\s+${mmm}\\s*$y?|" .    # 1st Dec [1970]
-        "$y\\s+${mmm}\\s+${nth}|" .     # 1970 Dec 1st
-        "$y\\s+${nth}\\s+${mmm}|" .     # 1970 1st Dec
+      my @daterx   =
+        (
+         "${mmm}\\s+${nth}\\s*$y?",       # Dec 1st [1970]
+         "${nth}\\s+${mmm}\\s*$y?",       # 1st Dec [1970]
+         "$y\\s+${mmm}\\s+${nth}",        # 1970 Dec 1st
+         "$y\\s+${nth}\\s+${mmm}",        # 1970 1st Dec
 
-        "${next}\\s+${fld}|" .          # next year, next month, next week
-        "${next}|" .                    # next friday
+         "${next}\\s+${fld}",             # next year, next month, next week
+         "${next}",                       # next friday
 
-        "${last}\\s+${mmm}\\s*$y?|" .   # last friday in october 95
-        "${last}\\s+${df}\\s+${mmm}\\s*$y?|" .
-                                        # last day in october 95
-        "${last}\\s*$y?|" .             # last friday in 95
+         "${last}\\s+${mmm}\\s*$y?",      # last friday in october 95
+         "${last}\\s+${df}\\s+${mmm}\\s*$y?",
+                                          # last day in october 95
+         "${last}\\s*$y?",                # last friday in 95
 
-        "${nth_wom}\\s+${mmm}\\s*$y?|" .
-                                        # nth DoW in MMM [YYYY]
-        "${nth}\\s*$y?|" .              # nth DoW in [YYYY]
+         "${nth_wom}\\s+${mmm}\\s*$y?",   # nth DoW in MMM [YYYY]
+         "${nth}\\s*$y?",                 # nth DoW in [YYYY]
 
-        "${nth}\\s+$df\\s+${mmm}\\s*$y?|" .
-                                        # nth day in MMM [YYYY]
+         "${nth}\\s+$df\\s+${mmm}\\s*$y?",
+                                          # nth day in MMM [YYYY]
 
-        "${nth}\\s+${wf}\\s*$y?|" .     # DoW Nth week [YYYY]
-        "${wf}\\s+(?<n>\\d+)\\s*$y?|" . # DoW week N [YYYY]
+         "${nth}\\s+${wf}\\s*$y?",        # DoW Nth week [YYYY]
+         "${wf}\\s+(?<n>\\d+)\\s*$y?",    # DoW week N [YYYY]
 
-        "${special}|" .                 # today, tomorrow
-        "${special}\\s+${wf}|" .        # today week
-                                        #   British: same as 1 week from today
+         "${special}",                    # today, tomorrow
+         "${special}\\s+${wf}",           # today week
+                                          #   British: same as 1 week from today
 
-        "${nth}|" .                     # nth
+         "${nth}",                        # nth
 
-        "${wf}";                        # monday week
-                                        #   British: same as 'in 1 week on monday'
+         "${wf}",                         # monday week
+                                          #   British: same as 'in 1 week on monday'
+        );
+      my $daterx = join('|',@daterx);
 
       $daterx = qr/^\s*(?:$daterx)\s*$/i;
       $$dmb{'data'}{'rx'}{'other'}{$rx} = $daterx;
@@ -1735,6 +1814,57 @@ sub _parse_date_common {
 
       ($y,$m,$d) = $self->_def_date($y,$m,$d,$noupdate);
       return($y,$m,$d);
+   }
+
+   return ();
+}
+
+# Parse truncated dates
+sub _parse_date_truncated {
+   my($self,$string,$noupdate) = @_;
+   my $dmt = $$self{'tz'};
+   my $dmb = $$dmt{'base'};
+
+   my $daterx = (exists $$dmb{'data'}{'rx'}{'other'}{'truncated'} ?
+                 $$dmb{'data'}{'rx'}{'other'}{'truncated'} :
+                 $self->_other_rx('truncated'));
+
+   return ()  if (! $daterx);
+
+   # Since we want whitespace to be used as a separator, turn all
+   # whitespace into single spaces. This is necessary since the
+   # regexps do backreferences to make sure that separators are
+   # not mixed.
+   $string =~ s/\s+/ /g;
+
+   if ($string =~ $daterx) {
+      my($y,$mmm,$month) = @+{qw(y mmm month)};
+
+      my ($m,$d);
+      if ($mmm) {
+         $m = $$dmb{'data'}{'wordmatch'}{'month_abb'}{lc($mmm)};
+      } elsif ($month) {
+         $m = $$dmb{'data'}{'wordmatch'}{'month_name'}{lc($month)};
+      }
+
+      # Handle all of the mmmYYYY formats
+
+      if ($y  &&  $m) {
+
+         my $format_mmmyyyy = $dmb->_config('format_mmmyyyy');
+         if ($format_mmmyyyy eq 'first') {
+            $d=1;
+            $$self{'data'}{'default_time'} = [0,0,0];
+         } else {
+            $d=$dmb->days_in_month($y,$m);
+            $$self{'data'}{'default_time'} = [23,59,59];
+         }
+
+         $$self{'data'}{'def'}[0] = '';
+         $$self{'data'}{'def'}[1] = '';
+         $$self{'data'}{'def'}[2] = 1;
+         return($y,$m,$d);
+      }
    }
 
    return ();
@@ -2598,8 +2728,10 @@ BEGIN {
          } else {
             $err = 1;
          }
-         for (my $i=0; $i<=5; $i++) {
-            $def[$i] = 0  if ($def[$i]);
+         if ($$self{'data'}{'set'} != 2) {
+            for (my $i=0; $i<=5; $i++) {
+               $def[$i] = 0  if ($def[$i]);
+            }
          }
          $tz = $dmt->_now('tz',1)  if (! $new_tz);
 

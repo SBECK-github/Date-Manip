@@ -54,7 +54,7 @@ Dates can be parsed in practically any form in common usage:
 
 =back
 
-The Date::Manip::Date manual has a list of all valid formats.
+The L<Date::Manip::Date> manual has a list of all valid formats.
 
 =head1 PARSING AN AMOUNT OF TIME
 
@@ -116,7 +116,7 @@ and the approximate amount:
 
 =back
 
-The Date::Manip::Calc manual has information about these, and other types of
+The L<Date::Manip::Calc> manual has information about these, and other types of
 calculations.
 
 =head1 TO ADD AN AMOUNT OF TIME TO A DATE
@@ -147,7 +147,7 @@ use the following:
 
 If the delta is a business delta, it will do a business mode calculation.
 
-The Date::Manip::Calc manual has information about these, and other types of
+The L<Date::Manip::Calc> manual has information about these, and other types of
 calculations.
 
 =head1 COMPARE TWO DATES
@@ -213,8 +213,8 @@ about them as follows:
 
 =back
 
-The Date::Manip::Date manual contains all of the format codes that can
-be used to extract information from a date. The Date::Manip::Delta manual
+The L<Date::Manip::Date> manual contains all of the format codes that can
+be used to extract information from a date. The L<Date::Manip::Delta> manual
 contains the codes for a delta.
 
 =head1 WORKING WITH EPOCH
@@ -247,7 +247,7 @@ epoch, you can use the following:
    $date  = new Date::Manip::Date;
    $err   = $date->parse("epoch $secs");
 
-   $date now contains the date wanted (in the local time zone)
+C<$date> now contains the date wanted (in the local time zone)
 
 =item B<Functional>
 
@@ -302,7 +302,7 @@ recurrences), do the following:
 
 =back
 
-The Date::Manip::Recur manual contains information about recurring events.
+The L<Date::Manip::Recur> manual contains information about recurring events.
 
 =head1 WORKING WITH DATES IN ANOTHER LANGUAGE
 
@@ -324,7 +324,7 @@ are only working with a single language), do the following:
 
 =back
 
-The Date::Manip::Config manual has a list of all supported languages (in the
+The L<Date::Manip::Config> manual has a list of all supported languages (in the
 section on the Language config variable). The meaning of the DateFormat
 config variable is also included.
 
@@ -345,7 +345,7 @@ stuff every time you switch back and forth between languages.
    $date_fre = new Date::Manip::Date;
    $date_fre->config("Language","French","DateFormat","non-US");
 
-Use the $date_eng object to do English operations, the $date_fre object to
+Use the C<$date_eng> object to do English operations, the C<$date_fre> object to
 do French operations.
 
 =item B<Functional>
@@ -362,12 +362,12 @@ This is NOT recommended. Use the OO method instead.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

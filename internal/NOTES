@@ -75,11 +75,9 @@ CURR_YEAR is the current year.
    ./internal/tzdata -z           : to create the main Zone module
                                     *** see NOTE 2 below ***
 
-Before cleaning up the tzdata directory, run the following to double
-check every timezone in zoneinfo against the Date::Manip version:
+Run the following to double check every timezone in zoneinfo against the
+Date::Manip version:
 
-   * create a new Makefile.PL
-   make install
    ./internal/dumps
 
 Run the two tzdata tests:
@@ -89,8 +87,6 @@ Run the two tzdata tests:
 Then clean up:
 
    ./internal/tzdata -c
-
-*** Make sure that the date command did not get installed.
 
 
 NOTE 1: although the tzdata script runs on my computer, it is quite possible

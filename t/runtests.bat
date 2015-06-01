@@ -69,6 +69,9 @@ perl -I../lib date.parse.iso.t 1
 perl -I../lib date.parse.italian.t 1
 perl -I../lib date.parse.misc.0.t 1
 perl -I../lib date.parse.misc.1.t 1
+perl -I../lib date.parse.mmmyyyy.first.t 1
+perl -I../lib date.parse.mmmyyyy.last.t 1
+perl -I../lib date.parse.mmmyyyy.t 1
 perl -I../lib date.parse.period.t 1
 perl -I../lib date.parse.polish.t 1
 perl -I../lib date.parse.portuguese.t 1
@@ -84,6 +87,9 @@ perl -I../lib date.parse_date.common.t 1
 perl -I../lib date.parse_date.iso.t 1
 perl -I../lib date.parse_date.misc.0.t 1
 perl -I../lib date.parse_date.misc.1.t 1
+perl -I../lib date.parse_date.mmmyyyy.first.t 1
+perl -I../lib date.parse_date.mmmyyyy.last.t 1
+perl -I../lib date.parse_date.mmmyyyy.t 1
 perl -I../lib date.parse_format.0.t 1
 perl -I../lib date.parse_format.1.t 1
 perl -I../lib date.parse_time.t 1

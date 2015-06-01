@@ -31,7 +31,41 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.51  (planned 2015-09-01)
 
-=head1 VERSION 6.50  (planned 2015-06-01)
+=head1 VERSION 6.50  2015-06-01
+
+=over 4
+
+=item Bug fixes
+
+Not really a bug, but 6.49 got a bunch of NYTprof data bundled with it
+by mistake.  It's been removed.  RT 103252
+
+Fixed a bug where information about whether a date was complete or
+truncated was discarded.  Jim Avera
+
+Fixed a bug where SetDate with a zone alias failed.
+
+Added the Format_MMMYYYY config variable to allow the truncated format
+mmmYYYY to be parsed instead of mmmDDYY.  David W. Morganwalp and RT 103142
+
+Fixed Makefile.PL/Build.PL to correct for a change on perl on windows
+which changes a module prereq requirement.  Alexandr Ciornii
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2015d)
+
+Added aliases for older HP-UX time zones.  RT 104141
+
+=item Documentation fixes
+
+Fixed URL for tzdata.  Mohammad S Anwar
+
+Better POD formats.
+
+Fixed a documentation error.  RT 103966
+
+=back
 
 =head1 VERSION 6.49  2015-03-01
 
@@ -1248,12 +1282,12 @@ This is implemented in Date::Manip::Base::day_of_year method.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>       - main module documentation
 
 =head1 LICENSE
 

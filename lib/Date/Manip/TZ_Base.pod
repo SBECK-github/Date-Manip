@@ -13,8 +13,13 @@ Date::Manip::TZ_Base - Methods common to the TZ and Base classes
 The Date::Manip::TZ_Base class is a second base class used for the
 following Date::Manip classes:
 
-   Date::Manip::Base
-   Date::Manip::TZ
+=over 4
+
+=item L<Date::Manip::Base>
+
+=item L<Date::Manip::TZ>
+
+=back
 
 This module is not intended to be called directly and performs no
 useful function by itself. Instead, use the various derived classes
@@ -23,10 +28,10 @@ which inherit from it.
 =head1 DESCRIPTION
 
 This module contains no public methods and is used internally by
-the Base and TZ classes. In some instances, if the two classes
-were completely separate, a Date::Manip::Base object would depend
-on a Date::Manip::TZ object creating a circular reference which I
-wish to avoid.
+the Base and TZ classes. In some instances, basic date operations
+depend on timezone information, and all timezone operations depend
+on the base class.  In order to avoid a circular dependancy, I created
+this class which allowed me to avoid that.
 
 =head1 KNOWN BUGS
 
@@ -34,12 +39,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>       - main module documentation
 
 =head1 LICENSE
 

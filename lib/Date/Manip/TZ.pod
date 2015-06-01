@@ -79,7 +79,7 @@ or 0 if it is a standard time.
 Date::Manip includes all of the data for all of the time zones from
 the zoneinfo database. This data is available from:
 
-   ftp://ftp.iana.org/tz/
+L<ftp://ftp.iana.org/tz/>
 
 Additional data from other standards are also used.
 
@@ -89,7 +89,7 @@ series of other modules which are used to handle each time zone.
 In that way, Date::Manip has no dependency on any other source
 of data.
 
-The Date::Manip::Zones document contains detailed information
+The L<Date::Manip::Zones> document contains detailed information
 on the data available.
 
 =head1 METHODS
@@ -149,8 +149,8 @@ It defaults to "std" if it is not present. When determining a time zone,
 it is usually necessary to check a number of different time zone and
 DST combinations.
 
-If $dstflag is "std", it will check both standard and daylight saving
-times, but will give preference to standard times. If $dstflag is
+If C<$dstflag> is "std", it will check both standard and daylight saving
+times, but will give preference to standard times. If C<$dstflag> is
 "stdonly", only standard times will be checked.
 
 The "dst" flag will search both, but give preference to daylight saving
@@ -181,25 +181,25 @@ items:
    [ $dateUT, $dateLT, $offsetstr, $offset, $abbrev, $isdst,
      $endUT, $endLT, $begUTs, $begLTs, $endUTs, $endLTs ]
 
-$dateUT and $dateLT are the starting date of the period (i.e. the
+C<$dateUT> and C<$dateLT> are the starting date of the period (i.e. the
 first second in a period) in universal (GMT) time and local
-(wallclock) time. $endUT and $endLT are the end date of the period
+(wallclock) time. C<$endUT> and C<$endLT> are the end date of the period
 (i.e. the last second in a period) in universal and local time.
 These are all stored as list references.
 
-$offsetstr is the string representation of the offset ("+05:00:00")
-and $offset is the corresponding list reference form ([5,0,0]).
+C<$offsetstr> is the string representation of the offset ("+05:00:00")
+and C<$offset> is the corresponding list reference form ([5,0,0]).
 
-$abbrev is the abbreviation that applies during this period, and $isdst
+C<$abbrev> is the abbreviation that applies during this period, and C<$isdst>
 is 0 or 1 if it is standard or daylight saving time.
 
 When accessing the elements in a period, use ONLY positive indices.
-In other words, to get $endUT, access it as $$period[6], NOT as
-$$period[-2], since I am considering adding more information to the
+In other words, to get C<$endUT>, access it as C<$$period[6]>, NOT as
+C<$$period[-2]>, since I am considering adding more information to the
 period description that may speed up performance.
 
-$begUTs is the string representation (YYYYMMDDHH:MN:SS) of $begUT.
-Similar for $begLTs, $endUTs, and $endLTs.
+C<$begUTs> is the string representation (YYYYMMDDHH:MN:SS) of C<$begUT>.
+Similar for C<$begLTs>, C<$endUTs>, and C<$endLTs>.
 
 =back
 
@@ -217,7 +217,7 @@ The following methods are available:
 
 =item B<new_config>
 
-Please refer to the Date::Manip::Obj documentation for these methods.
+Please refer to the L<Date::Manip::Obj> documentation for these methods.
 
 =item B<all_periods>
 
@@ -241,22 +241,22 @@ These functions convert a date from one time zone to another.
    ($err,$date,$offset,$isdst,$abbrev) =
       $tz->convert($date,$from,$to [,$isdst]);
 
-This converts a date in the time zone given by $from to the time zone
-given by $to.
+This converts a date in the time zone given by C<$from> to the time zone
+given by C<$to>.
 
    ($err,$date,$offset,$isdst,$abbrev) =
       $tz->convert_to_gmt($date [,$from] [,$isdst]);
 
-This converts a date to GMT. If $from is given, it is the current
-time zone of the date. If $from is omitted, it defaults to the local
+This converts a date to GMT. If C<$from> is given, it is the current
+time zone of the date. If C<$from> is omitted, it defaults to the local
 time zone.
 
-The value of $isdst returned is always 0.
+The value of C<$isdst> returned is always 0.
 
    ($err,$date,$offset,$isdst,$abbrev) =
       $tz->convert_from_gmt($date [,$to]);
 
-This converts a date from GMT to another time zone. If $to is given,
+This converts a date from GMT to another time zone. If C<$to> is given,
 the date is converted to that time zone. Otherwise, it is converted
 to the local time zone.
 
@@ -265,18 +265,18 @@ to the local time zone.
    ($err,$date,$offset,$isdst,$abbrev) =
       $tz->convert_from_local($date [,$to] [,$isdst]);
 
-Similar to the convert_to_gmt and convert_from_gmt functions. If $from
-or $to are omitted, they default to GMT.
+Similar to the B<convert_to_gmt> and B<convert_from_gmt> functions. If C<$from>
+or C<$to> are omitted, they default to GMT.
 
-If there is any ambiguity about whether $date is in DST or not (i.e.
+If there is any ambiguity about whether C<$date> is in DST or not (i.e.
 if it is a date that is repeated during a time change due to the clock
-being moved back), the $isdst option can be passed in as an argument
+being moved back), the C<$isdst> option can be passed in as an argument
 (it should be 0 or 1) to say which time to use. It is ignored in all
-cases where $date can be determined without that information.
+cases where C<$date> can be determined without that information.
 
-The $isdst value passed back is 1 if the converted date is in DST. The $offset
-value passed back is a list reference containing the offset from GMT. $abbrev passed
-back is the time zone abbreviation.
+The C<$isdst> value passed back is 1 if the converted date is in DST. The
+C<$offset> value passed back is a list reference containing the offset from
+GMT. C<$abbrev> passed back is the time zone abbreviation.
 
 Error codes are:
 
@@ -291,8 +291,8 @@ Error codes are:
    $tz->curr_zone();
 
 This returns the system time zone. The system time zone is determined
-using the methods described below in the DETERMINING THE SYSTEM
-TIME ZONE section.
+using the methods described below in the
+L</"DETERMINING THE SYSTEM TIME ZONE"> section.
 
 This is the time zone that is used by default unless the SetDate
 or ForceDate config variable is set to a different zone.
@@ -311,7 +311,7 @@ used to change how the time zone is determined.
 
 This sets the list and order of methods to use in determining the
 local time zone. The various methods available are listed below in
-the section DETERMINING THE SYSTEM TIME ZONE.
+the section L</"DETERMINING THE SYSTEM TIME ZONE">.
 
 Some methods may require one or more arguments. For example, the
 method named "mainvar" takes an option that is the name of a

@@ -32,12 +32,13 @@ internal/NOTES
 internal/TODO
 internal/translate
 internal/tzdata
+internal/tztab
 internal/unicode
 internal/windows.compare
 lib/Date/Manip.pm
 lib/Date/Manip.pod
+lib/Date/Manip/.TZ.pm.swp
 lib/Date/Manip/Base.pm
-lib/Date/Manip/Base.pm.orig
 lib/Date/Manip/Base.pod
 lib/Date/Manip/Calc.pod
 lib/Date/Manip/Changes5.pod
@@ -523,13 +524,6 @@ lib/Date/Manip/Offset/off424.pm
 lib/Date/Manip/Offset/off425.pm
 lib/Date/Manip/Offset/off426.pm
 lib/Date/Manip/Offset/off427.pm
-lib/Date/Manip/Offset/off428.pm
-lib/Date/Manip/Offset/off429.pm
-lib/Date/Manip/Offset/off430.pm
-lib/Date/Manip/Offset/off431.pm
-lib/Date/Manip/Offset/off432.pm
-lib/Date/Manip/Offset/off433.pm
-lib/Date/Manip/Offset/off434.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -556,7 +550,6 @@ lib/Date/Manip/TZ/aftuni00.pm
 lib/Date/Manip/TZ/afwind00.pm
 lib/Date/Manip/TZ/amadak00.pm
 lib/Date/Manip/TZ/amanch00.pm
-lib/Date/Manip/TZ/amanti00.pm
 lib/Date/Manip/TZ/amarag00.pm
 lib/Date/Manip/TZ/amasun00.pm
 lib/Date/Manip/TZ/amatik00.pm
@@ -577,7 +570,6 @@ lib/Date/Manip/TZ/amcanc00.pm
 lib/Date/Manip/TZ/amcara00.pm
 lib/Date/Manip/TZ/amcata00.pm
 lib/Date/Manip/TZ/amcaye00.pm
-lib/Date/Manip/TZ/amcaym00.pm
 lib/Date/Manip/TZ/amcent00.pm
 lib/Date/Manip/TZ/amchic00.pm
 lib/Date/Manip/TZ/amchih00.pm
@@ -634,7 +626,6 @@ lib/Date/Manip/TZ/ammonc00.pm
 lib/Date/Manip/TZ/ammont00.pm
 lib/Date/Manip/TZ/ammont01.pm
 lib/Date/Manip/TZ/ammont02.pm
-lib/Date/Manip/TZ/ammont03.pm
 lib/Date/Manip/TZ/amnass00.pm
 lib/Date/Manip/TZ/amnew_00.pm
 lib/Date/Manip/TZ/amnew_01.pm
@@ -904,7 +895,6 @@ lib/Date/Manip/TZ/pakosr00.pm
 lib/Date/Manip/TZ/pakwaj00.pm
 lib/Date/Manip/TZ/pamaju00.pm
 lib/Date/Manip/TZ/pamarq00.pm
-lib/Date/Manip/TZ/pamidw00.pm
 lib/Date/Manip/TZ/panaur00.pm
 lib/Date/Manip/TZ/paniue00.pm
 lib/Date/Manip/TZ/panorf00.pm
@@ -915,7 +905,6 @@ lib/Date/Manip/TZ/papitc00.pm
 lib/Date/Manip/TZ/papohn00.pm
 lib/Date/Manip/TZ/paport00.pm
 lib/Date/Manip/TZ/pararo00.pm
-lib/Date/Manip/TZ/pasaip00.pm
 lib/Date/Manip/TZ/patahi00.pm
 lib/Date/Manip/TZ/patara00.pm
 lib/Date/Manip/TZ/patong00.pm
@@ -1018,6 +1007,9 @@ t/date.parse.iso.t
 t/date.parse.italian.t
 t/date.parse.misc.0.t
 t/date.parse.misc.1.t
+t/date.parse.mmmyyyy.first.t
+t/date.parse.mmmyyyy.last.t
+t/date.parse.mmmyyyy.t
 t/date.parse.period.t
 t/date.parse.polish.t
 t/date.parse.portuguese.t
@@ -1033,6 +1025,9 @@ t/date.parse_date.common.t
 t/date.parse_date.iso.t
 t/date.parse_date.misc.0.t
 t/date.parse_date.misc.1.t
+t/date.parse_date.mmmyyyy.first.t
+t/date.parse_date.mmmyyyy.last.t
+t/date.parse_date.mmmyyyy.t
 t/date.parse_format.0.t
 t/date.parse_format.1.t
 t/date.parse_time.t

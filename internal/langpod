@@ -26,10 +26,6 @@ $VERSION='6.31';
 our $langdir  = 'lib/Date/Manip/Lang';
 our $curry    = ( localtime(time) )[5] + 1900;
 
-# so the CPAN indexer won't treat this as a POD file
-our $podstr = '=pod';
-our $hdstr  = '=head1';
-
 ###############################################################################
 # HELP
 ###############################################################################
@@ -164,6 +160,9 @@ sub write_pod {
       $words{'sepfr'} = $undef;
    }
 
+   # Try to hide pod so it doesn't get indexed
+   my $e = '=';
+
    print $out <<"EOF";
 # Copyright (c) $year0-$curry Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
@@ -172,30 +171,30 @@ sub write_pod {
 ########################################################################
 ########################################################################
 
-$podstr
+${e}pod
 
-=encoding utf-8
+${e}encoding utf-8
 
-$hdstr NAME
+${e}head1 NAME
 
 Date::Manip::Lang::${mod} - ${name} language support.
 
-$hdstr SYNOPSIS
+${e}head1 SYNOPSIS
 
 This module contains a list of words and expressions supporting
 the language. It is not intended to be used directly (other
 Date::Manip modules will load it as needed).
 
-$hdstr LANGUAGE EXPRESSIONS
+${e}head1 LANGUAGE EXPRESSIONS
 
 The following is a list of all language words and expressions used
 to write times and/or dates.
 
 All strings are case insensitive.
 
-=over 4
+${e}over 4
 
-=item B<Month names and abbreviations>
+${e}item B<Month names and abbreviations>
 
 When writing out the name of the month, several different variations may
 exist including full names and abbreviations.
@@ -230,7 +229,7 @@ $words{month_abb}[9]
 $words{month_abb}[10]
 $words{month_abb}[11]
 
-=item B<Day names and abbreviations>
+${e}item B<Day names and abbreviations>
 
 When writing out the name of the day, several different variations may
 exist including full names and abbreviations.
@@ -265,7 +264,7 @@ $words{day_char}[4]
 $words{day_char}[5]
 $words{day_char}[6]
 
-=item B<Delta field names>
+${e}item B<Delta field names>
 
 These are the names (and abbreviations) for the fields in a delta.  There are
 7 fields: years, months, weeks, days, hours, minutes, seconds.
@@ -280,7 +279,7 @@ $words{fields}[4]
 $words{fields}[5]
 $words{fields}[6]
 
-=item B<Morning/afternoon times>
+${e}item B<Morning/afternoon times>
 
 This is a list of expressions use to designate morning or afternoon time
 when a time is entered as a 12-hour time rather than a 24-hour time.
@@ -292,7 +291,7 @@ words:
 $words{ampm}[0]
 $words{ampm}[1]
 
-=item B<Each or every>
+${e}item B<Each or every>
 
 There are a list of words that specify every occurence of something.  These
 are used in the following phrases:
@@ -305,7 +304,7 @@ The following words may be used:
 
 $words{each}
 
-=item B<Next/Previous/Last occurence>
+${e}item B<Next/Previous/Last occurence>
 
 There are a list of words that may be used to specify the next,
 previous, or last occurence of something.  These words could be used
@@ -332,7 +331,7 @@ Last occurence:
 
 $words{last}
 
-=item B<Delta words for going forward/backward in time>
+${e}item B<Delta words for going forward/backward in time>
 
 When parsing deltas, there are words that may be used to specify
 the the delta will refer to a time in the future or to a time in
@@ -348,7 +347,7 @@ dates in the past or future respectively:
 $words{when}[0]
 $words{when}[1]
 
-=item B<Business mode>
+${e}item B<Business mode>
 
 This contains two lists of words which can be used to specify a standard
 (i.e. non-business) delta or a business delta.
@@ -364,7 +363,7 @@ The following words may be used to specify a business delta:
 
 $words{mode}[1]
 
-=item B<Numbers>
+${e}item B<Numbers>
 
 Numbers may be spelled out in a variety of ways.  The following sets correspond
 to the numbers from 1 to 53:
@@ -428,7 +427,7 @@ $words{nth}[50]
 $words{nth}[51]
 $words{nth}[52]
 
-=item B<Ignored words>
+${e}item B<Ignored words>
 
 In writing out dates in common forms, there are a number of words
 that are typically not important.
@@ -462,7 +461,7 @@ The following words may be used:
 
 $words{on}
 
-=item B<Words that set the date, time, or both>
+${e}item B<Words that set the date, time, or both>
 
 There are some words that can be used to specify a date, a
 time, or both relative to now.
@@ -493,7 +492,7 @@ The following words may be used:
 
 $words{offset_time}
 
-=item B<Hour/Minute/Second separators>
+${e}item B<Hour/Minute/Second separators>
 
 When specifying the time of day, the most common separator is a colon (:)
 which can be used for both separators.
@@ -515,7 +514,7 @@ additional pairs, they are listed here:
 
 $words{seps}
 
-=item B<Fractional second separator>
+${e}item B<Fractional second separator>
 
 When specifying fractional seconds, the most common way is to use a
 decimal point (.).  Some languages may specify a different separator
@@ -526,31 +525,31 @@ another separator, it is listed here:
 
 $words{sepfr}
 
-=back
+${e}back
 
-$hdstr KNOWN BUGS
+${e}head1 KNOWN BUGS
 
 None known.
 
-$hdstr BUGS AND QUESTIONS
+${e}head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
-$hdstr SEE ALSO
+${e}head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>       - main module documentation
 
-$hdstr LICENSE
+${e}head1 LICENSE
 
 This script is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
-$hdstr AUTHOR
+${e}head1 AUTHOR
 
 Sullivan Beck (sbeck\@cpan.org)
 
-=cut
+${e}cut
 EOF
 
    $out->close();

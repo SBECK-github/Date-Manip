@@ -6,13 +6,13 @@ Date::Manip::Offset::off208;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Feb 18 18:24:53 GMT 2015
-#    Data version: tzdata2015a
-#    Code version: tzcode2015a
+#    Generated on: Tue May  5 07:44:12 EDT 2015
+#    Data version: tzdata2015d
+#    Code version: tzcode2015d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://ftp.iana.orgtz
+#    ftp://ftp.iana.org/tz
 
 use strict;
 use warnings;
@@ -28,11 +28,38 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+11:56:52';
+$Offset        = '+12:00:00';
 
 %Offset        = (
    0 => [
+      'pacific/wake',
       'pacific/funafuti',
+      'pacific/tarawa',
+      'pacific/wallis',
+      'pacific/fiji',
+      'asia/anadyr',
+      'asia/kamchatka',
+      'pacific/auckland',
+      'pacific/majuro',
+      'pacific/nauru',
+      'pacific/kwajalein',
+      'asia/magadan',
+      'etc/gmt+12',
+      'y',
+      'pacific/kosrae',
+      'asia/ust-nera',
+      'asia/srednekolymsk',
+      ],
+   1 => [
+      'asia/magadan',
+      'asia/anadyr',
+      'asia/kamchatka',
+      'pacific/noumea',
+      'asia/sakhalin',
+      'pacific/efate',
+      'pacific/auckland',
+      'asia/ust-nera',
+      'asia/srednekolymsk',
       ],
 );
 

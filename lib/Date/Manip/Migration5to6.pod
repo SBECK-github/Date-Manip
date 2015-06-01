@@ -13,7 +13,7 @@ Date::Manip::Migration5to6 - how to upgrade from 5.xx to 6.00
 When upgrading from Date::Manip 5.xx to 6.00, a few changes may be
 necessary to your scripts.
 
-The Date::Manip::Changes5to6 document lists in more detail the ways in
+The L<Date::Manip::Changes5to6> document lists in more detail the ways in
 which Date::Manip changed, but very few of these actually entail
 changes to your script.
 
@@ -51,20 +51,20 @@ The Date_ConvTZ function has changed. It should now take 3 arguments:
 
    $date = Date_ConvTZ($date,$from,$to);
 
-If $from is not given, it defaults to the local time zone. If $to is
+If C<$from> is not given, it defaults to the local time zone. If C<$to> is
 not given, it defaults to the local time zone.
 
-The date is converted from the $from time zone into the $to
+The date is converted from the C<$from> time zone into the C<$to>
 time zone. Both should be any time zone (or alias) supported by
 Date::Manip.
 
-The old $errlevel argument is no longer handled.
+The old C<$errlevel> argument is no longer handled.
 
 =item B<ConvTZ and TZ config variables>
 
 If you use either the ConvTZ or TZ config variables, you should
 replace them with either SetDate or ForceDate. See the
-Date::Manip::Config document for information.
+L<Date::Manip::Config> document for information.
 
 The TZ variable will continue to work until Dec 2015 at which point
 it will be removed.
@@ -74,7 +74,7 @@ it will be removed.
 The following config variables have been deprecated, but will continue
 to function (though they will be removed at a future date):
 
-   TZ           (removed Dec 2015)
+   TZ           (removed Mar 2016)
 
 The following variables have been removed. If you use any of them,
 you may need to modify your scripts:
@@ -113,8 +113,8 @@ This information is no longer accurate. Using Memoize in conjunction
 with Date::Manip should have little impact on performance, and may
 lead to incorrect results, especially if you change config variables.
 
-Please see the Date::Manip::Changes5to6 (GENERAL CHANGES) document
-for more information.
+Please refer to L<Date::Manip::Changes5to6/"GENERAL CHANGES"> for
+more information.
 
 =back
 
@@ -124,12 +124,12 @@ document.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

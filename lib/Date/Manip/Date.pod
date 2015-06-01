@@ -1057,7 +1057,7 @@ The following date formats are supported:
    YYYY/mmm/D          2009/Mar/5
 
    mmmD                Mar5
-   mmmDDYY             Mar0509
+   mmmDDYY     4       Mar0509
    mmmDDYYYY           Mar052009
    Dmmm                5Mar
    DmmmYY              5Mar09
@@ -1086,13 +1086,19 @@ The following date formats are supported:
 
    YYYY:MM:DD          2010:01:15 (EXIF format)
 
+   mmmYYYY     4       Jun 2010
+   YYYYmmm     4       2010 June
+   mmm/YYYY    4       Jun/2010
+   YYYY/mmm    4       2010/Jun
+
 In the formats above, the slash (/) can be replace by any of the valid
 separators: whitespace, slash (/), period (.), or dash (-). The dash,
 though allowed, is discouraged since it may conflict with an ISO 8601
 format.  For example, the format MM/DD/YY is just fine, but MM-DD-YY
 does not work since it conflicts with YY-MM-DD.  To be safe, if "-" is
 used as a separator in a non-ISO format, they should be turned into
-"/" before calling the Date::Manip routines.
+"/" before calling the Date::Manip routines or you should use the 'noiso8601'
+option with the B<parse> or B<parse_date> methods.
 
 No matter what separator is used, the same separator must be used
 throughout the date. For example, MM/DD/YY is valid and MM.DD.YY is
@@ -1110,6 +1116,28 @@ Notes:
 
 3  The M/D format should not use the period (.) separator as that will
    incorrectly match the HH,H+ time format.
+
+4  Historically, I have not supported partial dates (i.e. dates that
+   were not fully specified), but it has been argued that something like
+   'Jun 1910' would be interpreted by almost everyone as a day in June
+   of 1910 instead of June 19, 2010.  And it has been shown that in
+   some applications, dates are specified in that way.  I have added the
+   new config variable Format_MMMYYYY which will change this.  If this
+   variable is not set, the formats allowed are:
+
+      mmmDDYY
+
+   If it is set, the formats allowed are:
+
+      mmmYYYY
+      YYYYmmm
+
+   The day of week may not be included with these formats.  When
+   parsing a full date/time, if Format_MMMYYYY is set to 'first',
+   it returns the 1st of the month at midnight.  If it is set to
+   'last', it returns the last day at 23:59:59.  If parsing only
+   only a date, it will be set to the first or last day of the
+   month at midnight.
 
 These formats explicitly set the date, but not the time. The default
 time is determined by the DefaultTime config variable.

@@ -22,10 +22,9 @@ modules for each time zone. The module is included in the distribution
 solely for the sake of completeness. Currently, no support is offered
 for this module, and it can (and may) change without notice.
 
-This module consists of routines for working with the tzdata files
-obtained from ftp://ftp.iana.org/tz/ . These files are updated
-several times a year and are the basis for time zone descriptions for
-most computer systems.
+This module consists of routines for working with the tzdata files.
+These files are updated several times a year and are the basis for
+time zone descriptions for most computer systems.
 
 =head1 ROUTINES
 
@@ -37,7 +36,7 @@ most computer systems.
 
    $tzd  = new Date::Manip::TZdata($dir);
 
-This finds and reads in all the tzdata. If $dir is passed in, it
+This finds and reads in all the tzdata. If C<$dir> is passed in, it
 is the directory where a tzdata directory is located. It defaults to
 the current directory.
 
@@ -68,7 +67,7 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip man page for information on submitting
+Please refer to the L<Date::Manip> man page for information on submitting
 bug reports or questions to the author.
 
 =head1 AUTHOR

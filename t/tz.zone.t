@@ -132,11 +132,17 @@ stdonly
 
 [ 2001 01 01 00 00 00 ] -12:00:00 dstonly =>
 
-[ 2001 01 01 00 00 00 ] -14:17:00         =>
+[ 1980 01 01 00 00 00 ] +07:30:00         => Asia/Kuala_Lumpur Asia/Singapore
 
-[ 1800 01 01 00 00 00 ] -14:17:00 MPT     =>
+[ 1980 01 01 00 00 00 ] +07:30:00 MALT    => Asia/Kuala_Lumpur
 
-[ 1910 01 01 00 00 00 ] 09:00:00  MPT     => Pacific/Saipan
+#
+# HPUX zones
+#
+
+BRST3BRDT                                 => America/Sao_Paulo
+
+'EST5EDT#Canada'                          => America/Toronto
 
 ";
 

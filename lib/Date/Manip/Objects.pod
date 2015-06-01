@@ -20,93 +20,94 @@ Date::Manip consists of the following primary modules:
 
 =over 4
 
-=item B<Date::Manip::Obj>
+=item L<Date::Manip::Obj>
 
-The Date::Manip::Obj module is not intended for direct use. It is used
+The L<Date::Manip::Obj> module is not intended for direct use. It is used
 as a base class for all other Date::Manip classes described below.
 
-The Date::Manip::Obj module contains some functions which are
+The L<Date::Manip::Obj> module contains some functions which are
 inherited by all these classes, so to understand all of the methods
 available to any of the classes below, you must include those
-documented in the Date::Manip::Obj class.
+documented in the L<Date::Manip::Obj> class.
 
-=item B<Date::Manip::Base>
+=item L<Date::Manip::Base>
 
-The Date::Manip::Base is used to perform basic operations including
+The L<Date::Manip::Base> is used to perform basic operations including
 basic date operations, management of configuration options, handling
 the definitions used in different languages, etc.
 
-A Date::Manip::Base object does not, of itself, contain any date
+A L<Date::Manip::Base> object does not, of itself, contain any date
 information. Instead, it contains configuration information which
 determines how the Date::Manip package performs date operations.  The
-configuration information is documented in the Date::Manip::Config
+configuration information is documented in the L<Date::Manip::Config>
 document.
 
-The Date::Manip::Base object has one other property that is very
+The L<Date::Manip::Base> object has one other property that is very
 important. When performing basic date operations, some intermediate
 results are cached in the object which leads to significant
 performance increases in later operations. As such, it is important to
 reuse the object as much as possible, rather than creating new
-Date::Manip::Base objects all the time.
+L<Date::Manip::Base> objects all the time.
 
 Much of the information in this document is related to this issue, and
 tells how to create various higher-level objects in order to get the
 most efficient reuse of this cached data.
 
-Because all other objects depend on a Date::Manip::Base object, a
-Date::Manip::Base object is embedded in all other objects, and the
+Because all other objects depend on a L<Date::Manip::Base> object, a
+L<Date::Manip::Base> object is embedded in all other objects, and the
 same Base object can be shared by any number of objects to achieve
 maximum performance.
 
-=item B<Date::Manip::TZ>
+=item L<Date::Manip::TZ>
 
-The Date::Manip::TZ module adds support for time zones. It is used to
+The L<Date::Manip::TZ> module adds support for time zones. It is used to
 verify date and time zone information, convert dates from one time
 zone to another, and handle all daylight saving time transitions.
 
-Similar to the Date::Manip::Base object, a great deal of information
-is cached in the Date::Manip::TZ object. This includes lists of all
+Similar to the L<Date::Manip::Base> object, a great deal of information
+is cached in the L<Date::Manip::TZ> object. This includes lists of all
 time zones, offsets, and abbreviations for all time zones. It also
 includes more a more detailed description of every time zone that has
 actually been worked used.
 
-A Date::Manip::TZ object relies on a Date::Manip::Base object (and a
-Date::Manip::Base object is always embedded in a Date::Manip::TZ
+A L<Date::Manip::TZ> object relies on a L<Date::Manip::Base> object (and a
+L<Date::Manip::Base> object is always embedded in a L<Date::Manip::TZ>
 object).  All higher level objects (those listed next) depend on both
-a Date::Manip::Base and Date::Manip::TZ object, so a Date::Manip::TZ
+a L<Date::Manip::Base> and L<Date::Manip::TZ> object, so a L<Date::Manip::TZ>
 object is embedded in them.
 
 In order to achieve maximum performance, and minimize memory usage,
-a Date::Manip::TZ object can be shared by any number of higher
-level objects, and in fact, it is desirable to reuse the same Date::Manip::TZ
+a L<Date::Manip::TZ> object can be shared by any number of higher
+level objects, and in fact, it is desirable to reuse the same L<Date::Manip::TZ>
 object as often as possible.
 
-=item B<Date::Manip::Date>
+=item L<Date::Manip::Date>
 
-=item B<Date::Manip::Delta>
+=item L<Date::Manip::Delta>
 
-=item B<Date::Manip::Recur>
+=item L<Date::Manip::Recur>
 
 These are the primary modules which are used to perform all high level
 date operations.
 
-The Date::Manip::Date class performs operations on dates (which includes
-a date, time, and time zone). The Date::Manip::Delta class performs
-operations with deltas (amounts of time). The Date::Manip::Recur class
+The L<Date::Manip::Date> class performs operations on dates (which includes
+a date, time, and time zone). The L<Date::Manip::Delta> class performs
+operations with deltas (amounts of time). The L<Date::Manip::Recur> class
 performs operations on recurring events.
 
 As mentioned above, each of these high level classes rely on both a
-Date::Manip::TZ object and a Date::Manip::Base object, so a Date::Manip::TZ
-object is embedded in each one (and the Date::Manip::TZ object has a
-Date::Manip::Base object embedded in it).
+L<Date::Manip::TZ> object and a L<Date::Manip::Base> object, so a
+L<Date::Manip::TZ> object is embedded in each one (and the
+L<Date::Manip::TZ> object has a L<Date::Manip::Base> object embedded in
+it).
 
-A Date::Manip::Date object contains a single date, so in order to
-work with multiple dates, multiple Date::Manip::Date objects will
+A L<Date::Manip::Date> object contains a single date, so in order to
+work with multiple dates, multiple L<Date::Manip::Date> objects will
 need to be created. In order to make the most effective use of cached
-information in the Date::Manip::Base object, the same Date::Manip::TZ
+information in the L<Date::Manip::Base> object, the same L<Date::Manip::TZ>
 object can be embedded in each of the higher level objects.
 
-The same goes for multiple Date::Manip::Delta and Date::Manip::Recur
+The same goes for multiple L<Date::Manip::Delta> and L<Date::Manip::Recur>
 objects.
 
 =back
@@ -135,7 +136,7 @@ optimize the use of cached data to get the best performance.
 
 If you do need to work with multiple different configurations (such as
 parsing dates from multiple languages), please refer to the next
-section WORKING WITH DATE::MANIP OBJECTS (MULTIPLE CONFIGURATIONS).
+section L</"WORKING WITH DATE::MANIP OBJECTS (MULTIPLE CONFIGURATION)">.
 
 =over 4
 
@@ -168,7 +169,7 @@ Additional high-level objects can be created using the calls:
    $delta = $date->new_delta();
    $recur = $date->new_recur();
 
-To access the embedded Date::Manip::TZ and Date::Manip::Base objects,
+To access the embedded L<Date::Manip::TZ> and L<Date::Manip::Base> objects,
 use the calls:
 
    $tz    = $date->tz();
@@ -182,21 +183,21 @@ of the calls:
    $tz    = new Date::Manip::TZ;
    $base  = new Date::Manip::Base;
 
-To get the base object embedded in a Date::Manip::TZ object, use:
+To get the base object embedded in a L<Date::Manip::TZ> object, use:
 
    $base  = $tz->base();
 
 =back
 
 For a more complete description of the methods used here, refer to the
-Date::Manip::Obj document.
+L<Date::Manip::Obj> document.
 
 =head1 WORKING WITH DATE::MANIP OBJECTS (MULTIPLE CONFIGURATION)
 
 Occasionally, it may be useful to have multiple sets of configurations.
-In order to do this, multiple Date::Manip::Base objects must be
+In order to do this, multiple L<Date::Manip::Base> objects must be
 created (each with their own set of configuration options), and then
-new Date::Manip objects are created with the appropriate Date::Manip::Base
+new Date::Manip objects are created with the appropriate L<Date::Manip::Base>
 object embedded in them.
 
 Possible reasons include:
@@ -205,9 +206,9 @@ Possible reasons include:
 
 =item B<Parsing multiple languages>
 
-A Date::Manip::Base object includes information about a single
+A L<Date::Manip::Base> object includes information about a single
 language. If you need to parse dates from two (or more) languages,
-a Date::Manip::Base object needs to be created for each one. This
+a L<Date::Manip::Base> object needs to be created for each one. This
 could be done as:
 
    $date_eng1 = new Date::Manip::Date;
@@ -222,10 +223,10 @@ Spanish.
 
 =item B<Business modes for different countries and/or businesses>
 
-If you are doing business mode calculations (see Date::Manip::Calc)
+If you are doing business mode calculations (see L<Date::Manip::Calc>)
 for two different businesses which have different holiday lists,
 work weeks, or business days, you can create different objects
-which read different config files (see Date::Manip::Config) with
+which read different config files (see L<Date::Manip::Config>) with
 the appropriate description of each.
 
 =back
@@ -240,24 +241,24 @@ example, refer to the following lines:
    $date3 = new Date::Manip::Date $date1;
    $date4 = new Date::Manip::Date $date2;
 
-The first line creates 3 objects: a Date::Manip::Base object, a
-Date::Manip::TZ object, and a Date::Manip::Date object). The
-Date::Manip::Base object has the configuration set to contain the
+The first line creates 3 objects: a L<Date::Manip::Base> object, a
+L<Date::Manip::TZ> object, and a L<Date::Manip::Date> object). The
+L<Date::Manip::Base> object has the configuration set to contain the
 value(s) passed in as the final list reference argument.
 
-The second line creates 3 new objects (a second Date::Manip::Base
-object, a second Date::Manip::TZ object, and a second
-Date::Manip::Date object). Since a list reference containing config
-variables is passed in, a new Date::Manip::Base object is created,
-rather than reusing the first one. The second Date::Manip::Base object
+The second line creates 3 new objects (a second L<Date::Manip::Base>
+object, a second L<Date::Manip::TZ> object, and a second
+L<Date::Manip::Date> object). Since a list reference containing config
+variables is passed in, a new L<Date::Manip::Base> object is created,
+rather than reusing the first one. The second L<Date::Manip::Base> object
 contains all the config from the first, as well as the config
 variables passed in in the list reference argument.
 
-The third line creates another Date::Manip::Date object which uses the
-first Date::Manip::Base and Date::Manip::TZ objects embedded in it.
+The third line creates another L<Date::Manip::Date> object which uses the
+first L<Date::Manip::Base> and L<Date::Manip::TZ> objects embedded in it.
 
-The fourth line creates another Date::Manip::Date object which uses
-the second Date::Manip::Base and Date::Manip::TZ objects embedded in
+The fourth line creates another L<Date::Manip::Date> object which uses
+the second L<Date::Manip::Base> and L<Date::Manip::TZ> objects embedded in
 it.
 
 Most of the time there will only be one set of configuration options
@@ -280,10 +281,10 @@ better performance. For example:
    $date2 = new Date::Manip::Date $date1;
 
 This is important for two reasons. First is memory usage. The
-Date::Manip::Base object is quite large. It stores a large number of
+L<Date::Manip::Base> object is quite large. It stores a large number of
 precompile regular expressions for language parsing, and as date
 operations are done, intermediate results are cached which can be
-reused later to improve performance. The Date::Manip::TZ object is
+reused later to improve performance. The L<Date::Manip::TZ> object is
 even larger and contains information about all known time zones indexed
 several different ways (by offset, by abbreviation, etc.). As
 time zones are actually used, a description of all of the time change
@@ -291,10 +292,10 @@ rules are loaded and added to this object.
 
 Since these objects are so large, it is important to reuse them, rather
 than to create lots of copies of them. It should be noted that because
-these objects are embedded in each of the high level object (Date::Manip::Date
+these objects are embedded in each of the high level object (L<Date::Manip::Date>
 for example), it makes these objects appear quite large.
 
-The second reason to reuse Date::Manip::Base objects is
+The second reason to reuse L<Date::Manip::Base> objects is
 performance. Since intermediate results are cached there, many date
 operations only need to be done once and then they can be reused any
 number of times. In essence, this is doing the same function as the
@@ -338,12 +339,12 @@ configuration alone, performance will be optimized.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 
