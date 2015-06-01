@@ -1,5 +1,7 @@
 ---
-winrequires:
-  - 'Win32::TieRegistry'
+condrequires:
+  'Win32::TieRegistry':
+    - [ '$IsWin32  &&  $Pvers >= 5.020',  '0.28' ]
+    - [ '$IsWin32',                       '0' ]
 pvers: 5.006
 git: 1

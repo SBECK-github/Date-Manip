@@ -94,6 +94,7 @@ sub Date_Init {
       }
    }
    $date->config(@args2);
+   return $date->err();
 }
 
 sub ParseDateString {

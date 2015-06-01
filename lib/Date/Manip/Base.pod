@@ -40,7 +40,7 @@ and dates in the GMT time zone.
 
 =head1 BASE METHODS
 
-This class inherits several base methods from the Date::Manip::Obj
+This class inherits several base methods from the L<Date::Manip::Obj>
 class. Please refer to the documentation for that class for a
 description of those methods.
 
@@ -52,14 +52,14 @@ description of those methods.
 
 =item B<new_config>
 
-Please refer to the Date::Manip::Obj documentation for these methods.
+Please refer to the L<Date::Manip::Obj> documentation for these methods.
 
 =item B<config>
 
    $dmb->config($var1,$val1,$var2,$val2,...);
 
 This will set the value of any configuration variable. Please refer to the
-Date::Manip::Config manual for a list of all configuration variables and their
+L<Date::Manip::Config> manual for a list of all configuration variables and their
 description.
 
 =back
@@ -108,23 +108,23 @@ A list containing a time zone expressed as an offset:
 
 =back
 
-In all of the above, the elements ($y, $m, $d, $h, $mn, $s) are all
+In all of the above, the elements C<($y, $m, $d, $h, $mn, $s)> are all
 numeric. In most of the routines described below, no error checking is
-done on the input.  $y should be between 1 and 9999, $m between 1 and
-12, $d between 1 and 31, $h should be between 0 and 23, $mn and $s
+done on the input.  C<$y> should be between 1 and 9999, C<$m> between 1 and
+12, C<$d> between 1 and 31, C<$h> should be between 0 and 23, C<$mn> and C<$s>
 between 0 and 59.
 
-$hms can be between 00:00:00 and 24:00:00, but an $offset must be
+C<$hms> can be between 00:00:00 and 24:00:00, but an C<$offset> must be
 between -23:59:59 and +23:59:59.
 
 Years are not translated to 4 digit years, so passing in a year of
 "04" will be equivalent to "0004", NOT "2004".
 
-The elements ($dy, $dm, $dw, $dd, $dh, $dmn, $ds) are all numeric,
+The elements C<($dy, $dm, $dw, $dd, $dh, $dmn, $ds)> are all numeric,
 but can be positive or negative. They represent an elapsed amount
 of time measured in years, months, weeks, etc.
 
-Since no error checking is done, passing in ($y,$m,$d) = (2004,2,31)
+Since no error checking is done, passing in C<($y,$m,$d) = (2004,2,31)>
 will NOT trigger an error, even though February does not have 31 days.
 Instead, some meaningless result will be returned.
 
@@ -153,23 +153,23 @@ This take two dates and determine the amount of time between them.
    $date = $dmb->calc_date_days($date,$n [,$subtract]);
    $ymd  = $dmb->calc_date_days($ymd,$n [,$subtract]);
 
-This returns a date $n days later (if $n>0) or earlier (if $n<0) than
-the date passed in. If $subtract is passed in, the sign of $n is reversed.
+This returns a date C<$n> days later (if C<$nE<gt>0>) or earlier (if C<$nE<lt>0>)
+than the date passed in. If C<$subtract> is passed in, the sign of C<$n> is reversed.
 
    $date = $dmb->calc_date_delta($date,$delta [,$subtract]);
 
 This take a date and add the given delta to it (or subtract the delta
-if $subtract is non-zero).
+if C<$subtract> is non-zero).
 
    $date = $dmb->calc_date_time($date,$time [,$subtract]);
 
 This take a date and add the given time to it (or subtract the time
-if $subtract is non-zero).
+if C<$subtract> is non-zero).
 
    $time = $dmb->calc_time_time(@time1,@time2 [,$subtract]);
 
 This take two times and add them together (or subtract the second from
-the first if $subtract is non-zero).
+the first if C<$subtract> is non-zero).
 
 =item B<check>
 
@@ -184,7 +184,7 @@ but perhaps not in all time zones.
 
 1 is returned if the the fields are valid, 0 otherwise.
 
-$hms is in the range 00:00:00 to 24:00:00.
+C<$hms> is in the range 00:00:00 to 24:00:00.
 
 =item B<cmp>
 
@@ -204,9 +204,9 @@ Returns the day of the week (1 for Monday, 7 for Sunday).
    $day = $dmb->day_of_year($ymd);
    $day = $dmb->day_of_year($date);
 
-In the first case, returns the day of the year (1 to 366) for $y, $m,
-$d.  In the second case, it returns a fractional day (1.0 <= $day <
-366.0 or 1.0 <= $day < 367.0 for a leap-year).  For example, day 1.5
+In the first case, returns the day of the year (1 to 366) for C<($y, $m, $d)>.
+In the second case, it returns a fractional day (1.0 <= C<$day> < 366.0 or
+1.0 <= C<$day> < 367.0 for a leap-year).  For example, day 1.5
 falls on Jan 1, at noon.  The somewhat non-intuitive answer (1.5
 instead of 0.5) is to make the two forms return numerically equivalent
 answers for times of 00:00:00 . You can look at the integer part of
@@ -219,11 +219,11 @@ The inverse operations can also be done:
    $ymd   = $dmb->day_of_year($y,$day);
    $date  = $dmb->day_of_year($y,$day);
 
-If $day is an integer, the year, month, and day is returned. If $day
+If C<$day> is an integer, the year, month, and day is returned. If C<$day>
 is a floating point number, it returns the year, month, day, hour,
 minutes, and decimal seconds.
 
-$day must be greater than or equal to 1 and less than 366 on non-leap years
+C<$day> must be greater than or equal to 1 and less than 366 on non-leap years
 or 367 on leap years.
 
 =item B<days_in_month>
@@ -258,28 +258,28 @@ The inverse operation is also available:
 
    $ymd = $dmb->days_since_1BC($days);
 
-Returns the date $days since Dec 31, 1BC. So day 1 is Jan 1, 0001.
+Returns the date C<$days> since Dec 31, 1BC. So day 1 is Jan 1, 0001.
 
 =item B<leapyear>
 
    $flag = $dmb->leapyear($y);
 
 Returns 1 if the argument is a leap year.  Originally copied from code
-written by David Muir Sharnoff <muir@idiom.com>.
+written by David Muir Sharnoff.
 
 =item B<nth_day_of_week>
 
    $ymd = $dmb->nth_day_of_week($y,$n,$dow);
 
-Returns the $n'th occurrence of $dow (1 for Monday, 7 for Sunday) in the
-year.  $n must be between 1 and 53 or -1 through -53.
+Returns the C<$n>th occurrence of C<$dow> (1 for Monday, 7 for Sunday) in the
+year.  C<$n> must be between 1 and 53 or -1 through -53.
 
    $ymd = $dmb->nth_day_of_week($y,$n,$dow,$m);
 
-Returns the $n'th occurrence of $dow in the given month.  $n must be between
+Returns the C<$n>th occurrence of C<$dow> in the given month.  C<$n> must be between
 1 and 5 or it can be -1 through -5.
 
-In all cases, nothing is returned if $n is beyond the last actual
+In all cases, nothing is returned if C<$n> is beyond the last actual
 result (i.e. the 5th Sunday in a month with only four Sundays).
 
 =item B<secs_since_1970>
@@ -374,7 +374,7 @@ string is of the format:
 
 where all signs are optional. The returned value (whether a list reference
 from the split function, or a string from the join function) will have
-all fields normalized unless $no_normalize is passed in.
+all fields normalized unless C<$no_normalize> is passed in.
 
    $delta = $dmb->split("delta",$string [,$no_normalize]);
    $delta = $dmb->split("business",$string [,$no_normalize]);
@@ -384,7 +384,7 @@ all fields normalized unless $no_normalize is passed in.
 
 Both of these split a string containing a delta, or create a string
 containing one. The difference is whether the delta is treated as
-a business or non-business delta (see Date::Manip::Delta documentation
+a business or non-business delta (see L<Date::Manip::Delta> documentation
 for a detailed description).
 
 The string that can be split is of the form:
@@ -402,7 +402,7 @@ Fields may be omitted entirely. For example:
 
 are both valid.
 
-The string or list output is normalized unless $no_normalize is passed
+The string or list output is normalized unless L<$no_normalize> is passed
 in.
 
 =item B<week1_day1>
@@ -450,12 +450,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

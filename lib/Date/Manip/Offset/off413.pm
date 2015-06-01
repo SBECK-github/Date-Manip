@@ -6,13 +6,13 @@ Date::Manip::Offset::off413;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Feb 18 18:24:54 GMT 2015
-#    Data version: tzdata2015a
-#    Code version: tzcode2015a
+#    Generated on: Tue May  5 07:44:13 EDT 2015
+#    Data version: tzdata2015d
+#    Code version: tzcode2015d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://ftp.iana.orgtz
+#    ftp://ftp.iana.org/tz
 
 use strict;
 use warnings;
@@ -28,11 +28,19 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-10:29:20';
+$Offset        = '-11:00:00';
 
 %Offset        = (
    0 => [
-      'pacific/kiritimati',
+      'pacific/pago_pago',
+      'pacific/niue',
+      'etc/gmt-11',
+      'l',
+      'pacific/fakaofo',
+      'pacific/apia',
+      'pacific/enderbury',
+      'america/adak',
+      'america/nome',
       ],
 );
 

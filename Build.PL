@@ -7,15 +7,26 @@ use warnings;
 use 5.006;
 use Module::Build 0.21;
 
+my %IsWin32 = map { $_ => 1 } qw( MSWin32 NetWare symbian );
+my $IsWin32 = 1   if ($IsWin32{ $^O });
+my $Pvers   = $];
+my $ConvVers= $Module::Build::VERSION;
+
 my %module_prereq = (
    'perl'                     => '5.006',
    'Carp'                     => '0',
+   'Data::Dumper'             => '0',
    'Encode'                   => '0',
    'IO::File'                 => '0',
    'Storable'                 => '0',
-   'Win32::TieRegistry'       => '0',
    'utf8'                     => '0',
 );
+
+if      ($IsWin32  &&  $Pvers >= 5.020) {
+   $module_prereq{'Win32::TieRegistry'} = 0.28;
+} elsif ($IsWin32) {
+   $module_prereq{'Win32::TieRegistry'} = 0;
+}
 
 my %script_prereq = (
 );
@@ -28,12 +39,6 @@ my %test_prereq = (
 my %config_prereq = (
    'Module::Build'            => '0.21',
 );
-
-my %IsWin32 = map { $_ => 1 } qw( MSWin32 NetWare symbian );
-my $IsWin32 = 1   if ($IsWin32{ $^O });
-if (! $IsWin32) {
-   delete $module_prereq{'Win32::TieRegistry'};
-}
 
 my %build_prereq = %config_prereq;
 if ($Module::Build::VERSION < 0.4004) {

@@ -39,7 +39,7 @@ Specific holidays can be set which occur only a single time.
 
    May 5, 2000                     = A one-time-only holiday
 
-Any format parseable by Date::Manip::Date::parse_date can be used.
+Any format parseable by C<Date::Manip::Date::parse_date> can be used.
 
 =item B<A date without a year>
 
@@ -52,10 +52,10 @@ using the simple lines:
 
 These dates must be written in a form which can be parsed as a full
 date by simply adding the year to the end of the string. Please refer
-to the Date::Manip::Date documentation to see what forms will
+to the L<Date::Manip::Date> documentation to see what forms will
 work. ISO 8601 dates will not work since the year comes first.
 
-Any format parseable by Date::Manip::Date::parse_date can be used.
+Any format parseable by C<Date::Manip::Date::parse_date> can be used.
 
 =item B<Recurrence>
 
@@ -154,7 +154,7 @@ Likewise, the two holidays:
    Jun 17                          = Bunker Hill Day
 
 sometimes fall on the same day.  Using the
-Date::Manip::Date::list_holidays method (or the Date_IsHoliday
+C<Date::Manip::Date::list_holidays> method (or the C<Date_IsHoliday>
 function), you can get a list of all names that the date contains.
 
 =back
@@ -203,8 +203,8 @@ and its duration.  An EVENT can be defined in the following ways:
    Recur ; Delta
 
 Date refers to a full date/time (and is any string that can be parsed
-by Date::Manip::Date::parse). YMD is any string which can be parsed by
-Date::Manip::Date::parse_date. YM is any string which can be parsed by
+by C<Date::Manip::Date::parse>). YMD is any string which can be parsed by
+C<Date::Manip::Date::parse_date>. YM is any string which can be parsed by
 the parse_date method to give a date in the current year. Recur is a
 partial or fully specified recurrence. Delta is any string that can be
 parsed to form a delta.
@@ -235,12 +235,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

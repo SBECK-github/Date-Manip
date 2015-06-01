@@ -10,8 +10,8 @@ Date::Manip::Calc - describes date calculations
 
 =head1 SYNOPSIS
 
-Two objects (both of which are either Date::Manip::Date or
-Date::Manip::Delta objects) may be used to creates a third object
+Two objects (both of which are either L<Date::Manip::Date> or
+L<Date::Manip::Delta> objects) may be used to creates a third object
 based on those two.
 
    $delta  = $date->calc($date2 [,$subtract] [,$mode]);
@@ -25,7 +25,7 @@ based on those two.
 
 This document describes date calculations. Date calculations involve
 two types of Date::Manip objects: dates and deltas. These are described
-in the Date::Manip::Date and Date::Manip::Delta manuals respectively.
+in the L<Date::Manip::Date> and L<Date::Manip::Delta> manuals respectively.
 
 Two objects (two dates, two deltas, or one of each) are used.  In all
 cases, if a second object is not passed in, undef is returned.
@@ -41,30 +41,30 @@ There are 3 types of date calculations:
 Two dates can be worked with and a delta will be produced which is
 the amount of time between the two dates.
 
-$date1 and $date2 are Date::Manip::Date objects with valid dates.
-The Date::Manip::Delta object returned is the amount of time between
-them. If $subtract is not passed in (or is 0), the delta produced
+C<$date1> and C<$date2> are L<Date::Manip::Date> objects with valid dates.
+The L<Date::Manip::Delta> object returned is the amount of time between
+them. If C<$subtract> is not passed in (or is 0), the delta produced
 is:
 
    DELTA = DATE2 - DATE1
 
-If $subtract is non-zero, the delta produced is:
+If C<$subtract> is non-zero, the delta produced is:
 
    DELTA = DATE1 - DATE2
 
-The $subtract argument has special importance when doing approximate
+The C<$subtract> argument has special importance when doing approximate
 calculations, and this is described below.
 
 If either date is invalid, a delta object will be returned which
 has an error associated with it.
 
-The $mode argument describes the type of delta is produced and is described
-below.
+The C<$mode> argument describes the type of delta is produced and is described
+below in L</"SUBTRACTION">.
 
 =item B<Date-Delta calculations>
 
-Date-delta calculations can be performed using either a Date::Manip::Date
-or Date::Manip::Delta object as the primary object:
+Date-delta calculations can be performed using either a L<Date::Manip::Date>
+or L<Date::Manip::Delta> object as the primary object:
 
    $date2  = $date1->calc($delta [,$subtract]);
    $date2  = $delta->calc($date1 [,$subtract]);
@@ -72,25 +72,25 @@ or Date::Manip::Delta object as the primary object:
 A date and delta can be combined to yield a date that is the
 given amount of time before or after it.
 
-$date1 and $delta are Date::Manip::Date and Date::Manip::Delta objects
-respectively. A new Date::Manip::Date object is produced.  If either
-$date1 or $delta are invalid, the new date object will have an error
-associated with it.
+C<$date1> and C<$delta> are L<Date::Manip::Date> and L<Date::Manip::Delta>
+objects respectively. A new L<Date::Manip::Dateyyyy> object is produced.
+If either C<$date1> or C<$delta> are invalid, the new date object will have
+an error associated with it.
 
 Both of the calls above perform the same function and produce exactly the
 same results.
 
-If $subtract is not passed in, or is 0, the resulting date is
+If C<$subtract> is not passed in, or is 0, the resulting date is
 formed as:
 
    DATE2 = DATE1 + DELTA
 
-If $subtract is non-zero, the resulting date is:
+If C<$subtract> is non-zero, the resulting date is:
 
    DATE2 = DATE1 - DELTA
 
-The $subtract argument has special importance when doing approximate
-calculations, and this is described below.
+The C<$subtract> argument has special importance when doing approximate
+calculations, and this is described below in L</"SUBTRACTION">.
 
 =item B<Delta-Delta calculations>
 
@@ -99,19 +99,19 @@ together, or subtract them.
 
    $delta3 = $delta1->calc($delta2 [,$subtract] [,$no_normalize]);
 
-If $subtract is not passed in, or is 0, the resulting delta formed
+If C<$subtract> is not passed in, or is 0, the resulting delta formed
 is:
 
    DELTA3 = DELTA1 + DELTA2
 
-If $subtract is non-zero, then the resulting delta is:
+If C<$subtract> is non-zero, then the resulting delta is:
 
    DELTA3 = DELTA1 - DELTA2
 
-$delta1 and $delta2 are valid Date::Manip::Delta objects, and a new
-Date::Manip::Delta object is produced.
+C<$delta1> and C<$delta2> are valid L<Date::Manip::Delta> objects, and a new
+L<Date::Manip::Delta> object is produced.
 
-$no_normalize can be the string 'nonormalize' or a non-zero value (in
+C<$no_normalize> can be the string 'nonormalize' or a non-zero value (in
 which case $subtract MUST be entered).
 
 =back
@@ -131,7 +131,8 @@ determined by the length of the work day, and only business days
 (i.e. days in which business is conducted) count. Holidays and
 weekends are omitted (though there is some flexibility in defining
 what exactly constitutes the work week as described in the
-Date::Manip::Config manual). This is described in more detail below.
+L<Date::Manip::Config> manual). This is described in more detail below
+in L</"BUSINESS MODE CONSIDERATIONS">.
 
 A non-business mode calculation is the normal type of calculation
 where no days are ignored, and all days are full length.
@@ -139,7 +140,7 @@ where no days are ignored, and all days are full length.
 =item B<Exact, semi-exact, and approximate calculations>
 
 An exact calculation is one in which the delta used (or produced) is
-an exact delta.  An exact delta is described in the Date::Manip::Delta
+an exact delta.  An exact delta is described in the L<Date::Manip::Delta>
 manual, but the short explanation is that it is a delta which only
 involves fields of an exactly known length (hours, minutes, and
 seconds).  Business deltas also include days in the exact part.  The
@@ -147,7 +148,7 @@ value of all other fields in the delta will be zero.
 
 A semi-exact calculation is one in which the deltas used (or produced)
 is a semi-exact delta.  This is also described in the
-Date::Manip::Delta manual, but the short explanation is that it
+L<Date::Manip::Delta> manual, but the short explanation is that it
 includes days and weeks (for standard calculations) or weeks (for
 business calculations) in addition to the exact fields.
 
@@ -173,9 +174,9 @@ When doing a date-date calculation, the following call is used:
 
    $delta = $date1->calc($date2 [,$subtract] [,$mode]);
 
-$mode defaults to "exact". The delta produced will be be either a
+C<$mode> defaults to "exact". The delta produced will be be either a
 business or non-business delta; exact, semi-exact, or approximate, as
-specified by $mode.
+specified by C<$mode>.
 
 Currently, the possible values that $mode can have are:
 
@@ -195,11 +196,11 @@ When doing calculations of a date and a delta:
    $date2 = $delta->calc($date1 [,$subtract]);
 
 the mode is not passed in. It is determined exclusively by the
-delta. If $delta is a business delta, A business calculation is
-done. If $delta is a non-business delta, a non-business calculation
+delta. If C<$delta> is a business delta, A business calculation is
+done. If C<$delta> is a non-business delta, a non-business calculation
 will be done.
 
-The $delta will also be classified as exact, semi-exact, or approximate
+The C<$delta> will also be classified as exact, semi-exact, or approximate
 based on which fields are non-zero.
 
 =item B<Mode in delta-delta calculations>
@@ -237,8 +238,8 @@ When doing a business calculation, both dates must be in the same time
 zone or an error is produced.
 
 For the exact, semi-exact, and approx calculations, when calculating
-the difference between two dates in different time zones, $date2 will
-be converted to the same timezone as $date1 and the returned date
+the difference between two dates in different time zones, C<$date2> will
+be converted to the same timezone as C<$date1> and the returned date
 will be in this timezone.
 
 =item B<date-delta calculations>
@@ -561,7 +562,7 @@ daylight saving time.
 =head1 SUBTRACTION
 
 In exact calculations, and in delta-delta calculations, the the
-$subtract argument is easy to understand.  When working with an
+C<$subtract> argument is easy to understand.  When working with an
 approximate delta however (either when adding an approximate delta to
 a date, or when taking two dates to get an approximate delta), there
 is a degree of uncertainty in how the calculation is done, and the
@@ -578,8 +579,8 @@ In other words the approximate delta (but NOT the exact delta) is different
 depending on whether you move from earlier date to the later date, or vice
 versa. And depending on what you are calculating, both are useful.
 
-In order to resolve this, the $subtract argument can take on the values
-0, 1, or 2, and have the meanings described next.
+In order to resolve this, the C<$subtract> argument can take on the values
+0, 1, or 2, and have different meanings.
 
 =over 4
 
@@ -589,16 +590,16 @@ In the call:
 
    $delta = $date1->calc($date2,$subtract,"approx");
 
-if $subtract is 0, the resulting delta can be added to $date1 to get
-$date2. Obviously $delta may still be negative (if $date2 comes before
-$date1).
+if C<$subtract> is 0, the resulting delta can be added to C<$date1> to get
+C<$date2>. Obviously C<$delta> may still be negative (if C<$date2> comes before
+C<$date1>).
 
-If $subtract is 1, the resulting delta can be subtracted from $date1
-to get $date2 (the deltas from these two are identical except for having
+If C<$subtract> is 1, the resulting delta can be subtracted from C<$date1>
+to get C<$date2> (the deltas from these two are identical except for having
 an opposite sign).
 
-If $subtract is 2, the resulting delta can be added to $date2 to get
-$date1. In other words, the following are identical:
+If C<$subtract> is 2, the resulting delta can be added to C<$date2> to get
+C<$date1>. In other words, the following are identical:
 
    $delta = $date1->calc($date2,2,"approx");
    $delta = $date2->calc($date1,"approx");
@@ -609,18 +610,19 @@ In the call:
 
    $date2 = $date1->calc($delta,$subtract);
 
-If $subtract is 0, the resulting date is determined by adding $delta to $date1.
+If C<$subtract> is 0, the resulting date is determined by adding C<$delta> to
+C<$date1>.
 
-If $subtract is 1, the resulting date is determined by subtracting $delta from
-$date1.
+If C<$subtract> is 1, the resulting date is determined by subtracting C<$delta>
+from C<$date1>.
 
-If $subtract is 2, the resulting date is the date which $delta can be added to
-to get $date1.
+If C<$subtract> is 2, the resulting date is the date which C<$delta>
+can be added to to get C<$date1>.
 
-For business mode calculations, $date1 will first be adjusted to be a valid
+For business mode calculations, C<$date1> will first be adjusted to be a valid
 work day (if it isn't already), so this may lead to non-intuitive results.
 
-In some cases, it is impossible to do a calculation with $subtract = 2.
+In some cases, it is impossible to do a calculation with C<$subtract> = 2.
 As an example, if the date is "Dec 31" and the delta is "1 month", there
 is no date which you can add "1 month" to to get "Dec 31".  When this occurs,
 the date returned has an error flag.
@@ -665,12 +667,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

@@ -15,12 +15,12 @@ can be set in a config file.  This document includes a sample config
 file.
 
 The config file consists of three sections.  The first section is
-config variables.  This is described more fully in the Date::Manip::Config
+config variables.  This is described more fully in the L<Date::Manip::Config>
 document.
 
 The second section is the holiday definition section.  The third section
 is the event definition section.  These are both described more fully
-in the Date::Manip::Holidays document.
+in the L<Date::Manip::Holidays> document.
 
 =head1 SAMPLE CONFIG FILE
 
@@ -150,7 +150,7 @@ want to include.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

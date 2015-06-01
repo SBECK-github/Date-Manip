@@ -6,13 +6,13 @@ Date::Manip::Offset::off387;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Feb 18 18:24:54 GMT 2015
-#    Data version: tzdata2015a
-#    Code version: tzcode2015a
+#    Generated on: Tue May  5 07:44:13 EDT 2015
+#    Data version: tzdata2015d
+#    Code version: tzcode2015d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://ftp.iana.orgtz
+#    ftp://ftp.iana.org/tz
 
 use strict;
 use warnings;
@@ -28,11 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-07:23:52';
+$Offset        = '-07:46:04';
 
 %Offset        = (
    0 => [
-      'america/hermosillo',
+      'america/creston',
       ],
 );
 

@@ -1,16 +1,31 @@
+Make all the data.* files contain only the 1st value.  All others are sorted
+correctly automatically (and not stored).  When harvesting, it'll notify of
+new/removed elements.
+
+Add option to Recur: ignore holidays
+   then flags like NBD ignore holidays (but count weekends)
+When calculating holidays, use this option by default to simplify
+   holidays.  Then, order of definitions is not important.
+
 Add options:
    onlyiso8601, etc. to parse
    no-delta-secs   (not delta as a plain number)
 
-########################################################################
-# Deprecated variables:
-
-03/01/2016
-
-
 Can I reduce the number of timezone modules loaded when parsing a date
 with an abbreviation or offset by loading one and testing it before
 loading a second?
+
+Make sure the following work:
+   1*12:0:24:0:0:0*FW1 = Christmas Day (observed)
+   December 25 2015    = Christmas Day
+
+Add a new type of recurrence (???):
+   *Christmas Day*NWD
+
+########################################################################
+# Deprecated variables:
+
+03/01/2016  TZ
 
 ########################################################################
 # +1 significant release

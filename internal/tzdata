@@ -1271,7 +1271,7 @@ Date::Manip::Offset::$module;
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://$tzdata_src$tzdata_dir
+#    ftp://$tzdata_src/$tzdata_dir
 
 use strict;
 use warnings;
@@ -1351,7 +1351,7 @@ sub do_zones {
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://$tzdata_src$tzdata_dir
+#    ftp://$tzdata_src/$tzdata_dir
 
 use strict;
 use warnings;
@@ -1398,7 +1398,7 @@ END {
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://$tzdata_src$tzdata_dir
+#    ftp://$tzdata_src/$tzdata_dir
 
 $podstr
 
@@ -1412,11 +1412,11 @@ This module is automatically generated. It contains a complete list of
 time zones specified in the standard zoneinfo (or Olson) databases
 obtained from:
 
-   ftp://$tzdata_src$tzdata_dir/tzdata_vers.tar.gz
+L<ftp://$tzdata_src/$tzdata_dir/tzdata_vers.tar.gz>
 
 All information is stored in variables, so this module provide no
 routines for dealing with time zone information. For routines related
-to time zones, see the documentation for the Date::Manip::TZ module.
+to time zones, see the documentation for the L<Date::Manip::TZ> module.
 
 ";
 
@@ -1440,12 +1440,12 @@ None known.
 
 $hdstr BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 $hdstr SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 $hdstr LICENSE
 
@@ -1570,8 +1570,8 @@ Time zones may be referred to as their full name
 aliases and abbreviations that may be used.
 
 Standard aliases are listed below. Additional aliases can be created,
-or existing aliases overridden using the new_alias method of the
-Date::Manip::TZ module.
+or existing aliases overridden using the C<new_alias> method of the
+L<Date::Manip::TZ> module.
 
 The zoneinfo database provides several standard aliases, including:
 
@@ -1667,8 +1667,8 @@ on the offset, and in what order. The first match is used. If the
 ISDST time is not known, the standard zones will be tested followed by
 the DST zones.
 
-The default order can be overridden with the off_zones method in the
-Date::Manip::TZ module.
+The default order can be overridden with the C<off_zones> method in the
+L<Date::Manip::TZ> module.
 
 ";
 
@@ -1758,18 +1758,15 @@ The abbreviations LMT and zzz which occur in the zoneinfo databases
 are ignored (and when parsing a date including them, the local time
 zone will be used).
 
-The default order can be overridden using the abbrev method of the
-Date::Manip::TZ module.
+The default order can be overridden using the C<abbrev> method of the
+L<Date::Manip::TZ> module.
 
-The order given here is open to discussion (and possible change) for
-some unspecified period of time (possibly the first couple releases in
-the 6.xx cycle), but at some point, the order will become fixed. Please
-note that I will always place emphasis on a time zone that used the
-abbreviation more recently than another time zone. Within those
-constraints, I'm interested in putting the more commonly used time zone
+The order given here is open to discussion (and possible change) based
+on changes to the timezone database.  I will always place emphasis on a
+time zone that used the abbreviation more recently than another time zone.
+Within those constraints, I've tried to put the more commonly used time zone
 at a higher priority. Since I'm not always able to decide which is the
-most commonly used, I'm very willing to entertain arguments for
-altering the order.
+most commonly used, I'm willing to entertain arguments for altering the order.
 
 ";
 

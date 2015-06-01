@@ -76,21 +76,18 @@ this example).
 The new module (spanish.pm) will need a few simple modifications.
 Change the package name from 'english' to 'spanish'.
 
-Fix the @Encodings lines.  Most languages can be written in more
+Fix the C<@Encodings> lines.  Most languages can be written in more
 than one encoding.  The first encoding in the list should be utf-8
 and the last should be perl.  Include any other encodings that
 should be supported as well.
 
-Set the $YearAdded and $LangName appropriately.
+Set the C<$YearAdded> and C<$LangName> appropriately.
 
 =item Translate the language terms
 
-Translate all of the data (after the __DATA__ line).
+The data section of the module is fairly straightforward to translate.
 
-The data section of the module (which is written in YAML) is fairly
-straightforward to translate.
-
-Every term is defined in the Date::Manip::Lang::english document
+Every term is defined in the L<Date::Manip::Lang::english> document
 (or in any of the other language module documents), so please
 refer to it to find out what each element means.  Then replace the
 English version with the new translation.
@@ -98,7 +95,7 @@ English version with the new translation.
 There are some requirements:
 
 1) Every element should be defined (except for the sephm and sepms
-elements).
+elements which are optional).
 
 2) The module must be written using UTF-8 characters if the language
 includes any non-ASCII characters.
@@ -107,7 +104,7 @@ includes any non-ASCII characters.
 element).  In most cases, the order of the values for each element is
 not important since they are just used to create a regular expression
 for parsing dates, but a few of them are also used to determine printable
-values using the Date::Manip::Date::printf method (or the UnixDate
+values using the C<Date::Manip::Date::printf> method (or the C<UnixDate>
 function).  These elements are:
 
    Element       printf directive
@@ -138,7 +135,7 @@ Feel free to contact me if you have any questions.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

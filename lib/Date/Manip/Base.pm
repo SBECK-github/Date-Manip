@@ -163,6 +163,10 @@ sub _init_config {
 
       'periodtimesep'    => 0,
 
+      # How to parse mmm#### strings
+
+      'format_mmmyyyy'   => '',
+
       # *** DEPRECATED ***
 
       'tz'               => '',
@@ -1135,6 +1139,10 @@ sub _config_var_base {
       # We have to redo the time regexp
       delete $$self{'data'}{'rx'}{'time'};
 
+   } elsif ($var eq 'format_mmmyyyy') {
+      my $err = $self->_config_var_format_mmmyyyy($val);
+      return  if ($err);
+
    } elsif ($var eq 'dateformat'    ||
             $var eq 'jan1week1'     ||
             $var eq 'printable'     ||
@@ -1327,6 +1335,18 @@ sub _config_var_defaulttime {
       return 0;
    }
    warn "ERROR: [config_var] invalid: DefaultTime: $val\n";
+   return 1;
+}
+
+sub _config_var_format_mmmyyyy {
+   my($self,$val) = @_;
+
+   if (lc($val) eq 'first'  ||
+       lc($val) eq 'last'   ||
+       lc($val) eq '') {
+      return 0;
+   }
+   warn "ERROR: [config_var] invalid: Format_MMMYYYY: $val\n";
    return 1;
 }
 

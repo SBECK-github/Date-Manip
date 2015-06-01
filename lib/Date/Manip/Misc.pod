@@ -224,7 +224,7 @@ years that I'd like to thank.  The most important contributions have
 come in the form of suggestions and bug reports by users.  I have
 tried to include the name of every person who first suggested each
 improvement or first reported each bug.  These are included in the
-Date::Manip::Changes5 and Date::Manip::Changes6 documents.  The list
+L<Date::Manip::Changes5> and L<Date::Manip::Changes6> documents.  The list
 is simply too long to appear here, but I appreciate their help.
 
 A number of people have made suggestions or reported bugs which are
@@ -270,12 +270,12 @@ better with Date::Manip.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

@@ -44,10 +44,10 @@ NOTE: unlike date parsing, support for frequencies written out in
 English (or whatever language you are working in) is extremely
 limited. For example, the string "the first of every month" will NOT
 be parsed as a valid frequency. A limited number of frequencies can be
-expressed in a written out form (see OTHER FREQUENCY FORMATS below),
-but most must be expressed in the format described below in FREQUENCY
-NOTATION. In this document however, the written out form will often be
-used for the sake of clarity.
+expressed in a written out form (see the <L/"OTHER FREQUENCY FORMATS"
+section below), but most must be expressed in the format described
+below in <L/"FREQUENCY NOTATION">. In this document however, the written out
+form will often be used for the sake of clarity.
 
 Since a frequency typically refers to events that could happen an
 infinite number of times, you usually have to specify a date range to
@@ -87,7 +87,7 @@ In frequency notation, this can be expressed as:
    1*11:4:5:0:0:0*FD1
 
 The syntax for the various modifiers is described below in the
-MODIFIERS section.
+L</"MODIFIERS"> section.
 
 =item B<Base date>
 
@@ -169,7 +169,7 @@ occur on Friday of that week.
 In most cases, it won't be necessary to treat base dates with that
 level of complexity, but with complicated recurring events, it may
 be necessary.  More information on how Date::Manip determines a
-recurring event from a base date is given below in the section BASE DATES.
+recurring event from a base date is given below in the section L</"BASE DATES">.
 
 =item B<Range>
 
@@ -200,7 +200,7 @@ the recurring event occurs in this range may NOT be the 0th occurrence
 with respect to the base date, and that is allowed.
 
 NOTE: both dates in the range and the base date must all be in the
-same time zone, and use the same Date::Manip::Base object.
+same time zone, and use the same L<Date::Manip::Base> object.
 
 =back
 
@@ -288,7 +288,7 @@ There is no way to express the following with a single recurrence:
 You have to use two recurrences to do this.
 
 You can include negative numbers in ranges. For example, including the
-range -2---1 means to go from the 2nd to the last to the last
+range -2--1 means to go from the 2nd to the last to the last
 occurrence.  Negative values are only supported in the week and
 day fields, and only in some cases.
 
@@ -356,7 +356,7 @@ given week of the month or week of the year:
 Although the meaning of almost every recurrence can be deduced by the
 above rules, a set of tables describing every possible combination of Y/M/W/D
 meanings, and giving an example of each is included below in the
-section LIST OF Y/M/W/D FREQUENCY DEFINITIONS. It also explains a small
+section L</"LIST OF Y/M/W/D FREQUENCY DEFINITIONS">. It also explains a small
 number of special cases.
 
 NOTE: If all fields left of the asterisk are zero, the last one is
@@ -380,7 +380,7 @@ events can be determined too.
 
 A recurrence of the form *Y:M:W:D:H:MN:S (which is technically speaking
 not a recurring event... it is just a date or dates specified using the
-recurrence syntax) uses the first date which matches the frequency as the
+frequency syntax) uses the first date which matches the frequency as the
 base date. Any base date specified will be completely ignored. A date range
 may be specified to work with a subset of the dates.
 
@@ -951,24 +951,24 @@ They are:
 
 =item B<err>
 
-Please refer to the Date::Manip::Obj documentation for these methods.
+Please refer to the L<Date::Manip::Obj> documentation for these methods.
 
 =item B<parse>
 
    $err = $recur->parse($string [,$modifiers] [,$base,$start,$end]);
 
 This creates a new recurrence. A string containing a valid frequency
-is required. In addition, $start, $end, and $base dates can be passed
-in (either as Date::Manip::Date objects, or as strings containing dates
+is required. In addition, C<$start>, C<$end>, and C<$base> dates can be passed
+in (either as L<Date::Manip::Date> objects, or as strings containing dates
 that can be parsed), and any number of the modifiers listed above.
 
-If the $start or $end dates are not included, they may be supplied
+If the C<$start> or C<$end> dates are not included, they may be supplied
 automatically, based on the value of the RecurRange variable. If any
 of the dates are passed in, they must be included in the order given
 (though it is safe to pass an empty string or undef in for any of them
 if you only want to set some, but not all of them).
 
-The $modifiers argument must either contain valid modifiers, or be
+The C<$modifiers> argument must either contain valid modifiers, or be
 left out of the argument list entirely. You cannot pass an empty string
 or undef in for it.
 
@@ -990,7 +990,7 @@ following are valid:
    FREQ**BASE
    FREQ**BASE*START*END
 
-If a part of the recurrence is passed in both as part of $string and
+If a part of the recurrence is passed in both as part of C<$string> and
 as an argument, the argument overrides the string portion, with the
 possible exception of modifiers. The modifiers in the argument override
 the string version unless the first one is a '+' in which case they
@@ -1032,7 +1032,7 @@ modifiers UNLESS the first one is the string "+", in which case the
 new modifiers are appended to the list.
 
 In the start, end, and base methods, the date passed in can be a
-Date::Manip::Date object, or a string that can be parsed to get a date.
+L<Date::Manip::Date> object, or a string that can be parsed to get a date.
 
 NOTE: the parse method will overwrite all parts of the recurrence,
 so it is not appropriate to do:
@@ -1063,16 +1063,16 @@ If any of the values are not yet determined, nothing will be returned.
 Returns the list of dates defined by the full recurrence. If there is
 an error, or if there are no dates, an empty list will be returned.
 
-$start and $end are either undef, or dates which can be used to limit
-the set of dates passed back (they can be Date::Manip::Date objects
+C<$start> and C<$end> are either C<undef,> or dates which can be used to limit
+the set of dates passed back (they can be L<Date::Manip::Date> objects
 or strings that can be parsed).
 
 If the recurrence does not have a start and end date already, passing
-in $start and $end will set the range (but they will NOT be stored in
+in C<$start> and C<$end> will set the range (but they will NOT be stored in
 the recurrence).
 
 If the recurrence does have a start and end date stored in it, the
-$start and $end arguments can be used to temporarily override
+C<$start> and C<$end> arguments can be used to temporarily override
 the limits. For example, if a recurrence has a start date of
 Jan 1, 2006 00:00:00 and and end date of Dec 31, 2006 23:59:59 stored
 in the recurrence, passing in $start of Jul 1, 2006 00:00:00 will
@@ -1081,15 +1081,15 @@ limit the dates returned to the range of Jul 1 to Dec 31.
 Passing in a start date of Jul 1, 2007 will mean that no dates are
 returned since the recurrence limits the date to be in 2006.
 
-If one or both of $start and $end are undef, then the stored values
+If one or both of C<$start> and C<$end> are C<undef>, then the stored values
 will be used.
 
 =item B<nth>
 
    ($date,$err) = $recur->nth($n);
 
-This returns the $n'th recurring event ($n may be any integer). If
-an error occurs, it is returned (but it is not set in $recur since
+This returns the C<$n>th recurring event (C<$n> may be any integer). If
+an error occurs, it is returned (but it is not set in C<$recur> since
 it may be properly, though perhaps incompletely, defined). The following
 errors may be returned:
 
@@ -1114,9 +1114,9 @@ There are a few special circumstances to be aware of.
 1) If the recurrence contains no interval (i.e. is of the form
 *Y:M:W:D:H:MN:S), the dates come directly from the rtime values.
 In this case, the 0th event is the first date in the list of
-dates specified by the rtime. As such, $n must be a positive
-integer.  If $n is negative, or outside the range of dates
-specified, the returned date will be undef (but this is not
+dates specified by the rtime. As such, C<$n> must be a positive
+integer.  If C<$n> is negative, or outside the range of dates
+specified, the returned date will be C<undef> (but this is not
 an error).
 
 2) A very small number of recurrences have an unknown number of
@@ -1137,21 +1137,22 @@ of combinations of values in the rtime) for each date. For these,
 calculating the Nth date is much faster. However, in this case, some
 of them may refer to an invalid date. For example, if the frequency is
 'the 31st of every month' and the base (0th) date is Jan 31, the 1st
-event would refer to Feb 31. Since that isn't valid, undef would be
-returned for $n=1. Obviously, it would be possible to actually
+event would refer to Feb 31. Since that isn't valid, C<undef> would be
+returned for C<$n=1.> Obviously, it would be possible to actually
 determine the Nth valid event by calculating all N-1 dates, but in the
 interest of performance, this is not done.
 
-4) The way the Nth recurring event is calculated differs slightly
-for NE>0 and NE<lt>0 if the delta referred to by the frequency is
+4) The way the Nth recurring event is calculated differs slightly for
+NE>0 and NE<lt>0 if the delta referred to by the frequency is
 approximate. To calculate the Nth recurring event (where N>0), you
 take the base date and add N*DELTA (where DELTA is the delta
 determined by the frequency).  To get the Nth recurring event (where
-NE<lt>0), a date is determine which, if N*DELTA were added to it, would
-produce the base date. For more details, refer to the
-Date::Manip::Calc document.  In the SUBTRACTION section in the
-discussion of approximate date-delta calculations, calculations are
-done with $subtract = 2.
+NE<lt>0), a date is determine which, if N*DELTA were added to it,
+would produce the base date. For more details, refer to the
+L<Date::Manip::Calc> document.  In the
+L<Date::Manip::Calc/"SUBTRACTION"> section in the discussion of
+approximate date-delta calculations, calculations are done with
+$subtract = 2.
 
 =item B<next>
 
@@ -1250,12 +1251,12 @@ with a base date of 2006 or later cannot be satisfied.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

@@ -11,7 +11,7 @@ Date::Manip::Config - Date::Manip configuration
 =head1 SYNOPSIS
 
 This documents the configuration information which is stored in
-each Date::Manip::Base object, how to modify this information,
+each L<Date::Manip::Base> object, how to modify this information,
 and how the information is used in the other Date::Manip modules.
 
 =head1 DESCRIPTION
@@ -24,11 +24,11 @@ many Date::Manip behaviors.
 There are three ways to set config variables. The first two are to
 pass them in when creating an object, or to pass them to the config
 method after the object is created. All of the main Date::Manip
-modules (Date::Manip::Base, Date::Manip::TZ, Date::Manip::Date,
-Date::Manip::Delta, and Date::Manip::Recur) have the config method.
+modules (L<Date::Manip::Base>, L<Date::Manip::TZ>, L<Date::Manip::Date>,
+L<Date::Manip::Delta>, and L<Date::Manip::Recur>) have the config method.
 
 As an example, you can create and configure a
-Date::Manip::Date object using the commands:
+L<Date::Manip::Date> object using the commands:
 
    $date = new Date::Manip::Date;
    $date->config($var1,$val1,$var2,$val2,...);
@@ -37,31 +37,30 @@ This can be shortened to:
 
    $date = new Date::Manip::Date [$var1,$val1,...];
 
-The values of the config variables are stored in the Date::Manip::Base
-object. So, if you have a Date::Manip::Date object, it has a
-Date::Manip::Base object associated with it, and the configuration
-information is stored there. The same Date::Manip::Base object may be
+The values of the config variables are stored in the L<Date::Manip::Base>
+object. So, if you have a L<Date::Manip::Date> object, it has a
+L<Date::Manip::Base> object associated with it, and the configuration
+information is stored there. The same L<Date::Manip::Base> object may be
 used by any number of higher objects, and all will share the same
-configuration. If multiple Date::Manip::Date objects share the same
-Date::Manip::Base object, setting a configuration variable on any of
-them affects all of the Date::Manip::Date objects. If you need to work
+configuration. If multiple L<Date::Manip::Date> objects share the same
+L<Date::Manip::Base> object, setting a configuration variable on any of
+them affects all of the L<Date::Manip::Date> objects. If you need to work
 with different configurations simultaneously, it is necessary to work
-with multiple Date::Manip::Base objects. This is covered in the
-Date::Manip::Objects document.
+with multiple L<Date::Manip::Base> objects. This is covered in the
+L<Date::Manip::Objects> document.
 
 The third way to set config variables is to store them in a config
 file. The config file is read in by passing the appropriate values to
 the config method as described below.  A config file is a good way to
 easily change a large number of settings. They are also necessary for
 other purposes (such as events and holidays which are covered
-in the Date::Manip::Holidays document).
+in the L<Date::Manip::Holidays> document).
 
 =head1 CONFIG FILES
 
 One of the variables that can be passed to the config method is
 "ConfigFile". The value of this variable is the path to a config
-file. A description of the file format and contents is described
-below.
+file.
 
 When any Date::Manip::* object is configured, any number of config
 files may be read (and the config files can specify additional files
@@ -103,12 +102,12 @@ The following is a sample config file:
 All config variables that may appear in the main part of a config file
 are described in the next section. Other sections are described elsewhere.
 The *Holidays and *Events sections are both described in the
-Date::Manip::Holidays documentation.
+L<Date::Manip::Holidays> documentation.
 
 A sample config file is included with the Date::Manip distribution.
 Modify it as appropriate and copy it to some appropriate directory and
 use the ConfigFile variable to access it. For example, if a config
-file is stored in /home/foo/Manip.cnf, you can load it by:
+file is stored in F</home/foo/Manip.cnf>, you can load it by:
 
    $date->config("ConfigFile","/home/foo/Manip.cnf");
 
@@ -156,27 +155,12 @@ variable is a full path to a file.
 An example call to the config function might be:
 
    $date->config("ConfigFile","/tmp/file1",
-                 "ConfigFile","/tmp/file2");
+                 'Language',$val);
 
-Config files are parsed immediately. So if the file '/tmp/file1'
-contains the following lines:
-
-   ConfigFile = /tmp/file3
-   ConfigFile = /tmp/file4
-
-the following sequence of events occur:
-
-First, /tmp/file1 is opened. All options from it are parsed until
-you get to the first ConfigFile line.
-
-At that point, /tmp/file3 is parsed and all config variables stored
-(and they override any previously stored from /tmp/file1).
-
-Next, you continue with /tmp/file1 until the second ConfigFile line
-is seen at which point /tmp/file4 is parsed.
-
-Finally, any remaining lines in /tmp/file1 are parsed. Then /tmp/file2
-is parsed.
+Config files are parsed immediately when encountered. So in thise example,
+the file F</tmp/file1> will be parsed before the next variable ('Language').
+In addition, if a config file contains a ConfigFile variable, that file
+will immediately be parsed before continuing with the original file.
 
 The path to the file may be specified in any way valid for the
 operating system. If a file is not found, a warning will be issued,
@@ -188,7 +172,7 @@ across multiple files.
 =item B<Language>
 
 Date::Manip can be used to parse dates in many different languages.
-A list of the languages is given in the Date::Manip::Lang document.
+A list of the languages is given in the L<Date::Manip::Lang> document.
 
 To parse dates in a different language, just use the Language config
 variable with the name of the language as the value. Language names
@@ -196,7 +180,7 @@ are case insensitive.
 
 Additional languages may be added with the help of someone fluent in
 English and the other language.  If you are interested in providing a
-translation for a new language, please refer to the Date::Manip::Lang
+translation for a new language, please refer to the L<Date::Manip::Lang>
 document for instructions.
 
 =item B<Encoding>
@@ -246,44 +230,6 @@ be in utf-16 encoding.
 Note that any time you change languages, it will reset the encodings,
 so you should set this config variable AFTER setting the language.
 
-=item B<DateFormat>
-
-Different countries look at the date 12/10 as Dec 10 or Oct 12.  In
-the United States, the first is most common, but this certainly
-doesn't hold true for other countries.  Setting DateFormat to "US"
-(case insensitive) forces the first behavior (Dec 10).  Setting
-DateFormat to anything else forces the second behavior (Oct 12).  The
-"US" setting is the default (sorry about that...  I live in the US
-:-).
-
-=item B<YYtoYYYY>
-
-When parsing a date containing a 2-digit year, the year must be converted
-to 4 digits. This config variable determines how this is done.
-
-By default, a 2 digit year is treated as falling in the 100 year period of
-CURR-89 to CURR+10. So in the year 2005, a two digit year will be somewhere
-in the range 1916 to 2015.
-
-YYtoYYYY may be set to any integer N to force a 2 digit year into the
-period CURR-N to CURR+(99-N).  A value of 0 forces the year to be the
-current year or later.  A value of 99 forces the year to be the
-current year or earlier.  Although the most common choice of values
-will be somewhere between 0 and 99, there is no restriction on N that
-forces it to be so. It can actually be any positive or negative number
-you want to force it into any 100 year period desired.
-
-YYtoYYYY can also be set to "C" to force it into the current century, or
-to "C##" to force it into a specific century.  So, in 1998, "C" forces
-2 digit years to be 1900-1999.  "C18" would always force a 2 digit year to
-be in the range 1800-1899. Note: I'm aware that the actual definitions of
-century are 1901-2000, NOT 1900-1999, so for purists, treat this as
-the way to supply the first two digits rather than as supplying a
-century.
-
-It can also be set to the form "C####" to force it into a specific 100
-year period.  C1950 refers to 1950-2049.
-
 =item B<FirstDay>
 
 It is sometimes necessary to know what day of week is regarded as
@@ -320,13 +266,56 @@ If Printable is set to 2, the format is:
 This config variable is present in order to maintain backward
 compatibility, and may actually be deprecated at some point. As such,
 additional formats will not be added. Instead, use the printf method
-in the Date::Manip::Date module to extract information with complete
+in the L<Date::Manip::Date> module to extract information with complete
 flexibility.
+
+=back
+
+=head1 DATE PARSING CONFIGURATION VARIABLES
+
+=over 4
+
+=item B<DateFormat>
+
+Different countries look at the date 12/10 as Dec 10 or Oct 12.  In
+the United States, the first is most common, but this certainly
+doesn't hold true for other countries.  Setting DateFormat to "US"
+(case insensitive) forces the first behavior (Dec 10).  Setting
+DateFormat to anything else forces the second behavior (Oct 12).  The
+"US" setting is the default (sorry about that...  I live in the US).
+
+=item B<YYtoYYYY>
+
+When parsing a date containing a 2-digit year, the year must be converted
+to 4 digits. This config variable determines how this is done.
+
+By default, a 2 digit year is treated as falling in the 100 year period of
+CURR-89 to CURR+10. So in the year 2005, a two digit year will be somewhere
+in the range 1916 to 2015.
+
+YYtoYYYY may be set to any integer N to force a 2 digit year into the
+period CURR-N to CURR+(99-N).  A value of 0 forces the year to be the
+current year or later.  A value of 99 forces the year to be the
+current year or earlier.  Although the most common choice of values
+will be somewhere between 0 and 99, there is no restriction on N that
+forces it to be so. It can actually be any positive or negative number
+you want to force it into any 100 year period desired.
+
+YYtoYYYY can also be set to "C" to force it into the current century, or
+to "C##" to force it into a specific century.  So, in 1998, "C" forces
+2 digit years to be 1900-1999.  "C18" would always force a 2 digit year to
+be in the range 1800-1899. Note: I'm aware that the actual definitions of
+century are 1901-2000, NOT 1900-1999, so for purists, treat this as
+the way to supply the first two digits rather than as supplying a
+century.
+
+It can also be set to the form "C####" to force it into a specific 100
+year period.  C1950 refers to 1950-2049.
 
 =item B<DefaultTime>
 
 When a date is parsed from one of the formats listed in the "Common date formats"
-or "Less common formats" sections of the Date::Manip::Date document, and no time
+or "Less common formats" sections of the L<Date::Manip::Date> document, and no time
 is explicitly included, the default time can be determined by the value of this
 variable. The two possible values are:
 
@@ -340,8 +329,11 @@ using the parse_date method always default to 00:00:00.
 
 =item B<PeriodTimeSep>
 
-By default, the only default time separator is a colon (:), so the
-time can be written as 12:15:30 .
+By default, the time separator (i.e. the character that separates
+hours from minutes and minutes from seconds) is specified in the
+language translations and in most cases it does not include a period.
+In English, the only defined time separator is a colon (:), so the time
+can be written as 12:15:30 .
 
 If you want to use a period (.) as a time separator as well, set this
 to 1.  Then you can write the time as 12.15.30 .
@@ -350,13 +342,22 @@ By default, a period is used as a date separator, so 12.15.30 would be
 interpreted as Dec 15 1930 (or 2030), so if you use the period as a
 date separator, it should not be used as a time separator too.
 
+=item B<Format_MMMYYYY>
+
+By default, when parsing a string like 'Jun 1925', it will be interpreted
+as 'Jun 19, 2025' (i.e. MMM DDYY).  Also, the string '1925 Jun' is not allowed.
+
+This variable can be set to either 'first' or 'last', and in that case,
+both 'Jun 1925' and '1925 Jun' will be allowed, and will refer to either
+the first or last day of June in 1925.
+
 =back
 
 =head1 BUSINESS CONFIGURATION VARIABLES
 
 These are configuration variables used to define work days and
 holidays used in business mode calculations. Refer to the
-Date::Manip::Calc documentation for details on these calculations.
+L<Date::Manip::Calc> documentation for details on these calculations.
 
 =over 4
 
@@ -382,7 +383,7 @@ Saturday.
 To handle a 10 days on, 4 days off schedule, do something similar
 but defined a holiday that occurs on all of the 4 days off.
 
-Both of these can be done using recurrences. Refer to the Date::Manip::Recur
+Both of these can be done using recurrences. Refer to the L<Date::Manip::Recur>
 documentation for details.
 
 =item B<WorkDay24Hr>
@@ -417,8 +418,8 @@ Periodically, if a day is not a business day, we need to find the
 nearest business day to it.  By default, we'll look to "tomorrow"
 first, but if this variable is set to 0, we'll look to "yesterday"
 first.  This is only used in the
-Date::Manip::Date::nearest_business_day method (and the
-Date_NearestWorkDay function) and is easily overridden (see
+C<Date::Manip::Date::nearest_business_day> method (and the
+C<Date_NearestWorkDay> function) and is easily overridden (see
 documentation for the nearest_business_day method).
 
 =item B<EraseHolidays>
@@ -430,7 +431,7 @@ ignored), the current list of defined holidays or events is erased.  A
 new set will be set the next time a config file is read in.
 
 Although these variables are supported, the best way to have multiple
-holiday or events lists will be to create multiple Date::Manip::Base
+holiday or events lists will be to create multiple L<Date::Manip::Base>
 objects based on separate config files.
 
 =back
@@ -461,11 +462,11 @@ The default value is "none".
 =head1 TIME ZONE RELATED CONFIGURATION VARIABLES
 
 The following configuration variables may alter the current
-time zone. As such, they are only available once the Date::Manip::TZ
+time zone. As such, they are only available once the L<Date::Manip::TZ>
 module is available. An easy way to handle this is to only pass them
-to the config method of a Date::Manip::TZ object or one of the high
-level objects (Date::Manip::Date, Date::Manip::Delta, or
-Date::Manip::Recur).
+to the config method of a L<Date::Manip::TZ> object or one of the high
+level objects (L<Date::Manip::Date>, L<Date::Manip::Delta>, or
+L<Date::Manip::Recur>).
 
 Many of Date::Manip's operations rely on knowing what time it is
 now. This consists of three things: knowing what date and time it is,
@@ -480,8 +481,8 @@ optional, and defaults to standard time if omitted.
 
 The default behavior of Date::Manip is to use the system localtime
 function to determine the date, time, and daylight saving time
-information, and to use various methods (see DETERMINING THE SYSTEM
-TIME ZONE in the Date::Manip::TZ documentation) to determine what
+information, and to use various methods (see
+L<Date::Manip::TZ/"DETERMINING THE SYSTEM TIME ZONE">) to determine what
 time zone the computer is in.
 
 =over 4
@@ -516,7 +517,7 @@ If it is currently
 
 and you call:
 
-   $date->config("setdate","Europe/Rome");
+   $date->config("setdate","now,Europe/Rome");
 
 the Date::Manip will treat that exact instant as
 
@@ -659,12 +660,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 

@@ -6,9 +6,9 @@ Date::Manip::TZ::asdush00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Feb 18 16:55:35 GMT 2015
-#    Data version: tzdata2015a
-#    Code version: tzcode2015a
+#    Generated on: Mon May  4 13:48:16 EDT 2015
+#    Data version: tzdata2015d
+#    Code version: tzcode2015d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:

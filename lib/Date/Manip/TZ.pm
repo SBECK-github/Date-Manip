@@ -22,6 +22,7 @@ use strict;
 use IO::File;
 require Date::Manip::Zones;
 use Date::Manip::Base;
+use Data::Dumper;
 
 our $VERSION;
 $VERSION='6.50';
@@ -411,61 +412,70 @@ sub _get_curr_zone {
       my $method = shift(@methods);
       my @zone   = ();
 
+      print "*** DEBUG *** METHOD: $method ["  if ($debug);
+
       if ($method eq 'main') {
 
          if (! @methods) {
+            print "]\n"  if ($debug);
             warn "ERROR: [_set_curr_zone] main requires argument\n";
             return;
          }
          my $var = shift(@methods);
-         push(@zone,$$::var)  if (defined $$::var);
-
-         if ($debug) {
-            print "*** DEBUG ***  main $var = " .
-                  (defined $$::var ? $$::var : 'undef') . "\n";
+         print "$var] "  if ($debug);
+         if (defined $$::var) {
+            push(@zone,$$::var);
+            print "$$::var\n"  if ($debug);
+         } else {
+            print "undef\n"  if ($debug);
          }
 
       } elsif ($method eq 'env') {
          if (@methods < 2) {
+            print "]\n"  if ($debug);
             warn "ERROR: [_set_curr_zone] env requires 2 argument\n";
             return;
          }
          my $type = lc( shift(@methods) );
+         print "$type,"  if ($debug);
+         
          if ($type ne 'zone'  &&
              $type ne 'offset') {
-            warn "ERROR: [_set_curr_zone] env requires 'offset' or 'zone' as the first argument\n";
+            print "?]\n"  if ($debug);
+            warn "ERROR: [_set_curr_zone] env requires 'offset' or 'zone' " .
+                 "as the first argument\n";
             return;
          }
          my $var  = shift(@methods);
+         print "$var] "  if ($debug);
          if (exists $ENV{$var}) {
             if ($type eq 'zone') {
                push(@zone,$ENV{$var});
+               print "$ENV{$var}\n"  if ($debug);
             } else {
                my $off = $ENV{$var};
+               print "$ENV{$var} = "  if ($debug);
                $off    = $dmb->_delta_convert('time',"0:0:$off");
                $off    = $dmb->_delta_convert('offset',$off);
+               print "$off\n"  if ($debug);
                push(@zone,$off);
             }
-         }
-
-         if ($debug) {
-            print "*** DEBUG *** env $type $var ";
-            if (exists $ENV{$var}) {
-               print $ENV{$var};
-               print $zone[$#zone]  if ($type eq 'offset');
-               print "\n";
-            } else {
-               print "-no result-\n";
-            }
+         } else {
+            print "undef\n"  if ($debug);
          }
 
       } elsif ($method eq 'file') {
          if (! @methods) {
+            print "]\n"  if ($debug);
             warn "ERROR: [_set_curr_zone] file requires argument\n";
             return;
          }
          my $file = shift(@methods);
-         next  if (! -f $file);
+         print "$file] "  if ($debug);
+         if (! -f $file) {
+            print "not found\n"  if ($debug);
+            next;
+         }
 
          my $in = new IO::File;
          $in->open($file)  ||  next;
@@ -474,13 +484,25 @@ sub _get_curr_zone {
          my @z;
          while (! $in->eof) {
             my $line = <$in>;
+            chomp($line);
             next  if ($line =~ /^\s*\043/  ||
                       $line =~ /^\s*$/);
+            if ($firstline) {
+               $firstline = 0;
+               $line      =~ s/^\s*//;
+               $line      =~ s/\s*$//;
+               $line      =~ s/["']//g;  # "
+               $line      =~ s/\s+/_/g;
+               @z         = ($line);
+            }
 
             # We're looking for lines of the form:
             #   TZ = string
             #   TIMEZONE = string
             #   ZONE = string
+            # Alternately, we may use a 1-line file (ignoring comments and
+            # whitespace) which contains only the zone name (it may be
+            # quoted or contain embedded whitespace).
             #
             # 'string' can be:
             #   the name of a timezone enclosed in single/double quotes
@@ -523,75 +545,68 @@ sub _get_curr_zone {
 
                last;
             }
-            if ($firstline) {
-               $firstline = 0;
-               $line      =~ s/^\s*//;
-               $line      =~ s/\s*$//;
-               $line      =~ s/["']//g;  # "
-               $line      =~ s/\s+/_/g;
-               push(@z,$line);
-            }
          }
          close(IN);
 
          push(@zone,@z)  if (@z);
 
          if ($debug) {
-            print "*** DEBUG *** file $file\n";
-            if (@z) {
-               print "              @z\n";
+            if (@zone) {
+               print "@zone\n";
             } else {
-               print "              -no result-\n";
+               print "no result\n";
             }
          }
 
       } elsif ($method eq 'command') {
          if (! @methods) {
+            print "]\n"  if ($debug);
             warn "ERROR: [_set_curr_zone] command requires argument\n";
             return;
          }
          my $command = shift(@methods);
+         print "$command] "  if ($debug);
          my ($out)   = _cmd($command);
          push(@zone,$out)  if ($out);
 
          if ($debug) {
-            print "*** DEBUG *** command $command\n";
             if ($out) {
-               print "              $out\n";
+               print "$out\n";
             } else {
-               print "              -no result-\n";
+               print "no output\n";
             }
          }
 
       } elsif ($method eq 'cmdfield') {
          if ($#methods < 1) {
+            print "]\n"  if ($debug);
             warn "ERROR: [_set_curr_zone] cmdfield requires 2 arguments\n";
             return;
          }
          my $command = shift(@methods);
          my $n       = shift(@methods);
+         print "$command,$n]\n"  if ($debug);
          my ($out)   = _cmd($command);
-         my @z;
+         my $val;
 
          if ($out) {
             $out    =~ s/^\s*//;
             $out    =~ s/\s*$//;
             my @out = split(/\s+/,$out);
-            push(@z,$out[$n])  if (defined $out[$n]);
+            $val    = $out[$n]  if (defined $out[$n]);
+            push(@zone,$val);
          }
 
-         push(@zone,@z)  if (@z);
-
          if ($debug) {
-            print "*** DEBUG *** cmdfield $command $n\n";
-            if (@z) {
-               print "              @z\n";
+            if ($val) {
+               print "$val\n";
             } else {
-               print "              -no result-\n";
+               print "no result\n";
             }
          }
 
       } elsif ($method eq 'gmtoff') {
+         print "] "  if ($debug);
          my($secUT,$minUT,$hourUT,$mdayUT,$monUT,$yearUT,$wdayUT,$ydayUT,
             $isdstUT) = gmtime($t);
          if ($mdayUT>($mday+1)) {
@@ -608,26 +623,27 @@ sub _get_curr_zone {
          $off    = $dmb->_delta_convert('time',"0:0:$off");
          $off    = $dmb->_delta_convert('offset',$off);
          push(@zone,$off);
-
-         if ($debug) {
-            print "*** DEBUG *** gmtoff $off\n";
-         }
+         print "$off\n"  if ($debug);
 
       } elsif ($method eq 'registry') {
+         print "] "  if ($debug);
          my $z = $self->_windows_registry_val();
-         push(@zone,$z)  if ($z);
-
-         if ($debug) {
-            print "*** DEBUG *** registry $z\n";
+         if ($z) {
+            push(@zone,$z);
+            print "$z\n"  if ($debug);
+         } else {
+            print "no result\n"  if ($debug);
          }
 
       } else {
+         print "]\n"  if ($debug);
          warn "ERROR: [_set_curr_zone] invalid method: $method\n";
          return;
       }
 
-      foreach my $zone (@zone) {
-         $zone = lc($zone);
+      while (@zone) {
+         my $zone = lc(shift(@zone));
+
          # OpenUNIX puts a colon at the start
          $zone =~ s/^://;
 
@@ -853,7 +869,9 @@ sub __zone {
       # $zone
 
       if ($zone) {
-         @zone = ($zone);
+         my $z = (exists $$self{'data'}{'Alias'}{$zone} ?
+                  $$self{'data'}{'Alias'}{$zone} : $zone);
+         @zone = ($z);
       }
 
       # $abbrev

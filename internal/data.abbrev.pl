@@ -201,7 +201,6 @@
                      'Atlantic/Bermuda'                          ,1930,9999,
                      'America/Barbados'                          ,1932,9999,
                      'Asia/Riyadh'                               ,1947,9999,
-                     'America/Antigua'                           ,1951,9999,
                      'America/Curacao'                           ,1965,9999,
                      'America/Goose_Bay'                         ,1966,9999,
                      'Asia/Qatar'                                ,1972,9999,
@@ -314,7 +313,6 @@
                      'Europe/London'                             ,1916,9999,
                      'America/Adak'                              ,1967,1983,
                      'America/Nome'                              ,1967,1983,
-                     'Pacific/Midway'                            ,1967,1983,
                      'Pacific/Pago_Pago'                         ,1967,1983,
                      'Europe/Gibraltar'                          ,1916,1956,
                      'Europe/Dublin'                             ,1917,1921,
@@ -502,7 +500,7 @@
                      'America/Belize'                            ,1918,1943,
                     ],
    'CHOST'       => [
-                     'Asia/Choibalsan'                           ,1983,2006,
+                     'Asia/Choibalsan'                           ,1983,9999,
                     ],
    'CHOT'        => [
                      'Asia/Choibalsan'                           ,1983,9999,
@@ -647,7 +645,6 @@
                     ],
    'ChST'        => [
                      'Pacific/Guam'                              ,2000,9999,
-                     'Pacific/Saipan'                            ,2000,9999,
                     ],
    'D'           => [
                      'D'                                         ,0001,9999,
@@ -674,10 +671,10 @@
                      'E'                                         ,0001,9999,
                     ],
    'EASST'       => [
-                     'Pacific/Easter'                            ,1932,2015,
+                     'Pacific/Easter'                            ,1968,2015,
                     ],
    'EAST'        => [
-                     'Pacific/Easter'                            ,1942,9999,
+                     'Pacific/Easter'                            ,1932,9999,
                     ],
    'EAT'         => [
                      'Africa/Nairobi'                            ,1928,9999,
@@ -692,7 +689,6 @@
                     ],
    'EDT'         => [
                      'America/New_York'                          ,1918,9999,
-                     'America/Montreal'                          ,1917,9999,
                      'America/Nipigon'                           ,1918,9999,
                      'America/Toronto'                           ,1918,9999,
                      'America/Detroit'                           ,1948,9999,
@@ -714,7 +710,7 @@
                      'America/Jamaica'                           ,1974,1983,
                      'America/Indiana/Tell_City'                 ,1969,1970,
                      'America/Santo_Domingo'                     ,1966,1967,
-                    ],
+                     ],
    'EEST'        => [
                      'EET'                                       ,1977,9999,
                      'Europe/Istanbul'                           ,1916,9999,
@@ -736,7 +732,7 @@
                      'Europe/Kiev'                               ,1990,9999,
                      'Europe/Simferopol'                         ,1992,2013,
                      'Europe/Uzhgorod'                           ,1992,9999,
-                     'Africa/Cairo'                              ,1940,9999,
+                     'Africa/Cairo'                              ,1940,2014,
                      'Europe/Kaliningrad'                        ,1991,2010,
                      'Europe/Minsk'                              ,1991,2010,
                      'Europe/Moscow'                             ,1991,1991,
@@ -787,19 +783,16 @@
                      'America/New_York'                          ,1945,1945,
                      'America/Detroit'                           ,1945,1945,
                      'America/Iqaluit'                           ,1945,1945,
-                     'America/Montreal'                          ,1945,1945,
                      'America/Nipigon'                           ,1945,1945,
                      'America/Thunder_Bay'                       ,1945,1945,
                      'America/Toronto'                           ,1945,1945,
                     ],
    'EST'         => [
                      'America/New_York'                          ,1883,9999,
-                     'America/Montreal'                          ,1884,9999,
                      'America/Nipigon'                           ,1895,9999,
                      'America/Toronto'                           ,1895,9999,
                      'America/Panama'                            ,1908,9999,
                      'America/Thunder_Bay'                       ,1910,9999,
-                     'America/Cayman'                            ,1912,9999,
                      'America/Grand_Turk'                        ,1912,2015,
                      'America/Jamaica'                           ,1912,9999,
                      'America/Nassau'                            ,1912,9999,
@@ -826,7 +819,6 @@
                      'America/Managua'                           ,1973,1997,
                      'America/Merida'                            ,1981,1982,
                      'America/Menominee'                         ,1969,1973,
-                     'America/Antigua'                           ,1912,1951,
                      'America/Chicago'                           ,1936,1936,
                      'America/Moncton'                           ,1883,1902,
                     ],
@@ -834,7 +826,6 @@
                      'America/New_York'                          ,1942,1945,
                      'America/Detroit'                           ,1942,1945,
                      'America/Iqaluit'                           ,1942,1945,
-                     'America/Montreal'                          ,1942,1945,
                      'America/Nipigon'                           ,1942,1945,
                      'America/Thunder_Bay'                       ,1942,1945,
                      'America/Toronto'                           ,1942,1945,
@@ -1008,14 +999,9 @@
    'H'           => [
                      'H'                                         ,0001,9999,
                     ],
-   'HADT'        => [
-                     'America/Adak'                              ,1984,9999,
-                    ],
-   'HAST'        => [
-                     'America/Adak'                              ,1983,9999,
-                    ],
    'HDT'         => [
                      'Pacific/Honolulu'                          ,1933,1945,
+                     'America/Adak'                              ,1984,9999,
                     ],
    'HKST'        => [
                      'Asia/Hong_Kong'                            ,1941,1979,
@@ -1031,13 +1017,14 @@
                      'Atlantic/Azores'                           ,1884,1912,
                     ],
    'HOVST'       => [
-                     'Asia/Hovd'                                 ,1983,2006,
+                     'Asia/Hovd'                                 ,1983,9999,
                     ],
    'HOVT'        => [
                      'Asia/Hovd'                                 ,1905,9999,
                     ],
    'HST'         => [
                      'Pacific/Honolulu'                          ,1896,9999,
+                     'America/Adak'                              ,1983,9999,
                     ],
    'I'           => [
                      'I'                                         ,0001,9999,
@@ -1159,7 +1146,6 @@
                      'Europe/Vilnius'                            ,1916,1919,
                      'America/Jamaica'                           ,1890,1912,
                      'America/Grand_Turk'                        ,1890,1912,
-                     'America/Cayman'                            ,1890,1912,
                     ],
    'KOST'        => [
                      'Pacific/Kosrae'                            ,1900,9999,
@@ -1299,7 +1285,6 @@
                      'Asia/Macau'                                ,1911,1999,
                     ],
    'MPT'         => [
-                     'Pacific/Saipan'                            ,1900,2000,
                      'America/Denver'                            ,1945,1945,
                      'America/Boise'                             ,1945,1945,
                      'America/Cambridge_Bay'                     ,1945,1945,
@@ -1310,7 +1295,7 @@
                      'America/Swift_Current'                     ,1945,1945,
                      'America/Yellowknife'                       ,1945,1945,
                      'America/North_Dakota/Beulah'               ,1945,1945,
-                    ],
+                     ],
    'MSD'         => [
                      'Europe/Moscow'                             ,1919,2010,
                      'Europe/Simferopol'                         ,1981,1996,
@@ -1324,6 +1309,7 @@
                      'Europe/Riga'                               ,1981,1988,
                      'Europe/Tallinn'                            ,1981,1988,
                      'Europe/Samara'                             ,1989,1990,
+                     'Europe/Volgograd'                          ,1992,2010,
                     ],
    'MSK'         => [
                      'Europe/Moscow'                             ,1919,9999,
@@ -1409,7 +1395,6 @@
    'NDT'         => [
                      'America/St_Johns'                          ,1917,9999,
                      'America/Goose_Bay'                         ,1918,1965,
-                     'Pacific/Midway'                            ,1956,1956,
                     ],
    'NEGT'        => [
                      'America/Paramaribo'                        ,1945,1975,
@@ -1448,7 +1433,6 @@
                      'America/St_Johns'                          ,1884,9999,
                      'America/Adak'                              ,1900,1967,
                      'America/Nome'                              ,1900,1967,
-                     'Pacific/Midway'                            ,1901,1967,
                      'Pacific/Pago_Pago'                         ,1911,1967,
                      'America/Goose_Bay'                         ,1884,1966,
                      'Europe/Amsterdam'                          ,1916,1937,
@@ -1584,7 +1568,7 @@
                      'America/Vancouver'                         ,1884,9999,
                      'America/Santa_Isabel'                      ,1924,9999,
                      'America/Tijuana'                           ,1924,9999,
-                     'America/Whitehorse'                        ,1966,9999,
+                     'America/Whitehorse'                        ,1967,9999,
                      'America/Dawson'                            ,1973,9999,
                      'Pacific/Pitcairn'                          ,1998,9999,
                      'America/Juneau'                            ,1900,1983,
@@ -1704,7 +1688,6 @@
                     ],
    'SST'         => [
                      'Pacific/Pago_Pago'                         ,1983,9999,
-                     'Pacific/Midway'                            ,1983,9999,
                      'Pacific/Apia'                              ,1950,2011,
                     ],
    'STAT'        => [
@@ -1783,7 +1766,7 @@
                      'U'                                         ,0001,9999,
                     ],
    'ULAST'       => [
-                     'Asia/Ulaanbaatar'                          ,1983,2006,
+                     'Asia/Ulaanbaatar'                          ,1983,9999,
                     ],
    'ULAT'        => [
                      'Asia/Ulaanbaatar'                          ,1905,9999,
@@ -2010,9 +1993,9 @@
                      'America/Juneau'                            ,1983,1983,
                      'America/Nome'                              ,1983,1983,
                      'America/Dawson'                            ,1900,1973,
-                     'America/Whitehorse'                        ,1900,1966,
+                     'America/Whitehorse'                        ,1900,1967,
                      'America/Sitka'                             ,1983,1983,
-                    ],
+                     ],
    'YWT'         => [
                      'America/Whitehorse'                        ,1942,1945,
                      'America/Dawson'                            ,1942,1945,

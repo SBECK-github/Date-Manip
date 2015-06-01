@@ -5,13 +5,13 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Feb 18 18:28:12 GMT 2015
-#    Data version: tzdata2015a
-#    Code version: tzcode2015a
+#    Generated on: Tue May  5 08:02:27 EDT 2015
+#    Data version: tzdata2015d
+#    Code version: tzcode2015d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
-#    ftp://ftp.iana.orgtz
+#    ftp://ftp.iana.org/tz
 
 =pod
 
@@ -25,11 +25,11 @@ This module is automatically generated. It contains a complete list of
 time zones specified in the standard zoneinfo (or Olson) databases
 obtained from:
 
-   ftp://ftp.iana.orgtz/tzdata_vers.tar.gz
+L<ftp://ftp.iana.org/tz/tzdata_vers.tar.gz>
 
 All information is stored in variables, so this module provide no
 routines for dealing with time zone information. For routines related
-to time zones, see the documentation for the Date::Manip::TZ module.
+to time zones, see the documentation for the L<Date::Manip::TZ> module.
 
 
 =head1 TIME ZONES
@@ -69,7 +69,6 @@ database:
      Africa/Windhoek                      afwind00
      America/Adak                         amadak00
      America/Anchorage                    amanch00
-     America/Antigua                      amanti00
      America/Araguaina                    amarag00
      America/Argentina/Buenos_Aires       ambuen00
      America/Argentina/Catamarca          amcata00
@@ -99,7 +98,6 @@ database:
      America/Cancun                       amcanc00
      America/Caracas                      amcara00
      America/Cayenne                      amcaye00
-     America/Cayman                       amcaym00
      America/Chicago                      amchic00
      America/Chihuahua                    amchih00
      America/Costa_Rica                   amcost00
@@ -156,7 +154,6 @@ database:
      America/Moncton                      ammonc00
      America/Monterrey                    ammont01
      America/Montevideo                   ammont02
-     America/Montreal                     ammont03
      America/Nassau                       amnass00
      America/New_York                     amnew_00
      America/Nipigon                      amnipi00
@@ -376,7 +373,6 @@ database:
      Pacific/Kwajalein                    pakwaj00
      Pacific/Majuro                       pamaju00
      Pacific/Marquesas                    pamarq00
-     Pacific/Midway                       pamidw00
      Pacific/Nauru                        panaur00
      Pacific/Niue                         paniue00
      Pacific/Norfolk                      panorf00
@@ -387,7 +383,6 @@ database:
      Pacific/Pohnpei                      papohn00
      Pacific/Port_Moresby                 paport00
      Pacific/Rarotonga                    pararo00
-     Pacific/Saipan                       pasaip00
      Pacific/Tahiti                       patahi00
      Pacific/Tarawa                       patara00
      Pacific/Tongatapu                    patong00
@@ -463,8 +458,8 @@ Time zones may be referred to as their full name
 aliases and abbreviations that may be used.
 
 Standard aliases are listed below. Additional aliases can be created,
-or existing aliases overridden using the new_alias method of the
-Date::Manip::TZ module.
+or existing aliases overridden using the C<new_alias> method of the
+L<Date::Manip::TZ> module.
 
 The zoneinfo database provides several standard aliases, including:
 
@@ -507,11 +502,13 @@ The zoneinfo database provides several standard aliases, including:
      Africa/Sao_Tome                      Africa/Abidjan
      Africa/Timbuktu                      Africa/Abidjan
      America/Anguilla                     America/Port_of_Spain
+     America/Antigua                      America/Port_of_Spain
      America/Argentina/ComodRivadavia     America/Argentina/Catamarca
      America/Aruba                        America/Curacao
      America/Atka                         America/Adak
      America/Buenos_Aires                 America/Argentina/Buenos_Aires
      America/Catamarca                    America/Argentina/Catamarca
+     America/Cayman                       America/Panama
      America/Coral_Harbour                America/Atikokan
      America/Cordoba                      America/Argentina/Cordoba
      America/Dominica                     America/Port_of_Spain
@@ -527,6 +524,7 @@ The zoneinfo database provides several standard aliases, including:
      America/Lower_Princes                America/Curacao
      America/Marigot                      America/Port_of_Spain
      America/Mendoza                      America/Argentina/Mendoza
+     America/Montreal                     America/Toronto
      America/Montserrat                   America/Port_of_Spain
      America/Porto_Acre                   America/Rio_Branco
      America/Rosario                      America/Argentina/Cordoba
@@ -632,7 +630,9 @@ The zoneinfo database provides several standard aliases, including:
      Navajo                               America/Denver
      PRC                                  Asia/Shanghai
      Pacific/Johnston                     Pacific/Honolulu
+     Pacific/Midway                       Pacific/Pago_Pago
      Pacific/Ponape                       Pacific/Pohnpei
+     Pacific/Saipan                       Pacific/Guam
      Pacific/Samoa                        Pacific/Pago_Pago
      Pacific/Truk                         Pacific/Chuuk
      Pacific/Yap                          Pacific/Chuuk
@@ -804,6 +804,7 @@ default alias can be overridden as described above.
                                           Europe/Paris
      CET-1WEST                            Europe/Luxembourg
      CGT2CGST                             America/Scoresbysund
+     CHOT-8CHOST                          Asia/Choibalsan
      CHOT-9CHOST                          Asia/Choibalsan
      CLT4CLST                             America/Santiago
                                           Antarctica/Palmer
@@ -890,7 +891,6 @@ default alias can be overridden as described above.
                                           Asia/Hebron
      EGT1EGST                             America/Scoresbysund
      EST5EDT                              America/New_York
-                                          America/Montreal
                                           America/Nipigon
                                           America/Toronto
                                           America/Detroit
@@ -914,7 +914,6 @@ default alias can be overridden as described above.
      EST5EPT                              America/New_York
                                           America/Detroit
                                           America/Iqaluit
-                                          America/Montreal
                                           America/Nipigon
                                           America/Thunder_Bay
                                           America/Toronto
@@ -929,9 +928,9 @@ default alias can be overridden as described above.
                                           Europe/Gibraltar
                                           Europe/Dublin
      GMT0IST                              Europe/Dublin
-     HAST10HADT                           America/Adak
      HKT-8HKST                            Asia/Hong_Kong
      HOVT-7HOVST                          Asia/Hovd
+     HST10HDT                             America/Adak
      IRKT-7IRKST                          Asia/Irkutsk
      IRKT-8IRKST                          Asia/Irkutsk
      IST-2EEST                            Asia/Gaza
@@ -976,7 +975,7 @@ default alias can be overridden as described above.
                                           Europe/Riga
                                           Europe/Tallinn
                                           Europe/Samara
-     MSK-3MSK                             Europe/Volgograd
+                                          Europe/Volgograd
      MST7MDT                              America/Denver
                                           America/Edmonton
                                           America/Boise
@@ -1008,7 +1007,6 @@ default alias can be overridden as described above.
      NOVT-6NOVST                          Asia/Novosibirsk
                                           Asia/Novokuznetsk
      NOVT-7NOVST                          Asia/Novosibirsk
-     NST11NDT                             Pacific/Midway
      NST11NPT                             America/Adak
                                           America/Nome
      NZST-12NZDT                          Pacific/Auckland
@@ -1112,6 +1110,9 @@ Aliases include:
 
      ALTERNATE NAME                       TIME ZONE           
      -----------------------------------  --------------------
+     ARST3ARDT                            America/Argentina/Buenos_Aires
+     AST10ADT                             America/Adak
+     AST4ADT#Canada                       America/Halifax
      AUS Central Standard Time            Australia/Darwin
      AUS Eastern Standard Time            Australia/Sydney
      Afghanistan Standard Time            Asia/Kabul
@@ -1123,8 +1124,15 @@ Aliases include:
      Atlantic Standard Time               America/Halifax
      Azerbaijan Standard Time             Asia/Baku
      Azores Standard Time                 Atlantic/Azores
+     BRST3BRDT                            America/Sao_Paulo
+     BRWST4BRWDT                          America/Campo_Grande
      Bahia Standard Time                  America/Bahia
      Bangladesh Standard Time             Asia/Dhaka
+     CSM6CDM                              America/Mexico_City
+     CST-9:30CDT                          Australia/Adelaide
+     CST6CDT#Canada                       America/Winnipeg
+     CST6CDT#Indiana                      America/Indiana/Indianapolis
+     CST6CDT#Mexico                       America/Mexico_City
      Canada Central Standard Time         America/Regina
      Cape Verde Standard Time             Atlantic/Cape_Verde
      Caucasus Standard Time               Asia/Yerevan
@@ -1143,6 +1151,16 @@ Aliases include:
      E. Australia Standard Time           Australia/Brisbane
      E. Europe Standard Time              Asia/Nicosia
      E. South America Standard Time       America/Sao_Paulo
+     EET-2EETDST                          Europe/Helsinki
+     EST-10EDT                            Australia/Melbourne
+     EST-10EDT#NSW                        Australia/Sydney
+     EST-10EDT#Tasmania                   Australia/Hobart
+     EST-10EDT#VIC                        Australia/Melbourne
+     EST5CDT                              America/Indiana/Indianapolis
+     EST5EDT#Canada                       America/Toronto
+     EST5EDT#Indiana                      America/Indiana/Indianapolis
+     EST5EST                              America/Indiana/Indianapolis
+     EST6CDT                              America/Indiana/Indianapolis
      Eastern Standard Time                America/New_York
      Egypt Standard Time                  Africa/Cairo
      Ekaterinburg Standard Time           Asia/Yekaterinburg
@@ -1163,6 +1181,13 @@ Aliases include:
      Jordan Standard Time                 Asia/Amman
      Kaliningrad Standard Time            Europe/Kaliningrad
      Korea Standard Time                  Asia/Seoul
+     MET-1METDST                          MET
+     MEZ-1MESZ                            CET
+     MSM7MDM                              America/Chihuahua
+     MST7MDT#Canada                       America/Edmonton
+     MST7MDT#Mexico                       America/Chihuahua
+     MXST6MXDT                            America/Mexico_City
+     MXST6MXDT#Mexico                     America/Mexico_City
      Magadan Standard Time                Asia/Magadan
      Mauritius Standard Time              Indian/Mauritius
      Middle East Standard Time            Asia/Beirut
@@ -1172,12 +1197,19 @@ Aliases include:
      Mountain Standard Time (Mexico)      America/Chihuahua
      Myanmar Standard Time                Asia/Rangoon
      N. Central Asia Standard Time        Asia/Novosibirsk
+     NST3:30NDT                           America/St_Johns
+     NST3:30NDT#Canada                    America/St_Johns
      Namibia Standard Time                Africa/Windhoek
      Nepal Standard Time                  Asia/Kathmandu
      New Zealand Standard Time            Pacific/Auckland
      Newfoundland Standard Time           America/St_Johns
      North Asia East Standard Time        Asia/Irkutsk
      North Asia Standard Time             Asia/Krasnoyarsk
+     PSM8PDM                              America/Santa_Isabel
+     PST-8PDT                             Asia/Singapore
+     PST8PDT#Canada                       America/Vancouver
+     PST8PDT#Mexico                       America/Santa_Isabel
+     PWT0PST                              Europe/Lisbon
      Pacific SA Standard Time             America/Santiago
      Pacific Standard Time                America/Los_Angeles
      Pacific Standard Time (Mexico)       America/Santa_Isabel
@@ -1189,6 +1221,7 @@ Aliases include:
      SA Eastern Standard Time             America/Cayenne
      SA Pacific Standard Time             America/Bogota
      SA Western Standard Time             America/La_Paz
+     SAST-2                               Africa/Johannesburg
      SE Asia Standard Time                Asia/Bangkok
      Samoa Standard Time                  Pacific/Apia
      Singapore Standard Time              Asia/Singapore
@@ -1212,6 +1245,19 @@ Aliases include:
      W. Australia Standard Time           Australia/Perth
      W. Central Africa Standard Time      Africa/Lagos
      W. Europe Standard Time              Europe/Berlin
+     WET0WETDST                           WET
+     WST-10WSTDST                         Asia/Vladivostok
+     WST-11WSTDST                         Asia/Srednekolymsk
+     WST-12WSTDST                         Asia/Kamchatka
+     WST-2WSTDST                          Europe/Minsk
+     WST-3WSTDST                          Europe/Moscow
+     WST-4WSTDST                          Europe/Samara
+     WST-5WSTDST                          Asia/Yekaterinburg
+     WST-6WSTDST                          Asia/Omsk
+     WST-7WSTDST                          Asia/Krasnoyarsk
+     WST-8WDT                             Australia/Perth
+     WST-8WSTDST                          Asia/Irkutsk
+     WST-9WSTDST                          Asia/Yakutsk
      West Asia Standard Time              Asia/Tashkent
      West Pacific Standard Time           Pacific/Port_Moresby
      Yakutsk Standard Time                Asia/Yakutsk
@@ -1223,21 +1269,19 @@ on the offset, and in what order. The first match is used. If the
 ISDST time is not known, the standard zones will be tested followed by
 the DST zones.
 
-The default order can be overridden with the off_zones method in the
-Date::Manip::TZ module.
+The default order can be overridden with the C<off_zones> method in the
+L<Date::Manip::TZ> module.
 
      ISDST  OFFSET      TIME ZONE                
      -----  ----------  -------------------------
      0      -15:56:00   Asia/Manila
      0      -14:21:00   Pacific/Guam
-     0      -14:17:00   Pacific/Saipan
      0      -14:00:00   Etc/GMT-14
      0      -13:00:00   Etc/GMT-13
      0      -12:00:00   Etc/GMT-12
                         M
                         Pacific/Kwajalein
                         Pacific/Enderbury
-     0      -11:49:28   Pacific/Midway
      0      -11:46:38   America/Adak
      0      -11:30:00   Pacific/Niue
                         Pacific/Apia
@@ -1248,8 +1292,7 @@ Date::Manip::TZ module.
      0      -11:20:00   Pacific/Niue
      0      -11:19:40   Pacific/Niue
      0      -11:01:38   America/Nome
-     0      -11:00:00   Pacific/Midway
-                        Pacific/Pago_Pago
+     0      -11:00:00   Pacific/Pago_Pago
                         Pacific/Niue
                         Etc/GMT-11
                         L
@@ -1324,7 +1367,6 @@ Date::Manip::TZ module.
      0      -07:33:52   America/Edmonton
      0      -07:28:18   America/Phoenix
      0      -07:23:52   America/Hermosillo
-     0      -07:17:44   Pacific/Easter
      0      -07:17:28   Pacific/Easter
      0      -07:11:20   America/Swift_Current
      0      -07:05:40   America/Mazatlan
@@ -1441,7 +1483,6 @@ Date::Manip::TZ module.
      0      -05:32:11   America/Detroit
      0      -05:29:36   America/Havana
      0      -05:29:28   America/Havana
-     0      -05:25:32   America/Cayman
      0      -05:19:36   America/Panama
      0      -05:19:20   America/Guayaquil
      0      -05:18:08   America/Panama
@@ -1451,16 +1492,13 @@ Date::Manip::TZ module.
      0      -05:08:36   America/Lima
      0      -05:08:12   America/Lima
      0      -05:07:11   America/Jamaica
-                        America/Cayman
                         America/Grand_Turk
      0      -05:00:00   America/New_York
-                        America/Montreal
                         America/Nipigon
                         America/Toronto
                         America/Lima
                         America/Panama
                         America/Thunder_Bay
-                        America/Cayman
                         America/Grand_Turk
                         America/Jamaica
                         America/Nassau
@@ -1495,14 +1533,12 @@ Date::Manip::TZ module.
                         Pacific/Galapagos
                         America/Merida
                         America/Menominee
-                        America/Antigua
                         America/Santiago
                         America/Chicago
                         America/Moncton
                         Pacific/Easter
      0      -04:56:16   America/Bogota
      0      -04:56:02   America/New_York
-     0      -04:54:16   America/Montreal
      0      -04:49:20   America/Port-au-Prince
      0      -04:49:00   America/Port-au-Prince
      0      -04:44:32   America/Grand_Turk
@@ -1545,7 +1581,6 @@ Date::Manip::TZ module.
                         America/Argentina/Ushuaia
      0      -04:15:36   America/Porto_Velho
      0      -04:14:24   America/Halifax
-     0      -04:07:12   America/Antigua
      0      -04:06:04   America/Port_of_Spain
      0      -04:04:20   America/Martinique
      0      -04:02:40   America/Boa_Vista
@@ -1558,28 +1593,28 @@ Date::Manip::TZ module.
                         America/Moncton
                         America/Martinique
                         America/Port_of_Spain
-                        Atlantic/Stanley
-                        America/Boa_Vista
                         America/Campo_Grande
+                        America/Boa_Vista
                         America/Cuiaba
                         America/Manaus
                         America/Porto_Velho
                         America/Thule
-                        America/Santiago
                         Atlantic/Bermuda
                         America/Asuncion
                         America/Barbados
                         America/La_Paz
-                        America/Antigua
                         America/Curacao
                         America/Goose_Bay
                         America/Santo_Domingo
                         America/Guyana
-                        America/Eirunepe
-                        America/Rio_Branco
+                        America/Grand_Turk
                         Etc/GMT-4
                         D
+                        America/Santiago
                         Antarctica/Palmer
+                        America/Eirunepe
+                        America/Rio_Branco
+                        Atlantic/Stanley
                         America/Argentina/San_Luis
                         America/Santarem
                         America/Caracas
@@ -1597,7 +1632,6 @@ Date::Manip::TZ module.
                         America/Miquelon
                         America/Argentina/Buenos_Aires
                         America/Cayenne
-                        America/Grand_Turk
      0      -03:59:48   America/Glace_Bay
      0      -03:58:29   America/Barbados
      0      -03:53:48   America/Argentina/Buenos_Aires
@@ -2157,7 +2191,6 @@ Date::Manip::TZ module.
                         V
                         Asia/Choibalsan
                         Asia/Vladivostok
-                        Pacific/Saipan
                         Asia/Sakhalin
                         Asia/Hong_Kong
                         Asia/Jakarta
@@ -2192,7 +2225,6 @@ Date::Manip::TZ module.
      0      +09:35:28   Australia/Currie
      0      +09:39:00   Pacific/Guam
      0      +09:39:52   Australia/Melbourne
-     0      +09:43:00   Pacific/Saipan
      0      +09:48:32   Pacific/Port_Moresby
                         Pacific/Bougainville
      0      +09:48:40   Pacific/Port_Moresby
@@ -2207,19 +2239,18 @@ Date::Manip::TZ module.
                         Australia/Sydney
                         Pacific/Chuuk
                         Pacific/Guam
-                        Pacific/Saipan
-                        Asia/Yakutsk
+                        Asia/Magadan
                         Asia/Vladivostok
+                        Antarctica/DumontDUrville
                         Asia/Sakhalin
+                        Asia/Ust-Nera
                         Etc/GMT+10
                         W
-                        Antarctica/DumontDUrville
-                        Asia/Magadan
+                        Asia/Yakutsk
                         Australia/Lord_Howe
                         Australia/Broken_Hill
                         Antarctica/Macquarie
                         Asia/Khandyga
-                        Asia/Ust-Nera
                         Asia/Chita
                         Asia/Srednekolymsk
                         Pacific/Bougainville
@@ -2313,7 +2344,6 @@ Date::Manip::TZ module.
      1      -10:00:00   Pacific/Apia
                         America/Adak
                         America/Nome
-                        Pacific/Midway
      1      -09:30:00   Pacific/Rarotonga
                         Pacific/Honolulu
      1      -09:00:00   America/Adak
@@ -2396,7 +2426,6 @@ Date::Manip::TZ module.
                         America/Indiana/Vevay
      1      -04:30:00   America/Santo_Domingo
      1      -04:00:00   America/New_York
-                        America/Montreal
                         America/Nipigon
                         America/Toronto
                         America/Havana
@@ -2679,6 +2708,7 @@ Date::Manip::TZ module.
                         Asia/Manila
                         Asia/Khandyga
                         Asia/Chita
+                        Asia/Choibalsan
      1      +09:30:00   Asia/Seoul
      1      +09:45:00   Australia/Eucla
      1      +10:00:00   Asia/Yakutsk
@@ -2740,18 +2770,15 @@ The abbreviations LMT and zzz which occur in the zoneinfo databases
 are ignored (and when parsing a date including them, the local time
 zone will be used).
 
-The default order can be overridden using the abbrev method of the
-Date::Manip::TZ module.
+The default order can be overridden using the C<abbrev> method of the
+L<Date::Manip::TZ> module.
 
-The order given here is open to discussion (and possible change) for
-some unspecified period of time (possibly the first couple releases in
-the 6.xx cycle), but at some point, the order will become fixed. Please
-note that I will always place emphasis on a time zone that used the
-abbreviation more recently than another time zone. Within those
-constraints, I'm interested in putting the more commonly used time zone
+The order given here is open to discussion (and possible change) based
+on changes to the timezone database.  I will always place emphasis on a
+time zone that used the abbreviation more recently than another time zone.
+Within those constraints, I've tried to put the more commonly used time zone
 at a higher priority. Since I'm not always able to decide which is the
-most commonly used, I'm very willing to entertain arguments for
-altering the order.
+most commonly used, I'm willing to entertain arguments for altering the order.
 
      ALIAS            TIME ZONE           
      ---------------  --------------------
@@ -2888,7 +2915,6 @@ altering the order.
                       Atlantic/Bermuda
                       America/Barbados
                       Asia/Riyadh
-                      America/Antigua
                       America/Curacao
                       America/Goose_Bay
                       Asia/Qatar
@@ -2953,7 +2979,6 @@ altering the order.
      BST              Europe/London
                       America/Adak
                       America/Nome
-                      Pacific/Midway
                       Pacific/Pago_Pago
                       Europe/Gibraltar
                       Europe/Dublin
@@ -3212,7 +3237,6 @@ altering the order.
                       America/Mexico_City
      CXT              Indian/Christmas
      ChST             Pacific/Guam
-                      Pacific/Saipan
      D                D
      DACT             Asia/Dhaka
      DAVT             Antarctica/Davis
@@ -3229,7 +3253,6 @@ altering the order.
                       Pacific/Galapagos
      EDDT             America/Iqaluit
      EDT              America/New_York
-                      America/Montreal
                       America/Nipigon
                       America/Toronto
                       America/Detroit
@@ -3310,17 +3333,14 @@ altering the order.
      EPT              America/New_York
                       America/Detroit
                       America/Iqaluit
-                      America/Montreal
                       America/Nipigon
                       America/Thunder_Bay
                       America/Toronto
      EST              America/New_York
-                      America/Montreal
                       America/Nipigon
                       America/Toronto
                       America/Panama
                       America/Thunder_Bay
-                      America/Cayman
                       America/Grand_Turk
                       America/Jamaica
                       America/Nassau
@@ -3347,13 +3367,11 @@ altering the order.
                       America/Managua
                       America/Merida
                       America/Menominee
-                      America/Antigua
                       America/Chicago
                       America/Moncton
      EWT              America/New_York
                       America/Detroit
                       America/Iqaluit
-                      America/Montreal
                       America/Nipigon
                       America/Thunder_Bay
                       America/Toronto
@@ -3422,9 +3440,8 @@ altering the order.
                       Asia/Qatar
      GYT              America/Guyana
      H                H
-     HADT             America/Adak
-     HAST             America/Adak
      HDT              Pacific/Honolulu
+                      America/Adak
      HKST             Asia/Hong_Kong
      HKT              Asia/Hong_Kong
      HMT              Asia/Kolkata
@@ -3435,6 +3452,7 @@ altering the order.
      HOVST            Asia/Hovd
      HOVT             Asia/Hovd
      HST              Pacific/Honolulu
+                      America/Adak
      I                I
      ICT              Asia/Ho_Chi_Minh
                       Asia/Bangkok
@@ -3502,7 +3520,6 @@ altering the order.
                       Europe/Vilnius
                       America/Jamaica
                       America/Grand_Turk
-                      America/Cayman
      KOST             Pacific/Kosrae
      KRAST            Asia/Krasnoyarsk
                       Asia/Novokuznetsk
@@ -3572,8 +3589,7 @@ altering the order.
                       Asia/Colombo
      MOST             Asia/Macau
      MOT              Asia/Macau
-     MPT              Pacific/Saipan
-                      America/Denver
+     MPT              America/Denver
                       America/Boise
                       America/Cambridge_Bay
                       America/Edmonton
@@ -3595,6 +3611,7 @@ altering the order.
                       Europe/Riga
                       Europe/Tallinn
                       Europe/Samara
+                      Europe/Volgograd
      MSK              Europe/Moscow
                       Europe/Simferopol
                       Europe/Minsk
@@ -3654,7 +3671,6 @@ altering the order.
      NDDT             America/St_Johns
      NDT              America/St_Johns
                       America/Goose_Bay
-                      Pacific/Midway
      NEGT             America/Paramaribo
      NEST             Europe/Amsterdam
      NET              Europe/Amsterdam
@@ -3673,7 +3689,6 @@ altering the order.
      NST              America/St_Johns
                       America/Adak
                       America/Nome
-                      Pacific/Midway
                       Pacific/Pago_Pago
                       America/Goose_Bay
                       Europe/Amsterdam
@@ -3803,7 +3818,6 @@ altering the order.
      SRET             Asia/Srednekolymsk
      SRT              America/Paramaribo
      SST              Pacific/Pago_Pago
-                      Pacific/Midway
                       Pacific/Apia
      STAT             Europe/Volgograd
      SVEST            Asia/Yekaterinburg
@@ -3972,12 +3986,12 @@ None known.
 
 =head1 BUGS AND QUESTIONS
 
-Please refer to the Date::Manip::Problems documentation for
+Please refer to the L<Date::Manip::Problems> documentation for
 information on submitting bug reports or questions to the author.
 
 =head1 SEE ALSO
 
-Date::Manip        - main module documentation
+L<Date::Manip>        - main module documentation
 
 =head1 LICENSE
 
