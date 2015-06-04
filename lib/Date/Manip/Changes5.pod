@@ -24,6 +24,17 @@ For the most part, Date::Manip has remained backward compatible at
 every release, but occasionally, a change is made which is backward
 incompatible. These are marked with an exclamation mark (!).
 
+=head1 VERSION 5.66 (Released with 6.51)
+
+=over 4
+
+=item Fixed a bug in Date_ConvTZ
+
+Applied a patch supplied by Zhenyi Zhou which fixes a bug in Date_ConvTZ
+where passing in an empty string did not work.
+
+=back
+
 =head1 VERSION 5.65 (Released with 6.37)
 
 As of December 2012, Version 5 of Date::Manip will no longer be modified.
