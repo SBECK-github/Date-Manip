@@ -3326,9 +3326,9 @@ sub Date_ConvTZ {
   Date_Init()  if (! $Curr{"InitDone"});
   my($gmt)=();
 
-  if (! defined $from) {
+  if ((! defined $from) or ($from eq '')) {
 
-    if (! defined $to) {
+    if ((! defined $to) or ($to eq '')) {
       # TZ -> ConvTZ
       return $date  if ($Cnf{"ConvTZ"} eq "IGNORE" or ! $Cnf{"ConvTZ"});
       $from=$Cnf{"TZ"};
@@ -3337,16 +3337,16 @@ sub Date_ConvTZ {
     } else {
       # ConvTZ,TZ -> $to
       $from=$Cnf{"ConvTZ"};
-      $from=$Cnf{"TZ"}  if (! defined $from);
+      $from=$Cnf{"TZ"}  if ((! defined $from) or ($from eq ''));
     }
 
   } else {
 
-    if (! defined $to) {
+    if ((! defined $to) or ($to eq '')) {
       # $from -> ConvTZ,TZ
       return $date  if ($Cnf{"ConvTZ"} eq "IGNORE");
       $to=$Cnf{"ConvTZ"};
-      $to=$Cnf{"TZ"}  if (! $to);
+      $to=$Cnf{"TZ"}  if ((! defined $to) or ($to eq ''));
 
     } else {
       # $from -> $to
