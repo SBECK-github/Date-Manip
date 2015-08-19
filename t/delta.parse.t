@@ -17,7 +17,8 @@ sub test {
   (@test)=@_;
   $err = $obj->parse(@test);
   if ($err) {
-     return $obj->err();
+     $err = $obj->err();
+     return ($obj->value(),$err);
   } else {
      @val = $obj->value();
      return (@val,$$obj{"data"}{"business"});
@@ -33,7 +34,7 @@ $tests="
 
 1:2:3:4:5:6:7               => 1 2 3 4 5 6 7 0
 
-'in 1:2:3:4:5:6:7'          => '[parse] Invalid delta string'
+'in 1:2:3:4:5:6:7'          => __blank__ '[parse] Invalid delta string'
 
 -1:2:3:4:5:6:7              => -1 -2 -3 -4 -5 -6 -7 0
 
@@ -85,7 +86,7 @@ $tests="
 
 '+ 35 y, -10 month 15mn'    => 34 2 0 0 0 -15 0 0
 
-'+35x 10 month'             => '[parse] Invalid delta string'
+'+35x 10 month'             => __blank__ '[parse] Invalid delta string'
 
 'two weeks ago'             => 0 0 -2 0 0 0 0 0
 

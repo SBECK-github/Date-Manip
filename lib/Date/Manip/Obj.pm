@@ -71,14 +71,7 @@ sub new {
       @opts = @{ pop(@args) };
    }
 
-   # There must be at most 1 additional argument
-
-   if (@args) {
-      if (@args > 1) {
-         warn "ERROR: [new] unknown arguments\n";
-         return undef;
-      }
-   }
+   # Additional arguments will be passed to parse.
 
    ########################
 
@@ -173,6 +166,8 @@ sub _init_args {
    if (@args) {
       warn "WARNING: [new] invalid arguments: @args\n";
    }
+
+   return;
 }
 
 sub _init_final {
@@ -249,6 +244,8 @@ sub config {
       my $val = shift(@opts);
       $obj->_config_var($var,$val);
    }
+
+   return;
 }
 
 sub get_config {

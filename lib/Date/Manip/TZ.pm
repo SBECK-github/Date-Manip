@@ -99,12 +99,13 @@ sub _init {
    if ($os eq 'Unix') {
       $$self{'data'}{'path'}    = '/bin:/usr/bin';
       $$self{'data'}{'methods'} = [
-                                   qw(main TZ
-                                      env  zone TZ
-                                      file /etc/TIMEZONE
-                                      file /etc/timezone
-                                      file /etc/sysconfig/clock
-                                      file /etc/default/init
+                                   qw(main   TZ
+                                      env    zone TZ
+                                      file   /etc/TIMEZONE
+                                      file   /etc/timezone
+                                      file   /etc/sysconfig/clock
+                                      file   /etc/default/init
+                                      tzdata /etc/localtime /usr/share/zoneinfo
                                     ),
                                    'command',  '/bin/date +%Z',
                                    'command',  '/usr/bin/date +%Z',
@@ -438,7 +439,7 @@ sub _get_curr_zone {
          }
          my $type = lc( shift(@methods) );
          print "$type,"  if ($debug);
-         
+
          if ($type ne 'zone'  &&
              $type ne 'offset') {
             print "?]\n"  if ($debug);
@@ -558,6 +559,21 @@ sub _get_curr_zone {
             }
          }
 
+      } elsif ($method eq 'tzdata') {
+         if (@methods < 2) {
+            print "]\n"  if ($debug);
+            warn "ERROR: [_set_curr_zone] tzdata requires two arguments\n";
+            return;
+         }
+         my $file    = shift(@methods);
+         my $dir     = shift(@methods);
+ 	 if (defined(my $z = _get_zoneinfo_zone($file,$dir))) {
+ 	    push @zone, $z;
+ 	    print "] $z\n"  if ($debug);
+ 	 } elsif ($debug) {
+ 	    print "] no result\n";
+ 	 }
+
       } elsif ($method eq 'command') {
          if (! @methods) {
             print "]\n"  if ($debug);
@@ -672,8 +688,82 @@ sub _get_curr_zone {
    return $currzone;
 }
 
-# This comes from the DateTime-TimeZone module
-#
+#######################
+# The following section comes from the DateTime-TimeZone module
+
+{
+   my $want_content;
+   my $want_size;
+   my $zoneinfo;
+
+   sub _get_zoneinfo_zone {
+      my($localtime,$z) = @_;
+      $zoneinfo = $z;
+
+      # /etc/localtime should be either a link to a tzdata file in
+      # /usr/share/zoneinfo or a copy of one of the files there.
+
+      return ''  if (! -d $zoneinfo || ! -f $localtime);
+
+      require Cwd;
+      if (-l $localtime) {
+         return _zoneinfo_file_name_to_zone(
+                                            Cwd::abs_path($localtime),
+                                            $zoneinfo,
+                                           );
+      }
+
+      $want_content = _zoneinfo_file_slurp($localtime);
+      $want_size    = -s $localtime;
+
+      # File::Find can't bail in the middle of a find, and we only want the
+      # first match, so we'll call it in an eval.
+
+      local $@ = undef;
+      eval {
+         require File::Find;
+         File::Find::find
+             ({
+               wanted      => \&_zoneinfo_find_file,
+               no_chdir    => 1,
+              },
+              $zoneinfo,
+           );
+           1;
+      } and return;
+      ref $@
+        and return $@->{zone};
+      die $@;
+   }
+
+   sub _zoneinfo_find_file {
+      my $zone;
+      defined($zone = _zoneinfo_file_name_to_zone($File::Find::name,
+                                                  $zoneinfo))
+        and -f $_
+        and $want_size == -s _
+        and ($want_content eq _zoneinfo_file_slurp($File::Find::name))
+        and die { zone => $zone };
+   }
+}
+
+sub _zoneinfo_file_name_to_zone {
+   my($file,$zoneinfo) = @_;
+   require File::Spec;
+   my $zone = File::Spec->abs2rel($file,$zoneinfo);
+   return $zone  if (exists $Date::Manip::Zones::ZoneNames{lc($zone)});
+   return;
+}
+
+sub _zoneinfo_file_slurp {
+   my($file) = @_;
+   open my $fh, '<', $file
+     or return;
+   binmode $fh;
+   local $/ = undef;
+   return <$fh>;
+}
+
 sub _windows_registry_val {
    my($self) = @_;
 
@@ -730,6 +820,9 @@ sub _windows_registry_val {
       return $z  if ($znam eq $stdnam);
    }
 }
+
+# End of DateTime-TimeZone section
+#######################
 
 # We will be testing commands that don't exist on all architectures,
 # so disable warnings.

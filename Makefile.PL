@@ -14,8 +14,11 @@ my $ConvVers= $ExtUtils::MakeMaker::VERSION;
 
 my %module_prereq = (
    'Carp'                     => '0',
+   'Cwd'                      => '0',
    'Data::Dumper'             => '0',
    'Encode'                   => '0',
+   'File::Find'               => '0',
+   'File::Spec'               => '0',
    'IO::File'                 => '0',
    'Storable'                 => '0',
    'utf8'                     => '0',

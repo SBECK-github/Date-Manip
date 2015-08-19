@@ -98,9 +98,9 @@ sub Date_Init {
 }
 
 sub ParseDateString {
-   my($string) = @_;
+   my($string,@opts) = @_;
    $string = ''  if (! defined($string));
-   my $err = $date->parse($string);
+   my $err = $date->parse($string,@opts);
    return ''  if ($err);
    my $ret = $date->value('local');
    return $ret;
@@ -116,25 +116,20 @@ sub ParseDateFormat {
 }
 
 sub ParseDate {
-   my(@a) = @_;
+   my($arg,@opts) = @_;
 
-   if ($#a!=0) {
-      print "ERROR:  Invalid number of arguments to ParseDate.\n";
-      return '';
-   }
-   my @args;
-   my $args = $a[0];
-   $args    = ''  if (! defined($args));
-   my $ref  = ref($args);
+   $arg     = ''  if (! defined($arg));
+   my $ref  = ref($arg);
    my $list = 0;
 
+   my @args;
    if (! $ref) {
-      @args = ($args);
+      @args = ($arg);
    } elsif ($ref eq 'ARRAY') {
-      @args = @$args;
+      @args = @$arg;
       $list = 1;
    } elsif ($ref eq 'SCALAR') {
-      @args = ($$args);
+      @args = ($$arg);
    } else {
       print "ERROR:  Invalid arguments to ParseDate.\n";
       return '';
@@ -142,9 +137,9 @@ sub ParseDate {
 
    while (@args) {
       my $string = join(' ',@args);
-      my $err = $date->parse($string);
+      my $err = $date->parse($string,@opts);
       if (! $err) {
-         splice(@$args,0,$#args+1)  if ($list);
+         splice(@$arg,0,$#args+1)  if ($list);
          my $ret = $date->value('local');
          return $ret;
       }

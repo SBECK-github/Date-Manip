@@ -23,6 +23,8 @@ sub test {
 
   my $obj3 = $obj1->calc($obj2,@test);
   return   if (! defined $obj3);
+  $err = $obj3->err();
+  return $err  if ($err);
   $ret = $obj3->value();
   $abb = $$obj3{'data'}{'abb'};
   return ($ret,$abb);
@@ -52,6 +54,7 @@ $tests="
 
 2001-02-03-04:05:06    '+ -2 hours' => '[parse] Invalid delta string'
 
+2011-12-11-12:00:00 +878400000:0:0  => '[calc] Delta too large'
 
 #
 # Spring forward: 2011-03-13 02:00 EST -> 2011-03-13 03:00 EDT
@@ -66,6 +69,8 @@ $tests="
 #
 
 '2011-11-06 01:59:59 EDT'   +1           => 2011110601:00:00 EST
+
+2011-04-03-12:00:00    +87840000:0:0     => '[calc] Delta produces date outside valid range'
 
 ";
 

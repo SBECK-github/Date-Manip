@@ -31,6 +31,47 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.51  (planned 2015-09-01)
 
+=over 4
+
+=item Changes suggested by perlcritic
+
+A number of minor changes based on suggestions by perlcritic.
+
+=item B<(!) Date::Manip::Delta::value now returns an empty string>
+
+If a delta has an error, or no valid delta in it, the value method returns
+an empty string instead of undef.  This is to be consistent with the
+Date::Manip::Date::value method which returns an empty string.
+
+=item Bug fixes
+
+Fixed a bug where date/delta calculations with deltas that are too
+large was not working correctly.  They now set an error condition
+and fail.  RT 105737
+
+Fixed a bug introduced by the previous patch and luckily discovered
+pre-release by Tom Wyant.
+
+Fixed code that produced a warning in 5.22.0.  Tom Wyant
+
+=item Improved DM6 ParseDate and ParseDateString
+
+Added C<@opts> argument.  Based on RT 105622.
+
+=item Time zone fixes
+
+Now uses /etc/localtime as a method to determine the local timezone.
+Patch supplied in RT 105159 (modified by me).  The patch uses some
+code derived from DateTime::TimeZone .
+
+Clearer message when the date is not valid in the timezone.
+
+=item Documentation fixes
+
+Fixed a typo.  RT 105546
+
+=back
+
 =head1 VERSION 6.50  2015-06-01
 
 =over 4

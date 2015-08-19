@@ -58,8 +58,8 @@ Any C<$obj> variable refers to an object in any of the classes.
 
 There are two ways to use the new method. They are:
 
-   $obj2  = new CLASS ($obj1,$string,\@opts);
-   $obj2  = $obj1->new($string,\@opts)
+   $obj2  = new CLASS ($obj1,$string,[@parse_opts,]\@opts);
+   $obj2  = $obj1->new($string,[@parse_opts,]\@opts)
 
 In both cases, all arguments are optional.
 
@@ -142,17 +142,11 @@ If the string is included, it will be parsed to give an initial value
 to the object. This will only be done AFTER any options are handled,
 so the following are equivalent:
 
-   $date = new Date::Manip::Date $string,\@opts;
+   $date = new Date::Manip::Date $string,@parse_opts,\@opts;
 
    $date = new Date::Manip::Date;
    $date->config(@opts);
-   $date->parse($string);
-
-Note that it is generally not a good idea to pass in C<$string> since all
-of the parse methods allow (but do not require) additional arguments, and
-this ability is not supported when passing in C<$string> to the new method.
-As a result, it's generally a better practice to call the parse method
-separately.
+   $date->parse($string,@parse_opts);
 
 Once a L<Date::Manip::Date> object (or any object in any other
 Date::Manip class) is created, it should always be used to create

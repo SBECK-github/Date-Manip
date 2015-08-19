@@ -22,9 +22,9 @@ sub test {
   return $$obj2{"err"}  if ($err);
 
   my $obj3 = $obj1->calc($obj2,@test);
-  if ($$obj3{'err'}) {
-     return $$obj3{'err'};
-  }
+  return   if (! defined $obj3);
+  $err = $obj3->err();
+  return $err  if ($err);
   $ret = $obj3->value();
   return $ret;
 }

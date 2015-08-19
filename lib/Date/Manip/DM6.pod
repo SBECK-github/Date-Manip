@@ -16,11 +16,11 @@ Date::Manip::DM6 - Date manipulation routines
 
    Date_Init("VAR=VAL","VAR=VAL",...);
 
-   $date = ParseDate(\@args);
-   $date = ParseDate($string);
-   $date = ParseDate(\$string);
+   $date = ParseDate(\@args [,@opts]);
+   $date = ParseDate($string [,@opts]);
+   $date = ParseDate(\$string [,@opts]);
 
-   $date = ParseDateString($string);
+   $date = ParseDateString($string [,@opts]);
 
    $date = ParseDateFormat($format,$string);
 
@@ -119,9 +119,9 @@ the list.
 
 =item B<ParseDate>
 
-   $date = ParseDate(\@args);
-   $date = ParseDate($string);
-   $date = ParseDate(\$string);
+   $date = ParseDate(\@args [,@opts]);
+   $date = ParseDate($string [,@opts]);
+   $date = ParseDate(\$string [,@opts]);
 
 This takes an array or a string containing a date and parses it.  When the
 date is included as an array (for example, the arguments to a program) the
@@ -142,6 +142,9 @@ work:
 No more reading man pages to find out what date format is required in a
 man page.
 
+The C<@opts> argument may contain values that can be passed to the
+C<Date::Manip::Date::parse> method.
+
 Historical note: this is originally why the Date::Manip routines were
 written (though long before they were released as the Date::Manip module).
 I was using a bunch of programs (primarily batch queue managers) where
@@ -152,11 +155,14 @@ which I could pass "@ARGV" to and have it remove a date from the beginning.
 
 =item B<ParseDateString>
 
-   $date = ParseDateString($string);
+   $date = ParseDateString($string [,@opts]);
 
 This parses a string containing a date and returns it. Refer to the
 Date::Manip::Date documentation for valid date formats. The date
 returned is in the local time zone.
+
+The C<@opts> argument may contain values that can be passed to the
+C<Date::Manip::Date::parse> method.
 
 =item B<ParseDateFormat>
 

@@ -522,7 +522,7 @@ This returns the value of the delta. In scalar context, it returns
 the printable string (equivalent to the printf directive '%Dt'). In
 list context, it returns a list of fields.
 
-undef is returned if there is no valid delta stored in $delta.
+An empty string is returned if there is no valid delta stored in $delta.
 
 =item B<convert>
 

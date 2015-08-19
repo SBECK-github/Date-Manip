@@ -23,7 +23,8 @@ sub test {
 
   my $err = $obj->parse(@test);
   if ($err) {
-     return $obj->err();
+     $err = $obj->err();
+     return ($obj->value(),$err);
   } else {
      $d1 = $obj->value();
      $d2 = $obj->value("gmt");

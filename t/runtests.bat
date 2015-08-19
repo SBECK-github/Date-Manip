@@ -46,6 +46,8 @@ perl -I../lib date.cmp.t 1
 perl -I../lib date.convert.t 1
 perl -I../lib date.holiday.0.t 1
 perl -I../lib date.holiday.1.t 1
+perl -I../lib date.init_args.t 1
+perl -I../lib date.is.t 1
 perl -I../lib date.is_business_day.t 1
 perl -I../lib date.list_events.0.t 1
 perl -I../lib date.list_events.1.t 1
@@ -65,6 +67,7 @@ perl -I../lib date.parse.dutch.t 1
 perl -I../lib date.parse.english.t 1
 perl -I../lib date.parse.french.t 1
 perl -I../lib date.parse.holidays.t 1
+perl -I../lib date.parse.invalid.t 1
 perl -I../lib date.parse.iso.t 1
 perl -I../lib date.parse.italian.t 1
 perl -I../lib date.parse.misc.0.t 1
@@ -111,6 +114,8 @@ perl -I../lib delta.calc.delta_delta_business.1.t 1
 perl -I../lib delta.calc.delta_delta_exact.t 1
 perl -I../lib delta.cmp.t 1
 perl -I../lib delta.convert.t 1
+perl -I../lib delta.init_args.t 1
+perl -I../lib delta.is.t 1
 perl -I../lib delta.parse.fract.t 1
 perl -I../lib delta.parse.t 1
 perl -I../lib delta.printf.t 1
@@ -173,6 +178,8 @@ perl -I../lib recur.dates.0.t 1
 perl -I../lib recur.dates.1.t 1
 perl -I../lib recur.dates.2.t 1
 perl -I../lib recur.frequency.t 1
+perl -I../lib recur.init_args.t 1
+perl -I../lib recur.is.t 1
 perl -I../lib recur.nth.t 1
 perl -I../lib tz.all_periods.t 1
 perl -I../lib tz.convert.t 1

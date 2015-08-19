@@ -910,6 +910,8 @@ sub _tzd_Zone {
 sub _tzd_DeleteZone {
    my($self,$zone) = @_;
    delete $$self{'zone'}{$zone};
+
+   return;
 }
 
 sub _tzd_ZoneKeys {
@@ -942,6 +944,8 @@ sub _tzd_CheckZones {
       }
       $self->_tzd_DeleteZone($zone)  if ($Error);
    }
+
+   return;
 }
 
 # TZdata file:
@@ -1301,6 +1305,8 @@ sub _tzd_ZoneLines {
       $lastdstend = $dstend;
    }
    $$self{'zonelines'}{$zone}{'numlines'} = $i;
+
+   return;
 }
 
 # Parses date information from  a single rule and returns a date.

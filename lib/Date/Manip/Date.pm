@@ -73,19 +73,15 @@ sub _init {
       # The date in local timezone
       'loc'    => [],        # the date converted to local timezone
      };
+   return;
 }
 
 sub _init_args {
    my($self) = @_;
 
    my @args = @{ $$self{'args'} };
-   if (@args) {
-      if ($#args == 0) {
-         $self->parse($args[0]);
-      } else {
-         warn "WARNING: [new] invalid arguments: @args\n";
-      }
-   }
+   $self->parse(@args);
+   return;
 }
 
 sub input {
@@ -1026,7 +1022,7 @@ sub _parse_check {
    }
 
    if (! @tmp) {
-      $$self{'err'} = "[$caller] Invalid timezone";
+      $$self{'err'} = "[$caller] Invalid date in timezone";
       return 1;
    }
 
@@ -1962,6 +1958,7 @@ sub _parse_holidays {
    return (0);
 }
 
+no integer;
 sub _parse_delta {
    my($self,$string,$dow,$got_time,$h,$mn,$s,$noupdate) = @_;
    my $dmt = $$self{'tz'};
@@ -1975,6 +1972,17 @@ sub _parse_delta {
 
    if (! $err) {
       my($dy,$dm,$dw,$dd,$dh,$dmn,$ds) = @{ $$delta{'data'}{'delta'} };
+
+      # We can't handle a delta longer than 10000 years
+      if (abs($dy)  > 10000       ||
+          abs($dm)  > 12000       ||   # 10000*12
+          abs($dw)  > 53000       ||   # 10000*53
+          abs($dh)  > 87840000    ||   # 10000*366*24
+          abs($dmn) > 5270400000  ||   # 10000*366*24*60
+          abs($ds)  > 316224000000) {  # 10000*366*24*60*60
+         $$self{'err'} = '[parse] Delta too large';
+         return (1);
+      }
 
       if ($got_time  &&
           ($dh != 0  ||  $dmn != 0  ||  $ds != 0)) {
@@ -2018,6 +2026,7 @@ sub _parse_delta {
 
    return (0);
 }
+use integer;
 
 sub _parse_datetime_other {
    my($self,$string,$noupdate) = @_;
@@ -3314,6 +3323,7 @@ sub __calc_date_date {
    return [ $dy,$dm,$dw,$dd,$dh,$dmn,$ds ];
 }
 
+no integer;
 sub _calc_date_delta {
    my($self,$delta,$subtract) = @_;
    my $ret                    = $self->new_date();
@@ -3337,12 +3347,26 @@ sub _calc_date_delta {
    my $tz        = $$self{'data'}{'tz'};
    my $isdst     = $$self{'data'}{'isdst'};
 
+   # We can't handle a delta longer than 10000 years
+   my($dy,$dm,$dw,$dd,$dh,$dmn,$ds) = @delta;
+   if (abs($dy)  > 10000       ||
+       abs($dm)  > 12000       ||   # 10000*12
+       abs($dw)  > 53000       ||   # 10000*53
+       abs($dh)  > 87840000    ||   # 10000*366*24
+       abs($dmn) > 5270400000  ||   # 10000*366*24*60
+       abs($ds)  > 316224000000) {  # 10000*366*24*60*60
+      $$ret{'err'} = '[calc] Delta too large';
+      return $ret;
+   }
+
    my($err,$date2,$offset,$abbrev);
    ($err,$date2,$offset,$isdst,$abbrev) =
      $self->__calc_date_delta([@date],[@delta],$subtract,$business,$tz,$isdst);
 
    if ($err) {
       $$ret{'err'} = '[calc] Unable to perform calculation';
+   } elsif ($$date2[0]<0 || $$date2[0]>9999) {
+      $$ret{'err'} = '[calc] Delta produces date outside valid range';
    } else {
       $$ret{'data'}{'set'}   = 1;
       $$ret{'data'}{'date'}  = $date2;
@@ -3353,6 +3377,7 @@ sub _calc_date_delta {
    }
    return $ret;
 }
+use integer;
 
 sub __calc_date_delta {
    my($self,$date,$delta,$subtract,$business,$tz,$isdst) = @_;
@@ -3397,7 +3422,7 @@ sub __calc_date_delta {
       # so this can be written:
       #    DATE - DELTA(exact) = RET'
       #
-      # So the inverse subtract only needs include the approximate
+      # So the inverse subtract only needs to include the approximate
       # portion of the delta.
 
       ($err,$date2,$offset,$isdst,$abbrev) =
@@ -4087,6 +4112,7 @@ sub next_business_day {
 
    $date = $self->__nextprev_business_day(0,$off,$checktime,$date);
    $self->set('date',$date);
+   return;
 }
 
 sub prev_business_day {
@@ -4099,6 +4125,7 @@ sub prev_business_day {
 
    $date = $self->__nextprev_business_day(1,$off,$checktime,$date);
    $self->set('date',$date);
+   return;
 }
 
 sub __nextprev_business_day {
@@ -4156,6 +4183,7 @@ sub nearest_business_day {
    return  if (! defined($date));
 
    $self->set('date',$date);
+   return;
 }
 
 sub __nearest_business_day {
@@ -4251,6 +4279,7 @@ sub _holiday_objs {
 
       warn "WARNING: invalid holiday description: $string\n";
    }
+   return;
 }
 
 # Make sure that holidays are set for a given year.
@@ -4285,6 +4314,7 @@ sub _holidays {
 
    $self->_holidays($year-1,1);
    $self->_holidays($year+1,1);
+   return;
 }
 
 sub _holidays_year {
@@ -4351,6 +4381,7 @@ sub _holidays_year {
    }
 
    $$dmb{'data'}{'init_holidays'} = 0;
+   return;
 }
 
 ########################################################################
@@ -4919,6 +4950,8 @@ sub _events_year {
          $$dmb{'data'}{'events'}{$i}{$y} = [ $d0,$d1 ];
       }
    }
+
+   return;
 }
 
 # This parses the raw event list.  It only has to be done once.
@@ -5168,6 +5201,8 @@ sub _event_objs {
          next;
       }
    }
+
+   return;
 }
 
 1;

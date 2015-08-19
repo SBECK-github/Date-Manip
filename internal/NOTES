@@ -139,7 +139,7 @@ Before every release, spellcheck the documents:
 
    for i in `find lib -type f -name \*.pod` ;do
       podspell $i > $i.txt
-      ispell -p internal/manip.isp $i.txt
+      ispell -p internal/module.isp $i.txt
       rm -f $i.txt $i.txt.bak
    done
 
@@ -166,7 +166,19 @@ Install the module. Then run the following:
    ./internal/gen_dm5abbrevs > lib/Date/Manip/DM5abbrevs.pm
 
 #########################################################################
+Make sure that the test suite covers everything
+
+   . ../0
+   cover -delete
+   cover -test
+       # make sure everything is 100%
+   cover -delete
+   make distclean
+
+#########################################################################
 Regenerate the MANIFEST and run the kwalitee tests
+
+find . -name \*.swp
 
 #########################################################################
 Run the internal/leak.pl whenever a new version of perl is available to

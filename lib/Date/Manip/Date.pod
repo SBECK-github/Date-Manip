@@ -680,7 +680,7 @@ SetDate or ForceDate config variables).
 
 If $type is "gmt", the date is returned in the GMT time zone.
 
-An empty string or list is returned i the case of an error (and
+An empty string or list is returned in the case of an error (and
 an error code is set).
 
 =item B<week_of_year>

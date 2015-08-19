@@ -615,6 +615,20 @@ The following methods are available:
    gmtoff                    Uses the current offset from
                              GMT to come up with a best guess.
 
+   tzdata     FILE DIR       This uses a system config file that
+                             contains a pointer to the local tzdata
+                             files to  determine the timezone.  On
+                             many operating systems, use:
+
+                             tzdata /etc/localtime /usr/share/zoneinfo
+
+                             FILE is the system file.  DIR is the
+                             directory where the tzdata files are stored.
+
+                             The config file is either a link to a file
+                             in the tzdata directory or a copy of one
+                             of the files.
+
    registry                  Look up the value in the
                              Windows registry. This is only
                              available to hosts running a
@@ -634,6 +648,7 @@ Unix systems:
    file     /etc/timezone
    file     /etc/sysconfig/clock
    file     /etc/default/init
+   tzdata   /etc/localtime /usr/share/zoneinfo
    command  "/bin/date +%Z"
    command  "/usr/bin/date +%Z"
    command  "/usr/local/bin/date +%Z"

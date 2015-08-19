@@ -30,7 +30,7 @@ which inherit from it.
 This module contains no public methods and is used internally by
 the Base and TZ classes. In some instances, basic date operations
 depend on timezone information, and all timezone operations depend
-on the base class.  In order to avoid a circular dependancy, I created
+on the base class.  In order to avoid a circular dependency, I created
 this class which allowed me to avoid that.
 
 =head1 KNOWN BUGS

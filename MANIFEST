@@ -28,6 +28,7 @@ internal/gen_dm5abbrevs
 internal/langpod
 internal/leak.pl
 internal/manip.isp
+internal/module.isp
 internal/NOTES
 internal/TODO
 internal/translate
@@ -983,6 +984,8 @@ t/date.cmp.t
 t/date.convert.t
 t/date.holiday.0.t
 t/date.holiday.1.t
+t/date.init_args.t
+t/date.is.t
 t/date.is_business_day.t
 t/date.list_events.0.t
 t/date.list_events.1.t
@@ -1002,6 +1005,7 @@ t/date.parse.dutch.t
 t/date.parse.english.t
 t/date.parse.french.t
 t/date.parse.holidays.t
+t/date.parse.invalid.t
 t/date.parse.iso.t
 t/date.parse.italian.t
 t/date.parse.misc.0.t
@@ -1048,6 +1052,8 @@ t/delta.calc.delta_delta_business.1.t
 t/delta.calc.delta_delta_exact.t
 t/delta.cmp.t
 t/delta.convert.t
+t/delta.init_args.t
+t/delta.is.t
 t/delta.parse.fract.t
 t/delta.parse.t
 t/delta.printf.t
@@ -1122,6 +1128,8 @@ t/recur.dates.0.t
 t/recur.dates.1.t
 t/recur.dates.2.t
 t/recur.frequency.t
+t/recur.init_args.t
+t/recur.is.t
 t/recur.nth.t
 t/runtests
 t/runtests.bat

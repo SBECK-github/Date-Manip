@@ -158,9 +158,7 @@ sub _init_args {
    my($self) = @_;
 
    my @args = @{ $$self{'args'} };
-   if (@args) {
-      $self->parse(@args);
-   }
+   $self->parse(@args);
 }
 
 sub _holiday {
