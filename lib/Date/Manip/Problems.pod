@@ -96,7 +96,7 @@ slower than 5.xx.  The reason for this is that each time a new timezone is
 accessed, 6.xx does quite a bit of work to initialize it.  5.xx does not
 have this overhead, so it can parse dates from any number of timezones
 without a speed penalty.  However, 5.xx does NOT handle timezones correctly,
-so many of the dates will be incorrect.  If timezones are imporant to you,
+so many of the dates will be incorrect.  If timezones are important to you,
 there is no way to use 5.xx and get accurate results.
 
 If you only parse dates from a single timezone (which is more often what

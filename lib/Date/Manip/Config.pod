@@ -157,7 +157,7 @@ An example call to the config function might be:
    $date->config("ConfigFile","/tmp/file1",
                  'Language',$val);
 
-Config files are parsed immediately when encountered. So in thise example,
+Config files are parsed immediately when encountered. So in this example,
 the file F</tmp/file1> will be parsed before the next variable ('Language').
 In addition, if a config file contains a ConfigFile variable, that file
 will immediately be parsed before continuing with the original file.

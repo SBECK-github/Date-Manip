@@ -269,7 +269,7 @@ SEE ALSO
 
   Miscellaneous information:
     Date::Manip::Calc
-        Detailed informaion on how date calculations are done.
+        Detailed information on how date calculations are done.
 
     Date::Manip::Holidays
         Information on defining and using holidays and events.
@@ -318,7 +318,7 @@ SEE ALSO
 
     Date::Manip::Misc
         Miscellaneous information about Date::Manip (who should use it;
-        acknowledgements).
+        acknowledgments).
 
     Date::Manip::Problems
         Common problems and instructions for reporting bugs.

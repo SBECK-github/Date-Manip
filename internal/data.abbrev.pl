@@ -710,7 +710,8 @@
                      'America/Jamaica'                           ,1974,1983,
                      'America/Indiana/Tell_City'                 ,1969,1970,
                      'America/Santo_Domingo'                     ,1966,1967,
-                     ],
+                     'America/Cayman'                            ,2016,9999,
+                    ],
    'EEST'        => [
                      'EET'                                       ,1977,9999,
                      'Europe/Istanbul'                           ,1916,9999,
@@ -821,6 +822,7 @@
                      'America/Menominee'                         ,1969,1973,
                      'America/Chicago'                           ,1936,1936,
                      'America/Moncton'                           ,1883,1902,
+                     'America/Cayman'                            ,1912,9999,
                     ],
    'EWT'         => [
                      'America/New_York'                          ,1942,1945,
@@ -1146,6 +1148,7 @@
                      'Europe/Vilnius'                            ,1916,1919,
                      'America/Jamaica'                           ,1890,1912,
                      'America/Grand_Turk'                        ,1890,1912,
+                     'America/Cayman'                            ,1890,1912,
                     ],
    'KOST'        => [
                      'Pacific/Kosrae'                            ,1900,9999,
@@ -1789,7 +1792,7 @@
                      'America/Montevideo'                        ,1923,1974,
                     ],
    'UYST'        => [
-                     'America/Montevideo'                        ,1942,9999,
+                     'America/Montevideo'                        ,1942,2015,
                     ],
    'UYT'         => [
                      'America/Montevideo'                        ,1920,9999,

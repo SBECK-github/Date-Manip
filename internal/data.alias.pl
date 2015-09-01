@@ -318,7 +318,8 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Cancun'                          ,1996,1997,
                        'America/Jamaica'                         ,1974,1983,
                        'America/Indiana/Tell_City'               ,1969,1970,
-                       ],
+                       'America/Cayman'                          ,2016,9999,
+                      ],
    'MST7MDT'       => [
                        'America/Denver'                          ,1918,9999,
                        'America/Edmonton'                        ,1918,9999,
@@ -890,7 +891,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Asia/Oral'                               ,1982,1988,
                       ],
    'UYT3UYST'      => [
-                       'America/Montevideo'                      ,1959,9999,
+                       'America/Montevideo'                      ,1959,2014,
                       ],
    'VLAT-9VLAST'   => [
                        'Asia/Vladivostok'                        ,1991,1991,

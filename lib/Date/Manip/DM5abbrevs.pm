@@ -145,7 +145,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       chadt  +1345
       chast  +1245
       chdt   -0530
-      chost  +1000
+      chost  +0900
       chot   +0800
       chst   +1000
       chut   +1000
@@ -234,9 +234,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       gst    -0200
       gyt    -0400
       h      -0800
-      hadt   -0900
-      hast   -1000
-      hdt    -0930
+      hdt    -0900
       hkst   +0900
       hkt    +0800
       hovst  +0800
@@ -297,7 +295,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       mmt    +0630
       most   +0900
       mot    +0800
-      mpt    +1000
+      mpt    -0600
       msd    +0400
       msk    +0300
       msm    +0500
@@ -540,7 +538,7 @@ The following timezones are defined:
       CHADT  +1345
       CHAST  +1245
       CHDT   -0530
-      CHOST  +1000
+      CHOST  +0900
       CHOT   +0800
       CHST   +1000
       CHUT   +1000
@@ -636,9 +634,7 @@ The following timezones are defined:
       GST    -0200
       GYT    -0400
       H      -0800
-      HADT   -0900
-      HAST   -1000
-      HDT    -0930
+      HDT    -0900
       HKST   +0900
       HKT    +0800
       HOVST  +0800
@@ -706,7 +702,7 @@ The following timezones are defined:
       MMT    +0630
       MOST   +0900
       MOT    +0800
-      MPT    +1000
+      MPT    -0600
       MSD    +0400
       MSK    +0300
       MSM    +0500

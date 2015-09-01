@@ -27,15 +27,24 @@ For the most part, Date::Manip has remained backward compatible at
 every release, but occasionally, a change is made which is backward
 incompatible. These are marked with an exclamation mark (!).
 
+=head1 VERSION 6.56  (planned 2016-12-01)
+
+=head1 VERSION 6.55  (planned 2016-09-01)
+
+=head1 VERSION 6.54  (planned 2016-06-01)
+
+=head1 VERSION 6.53  (planned 2016-03-01)
+
 =head1 VERSION 6.52  (planned 2015-12-01)
 
-=head1 VERSION 6.51  (planned 2015-09-01)
+=head1 VERSION 6.51  2015-09-01
 
 =over 4
 
 =item Changes suggested by perlcritic
 
-A number of minor changes based on suggestions by perlcritic.
+Played with perlcritic and made a few minor changes based on it's suggestions.
+I doubt I will use perlcritic significantly.
 
 =item B<(!) Date::Manip::Delta::value now returns an empty string>
 
@@ -60,11 +69,18 @@ Added C<@opts> argument.  Based on RT 105622.
 
 =item Time zone fixes
 
+Newest zoneinfo data (tzdata 2015f)
+
 Now uses /etc/localtime as a method to determine the local timezone.
 Patch supplied in RT 105159 (modified by me).  The patch uses some
 code derived from DateTime::TimeZone .
 
 Clearer message when the date is not valid in the timezone.
+
+=item Test fixes
+
+Added a number of new tests based on Devel::Cover.  Over the next several
+releases, I intend to continue to add tests until coverage is 100%.
 
 =item Documentation fixes
 

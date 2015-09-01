@@ -157,8 +157,7 @@ Update the copyright
 Switch the system timezone to America/Central and run the tests.
 
 #########################################################################
-Update the Changes5/Changes6 docs with the date. Then update internal/VERSION
-to include the new version.
+Update the Changes5/Changes6 docs with the date.
 
 #########################################################################
 Install the module. Then run the following:

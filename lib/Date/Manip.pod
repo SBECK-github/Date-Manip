@@ -355,7 +355,7 @@ interfaces.
 
 =item L<Date::Manip::Calc>
 
-Detailed informaion on how date calculations are done.
+Detailed information on how date calculations are done.
 
 =item L<Date::Manip::Holidays>
 
@@ -433,7 +433,7 @@ Change log for Date::Manip 6.xx
 =item L<Date::Manip::Misc>
 
 Miscellaneous information about Date::Manip (who should use it;
-acknowledgements).
+acknowledgments).
 
 =item L<Date::Manip::Problems>
 

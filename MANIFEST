@@ -524,6 +524,7 @@ lib/Date/Manip/Offset/off424.pm
 lib/Date/Manip/Offset/off425.pm
 lib/Date/Manip/Offset/off426.pm
 lib/Date/Manip/Offset/off427.pm
+lib/Date/Manip/Offset/off428.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -570,6 +571,7 @@ lib/Date/Manip/TZ/amcanc00.pm
 lib/Date/Manip/TZ/amcara00.pm
 lib/Date/Manip/TZ/amcata00.pm
 lib/Date/Manip/TZ/amcaye00.pm
+lib/Date/Manip/TZ/amcaym00.pm
 lib/Date/Manip/TZ/amcent00.pm
 lib/Date/Manip/TZ/amchic00.pm
 lib/Date/Manip/TZ/amchih00.pm

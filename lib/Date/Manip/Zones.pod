@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue May  5 08:02:27 EDT 2015
-#    Data version: tzdata2015d
-#    Code version: tzcode2015d
+#    Generated on: Tue Sep  1 08:33:25 EDT 2015
+#    Data version: tzdata2015f
+#    Code version: tzcode2015f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -25,11 +25,7 @@ This module is automatically generated. It contains a complete list of
 time zones specified in the standard zoneinfo (or Olson) databases
 obtained from:
 
-<<<<<<< HEAD
-   ftp://ftp.iana.org/tz/tzdata-latest.tar.gz
-=======
 L<ftp://ftp.iana.org/tz/tzdata_vers.tar.gz>
->>>>>>> SBECK-github
 
 All information is stored in variables, so this module provide no
 routines for dealing with time zone information. For routines related
@@ -102,6 +98,7 @@ database:
      America/Cancun                       amcanc00
      America/Caracas                      amcara00
      America/Cayenne                      amcaye00
+     America/Cayman                       amcaym00
      America/Chicago                      amchic00
      America/Chihuahua                    amchih00
      America/Costa_Rica                   amcost00
@@ -512,7 +509,6 @@ The zoneinfo database provides several standard aliases, including:
      America/Atka                         America/Adak
      America/Buenos_Aires                 America/Argentina/Buenos_Aires
      America/Catamarca                    America/Argentina/Catamarca
-     America/Cayman                       America/Panama
      America/Coral_Harbour                America/Atikokan
      America/Cordoba                      America/Argentina/Cordoba
      America/Dominica                     America/Port_of_Spain
@@ -915,6 +911,7 @@ default alias can be overridden as described above.
                                           America/Cancun
                                           America/Jamaica
                                           America/Indiana/Tell_City
+                                          America/Cayman
      EST5EPT                              America/New_York
                                           America/Detroit
                                           America/Iqaluit
@@ -968,6 +965,7 @@ default alias can be overridden as described above.
                                           Europe/Tallinn
                                           Europe/Vilnius
      MSK-3MSD                             Europe/Moscow
+                                          Europe/Volgograd
                                           Europe/Simferopol
                                           Europe/Kaliningrad
                                           Europe/Vilnius
@@ -979,7 +977,6 @@ default alias can be overridden as described above.
                                           Europe/Riga
                                           Europe/Tallinn
                                           Europe/Samara
-                                          Europe/Volgograd
      MST7MDT                              America/Denver
                                           America/Edmonton
                                           America/Boise
@@ -1487,6 +1484,7 @@ L<Date::Manip::TZ> module.
      0      -05:32:11   America/Detroit
      0      -05:29:36   America/Havana
      0      -05:29:28   America/Havana
+     0      -05:25:32   America/Cayman
      0      -05:19:36   America/Panama
      0      -05:19:20   America/Guayaquil
      0      -05:18:08   America/Panama
@@ -1497,6 +1495,7 @@ L<Date::Manip::TZ> module.
      0      -05:08:12   America/Lima
      0      -05:07:11   America/Jamaica
                         America/Grand_Turk
+                        America/Cayman
      0      -05:00:00   America/New_York
                         America/Nipigon
                         America/Toronto
@@ -1541,6 +1540,7 @@ L<Date::Manip::TZ> module.
                         America/Chicago
                         America/Moncton
                         Pacific/Easter
+                        America/Cayman
      0      -04:56:16   America/Bogota
      0      -04:56:02   America/New_York
      0      -04:49:20   America/Port-au-Prince
@@ -2459,6 +2459,7 @@ L<Date::Manip::TZ> module.
                         America/Rankin_Inlet
                         America/Resolute
                         America/Santiago
+                        America/Cayman
      1      -03:32:36   America/La_Paz
      1      -03:00:00   America/Halifax
                         America/Glace_Bay
@@ -3278,6 +3279,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Jamaica
                       America/Indiana/Tell_City
                       America/Santo_Domingo
+                      America/Cayman
      EEST             EET
                       Europe/Istanbul
                       Asia/Beirut
@@ -3373,6 +3375,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Menominee
                       America/Chicago
                       America/Moncton
+                      America/Cayman
      EWT              America/New_York
                       America/Detroit
                       America/Iqaluit
@@ -3524,6 +3527,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Vilnius
                       America/Jamaica
                       America/Grand_Turk
+                      America/Cayman
      KOST             Pacific/Kosrae
      KRAST            Asia/Krasnoyarsk
                       Asia/Novokuznetsk
