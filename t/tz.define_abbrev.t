@@ -26,13 +26,13 @@ $obj->config("forcedate","now,America/New_York");
 $tests="
 
 BRT reset =>
+   America/Sao_Paulo
    America/Araguaina
    America/Bahia
-   America/Belem
    America/Fortaleza
    America/Maceio
    America/Recife
-   America/Sao_Paulo
+   America/Belem
    America/Santarem
 
 BRT
