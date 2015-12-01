@@ -5,7 +5,6 @@
 use strict;
 use warnings;
 use 5.006;
-use Test::Inter 0;
 use ExtUtils::MakeMaker 6.30;
 
 my %IsWin32 = map { $_ => 1 } qw( MSWin32 NetWare symbian );
@@ -35,12 +34,12 @@ my %script_prereq = (
 );
 
 my %test_prereq = (
+   'Test::Inter'              => '0',
    'Test::More'               => '0',
 );
 
 my %config_prereq = (
    'ExtUtils::MakeMaker'      => '6.30',
-   'Test::Inter'              => '0',
 );
 
 %module_prereq = (%module_prereq,%script_prereq);

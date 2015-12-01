@@ -27,8 +27,7 @@
       },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30",
-            "Test::Inter" : "0"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -47,6 +46,7 @@
       },
       "test" : {
          "requires" : {
+            "Test::Inter" : "0",
             "Test::More" : "0"
          }
       }

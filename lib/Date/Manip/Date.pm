@@ -258,6 +258,20 @@ sub parse {
                $dow = '';
             }
             last PARSE  if ($done);
+
+            # We'll also check the original string to see if it's a valid
+            # delta since some deltas may have interpreted part of it as
+            # a time or timezone.
+
+            ($done,@tmp) =
+              $self->_parse_delta($instring,$dow,$got_time,$h,$mn,$s,\$noupdate);
+            if (@tmp) {
+               ($y,$m,$d,$h,$mn,$s) = @tmp;
+               $got_time = 1;
+               $dow = '';
+               ($tzstring,$zone,$abb,$off) = ();
+            }
+            last PARSE  if ($done);
          }
 
          # Parse holidays

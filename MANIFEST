@@ -995,6 +995,7 @@ t/date.list_holidays.0.t
 t/date.list_holidays.1.t
 t/date.list_holidays.2.t
 t/date.list_holidays.3.t
+t/date.list_holidays.4.t
 t/date.nearest_business_day.t
 t/date.next.t
 t/date.next_business_day.t
@@ -1106,6 +1107,10 @@ t/Manip.cnf
 t/Manip.cnf.part1
 t/Manip.cnf.part2
 t/Manip5.cnf
+t/New_Years.1.cnf
+t/New_Years.2.cnf
+t/New_Years.3.cnf
+t/New_Years.4.cnf
 t/OldEvents.cnf
 t/orig.convtz.t
 t/orig.date_isholiday.t
@@ -1129,6 +1134,7 @@ t/pod_coverage.t
 t/recur.dates.0.t
 t/recur.dates.1.t
 t/recur.dates.2.t
+t/recur.dates.3.t
 t/recur.frequency.t
 t/recur.init_args.t
 t/recur.is.t
@@ -1147,6 +1153,5 @@ t/tz.periods.t
 t/tz.zone.t
 t/tzdata._ruleinfo.t
 t/tzdata._zoneinfo.t
-t/xtra.now.tx
 META.yml                                 Module YAML meta-data (added by MakeMaker)
 META.json                                Module JSON meta-data (added by MakeMaker)

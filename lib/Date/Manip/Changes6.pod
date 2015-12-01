@@ -64,6 +64,9 @@ Based on L<http://perlmonks.org/?node_id=1148735>.
 
 Fixed a bug where the RecurRange config variable wasn't getting used.
 
+Fixed a bug where some deltas were not parsed correctly as dates.
+RT 109600
+
 =item Time zone fixes
 
 Newest zoneinfo data (tzdata 2015g)

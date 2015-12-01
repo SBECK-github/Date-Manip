@@ -55,6 +55,7 @@ perl -I../lib date.list_holidays.0.t 1
 perl -I../lib date.list_holidays.1.t 1
 perl -I../lib date.list_holidays.2.t 1
 perl -I../lib date.list_holidays.3.t 1
+perl -I../lib date.list_holidays.4.t 1
 perl -I../lib date.nearest_business_day.t 1
 perl -I../lib date.next.t 1
 perl -I../lib date.next_business_day.t 1
@@ -177,6 +178,7 @@ perl -I../lib orig.unixdate.t 1
 perl -I../lib recur.dates.0.t 1
 perl -I../lib recur.dates.1.t 1
 perl -I../lib recur.dates.2.t 1
+perl -I../lib recur.dates.3.t 1
 perl -I../lib recur.frequency.t 1
 perl -I../lib recur.init_args.t 1
 perl -I../lib recur.is.t 1

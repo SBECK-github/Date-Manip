@@ -1555,7 +1555,7 @@ a valid combined date and time.
 Dates are often specified in terms of a delta from "now". For example,
 "in 2 days".
 
-Any valid delta can be used to specify a date, and the date is defined
+Most valid deltas can be used to specify a date, and the date is defined
 as that delta added to "now". Refer to the Date::Manip::Delta documentation
 for a list of valid delta formats.
 
