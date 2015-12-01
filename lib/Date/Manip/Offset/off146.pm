@@ -19,7 +19,7 @@ use warnings;
 require 5.010000;
 
 our ($VERSION);
-$VERSION='6.52';
+$VERSION='6.53';
 END { undef $VERSION; }
 
 our ($Offset,%Offset);
