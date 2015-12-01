@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse';
+$t = new Test::Inter 'delta :: parse';
 $testdir = '';
 $testdir = $t->testdir();
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'DateCalc (date,date,approx)';
+$t = new Test::Inter 'DM5 :: DateCalc (date,date,approx)';
 $testdir = '';
 $testdir = $t->testdir();
 

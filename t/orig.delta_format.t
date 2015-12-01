@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Delta_Format';
+$t = new Test::Inter 'Orig :: Delta_Format';
 $testdir = '';
 $testdir = $t->testdir();
 

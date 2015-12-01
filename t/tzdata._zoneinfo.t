@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_zoneInfo';
+$t = new Test::Inter 'tzdata :: _zoneInfo';
 $testdir = '';
 $testdir = $t->testdir();
 

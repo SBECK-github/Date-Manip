@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'SetTime';
+$t = new Test::Inter 'DM5 :: SetTime';
 $testdir = '';
 $testdir = $t->testdir();
 

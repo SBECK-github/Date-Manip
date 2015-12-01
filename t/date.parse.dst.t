@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (DST changes)';
+$t = new Test::Inter 'date :: parse (DST changes)';
 $testdir = '';
 $testdir = $t->testdir();
 

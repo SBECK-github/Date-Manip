@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'week_of_year (Y,W)';
+$t = new Test::Inter 'base :: week_of_year (Y,W)';
 $testdir = '';
 $testdir = $t->testdir();
 

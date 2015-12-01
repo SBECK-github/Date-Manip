@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'list_events';
+$t = new Test::Inter 'date :: list_events';
 $testdir = '';
 $testdir = $t->testdir();
 

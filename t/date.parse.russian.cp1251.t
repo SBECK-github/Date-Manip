@@ -5,7 +5,7 @@ use Test::Inter;
 binmode(STDOUT,':utf8');
 binmode(STDERR,':utf8');
 
-$t = new Test::Inter 'parse (Russian, cp1251)';
+$t = new Test::Inter 'date :: parse (Russian, cp1251)';
 $testdir = '';
 $testdir = $t->testdir();
 

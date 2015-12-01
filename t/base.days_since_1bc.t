@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'days_since_1BC';
+$t = new Test::Inter 'base :: days_since_1BC';
 $testdir = '';
 $testdir = $t->testdir();
 

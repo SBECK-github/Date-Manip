@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Delta (signs)';
+$t = new Test::Inter 'DM5 :: Delta (signs)';
 $testdir = '';
 $testdir = $t->testdir();
 

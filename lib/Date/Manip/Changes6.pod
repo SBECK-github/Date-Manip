@@ -37,6 +37,43 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.52  (planned 2015-12-01)
 
+=over 4
+
+=item B<Added date ranges on unmodified dates in Recur>
+
+The date range can now be specified for either the fully modified dates, or
+the unmodified dates.  This will make it easier to work with holidays in some
+instances.  Based on L<http://perlmonks.org/?node_id=1148735>.
+
+=item B<Added IWn and NWn recurrence modifiers>
+
+Based on L<http://perlmonks.org/?node_id=1148735>.
+
+=item B<(!) Reworked holidays slightly>
+
+Previously, every line in the Holidays section defined a unique holiday.
+Now, the names determine the list of holidays.
+
+It is not allowed to have two separate holidays named exactly the same.
+It IS allowed to have complex holidays that require two (or more) lines
+in the Holidays section to define them completely.
+
+Based on L<http://perlmonks.org/?node_id=1148735>.
+
+=item Bug fixes
+
+Fixed a bug where the RecurRange config variable wasn't getting used.
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2015g)
+
+=item Test fixes
+
+Added a number of new tests based on Devel::Cover.
+
+=back
+
 =head1 VERSION 6.51  2015-09-01
 
 =over 4

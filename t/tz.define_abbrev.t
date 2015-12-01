@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'define_abbrev';
+$t = new Test::Inter 'tz :: define_abbrev';
 $testdir = '';
 $testdir = $t->testdir();
 

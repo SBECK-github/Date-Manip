@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_init_args';
+$t = new Test::Inter 'date :: _init_args';
 $testdir = '';
 $testdir = $t->testdir();
 

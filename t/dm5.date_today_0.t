@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Date (today/now TodayIsMidnight=1)';
+$t = new Test::Inter 'DM5 :: Date (today/now TodayIsMidnight=1)';
 $testdir = '';
 $testdir = $t->testdir();
 

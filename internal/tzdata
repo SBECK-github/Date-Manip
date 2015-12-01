@@ -190,14 +190,9 @@ sub _release {
 sub do_build {
    print "Build...\n";
 
-   my $dirs="TOPDIR=./tmp " .
-     "TZDIR=./tmp/zoneinfo " .
-     "ETCDIR=./tmp/etc " .
-     "BINDIR=./tmp/bin " .
-     "MANDIR=./tmp/man " .
-     "LIBDIR=./tmp/lib";
    system("cd tzdata; " .
-          "make $dirs INSTALL;");
+          "touch NEWS; " .
+          "make TOPDIR=./tmp INSTALL;");
 }
 
 ############################################################################

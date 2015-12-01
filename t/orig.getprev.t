@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'GetPrev';
+$t = new Test::Inter 'Orig :: GetPrev';
 $testdir = '';
 $testdir = $t->testdir();
 

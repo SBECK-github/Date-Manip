@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'convert';
+$t = new Test::Inter 'date :: convert';
 $testdir = '';
 $testdir = $t->testdir();
 

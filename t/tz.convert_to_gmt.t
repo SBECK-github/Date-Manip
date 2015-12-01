@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'convert_to_gmt';
+$t = new Test::Inter 'tz :: convert_to_gmt';
 $testdir = '';
 $testdir = $t->testdir();
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_calc_date_ymwd';
+$t = new Test::Inter 'base :: _calc_date_ymwd';
 $testdir = '';
 $testdir = $t->testdir();
 

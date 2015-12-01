@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (delta)';
+$t = new Test::Inter 'date :: parse (delta)';
 $testdir = '';
 $testdir = $t->testdir();
 

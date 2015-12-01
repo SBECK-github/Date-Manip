@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'calc_time_time';
+$t = new Test::Inter 'base :: calc_time_time';
 $testdir = '';
 $testdir = $t->testdir();
 

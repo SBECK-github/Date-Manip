@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue Sep  1 08:33:25 EDT 2015
-#    Data version: tzdata2015f
-#    Code version: tzcode2015f
+#    Generated on: Wed Nov 25 11:48:25 EST 2015
+#    Data version: tzdata2015g
+#    Code version: tzcode2015g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -113,7 +113,8 @@ database:
      America/Edmonton                     amedmo00
      America/Eirunepe                     ameiru00
      America/El_Salvador                  amel_s00
-     America/Fortaleza                    amfort00
+     America/Fort_Nelson                  amfort00
+     America/Fortaleza                    amfort01
      America/Glace_Bay                    amglac00
      America/Godthab                      amgodt00
      America/Goose_Bay                    amgoos00
@@ -1031,6 +1032,7 @@ default alias can be overridden as described above.
                                           America/Boise
                                           America/Metlakatla
                                           America/Sitka
+                                          America/Fort_Nelson
      PST8PPT                              America/Los_Angeles
                                           America/Dawson_Creek
                                           America/Juneau
@@ -1039,6 +1041,7 @@ default alias can be overridden as described above.
                                           America/Vancouver
                                           America/Metlakatla
                                           America/Sitka
+                                          America/Fort_Nelson
      PYT4PYST                             America/Asuncion
      QYZT-6QYZST                          Asia/Qyzylorda
      SAKT-10SAKST                         Asia/Sakhalin
@@ -1340,6 +1343,7 @@ L<Date::Manip::TZ> module.
      0      -08:40:20   Pacific/Pitcairn
      0      -08:30:00   Pacific/Pitcairn
      0      -08:12:28   America/Vancouver
+     0      -08:10:47   America/Fort_Nelson
      0      -08:00:56   America/Dawson_Creek
      0      -08:00:00   America/Los_Angeles
                         America/Vancouver
@@ -1360,6 +1364,7 @@ L<Date::Manip::TZ> module.
                         America/Mazatlan
                         America/Boise
                         America/Creston
+                        America/Fort_Nelson
      0      -07:52:58   America/Los_Angeles
      0      -07:48:04   America/Tijuana
      0      -07:46:04   America/Creston
@@ -1386,6 +1391,7 @@ L<Date::Manip::TZ> module.
                         America/Yellowknife
                         America/Dawson_Creek
                         America/Inuvik
+                        America/Fort_Nelson
                         Etc/GMT-7
                         G
                         America/North_Dakota/Beulah
@@ -2275,21 +2281,22 @@ L<Date::Manip::TZ> module.
                         Pacific/Efate
                         Pacific/Guadalcanal
                         Pacific/Noumea
+                        Asia/Srednekolymsk
+                        Pacific/Bougainville
+                        Pacific/Norfolk
                         Asia/Sakhalin
+                        Asia/Ust-Nera
                         Asia/Vladivostok
                         Asia/Kamchatka
                         Asia/Magadan
                         Asia/Anadyr
+                        Asia/Khandyga
+                        Pacific/Kwajalein
+                        Pacific/Majuro
                         Etc/GMT+11
                         X
                         Antarctica/Macquarie
-                        Pacific/Kwajalein
-                        Pacific/Majuro
                         Antarctica/Casey
-                        Asia/Ust-Nera
-                        Asia/Khandyga
-                        Asia/Srednekolymsk
-                        Pacific/Bougainville
      0      +11:05:48   Pacific/Noumea
      0      +11:06:28   Pacific/Wake
      0      +11:07:40   Pacific/Nauru
@@ -2356,15 +2363,16 @@ L<Date::Manip::TZ> module.
                         America/Yakutat
                         America/Anchorage
                         America/Nome
+                        America/Sitka
                         America/Dawson
                         America/Whitehorse
-                        America/Sitka
      1      -07:00:00   America/Los_Angeles
                         America/Vancouver
                         America/Santa_Isabel
                         America/Tijuana
                         America/Dawson
                         America/Whitehorse
+                        America/Fort_Nelson
                         America/Juneau
                         America/Dawson_Creek
                         America/Boise
@@ -2397,21 +2405,21 @@ L<Date::Manip::TZ> module.
                         America/Rainy_River
                         America/Mexico_City
                         America/Rankin_Inlet
-                        Pacific/Easter
+                        America/Resolute
                         America/Matamoros
                         America/Monterrey
                         America/North_Dakota/Center
                         America/Merida
-                        America/Cancun
                         America/North_Dakota/New_Salem
                         America/Bahia_Banderas
                         America/North_Dakota/Beulah
+                        Pacific/Easter
+                        America/Cancun
                         America/Indiana/Petersburg
                         America/Indiana/Vincennes
                         America/Indiana/Winamac
                         America/Guatemala
                         America/Managua
-                        America/Resolute
                         America/Tegucigalpa
                         America/Kentucky/Monticello
                         America/Cambridge_Bay
@@ -2443,11 +2451,12 @@ L<Date::Manip::TZ> module.
                         America/Indiana/Vevay
                         America/Indiana/Vincennes
                         America/Indiana/Winamac
-                        America/Grand_Turk
+                        America/Port-au-Prince
                         America/Pangnirtung
                         America/Kentucky/Monticello
                         America/Indiana/Petersburg
-                        America/Port-au-Prince
+                        America/Cayman
+                        America/Grand_Turk
                         America/Cancun
                         America/Eirunepe
                         America/Lima
@@ -2459,7 +2468,6 @@ L<Date::Manip::TZ> module.
                         America/Rankin_Inlet
                         America/Resolute
                         America/Santiago
-                        America/Cayman
      1      -03:32:36   America/La_Paz
      1      -03:00:00   America/Halifax
                         America/Glace_Bay
@@ -2751,6 +2759,7 @@ L<Date::Manip::TZ> module.
                         Asia/Ust-Nera
                         Asia/Srednekolymsk
      1      +12:30:00   Pacific/Auckland
+                        Pacific/Norfolk
      1      +13:00:00   Pacific/Auckland
                         Pacific/Fiji
                         Asia/Kamchatka
@@ -3657,6 +3666,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Tijuana
                       Europe/Moscow
                       America/North_Dakota/Beulah
+                      America/Fort_Nelson
      MUST             Indian/Mauritius
      MUT              Indian/Mauritius
      MVT              Indian/Maldives
@@ -3682,6 +3692,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      NEGT             America/Paramaribo
      NEST             Europe/Amsterdam
      NET              Europe/Amsterdam
+     NFST             Pacific/Norfolk
      NFT              Pacific/Norfolk
      NMT              Pacific/Norfolk
      NOVST            Asia/Novosibirsk
@@ -3726,6 +3737,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Boise
                       America/Metlakatla
                       America/Sitka
+                      America/Fort_Nelson
      PEST             America/Lima
      PET              America/Lima
      PETST            Asia/Kamchatka
@@ -3762,6 +3774,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Vancouver
                       America/Metlakatla
                       America/Sitka
+                      America/Fort_Nelson
      PST              America/Los_Angeles
                       America/Vancouver
                       America/Santa_Isabel
@@ -3779,6 +3792,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Metlakatla
                       America/Sitka
                       America/Creston
+                      America/Fort_Nelson
      PWT              Pacific/Palau
                       America/Los_Angeles
                       America/Dawson_Creek
@@ -3788,6 +3802,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Vancouver
                       America/Metlakatla
                       America/Sitka
+                      America/Fort_Nelson
      PYST             America/Asuncion
      PYT              America/Asuncion
      Q                Q

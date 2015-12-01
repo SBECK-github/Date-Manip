@@ -313,6 +313,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       negt   -0330
       nest   +0120
       net    +0020
+      nfst   +1230
       nft    +1130
       nmt    +1112
       novst  +0700
@@ -720,6 +721,7 @@ The following timezones are defined:
       NEGT   -0330
       NEST   +0120
       NET    +0020
+      NFST   +1230
       NFT    +1130
       NMT    +1112
       NOVST  +0700

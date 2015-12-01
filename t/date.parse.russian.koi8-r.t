@@ -2,7 +2,7 @@
 
 use Test::More;
 use Test::Inter;
-$t = new Test::Inter 'parse (Russian, koi8-r)';
+$t = new Test::Inter 'date :: parse (Russian, koi8-r)';
 $testdir = '';
 $testdir = $t->testdir();
 

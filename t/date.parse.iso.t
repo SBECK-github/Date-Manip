@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (ISO 8601)';
+$t = new Test::Inter 'date :: parse (ISO 8601)';
 $testdir = '';
 $testdir = $t->testdir();
 

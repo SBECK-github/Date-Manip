@@ -1942,17 +1942,12 @@ sub _parse_holidays {
       $y = $dmt->_now('y',$noupdate)  if (! $y);
       $y += 0;
 
-      $self->_holidays($y,2);
-      return (0)  if (! exists $$dmb{'data'}{'holidays'}{'dates'}{$y});
-      foreach my $m (keys %{ $$dmb{'data'}{'holidays'}{'dates'}{$y} }) {
-         foreach my $d (keys %{ $$dmb{'data'}{'holidays'}{'dates'}{$y}{$m} }) {
-            foreach my $nam (@{ $$dmb{'data'}{'holidays'}{'dates'}{$y}{$m}{$d} }) {
-               if (lc($nam) eq lc($hol)) {
-                  return(1,$y,$m,$d);
-               }
-            }
-         }
-      }
+      $self->_holidays($y-1);
+      $self->_holidays($y);
+      $self->_holidays($y+1);
+      return (0)  if (! exists $$dmb{'data'}{'holidays'}{'yhols'}{$y+0}{$hol});
+      my ($y,$m,$d) = @{ $$dmb{'data'}{'holidays'}{'yhols'}{$y+0}{$hol} };
+      return(1,$y,$m,$d);
    }
 
    return (0);
@@ -4043,7 +4038,11 @@ sub __is_business_day {
 
    # Check for holidays
 
-   $self->_holidays($y,2)  unless ($$dmb{'data'}{'init_holidays'});
+   if (! $$dmb{'data'}{'init_holidays'}) {
+      $self->_holidays($y-1);
+      $self->_holidays($y);
+      $self->_holidays($y+1);
+   }
 
    return 0  if (exists $$dmb{'data'}{'holidays'}{'dates'}  &&
                  exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}  &&
@@ -4059,7 +4058,9 @@ sub list_holidays {
    my $dmb = $$dmt{'base'};
 
    $y = $dmt->_now('y',1)  if (! $y);
-   $self->_holidays($y,2);
+   $self->_holidays($y-1);
+   $self->_holidays($y);
+   $self->_holidays($y+1);
 
    my @ret;
    my @m = sort { $a <=> $b } keys %{ $$dmb{'data'}{'holidays'}{'dates'}{$y+0} };
@@ -4085,12 +4086,19 @@ sub holiday {
    my $dmb = $$dmt{'base'};
 
    my($y,$m,$d) = @{ $$self{'data'}{'date'} };
-   $self->_holidays($y,2);
+   $self->_holidays($y-1);
+   $self->_holidays($y);
+   $self->_holidays($y+1);
 
    if (exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}  &&
        exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}  &&
        exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0}) {
       my @tmp = @{ $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} };
+
+      foreach my $tmp (@tmp) {
+         $tmp = ''  if ($tmp =~ /DMunnamed/);
+      }
+
       if (wantarray) {
          return ()  if (! @tmp);
          return @tmp;
@@ -4237,11 +4245,19 @@ sub _holiday_objs {
    # Go through all of the strings from the config file.
    #
    my (@str)      = @{ $$dmb{'data'}{'sections'}{'holidays'} };
-   $$dmb{'data'}{'holidays'}{'hols'} = [];
+   $$dmb{'data'}{'holidays'}{'defs'} = [];
 
+   # Keep track of the holiday names
+   my $unnamed    = 0;
+
+   LINE:
    while (@str) {
       my($string) = shift(@str);
       my($name)   = shift(@str);
+      if (! $name) {
+         $unnamed++;
+         $name    = "DMunnamed $unnamed";
+      }
 
       # If $string is a parse_date string AND it contains a year, we'll
       # store the date as a holiday, but not store the holiday description
@@ -4249,19 +4265,41 @@ sub _holiday_objs {
 
       my $date  = $self->new_date();
       my $err   = $date->parse_date($string);
+
       if (! $err) {
+         my($y,$m,$d) = @{ $$date{'data'}{'date'} };
+
          if ($$date{'data'}{'def'}[0] eq '') {
-            push(@{ $$dmb{'data'}{'holidays'}{'hols'} },$string,$name);
+            # Lines of the form:  Jun 12
+            #
+            # We will NOT cache this holiday because we want to only
+            # cache holidays from lines like 'Jun 12 1972' during this
+            # phase so we find conflicts.
+
+            push(@{ $$dmb{'data'}{'holidays'}{'defs'} },$name,$string);
+
          } else {
-            my($y,$m,$d) = @{ $$date{'data'}{'date'} };
+            # Lines of the form:  Jun 12 1972
+            #
+            # We'll cache these to make sure we don't have two lines:
+            #    Jun 12 1972 = Some Holiday
+            #    Jun 13 1972 = Some Holiday
+
+            if (exists $$dmb{'data'}{'holidays'}{'hols'}{$name}{$y+0}) {
+               warn "WARNING: Holiday defined twice for one year: $name [$y]\n";
+               next LINE;
+            }
+
+            $$dmb{'data'}{'holidays'}{'yhols'}{$y+0}{$name} = [$y,$m,$d];
+            $$dmb{'data'}{'holidays'}{'hols'}{$name}{$y+0}  = [$y,$m,$d];
+
             if (exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0}) {
                push @{ $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} },$name;
             } else {
                $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} = [ $name ];
             }
          }
-
-         next;
+         next LINE;
       }
       $date->err(1);
 
@@ -4269,11 +4307,10 @@ sub _holiday_objs {
       # only have to do once) and store it.
 
       my $recur = $self->new_recur();
-      $recur->_holiday();
       $err      = $recur->parse($string);
       if (! $err) {
-         push(@{ $$dmb{'data'}{'holidays'}{'hols'} },$recur,$name);
-         next;
+         push(@{ $$dmb{'data'}{'holidays'}{'defs'} },$name,$recur);
+         next LINE;
       }
       $recur->err(1);
 
@@ -4282,105 +4319,91 @@ sub _holiday_objs {
    return;
 }
 
-# Make sure that holidays are set for a given year.
-#
-#   $$dmb{'data'}{'holidays'}{'years'}{$year} = 0   nothing done
-#                                               1   this year done
-#                                               2   both adjacent years done
+# Make sure that holidays are done for a given year.
 #
 sub _holidays {
-   my($self,$year,$level) = @_;
+   my($self,$year) = @_;
 
    my $dmt = $$self{'tz'};
    my $dmb = $$dmt{'base'};
-   $self->_holiday_objs($year)  if (! $$dmb{'data'}{'holidays'}{'init'});
 
-   $$dmb{'data'}{'holidays'}{'years'}{$year} = 0
-     if (! exists $$dmb{'data'}{'holidays'}{'years'}{$year});
-
-   my $curr_level = $$dmb{'data'}{'holidays'}{'years'}{$year};
-   return  if ($curr_level >= $level);
-   $$dmb{'data'}{'holidays'}{'years'}{$year} = $level;
+   return  if ($$dmb{'data'}{'holidays'}{'ydone'}{$year+0});
+   $self->_holiday_objs()  if (! $$dmb{'data'}{'holidays'}{'init'});
 
    # Parse the year
-
-   if ($curr_level == 0) {
-      $self->_holidays_year($year);
-
-      return  if ($level == 1);
-   }
-
-   # Parse the years around it.
-
-   $self->_holidays($year-1,1);
-   $self->_holidays($year+1,1);
-   return;
-}
-
-sub _holidays_year {
-   my($self,$y) = @_;
-
-   my $dmt = $$self{'tz'};
-   my $dmb = $$dmt{'base'};
 
    # Get the objects and set them to use the new year. Also, get the
    # range for recurrences.
 
-   my @hol      = @{ $$dmb{'data'}{'holidays'}{'hols'} };
+   my @hol      = @{ $$dmb{'data'}{'holidays'}{'defs'} };
 
-   my $beg      = $self->new_date();
-   $beg->set('date',[$y-1,12,1,0,0,0]);
-   my $end      = $self->new_date();
-   $end->set('date',[$y+1,2,1,0,0,0]);
+   my $beg      = "$year-01-01-00:00:00";
+   my $end      = "$year-12-31-23:59:59";
 
    # Get the date for each holiday.
 
    $$dmb{'data'}{'init_holidays'} = 1;
+   $$dmb{'data'}{'tmpnow'}        = [$year,1,1,0,0,0];
 
+   HOLIDAY:
    while (@hol) {
 
-      my($obj)  = shift(@hol);
-      my($name) = shift(@hol);
+      my $name  = shift(@hol);
+      my $obj   = shift(@hol);
 
-      $$dmb{'data'}{'tmpnow'} = [$y,1,1,0,0,0];
+      # Each holiday only gets defined once per year
+      next  if (exists $$dmb{'data'}{'holidays'}{'hols'}{$name}{$year+0});
+
       if (ref($obj)) {
          # It's a recurrence
+
+         # We have to initialize the recurrence as it may contain idates
+         # and dates outside of this range that are not correct.
+
+         $obj->_init_dates();
 
          # If the recurrence has a date range built in, we won't override it.
          # Otherwise, we'll only look for dates in this year.
 
+         my @dates;
          if ($obj->start()  &&  $obj->end()) {
-            $obj->dates();
+            @dates = $obj->dates();
          } else {
-            $obj->dates($beg,$end);
+            @dates = $obj->dates($beg,$end,1);
          }
 
-         foreach my $i (keys %{ $$obj{'data'}{'dates'} }) {
-            next  if ($$obj{'data'}{'saved'}{$i});
-            my $date     = $$obj{'data'}{'dates'}{$i};
+         foreach my $date (@dates) {
             my($y,$m,$d) = @{ $$date{'data'}{'date'} };
+
+            $$dmb{'data'}{'holidays'}{'yhols'}{$year+0}{$name} = [$y,$m,$d];
+            $$dmb{'data'}{'holidays'}{'hols'}{$name}{$year+0}  = [$y,$m,$d];
+
             if (exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0}) {
                push @{ $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} },$name;
             } else {
                $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} = [$name];
             }
-            $$obj{'data'}{'saved'}{$i} = 1;
          }
 
       } else {
          my $date = $self->new_date();
          $date->parse_date($obj);
          my($y,$m,$d) = @{ $$date{'data'}{'date'} };
+
+         $$dmb{'data'}{'holidays'}{'yhols'}{$year+0}{$name} = [$y,$m,$d];
+         $$dmb{'data'}{'holidays'}{'hols'}{$name}{$year+0}  = [$y,$m,$d];
+
          if (exists $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0}) {
             push @{ $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} },$name;
          } else {
             $$dmb{'data'}{'holidays'}{'dates'}{$y+0}{$m+0}{$d+0} = [$name];
          }
       }
-      $$dmb{'data'}{'tmpnow'} = [];
    }
 
-   $$dmb{'data'}{'init_holidays'} = 0;
+   $$dmb{'data'}{'init_holidays'}              = 0;
+   $$dmb{'data'}{'tmpnow'}                     = [];
+   $$dmb{'data'}{'holidays'}{'ydone'}{$year+0} = 1;
    return;
 }
 

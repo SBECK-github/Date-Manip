@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'cmp';
+$t = new Test::Inter 'delta :: cmp';
 $testdir = '';
 $testdir = $t->testdir();
 

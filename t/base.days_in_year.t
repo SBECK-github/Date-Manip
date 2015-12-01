@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'days_in_year';
+$t = new Test::Inter 'base :: days_in_year';
 $testdir = '';
 $testdir = $t->testdir();
 

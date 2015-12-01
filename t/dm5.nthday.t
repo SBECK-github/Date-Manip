@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'NthDayOfYear';
+$t = new Test::Inter 'DM5 :: NthDayOfYear';
 $testdir = '';
 $testdir = $t->testdir();
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'prev_business_day';
+$t = new Test::Inter 'date :: prev_business_day';
 $testdir = '';
 $testdir = $t->testdir();
 

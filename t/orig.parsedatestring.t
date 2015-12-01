@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'ParseDateString';
+$t = new Test::Inter 'Orig :: ParseDateString';
 $testdir = '';
 $testdir = $t->testdir();
 

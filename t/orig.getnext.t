@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'GetNext';
+$t = new Test::Inter 'Orig :: GetNext';
 $testdir = '';
 $testdir = $t->testdir();
 

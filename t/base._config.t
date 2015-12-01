@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_config';
+$t = new Test::Inter 'base :: _config';
 $testdir = '';
 $testdir = $t->testdir();
 

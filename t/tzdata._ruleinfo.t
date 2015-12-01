@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_ruleInfo';
+$t = new Test::Inter 'tzdata :: _ruleInfo';
 $testdir = '';
 $testdir = $t->testdir();
 

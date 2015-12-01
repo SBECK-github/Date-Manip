@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'dates';
+$t = new Test::Inter 'recur :: full recur';
 $testdir = '';
 $testdir = $t->testdir();
 

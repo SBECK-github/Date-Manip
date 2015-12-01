@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_critical_date';
+$t = new Test::Inter 'base :: _critical_date';
 $testdir = '';
 $testdir = $t->testdir();
 

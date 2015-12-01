@@ -83,7 +83,7 @@
                      'America/Nome'                              ,1984,9999,
                      'America/Yakutat'                           ,1984,9999,
                      'America/Sitka'                             ,1984,9999,
-                     'America/Anchorage'                         ,1984,2037,
+                     'America/Anchorage'                         ,1984,9999,
                     ],
    'AKST'        => [
                      'America/Anchorage'                         ,1983,9999,
@@ -1356,6 +1356,7 @@
                      'America/Tijuana'                           ,1922,1930,
                      'Europe/Moscow'                             ,1917,1919,
                      'America/North_Dakota/Beulah'               ,1883,2010,
+                     'America/Fort_Nelson'                       ,2015,9999,
                     ],
    'MUST'        => [
                      'Indian/Mauritius'                          ,1982,2009,
@@ -1407,6 +1408,9 @@
                     ],
    'NET'         => [
                      'Europe/Amsterdam'                          ,1937,1940,
+                    ],
+   'NFST'        => [
+                     'Pacific/Norfolk'                           ,1974,1975,
                     ],
    'NFT'         => [
                      'Pacific/Norfolk'                           ,1950,9999,
@@ -1491,6 +1495,7 @@
                      'America/Boise'                             ,1918,1919,
                      'America/Metlakatla'                        ,1969,1983,
                      'America/Sitka'                             ,1969,1983,
+                     'America/Fort_Nelson'                       ,1918,2014,
                     ],
    'PEST'        => [
                      'America/Lima'                              ,1938,1994,
@@ -1565,6 +1570,7 @@
                      'America/Vancouver'                         ,1945,1945,
                      'America/Metlakatla'                        ,1945,1945,
                      'America/Sitka'                             ,1945,1945,
+                     'America/Fort_Nelson'                       ,1945,1945,
                     ],
    'PST'         => [
                      'America/Los_Angeles'                       ,1883,9999,
@@ -1584,6 +1590,7 @@
                      'America/Metlakatla'                        ,1900,9999,
                      'America/Sitka'                             ,1900,1983,
                      'America/Creston'                           ,1916,1918,
+                     'America/Fort_Nelson'                       ,1884,2015,
                     ],
    'PWT'         => [
                      'Pacific/Palau'                             ,1900,9999,
@@ -1595,6 +1602,7 @@
                      'America/Vancouver'                         ,1942,1945,
                      'America/Metlakatla'                        ,1942,1945,
                      'America/Sitka'                             ,1942,1945,
+                     'America/Fort_Nelson'                       ,1942,1945,
                     ],
    'PYST'        => [
                      'America/Asuncion'                          ,1975,9999,

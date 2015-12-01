@@ -303,20 +303,16 @@ sub _init_holidays {
 
    # {data}{sections}{holidays} = [ STRING, HOLIDAY_NAME, ... ]
    #
-   # {data}{holidays}{YEAR}     = 1  if this year has been parsed
-   #                              2  if YEAR-1 and YEAR+1 have been parsed
-   #                                 (both must be done before holidays can
-   #                                 be known so that New Years can be
-   #                                 celebrated on Dec 31 if Jan 1 is weekend)
-   #                 {date}     = DATE_OBJ
-   #                                 a Date::Manip::Date object to use for holidays
-   #                 {hols}     = [ RECUR_OBJ|DATE_STRING, HOLIDAY_NAME, ... ]
-   #                                 DATE_STRING is suitable for parse_date
-   #                                 using DATE_OBJ.  RECUR_OBJ is a
-   #                                 Date::Manip::Recur object that can be used
-   #                                 once the start and end date is set.
+   # {data}{holidays}{init}     = 1  if holidays have been initialized
+   #                 {ydone}    = { Y => 1 }
+   #                 {yhols}    = { Y => NAME => [Y,M,D] }
+   #                 {hols}     = { NAME => Y => [Y,M,D] }
    #                 {dates}    = { Y => M => D => NAME }
-   #
+   #                 {defs}     = [ NAME DEF NAME DEF ... ]
+   #                                 NAME is the name of a holiday (it will
+   #                                 be 'DMunnamed I' for the Ith unnamed
+   #                                 holiday)
+   #                                 DEF is a string or a Recur
    # {data}{init_holidays}      = 1  if currently initializing holidays
 
    $$self{'data'}{'holidays'}             = {};

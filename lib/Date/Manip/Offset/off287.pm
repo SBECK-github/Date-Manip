@@ -6,9 +6,9 @@ Date::Manip::Offset::off287;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue Sep  1 08:31:00 EDT 2015
-#    Data version: tzdata2015f
-#    Code version: tzcode2015f
+#    Generated on: Wed Nov 25 11:44:43 EST 2015
+#    Data version: tzdata2015g
+#    Code version: tzcode2015g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -94,11 +94,12 @@ $Offset        = '-04:00:00';
       'america/indiana/vevay',
       'america/indiana/vincennes',
       'america/indiana/winamac',
-      'america/grand_turk',
+      'america/port-au-prince',
       'america/pangnirtung',
       'america/kentucky/monticello',
       'america/indiana/petersburg',
-      'america/port-au-prince',
+      'america/cayman',
+      'america/grand_turk',
       'america/cancun',
       'america/eirunepe',
       'america/lima',
@@ -110,7 +111,6 @@ $Offset        = '-04:00:00';
       'america/rankin_inlet',
       'america/resolute',
       'america/santiago',
-      'america/cayman',
       ],
 );
 

@@ -2,7 +2,7 @@
 
 use utf8;
 use Test::Inter;
-$t = new Test::Inter 'parse (Portuguese)';
+$t = new Test::Inter 'date :: parse (Portuguese)';
 $testdir = '';
 $testdir = $t->testdir();
 

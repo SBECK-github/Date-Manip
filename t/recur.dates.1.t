@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'dates (old tests)';
+$t = new Test::Inter 'recur :: modifiers';
 $testdir = '';
 $testdir = $t->testdir();
 

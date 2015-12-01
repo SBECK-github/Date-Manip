@@ -6,9 +6,9 @@ Date::Manip::Offset::off215;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue Sep  1 08:31:00 EDT 2015
-#    Data version: tzdata2015f
-#    Code version: tzcode2015f
+#    Generated on: Wed Nov 25 11:44:43 EST 2015
+#    Data version: tzdata2015g
+#    Code version: tzcode2015g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -33,6 +33,7 @@ $Offset        = '+12:30:00';
 %Offset        = (
    1 => [
       'pacific/auckland',
+      'pacific/norfolk',
       ],
 );
 

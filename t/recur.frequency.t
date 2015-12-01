@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'frequency';
+$t = new Test::Inter 'recur :: frequency';
 $testdir = '';
 $testdir = $t->testdir();
 

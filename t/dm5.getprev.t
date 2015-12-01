@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'GetPrev';
+$t = new Test::Inter 'DM5 :: GetPrev';
 $testdir = '';
 $testdir = $t->testdir();
 

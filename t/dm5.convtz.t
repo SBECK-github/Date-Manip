@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'ConvTZ';
+$t = new Test::Inter 'DM5 :: ConvTZ';
 $testdir = '';
 $testdir = $t->testdir();
 

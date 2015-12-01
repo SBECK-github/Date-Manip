@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'set (Printable=0)';
+$t = new Test::Inter 'date :: set (Printable=0)';
 $testdir = '';
 $testdir = $t->testdir();
 

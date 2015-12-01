@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter '_fix_year (50)';
+$t = new Test::Inter 'base :: _fix_year (50)';
 $testdir = '';
 $testdir = $t->testdir();
 

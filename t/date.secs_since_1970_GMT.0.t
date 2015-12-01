@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'secs_since_1970_GMT(secs->date)';
+$t = new Test::Inter 'date :: secs_since_1970_GMT(secs->date)';
 $testdir = '';
 $testdir = $t->testdir();
 

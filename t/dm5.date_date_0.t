@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'DateCalc (date,date,exact)';
+$t = new Test::Inter 'DM5 :: DateCalc (date,date,exact)';
 $testdir = '';
 $testdir = $t->testdir();
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (fractional)';
+$t = new Test::Inter 'delta :: parse (fractional)';
 $testdir = '';
 $testdir = $t->testdir();
 

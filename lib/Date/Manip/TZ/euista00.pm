@@ -6,9 +6,9 @@ Date::Manip::TZ::euista00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue Sep  1 08:27:08 EDT 2015
-#    Data version: tzdata2015f
-#    Code version: tzcode2015f
+#    Generated on: Wed Nov 25 11:33:45 EST 2015
+#    Data version: tzdata2015g
+#    Code version: tzcode2015g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -605,11 +605,11 @@ END { undef $VERSION; }
    2015 =>
      [
         [ [2015,3,29,1,0,0],[2015,3,29,4,0,0],'+03:00:00',[3,0,0],
-          'EEST',1,[2015,10,25,0,59,59],[2015,10,25,3,59,59],
-          '2015032901:00:00','2015032904:00:00','2015102500:59:59','2015102503:59:59' ],
-        [ [2015,10,25,1,0,0],[2015,10,25,3,0,0],'+02:00:00',[2,0,0],
+          'EEST',1,[2015,11,8,0,59,59],[2015,11,8,3,59,59],
+          '2015032901:00:00','2015032904:00:00','2015110800:59:59','2015110803:59:59' ],
+        [ [2015,11,8,1,0,0],[2015,11,8,3,0,0],'+02:00:00',[2,0,0],
           'EET',0,[2016,3,27,0,59,59],[2016,3,27,2,59,59],
-          '2015102501:00:00','2015102503:00:00','2016032700:59:59','2016032702:59:59' ],
+          '2015110801:00:00','2015110803:00:00','2016032700:59:59','2016032702:59:59' ],
      ],
    2016 =>
      [

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'set';
+$t = new Test::Inter 'delta :: set';
 $testdir = '';
 $testdir = $t->testdir();
 

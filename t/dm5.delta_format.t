@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'FormatDelta';
+$t = new Test::Inter 'DM5 :: FormatDelta';
 $testdir = '';
 $testdir = $t->testdir();
 

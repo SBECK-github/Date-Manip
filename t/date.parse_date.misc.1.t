@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse_date (misc,DefaultTime=curr)';
+$t = new Test::Inter 'date :: parse_date (misc,DefaultTime=curr)';
 $testdir = '';
 $testdir = $t->testdir();
 

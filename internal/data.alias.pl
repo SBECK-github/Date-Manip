@@ -351,6 +351,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Boise'                           ,1918,1919,
                        'America/Metlakatla'                      ,1969,1983,
                        'America/Sitka'                           ,1969,1982,
+                       'America/Fort_Nelson'                     ,1918,2014,
                       ],
 
    # Open to discussion
@@ -376,7 +377,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Nome'                            ,1984,9999,
                        'America/Yakutat'                         ,1984,9999,
                        'America/Sitka'                           ,1984,9999,
-                       'America/Anchorage'                       ,1984,2037,
+                       'America/Anchorage'                       ,1984,9999,
                       ],
    'AKTT-5AKTST'   => [
                        'Asia/Aqtobe'                             ,1982,1990,
@@ -832,6 +833,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Vancouver'                       ,1945,1945,
                        'America/Metlakatla'                      ,1945,1945,
                        'America/Sitka'                           ,1945,1945,
+                       'America/Fort_Nelson'                     ,1945,1945,
                       ],
    'PYT4PYST'      => [
                        'America/Asuncion'                        ,1976,9999,

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'leapyear';
+$t = new Test::Inter 'base :: leapyear';
 $testdir = '';
 $testdir = $t->testdir();
 

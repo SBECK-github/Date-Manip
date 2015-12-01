@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'printf';
+$t = new Test::Inter 'delta :: printf';
 $testdir = '';
 $testdir = $t->testdir();
 

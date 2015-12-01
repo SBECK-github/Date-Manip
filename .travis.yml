@@ -2,7 +2,6 @@ language: perl
 sudo: false
 os:
   - linux
-  - osx
 perl:
   - "5.20"
   - "5.18"

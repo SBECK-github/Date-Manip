@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'split';
+$t = new Test::Inter 'base :: split';
 $testdir = '';
 $testdir = $t->testdir();
 

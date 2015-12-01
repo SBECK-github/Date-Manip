@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (with timezone)';
+$t = new Test::Inter 'date :: parse (with timezone)';
 $testdir = '';
 $testdir = $t->testdir();
 

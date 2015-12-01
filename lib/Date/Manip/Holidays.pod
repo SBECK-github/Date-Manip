@@ -24,9 +24,21 @@ line is of the form:
 
    STRING = HOLIDAY
 
-HOLIDAY is the name of the holiday (or it can be blank in which case
-the day will still be treated as a holiday... for example the day
-after Thanksgiving is often a work holiday though it is not named).
+HOLIDAY is the name of the holiday or it can be blank.
+
+If HOLIDAY is blank, the holiday is unnamed, but still treated as a
+holiday.  For example, in the US, the day after Thanksgiving is often
+a work holiday though it is not named.
+
+HOLIDAY should be unique in most cases.  The only exception is if the
+holiday definition is complex enough that it is impossible to describe
+it with one STRING.  In this case, multiple lines may be given with
+different values of STRING but the same value for HOLIDAY, and in these
+cases, the first STRING that matches a given year will be used.  This
+situation is described in more detail below.
+
+NOTE: It is not allowed to have unnamed holidays that require multiple
+definitions, so a name will have to be assigned in that case.
 
 STRING is a string which can be parsed to give a valid date. It can be any
 of the following forms:
@@ -40,6 +52,19 @@ Specific holidays can be set which occur only a single time.
    May 5, 2000                     = A one-time-only holiday
 
 Any format parseable by C<Date::Manip::Date::parse_date> can be used.
+
+There is one caveat to using a full date.  Date::Manip assumes that
+most holidays will appear once per year, so if you were to explicitly
+defined New Years (observed) as:
+
+   2004-12-31                      = New Year's Day
+
+then it would assume that it had found the occurence of New Year's for
+2004 when in fact, this is the 2005 occurence.
+
+Full date specifications should only be used as a last resort, and
+probably only if you will explicitly specify all occurences of the
+holiday.
 
 =item B<A date without a year>
 
@@ -55,7 +80,8 @@ date by simply adding the year to the end of the string. Please refer
 to the L<Date::Manip::Date> documentation to see what forms will
 work. ISO 8601 dates will not work since the year comes first.
 
-Any format parseable by C<Date::Manip::Date::parse_date> can be used.
+Any format parseable by C<Date::Manip::Date::parse_date> which allows the
+year to be at the end can be used.
 
 =item B<Recurrence>
 
@@ -156,6 +182,38 @@ Likewise, the two holidays:
 sometimes fall on the same day.  Using the
 C<Date::Manip::Date::list_holidays> method (or the C<Date_IsHoliday>
 function), you can get a list of all names that the date contains.
+
+=item B<Complex holiday descriptions>
+
+Occasionally, you cannot describe a holiday using a single line.  For
+example, the US Federal Reserve banks use a complex holiday description
+where:
+
+   For holidays falling on Saturday, Federal Reserve Banks
+   and Branches will be open the preceding Friday. For holidays
+   falling on Sunday, all Federal Reserve Banks and Branches
+   will be closed the following Monday.
+
+Since Saturday is not a business day, the DWD modifier will not work.
+For these, you need a more complicated definition.
+
+The following definitions both work:
+
+   # Saturday
+   1*1:0:1:0:0:0*NBD,BD1,IBD,FD1   = New Year's Day
+   # Sunday (observed Monday)
+   1*1:0:1:0:0:0*NBD,BD1,NBD,FD2   = New Year's Day
+   # M-F
+   1*1:0:1:0:0:0*IBD               = New Year's Day
+
+and
+
+   # Saturday
+   1*1:0:1:0:0:0*IW6               = New Year's Day
+   # Sunday (observed Monday)
+   1*1:0:1:0:0:0*IW7,FD1           = New Year's Day
+   # M-F
+   1*1:0:1:0:0:0*IBD               = New Year's Day
 
 =back
 

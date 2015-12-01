@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse (Spanish)';
+$t = new Test::Inter 'date :: parse (Spanish)';
 $testdir = '';
 $testdir = $t->testdir();
 

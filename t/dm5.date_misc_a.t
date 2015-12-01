@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Date (Internal=1)';
+$t = new Test::Inter 'DM5 :: Date (Internal=1)';
 $testdir = '';
 $testdir = $t->testdir();
 

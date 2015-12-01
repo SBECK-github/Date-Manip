@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'calc (date,delta,business 08:30-17:00)';
+$t = new Test::Inter 'date :: calc (date,delta,business 08:30-17:00)';
 $testdir = '';
 $testdir = $t->testdir();
 

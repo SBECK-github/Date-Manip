@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'calc_date_delta';
+$t = new Test::Inter 'base :: calc_date_delta';
 $testdir = '';
 $testdir = $t->testdir();
 

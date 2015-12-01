@@ -53,9 +53,10 @@ Since a frequency typically refers to events that could happen an
 infinite number of times, you usually have to specify a date range to
 get the actual dates.  Some frequencies also require a base date (i.e.
 information about when one such even actually occurred) since the
-frequency is ambiguous.  For example, the frequency 'every other day'
-does not include enough information to specify the dates that the
-event happened on, so you have to explicitly define one.
+frequency is otherwise ambiguous.  For example, the frequency 'every
+other day' does not include enough information to specify the dates
+that the event happened on, so you have to explicitly define one of
+them.  Then all others can be derived.
 
 =item B<Modifier>
 
@@ -201,6 +202,12 @@ with respect to the base date, and that is allowed.
 
 NOTE: both dates in the range and the base date must all be in the
 same time zone, and use the same L<Date::Manip::Base> object.
+
+An alternate definition of the range may also be used to specify that
+the recurring events based only on the interval and BEFORE any
+modifiers are applied fall in the range.
+
+This definition is described in more detail below.
 
 =back
 
@@ -456,6 +463,42 @@ Every recurring date will fall in the limit:
 When a recurrence is created, it may include a default range, and this is
 handled by the RecurRange config variable.
 
+By default, the date range applies to the final dates once all modifiers
+have been applied.
+
+This behavior can be changed by applying the range to the unmodified
+dates.
+
+An example of how this applies might be in defining New Year's Day
+(observed).  The most useful definition of this would be:
+
+   1*1:0:1:0:0:0*dwd
+
+which means Jan 1 modified to the nearest working day.
+
+But if you wanted to find New Year's for 2005 using this definition by passing
+in a start date of 2005-01-01-00:00:00 and an end date of 2005-12-31-23:59:59,
+you won't find anything because New Year's day will actually be observed on
+2004-12-31 (since Jan 1 is a Saturday).
+
+To get around this, you can pass in a non-zero parameter with the recurrence
+which means that this range will be applied to the unmodified dates.
+
+In effect, this discards the modifier (dwd), gets the dates that fall in
+the range, and for all that fall in the range, the modifiers are applied.
+
+So:
+
+   1*1:0:1:0:0:0*dwd**2005-01-01-00:00:00*2005-12-31-23:59:59
+
+will return no dates, but:
+
+   1*1:0:1:0:0:0*dwd**2005-01-01-00:00:00*2005-12-31-23:59:59*1
+
+will return:
+
+   2004-12-31-00:00:00
+
 =head1 OTHER FREQUENCY FORMATS
 
 There are a small handful of English strings (or the equivalent in
@@ -545,6 +588,10 @@ on business days. These modifiers include:
   IBD   This discards the date if it is not a business day.
   NBD   This discards the date if it IS a business day.
 
+  IWn   This discards the date if it is not the n'th day
+        of the week (n=1-7, 1 is Monday)
+  NWn   This discards the date if it IS the n'th day of the week
+
 The CWD, CWN, and CWP modifiers will always change the date to the
 closest working day NOT counting the current date.
 
@@ -564,7 +611,7 @@ initially moved to the following Monday (assuming it is a work day)
 and the FW1 moves it to Tuesday. The final result will be Tuesday at
 noon.
 
-The IBD and NBD modifiers eliminate dates from the list immediately.
+The IBD, NBD, IWn, and NWn modifiers eliminate dates from the list immediately.
 In other words, if a recurrence has three modifiers:
 
   FD1,IBD,FD1
@@ -955,7 +1002,7 @@ Please refer to the L<Date::Manip::Obj> documentation for these methods.
 
 =item B<parse>
 
-   $err = $recur->parse($string [,$modifiers] [,$base,$start,$end]);
+   $err = $recur->parse($string [,$modifiers] [,$base,$start,$end,$unmod]);
 
 This creates a new recurrence. A string containing a valid frequency
 is required. In addition, C<$start>, C<$end>, and C<$base> dates can be passed
@@ -966,18 +1013,18 @@ If the C<$start> or C<$end> dates are not included, they may be supplied
 automatically, based on the value of the RecurRange variable. If any
 of the dates are passed in, they must be included in the order given
 (though it is safe to pass an empty string or undef in for any of them
-if you only want to set some, but not all of them).
+if you only want to set some, but not all of them).  If C<$unmod> is true,
+the range will apply to unmodified dates rather than the modified dates.
 
-The C<$modifiers> argument must either contain valid modifiers, or be
-left out of the argument list entirely. You cannot pass an empty string
-or undef in for it.
+The C<$modifiers> argument must contain valid modifiers, or be left out of
+the argument list entirely. You cannot pass an empty string or undef in for it.
 
    $err = $recur->parse($string);
 
 This creates a recurrence from a string which contains all of the
 necessary elements of the recurrence. The string is of the format:
 
-   FREQ*MODIFIERS*BASE*START*END
+   FREQ*MODIFIERS*BASE*START*END*UNMOD
 
 where FREQ is a string containing a frequency, MODIFIERS is a string
 containing a comma separated list of modifiers, BASE, START, and END
@@ -989,6 +1036,7 @@ following are valid:
    FREQ*MODIFIERS
    FREQ**BASE
    FREQ**BASE*START*END
+   FREQ***START*END*UNMOD
 
 If a part of the recurrence is passed in both as part of C<$string> and
 as an argument, the argument overrides the string portion, with the
@@ -1012,6 +1060,7 @@ recurrence) using the following:
    $err = $recur->frequency($frequency);
 
    $err = $recur->start($start);
+   $err = $recur->start($start,$unmod);
    $err = $recur->end($end);
 
    $err = $recur->basedate($base);
@@ -1033,6 +1082,8 @@ new modifiers are appended to the list.
 
 In the start, end, and base methods, the date passed in can be a
 L<Date::Manip::Date> object, or a string that can be parsed to get a date.
+If C<$unmod> is true, it will mean that the range will apply to unmodified
+dates.
 
 NOTE: the parse method will overwrite all parts of the recurrence,
 so it is not appropriate to do:
@@ -1058,7 +1109,7 @@ If any of the values are not yet determined, nothing will be returned.
 
 =item B<dates>
 
-   @dates = $recur->dates([$start,$end]);
+   @dates = $recur->dates([$start,$end,$unmod]);
 
 Returns the list of dates defined by the full recurrence. If there is
 an error, or if there are no dates, an empty list will be returned.

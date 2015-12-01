@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Normalize (after business day)';
+$t = new Test::Inter 'DM5 :: Normalize (after business day)';
 $testdir = '';
 $testdir = $t->testdir();
 

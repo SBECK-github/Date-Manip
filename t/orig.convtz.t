@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Date_ConvTZ';
+$t = new Test::Inter 'Orig :: Date_ConvTZ';
 $testdir = '';
 $testdir = $t->testdir();
 

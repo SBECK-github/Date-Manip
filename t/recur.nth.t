@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'nth/next/prev';
+$t = new Test::Inter 'recur :: nth/next/prev';
 $testdir = '';
 $testdir = $t->testdir();
 

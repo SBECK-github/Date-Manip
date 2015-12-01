@@ -5,9 +5,9 @@ package Date::Manip::Zones;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue Sep  1 08:33:25 EDT 2015
-#    Data version: tzdata2015f
-#    Code version: tzcode2015f
+#    Generated on: Wed Nov 25 11:48:25 EST 2015
+#    Data version: tzdata2015g
+#    Code version: tzcode2015g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -37,8 +37,8 @@ END {
    undef %Offmod;
 }
 
-$TzdataVersion = 'tzdata2015f';
-$TzcodeVersion = 'tzcode2015f';
+$TzdataVersion = 'tzdata2015g';
+$TzcodeVersion = 'tzcode2015g';
 $FirstDate     = '0001010200:00:00';
 $LastDate      = '9999123100:00:00';
 $LastYear      = '2065';
@@ -109,7 +109,8 @@ $LastYear      = '2065';
   'america/edmonton'                   => 'amedmo00',
   'america/eirunepe'                   => 'ameiru00',
   'america/el_salvador'                => 'amel_s00',
-  'america/fortaleza'                  => 'amfort00',
+  'america/fort_nelson'                => 'amfort00',
+  'america/fortaleza'                  => 'amfort01',
   'america/glace_bay'                  => 'amglac00',
   'america/godthab'                    => 'amgodt00',
   'america/goose_bay'                  => 'amgoos00',
@@ -507,6 +508,7 @@ $LastYear      = '2065';
   'america/edmonton'                   => 'America/Edmonton',
   'america/eirunepe'                   => 'America/Eirunepe',
   'america/el_salvador'                => 'America/El_Salvador',
+  'america/fort_nelson'                => 'America/Fort_Nelson',
   'america/fortaleza'                  => 'America/Fortaleza',
   'america/glace_bay'                  => 'America/Glace_Bay',
   'america/godthab'                    => 'America/Godthab',
@@ -906,6 +908,7 @@ $LastYear      = '2065';
   'america/edmonton'                   => 'america/edmonton',
   'america/eirunepe'                   => 'america/eirunepe',
   'america/el_salvador'                => 'america/el_salvador',
+  'america/fort_nelson'                => 'america/fort_nelson',
   'america/fortaleza'                  => 'america/fortaleza',
   'america/glace_bay'                  => 'america/glace_bay',
   'america/godthab'                    => 'america/godthab',
@@ -2586,7 +2589,8 @@ $LastYear      = '2065';
                      'america/santa_isabel',
                      'america/tijuana',
                      'europe/moscow',
-                     'america/north_dakota/beulah' ],
+                     'america/north_dakota/beulah',
+                     'america/fort_nelson' ],
   'must'        => [ 'indian/mauritius' ],
   'mut'         => [ 'indian/mauritius' ],
   'mvt'         => [ 'indian/maldives' ],
@@ -2612,6 +2616,7 @@ $LastYear      = '2065';
   'negt'        => [ 'america/paramaribo' ],
   'nest'        => [ 'europe/amsterdam' ],
   'net'         => [ 'europe/amsterdam' ],
+  'nfst'        => [ 'pacific/norfolk' ],
   'nft'         => [ 'pacific/norfolk' ],
   'nmt'         => [ 'pacific/norfolk' ],
   'novst'       => [ 'asia/novosibirsk',
@@ -2655,7 +2660,8 @@ $LastYear      = '2065';
                      'america/dawson_creek',
                      'america/boise',
                      'america/metlakatla',
-                     'america/sitka' ],
+                     'america/sitka',
+                     'america/fort_nelson' ],
   'pest'        => [ 'america/lima' ],
   'pet'         => [ 'america/lima' ],
   'petst'       => [ 'asia/kamchatka' ],
@@ -2691,7 +2697,8 @@ $LastYear      = '2065';
                      'america/tijuana',
                      'america/vancouver',
                      'america/metlakatla',
-                     'america/sitka' ],
+                     'america/sitka',
+                     'america/fort_nelson' ],
   'pst'         => [ 'america/los_angeles',
                      'america/vancouver',
                      'america/santa_isabel',
@@ -2708,7 +2715,8 @@ $LastYear      = '2065';
                      'america/boise',
                      'america/metlakatla',
                      'america/sitka',
-                     'america/creston' ],
+                     'america/creston',
+                     'america/fort_nelson' ],
   'pwt'         => [ 'pacific/palau',
                      'america/los_angeles',
                      'america/dawson_creek',
@@ -2717,7 +2725,8 @@ $LastYear      = '2065';
                      'america/tijuana',
                      'america/vancouver',
                      'america/metlakatla',
-                     'america/sitka' ],
+                     'america/sitka',
+                     'america/fort_nelson' ],
   'pyst'        => [ 'america/asuncion' ],
   'pyt'         => [ 'america/asuncion' ],
   'q'           => [ 'q' ],
@@ -3314,42 +3323,43 @@ $LastYear      = '2065';
   '-07:52:58'  => 'off390',
   '-08:00:00'  => 'off391',
   '-08:00:56'  => 'off392',
-  '-08:12:28'  => 'off393',
-  '-08:30:00'  => 'off394',
-  '-08:40:20'  => 'off395',
-  '-08:46:18'  => 'off396',
-  '-08:57:41'  => 'off397',
-  '-08:59:48'  => 'off398',
-  '-09:00:00'  => 'off399',
-  '-09:00:12'  => 'off400',
-  '-09:01:13'  => 'off401',
-  '-09:17:40'  => 'off402',
-  '-09:18:00'  => 'off403',
-  '-09:18:55'  => 'off404',
-  '-09:30:00'  => 'off405',
-  '-09:58:16'  => 'off406',
-  '-09:59:36'  => 'off407',
-  '-10:00:00'  => 'off408',
-  '-10:29:20'  => 'off409',
-  '-10:30:00'  => 'off410',
-  '-10:31:26'  => 'off411',
-  '-10:39:04'  => 'off412',
-  '-10:40:00'  => 'off413',
-  '-11:00:00'  => 'off414',
-  '-11:01:38'  => 'off415',
-  '-11:19:40'  => 'off416',
-  '-11:20:00'  => 'off417',
-  '-11:22:48'  => 'off418',
-  '-11:24:20'  => 'off419',
-  '-11:24:56'  => 'off420',
-  '-11:26:56'  => 'off421',
-  '-11:30:00'  => 'off422',
-  '-11:46:38'  => 'off423',
-  '-12:00:00'  => 'off424',
-  '-13:00:00'  => 'off425',
-  '-14:00:00'  => 'off426',
-  '-14:21:00'  => 'off427',
-  '-15:56:00'  => 'off428',
+  '-08:10:47'  => 'off393',
+  '-08:12:28'  => 'off394',
+  '-08:30:00'  => 'off395',
+  '-08:40:20'  => 'off396',
+  '-08:46:18'  => 'off397',
+  '-08:57:41'  => 'off398',
+  '-08:59:48'  => 'off399',
+  '-09:00:00'  => 'off400',
+  '-09:00:12'  => 'off401',
+  '-09:01:13'  => 'off402',
+  '-09:17:40'  => 'off403',
+  '-09:18:00'  => 'off404',
+  '-09:18:55'  => 'off405',
+  '-09:30:00'  => 'off406',
+  '-09:58:16'  => 'off407',
+  '-09:59:36'  => 'off408',
+  '-10:00:00'  => 'off409',
+  '-10:29:20'  => 'off410',
+  '-10:30:00'  => 'off411',
+  '-10:31:26'  => 'off412',
+  '-10:39:04'  => 'off413',
+  '-10:40:00'  => 'off414',
+  '-11:00:00'  => 'off415',
+  '-11:01:38'  => 'off416',
+  '-11:19:40'  => 'off417',
+  '-11:20:00'  => 'off418',
+  '-11:22:48'  => 'off419',
+  '-11:24:20'  => 'off420',
+  '-11:24:56'  => 'off421',
+  '-11:26:56'  => 'off422',
+  '-11:30:00'  => 'off423',
+  '-11:46:38'  => 'off424',
+  '-12:00:00'  => 'off425',
+  '-13:00:00'  => 'off426',
+  '-14:00:00'  => 'off427',
+  '-14:21:00'  => 'off428',
+  '-15:56:00'  => 'off429',
 
 );
 

@@ -1,5 +1,4 @@
 .travis.yml
-Build.PL
 Changes
 examples/dm_date
 examples/dm_zdump
@@ -525,6 +524,7 @@ lib/Date/Manip/Offset/off425.pm
 lib/Date/Manip/Offset/off426.pm
 lib/Date/Manip/Offset/off427.pm
 lib/Date/Manip/Offset/off428.pm
+lib/Date/Manip/Offset/off429.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -589,6 +589,7 @@ lib/Date/Manip/TZ/amedmo00.pm
 lib/Date/Manip/TZ/ameiru00.pm
 lib/Date/Manip/TZ/amel_s00.pm
 lib/Date/Manip/TZ/amfort00.pm
+lib/Date/Manip/TZ/amfort01.pm
 lib/Date/Manip/TZ/amglac00.pm
 lib/Date/Manip/TZ/amgodt00.pm
 lib/Date/Manip/TZ/amgoos00.pm
@@ -934,7 +935,6 @@ lib/Date/Manip/Zones.pod
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
-META.json
 README
 README.first
 t/.ppo.yaml
@@ -1148,4 +1148,5 @@ t/tz.zone.t
 t/tzdata._ruleinfo.t
 t/tzdata._zoneinfo.t
 t/xtra.now.tx
-META.yml
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

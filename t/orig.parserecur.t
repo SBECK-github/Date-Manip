@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'ParseRecur';
+$t = new Test::Inter 'Orig :: ParseRecur';
 $testdir = '';
 $testdir = $t->testdir();
 

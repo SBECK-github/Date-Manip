@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'printf (nonUS)';
+$t = new Test::Inter 'date :: printf (nonUS)';
 $testdir = '';
 $testdir = $t->testdir();
 

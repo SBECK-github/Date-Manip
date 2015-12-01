@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'ParseRecur (English)';
+$t = new Test::Inter 'DM5 :: ParseRecur (English)';
 $testdir = '';
 $testdir = $t->testdir();
 

@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'parse_date (format_mmmyyyy=last)';
+$t = new Test::Inter 'date :: parse_date (format_mmmyyyy=last)';
 $testdir = '';
 $testdir = $t->testdir();
 

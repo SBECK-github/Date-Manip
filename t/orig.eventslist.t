@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'Event_List';
+$t = new Test::Inter 'Orig :: Event_List';
 $testdir = '';
 $testdir = $t->testdir();
 

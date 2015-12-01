@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'calc (delta,delta,approx)';
+$t = new Test::Inter 'delta :: calc (delta,delta,approx)';
 $testdir = '';
 $testdir = $t->testdir();
 
