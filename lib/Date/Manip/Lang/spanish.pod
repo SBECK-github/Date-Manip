@@ -209,7 +209,7 @@ words:
 
 =item B<Each or every>
 
-There are a list of words that specify every occurence of something.  These
+There are a list of words that specify every occurrence of something.  These
 are used in the following phrases:
 
    EACH Monday
@@ -221,32 +221,32 @@ The following words may be used:
    cada
 
 
-=item B<Next/Previous/Last occurence>
+=item B<Next/Previous/Last occurrence>
 
 There are a list of words that may be used to specify the next,
-previous, or last occurence of something.  These words could be used
+previous, or last occurrence of something.  These words could be used
 in the following phrases:
 
    NEXT week
 
-   LAST tuesday
-   PREVIOUS tuesday
+   LAST Tuesday
+   PREVIOUS Tuesday
 
    LAST day of the month
 
 The following words may be used:
 
-Next occurence:
+Next occurrence:
 
    siguiente
 
 
-Previous occurence:
+Previous occurrence:
 
    anterior
 
 
-Last occurence:
+Last occurrence:
 
    ultimo
    último

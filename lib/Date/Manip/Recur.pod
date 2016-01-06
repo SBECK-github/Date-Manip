@@ -121,7 +121,7 @@ Recurring events are assigned a number with the event that is referred
 to by the base date being the 0th occurrence, the first one after that
 as the 1st occurrence, etc.  Recurring events can also occur before
 the base date with the last time the recurring event occurred before
-the base date is the -1th occurence.
+the base date is the -1th occurrence.
 
 So, if the frequency is
 
@@ -372,7 +372,7 @@ implied to be 1. In other words, the following are equivalent:
    0:0:0*x:x:x:x
    0:0:1*x:x:x:x
 
-and can be thought of as every possible occurence of the rtime.
+and can be thought of as every possible occurrence of the rtime.
 
 NOTE: When applying a frequency to get a list of dates on which a
 recurring event occurs, a delta is created from the frequency which is
@@ -472,7 +472,7 @@ dates.
 An example of how this applies might be in defining New Year's Day
 (observed).  The most useful definition of this would be:
 
-   1*1:0:1:0:0:0*dwd
+   1*1:0:1:0:0:0*DWD
 
 which means Jan 1 modified to the nearest working day.
 
@@ -484,16 +484,16 @@ you won't find anything because New Year's day will actually be observed on
 To get around this, you can pass in a non-zero parameter with the recurrence
 which means that this range will be applied to the unmodified dates.
 
-In effect, this discards the modifier (dwd), gets the dates that fall in
+In effect, this discards the modifier (DWD), gets the dates that fall in
 the range, and for all that fall in the range, the modifiers are applied.
 
 So:
 
-   1*1:0:1:0:0:0*dwd**2005-01-01-00:00:00*2005-12-31-23:59:59
+   1*1:0:1:0:0:0*DWD**2005-01-01-00:00:00*2005-12-31-23:59:59
 
 will return no dates, but:
 
-   1*1:0:1:0:0:0*dwd**2005-01-01-00:00:00*2005-12-31-23:59:59*1
+   1*1:0:1:0:0:0*DWD**2005-01-01-00:00:00*2005-12-31-23:59:59*1
 
 will return:
 
@@ -781,7 +781,7 @@ Possibilities are:
                 current year
 
 When the week is right of the asterisk, and the month is zero, the
-recurrence refers to an occurence of the day-of-week during the
+recurrence refers to an occurrence of the day-of-week during the
 year. The following are possible:
 
   frequency     meaning
@@ -866,27 +866,27 @@ asterisk and month is non-zero):
   frequency     meaning
 
   1:2*3:0       every 1 year, 2 months on the 3rd
-                occurence of FirstDay
+                occurrence of FirstDay
 
-  0:2*3:0       every 2 months on the 3rd occurence
+  0:2*3:0       every 2 months on the 3rd occurrence
                 of FirstDay
 
-  1*2:3:0       every year on the 3rd occurence
+  1*2:3:0       every year on the 3rd occurrence
                 of FirstDay in Feb
 
   0*2:3:0       same as 1*2:3:0
 
- *1:2:3:0       the 3rd occurence of FirstDay
+ *1:2:3:0       the 3rd occurrence of FirstDay
                 Feb 0001
 
- *0:2:3:0       the 3rd occurence of FirstDay
+ *0:2:3:0       the 3rd occurrence of FirstDay
                 in Feb of the current year
 
 NOTE: in the last group, a slightly more intuitive definition of these
 would have been to say that the week field refers to the week of the
 month, but given the ISO 8601 manner of defining when weeks start,
 this definition would have virtually no practical application. So the
-definition of the week field referring to the Nth occurence of
+definition of the week field referring to the Nth occurrence of
 FirstDay in a month was used instead.
 
 There are a few special cases here:
@@ -894,7 +894,7 @@ There are a few special cases here:
   frequency     meaning
 
   0:0*3:0       same as 0:1*3:0   (every month on the 3rd
-                occurence of the first day of week)
+                occurrence of the first day of week)
 
   0*0:3:0       same as 1*0:3:0
 

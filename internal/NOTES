@@ -135,13 +135,18 @@ In internal/benchmarks directory
 #########################################################################
 Before every release, spellcheck the documents:
 
-   internal/langpod
-
-   for i in `find lib -type f -name \*.pod` ;do
-      podspell $i > $i.txt
+   for i in `find lib -type f -name \*.pod | egrep -v 'Lang\/' |
+             egrep -v Zones.pod` ;do
+      pod2text $i > $i.txt
       ispell -p internal/module.isp $i.txt
       rm -f $i.txt $i.txt.bak
    done
+
+   internal/langpod
+
+   pod2text ./lib/Date/Manip/Lang/english.pod > english.txt
+   ispell -p internal/module.isp english.txt
+   rm -f english.txt english.txt.bak
 
 #########################################################################
 Update the copyright

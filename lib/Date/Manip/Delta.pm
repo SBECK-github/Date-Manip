@@ -979,7 +979,7 @@ sub cmp {
                                        $d*$dl + $h*3600 + $mn*60 + $s);
    }
 
-   return ($$self{'data'}{'length'} cmp $$delta{'data'}{'length'});
+   return ($$self{'data'}{'length'} <=> $$delta{'data'}{'length'});
 }
 
 1;

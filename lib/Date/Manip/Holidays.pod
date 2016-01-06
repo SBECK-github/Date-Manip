@@ -59,11 +59,11 @@ defined New Years (observed) as:
 
    2004-12-31                      = New Year's Day
 
-then it would assume that it had found the occurence of New Year's for
-2004 when in fact, this is the 2005 occurence.
+then it would assume that it had found the occurrence of New Year's for
+2004 when in fact, this is the 2005 occurrence.
 
 Full date specifications should only be used as a last resort, and
-probably only if you will explicitly specify all occurences of the
+probably only if you will explicitly specify all occurrence of the
 holiday.
 
 =item B<A date without a year>

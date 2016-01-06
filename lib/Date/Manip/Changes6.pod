@@ -35,7 +35,21 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.53  (planned 2016-03-01)
 
-=head1 VERSION 6.52  (planned 2015-12-01)
+=over 4
+
+=item Bug fixes
+
+Date::Manip::Delta::cmp had a bug in it's comparison.  Ian Gibbs.
+
+=item Documentation fixes
+
+Lots of typos fixed.  I was using podspell to do spell checking, but it was
+discarding too much real text (which wasn't getting checked as a result).
+Switched to pod2text which does a better job.  RT 110025
+
+=back
+
+=head1 VERSION 6.52  2015-12-01
 
 =over 4
 

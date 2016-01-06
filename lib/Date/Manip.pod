@@ -435,6 +435,11 @@ Change log for Date::Manip 6.xx
 Miscellaneous information about Date::Manip (who should use it;
 acknowledgments).
 
+=item L<Date::Manip::History>
+
+Musings on the history of Date::Manip written around it's
+20th birthday.
+
 =item L<Date::Manip::Problems>
 
 Common problems and instructions for reporting bugs.

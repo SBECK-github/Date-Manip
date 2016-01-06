@@ -4472,7 +4472,7 @@ sub _Date_Recur_WoM {
     $date1=_DateCalc_DateDelta($date0,"+0:1:0:0:0:0:0");
 
     foreach $d (@d) {
-      # Find 1st occurence of DOW (in both months)
+      # Find 1st occurrence of DOW (in both months)
       $d0=Date_GetNext($date0,$d,1);
       $d1=Date_GetNext($date1,$d,1);
 

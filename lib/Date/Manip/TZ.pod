@@ -53,14 +53,14 @@ Each period includes the following information:
 =item B<start time, end time>
 
 The period begin and ends at certain times. The times are
-included both as an absolute GMT time, and as a wallclock time.
-The wallclock start time is the time that will be on a clock
-just as the period starts (i.e. after a time change). The wallclock
+included both as an absolute GMT time, and as a wall clock time.
+The wall clock start time is the time that will be on a clock
+just as the period starts (i.e. after a time change). The wall clock
 end time is the time on a clock immediately before the period ends.
 
 =item B<offset>
 
-The entire period has an offset which is how much the wallclock
+The entire period has an offset which is how much the wall clock
 time differs from GMT.
 
 =item B<abbreviation>
@@ -183,7 +183,7 @@ items:
 
 C<$dateUT> and C<$dateLT> are the starting date of the period (i.e. the
 first second in a period) in universal (GMT) time and local
-(wallclock) time. C<$endUT> and C<$endLT> are the end date of the period
+(wall clock) time. C<$endUT> and C<$endLT> are the end date of the period
 (i.e. the last second in a period) in universal and local time.
 These are all stored as list references.
 
@@ -325,16 +325,16 @@ will NOT change the method list.
 
 =item B<date_period>
 
-   $period = $tz->date_period($date,$zone,$wallclock [,$isdst]);
+   $period = $tz->date_period($date,$zone,$wall_clock [,$isdst]);
 
 This returns the period information for the given date. $date defaults
-to GMT, but may be given as local (i.e. wallclock) time if $wallclock
+to GMT, but may be given as local (i.e. wall clock) time if $wall_clock
 is non-zero. The period information is described in the periods method
 below.
 
-If a wallclock time is given, no period is returned if the wallclock
+If a wall clock time is given, no period is returned if the wall clock
 time doesn't ever appear (such as when a time change results in the
-clock moving forward "skipping" a period of time). If the wallclock
+clock moving forward "skipping" a period of time). If the wall clock
 time appears twice (i.e. when a time change results in the clock
 being set back), the $isdst variable is used. The standard time
 is used unless $isdst is non-zero.  $isdst is ignored except in the
@@ -493,7 +493,7 @@ allowed). The reverse is true if $dstflag is "dst".
 
 If $date is given, only zones in which $date will appear in a
 zone that matches all other information are given. $date is a
-wallclock time.
+wall clock time.
 
 If no $zone, $abbrev, or $offset are entered, the local time zone
 may be returned (unless $date is entered, and it doesn't exist in

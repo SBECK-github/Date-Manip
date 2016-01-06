@@ -184,7 +184,7 @@ Currently, the possible values that $mode can have are:
    semi     : a semi-exact, non-business calculation
    approx   : an approximate, non-business calculation
 
-   business : an exact, business alculation
+   business : an exact, business calculation
    bsemi    : a semi-exact, business calculation
    bapprox  : an approximate, business calculation
 

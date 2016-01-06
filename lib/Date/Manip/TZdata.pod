@@ -55,10 +55,10 @@ change as a result of the time change).  This is not accounted for,
 and it is hoped that this situation will never occur.
 
 Also, because this module is strictly limited to 4 digit positive
-years (regardless of whether it is wallclock or universal time), and
+years (regardless of whether it is wall clock or universal time), and
 because various parts of the module switch back and forth, valid times
 for this module are from Jan 2, 0001 to Dec 30, 9999. This ensures
-that conversions from wallclock to universal or vice versa will never
+that conversions from wall clock to universal or vice versa will never
 make dates occur in the year 0000 or 10000.
 
 =head1 KNOWN BUGS

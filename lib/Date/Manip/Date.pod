@@ -498,13 +498,13 @@ in a day of week and possibly a time:
 
    $err = $date->prev($dow, $curr [,$time]);
 
-If $curr = 0, this means to look for the previous occurence of the day
+If $curr = 0, this means to look for the previous occurrence of the day
 of week, and set the time to the value passed in (or current time if
 no time was passed in). The day is ALWAY less than the current day. If
 the current day is the same day of week as $dow, then the date
 returned will be one week earlier.
 
-If $curr = 1, it means to look for the current or previous occurence
+If $curr = 1, it means to look for the current or previous occurrence
 of the day of week, and set the time to the value passed in (or 00:00:00 if
 none was passed in). If the current day of week is the same as $dow, the
 date will remain unchanged. Since the time is then set, the new date may
@@ -594,7 +594,7 @@ This returns the number of seconds that have elapsed since Jan 1, 1970
 
 The reverse is also allowed:
 
-   $err = $date->secs_sincs_1970_GMT($secs);
+   $err = $date->secs_since_1970_GMT($secs);
 
 which sets the date to $secs seconds from Jan 1, 1970 00:00:00 GMT in
 the local time zone.
@@ -769,7 +769,7 @@ The first way to specify the time zone is to specify it by complete name
 Although this is unambiguous when it comes to determining the time zone,
 the time is ambiguous in most zones for one hour of the year. When
 a time change occurs during which the clock is moved back, the same
-wallclock time occurs twice.
+wall clock time occurs twice.
 
 For example, in America/New_York, on Sunday, Nov 2, 2008, at 02:00 in
 the morning, the clock was set back to 01:00. As a result, the date
@@ -863,7 +863,7 @@ A calendar date includes the following fields:
    YY    2-digit representation of the year in
          a century
    MM    2-digit representation of a month
-   DD    2-ditit representation of a day of month
+   DD    2-digit representation of a day of month
    DoY   3-digit representation of a day of year
          (001-366)
    Www   the character "W" followed by a 2-digit
@@ -1161,7 +1161,7 @@ The following formats are also supported by Date::Manip:
         1970 1st Dec
 
    next/prev DoW
-        The next or last occurence of DoW
+        The next or last occurrence of DoW
            next Friday
            last Friday at 12:40
 
@@ -1724,7 +1724,7 @@ from the date.
 
    Extended formats
        %<A=NUM>   These returns the NUMth value of the %A, %a, and %v formats
-       %<a=NUM>   resepectively.  In English, that would yield:
+       %<a=NUM>   respectively.  In English, that would yield:
        %<v=NUM>      %<A=2>   => Tuesday
                      %<a=2>   => Tue
                      %<v=2>   => T

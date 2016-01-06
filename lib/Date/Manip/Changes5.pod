@@ -355,9 +355,9 @@ making the week element (N) refer to the Nth occurrence of a day of the
 week in the week, month, or year. It is now possible to look at the
 3rd Friday of every month for example.
 
-Y-0-WOY-DOW now refers to the WOY'th occurence of DOW instead of the
+Y-0-WOY-DOW now refers to the WOY'th occurrence of DOW instead of the
 ISO 8601 date Y-W(WOY)-DOY. Also, changed Y-0-WOY-0 to refer to the
-WOY'th occurence of FirstDay, and got rid of the MW and MD flags. Many
+WOY'th occurrence of FirstDay, and got rid of the MW and MD flags. Many
 other similar changes.
 
 =item B<(!) Changed %x format in UnixDate>
@@ -384,7 +384,7 @@ bugs list).
 
 Fix for a potential problem in the "0000" time zone.  Ed Avis
 
-Changed taint check to be the one in persec(1).  Max Kalika
+Changed taint check to be the one in perlsec(1).  Max Kalika
 
 Minor fix so DateInit("VAR=") will work.  Thomas Bohme
 
@@ -1057,7 +1057,7 @@ Split Manip.pm.  New files are HISTORY, TODO, Manip.pod.
 
 Fixed a bug in ParseDateDelta.  Antonio Rosella.
 
-Removed the only occurence of $& (which may speed some things up).  Fix
+Removed the only occurrence of $& (which may speed some things up).  Fix
 by Ken Williams.  First suggested by Abigail.
 
 Fixed an overflow bug in doing date calculations with 2 dates more than
@@ -1503,7 +1503,7 @@ Suggested by Are Bryne.
 
 Added options to delete existing holidays and ignore global config file.
 
-Date_GetNext and Date_GetPrev now return the next/prev occurence of a
+Date_GetNext and Date_GetPrev now return the next/prev occurrence of a
 time as well as a day.  Suggested by Are Bryne.
 
 In approximate mode, deltas now come out completely normalized (only 1

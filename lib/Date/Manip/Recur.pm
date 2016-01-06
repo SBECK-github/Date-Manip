@@ -1346,10 +1346,10 @@ sub _apply_rtime_mods {
 
          #  *1:2:3:4       in Feb 0001 on the 3rd Thur of the month
          #  *0:2:3:4       on the 3rd Thur of Feb in the curr year
-         #  *1:2:3:0       the 3rd occurence of FirstDay in Feb 0001
-         #  *0:2:3:0       the 3rd occurence of FirstDay in Feb of curr year
+         #  *1:2:3:0       the 3rd occurrence of FirstDay in Feb 0001
+         #  *0:2:3:0       the 3rd occurrence of FirstDay in Feb of curr year
          #   1*2:3:4       every year in Feb on the 3rd Thur
-         #   1*2:3:0       every year on the 3rd occurence of FirstDay in Feb
+         #   1*2:3:0       every year on the 3rd occurrence of FirstDay in Feb
 
          ($err,@m)  = $self->_rtime_values('m',$mf);
          return ()  if ($err);
@@ -1400,9 +1400,9 @@ sub _apply_rtime_mods {
 
       } else {
 
-         #   0:2*3:0       every 2 months on the 3rd occurence of FirstDay
+         #   0:2*3:0       every 2 months on the 3rd occurrence of FirstDay
          #   0:2*3:4       every 2 months on the 3rd Thur of the month
-         #   1:2*3:0       every 1 year, 2 months on 3rd occurence of FirstDay
+         #   1:2*3:0       every 1 year, 2 months on 3rd occurrence of FirstDay
          #   1:2*3:4       every 1 year, 2 months on the 3rd Thur of the month
 
          if ($d_empty) {
@@ -2173,7 +2173,7 @@ sub _rtime_values {
    } elsif ($type eq 'dow_of_year') {
       my($y,$dow) = @args;
 
-      # Get the 1st occurence of $dow
+      # Get the 1st occurrence of $dow
       my $d0   = 1;
       my $dow0 = $dmb->day_of_week([$y,1,$d0]);
       if ($dow > $dow0) {
@@ -2201,7 +2201,7 @@ sub _rtime_values {
    } elsif ($type eq 'dow_of_month') {
       my($y,$m,$dow) = @args;
 
-      # Get the 1st occurence of $dow in the month
+      # Get the 1st occurrence of $dow in the month
       my $d0   = 1;
       my $dow0 = $dmb->day_of_week([$y,$m,$d0]);
       if ($dow > $dow0) {

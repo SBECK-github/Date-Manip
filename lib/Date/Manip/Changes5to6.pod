@@ -609,9 +609,9 @@ For example, the recurrence:
 
    1*2:3:4:0:0:0
 
-referred to the 3rd occurence of the 4th day of the week in February.
+referred to the 3rd occurrence of the 4th day of the week in February.
 
-The meaning has been changed to refer to the 3rd occurence of day 4
+The meaning has been changed to refer to the 3rd occurrence of day 4
 (Thursday) in February. This is a much more useful type of recurrence.
 
 As a result of this change, the related recurrence:
@@ -649,7 +649,7 @@ dropped for this string.
 
 I also dropped the following for a similar reason:
 
-   every 6th tuesday [in 1999]
+   every 6th Tuesday [in 1999]
 
 =item B<Other minor recurrence changes>
 

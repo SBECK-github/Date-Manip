@@ -10,6 +10,7 @@ When calculating holidays, use this option by default to simplify
 Add options:
    onlyiso8601, etc. to parse
    no-delta-secs   (not delta as a plain number)
+   no-timezone
 
 Can I reduce the number of timezone modules loaded when parsing a date
 with an abbreviation or offset by loading one and testing it before
@@ -21,6 +22,9 @@ Make sure the following work:
 
 Add a new type of recurrence (???):
    *Christmas Day*NWD
+
+Add ability to supply holidays via. a list rather than a config file.
+   ksublondie on perlmonks
 
 ########################################################################
 # Deprecated variables:
