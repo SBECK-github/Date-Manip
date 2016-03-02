@@ -1,5 +1,5 @@
 package Date::Manip::Date;
-# Copyright (c) 1995-2015 Sullivan Beck. All rights reserved.
+# Copyright (c) 1995-2016 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -3889,6 +3889,11 @@ sub secs_since_1970_GMT {
       return 1  if ($err);
       $self->set('date',$date);
       return 0;
+   }
+
+   if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
+      warn "WARNING: [secs_since_1970_GMT] Object must contain a valid date\n";
+      return undef;
    }
 
    my @date = $self->value('gmt');

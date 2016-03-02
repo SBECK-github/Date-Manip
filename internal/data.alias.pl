@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -76,7 +76,6 @@
    "North Asia East Standard Time"   => "Asia/Irkutsk",
    "North Asia Standard Time"        => "Asia/Krasnoyarsk",
    "Pacific SA Standard Time"        => "America/Santiago",
-   "Pacific Standard Time (Mexico)"  => "America/Santa_Isabel",
    "Pacific Standard Time"           => "America/Los_Angeles",
    "Pakistan Standard Time"          => "Asia/Karachi",
    "Paraguay Standard Time"          => "America/Asuncion",
@@ -144,10 +143,8 @@
    'MXST6MXDT#Mexico'                => 'America/Mexico_City',
    'NST3:30NDT'                      => 'America/St_Johns',
    'NST3:30NDT#Canada'               => 'America/St_Johns',
-   'PSM8PDM'                         => 'America/Santa_Isabel',
    'PST-8PDT'                        => 'Asia/Singapore',
    'PST8PDT#Canada'                  => 'America/Vancouver',
-   'PST8PDT#Mexico'                  => 'America/Santa_Isabel',
    'PWT0PST'                         => 'Europe/Lisbon',
    'SAST-2'                          => 'Africa/Johannesburg',
    'WET0WETDST'                      => 'WET',
@@ -318,7 +315,6 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Cancun'                          ,1996,1997,
                        'America/Jamaica'                         ,1974,1983,
                        'America/Indiana/Tell_City'               ,1969,1970,
-                       'America/Cayman'                          ,2016,9999,
                       ],
    'MST7MDT'       => [
                        'America/Denver'                          ,1918,9999,
@@ -342,7 +338,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'PST8PDT'       => [
                        'America/Los_Angeles'                     ,1918,9999,
                        'America/Vancouver'                       ,1918,9999,
-                       'America/Santa_Isabel'                    ,1931,9999,
                        'America/Tijuana'                         ,1931,9999,
                        'America/Dawson'                          ,1980,9999,
                        'America/Whitehorse'                      ,1980,9999,
@@ -378,6 +373,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Yakutat'                         ,1984,9999,
                        'America/Sitka'                           ,1984,9999,
                        'America/Anchorage'                       ,1984,9999,
+                       'America/Metlakatla'                      ,2016,9999,
                       ],
    'AKTT-5AKTST'   => [
                        'Asia/Aqtobe'                             ,1982,1990,
@@ -828,7 +824,6 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Los_Angeles'                     ,1945,1945,
                        'America/Dawson_Creek'                    ,1945,1945,
                        'America/Juneau'                          ,1945,1945,
-                       'America/Santa_Isabel'                    ,1945,1945,
                        'America/Tijuana'                         ,1945,1945,
                        'America/Vancouver'                       ,1945,1945,
                        'America/Metlakatla'                      ,1945,1945,

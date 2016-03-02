@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::afwind00;
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:33:40 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:46:09 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -712,6 +712,15 @@ END { undef $VERSION; }
         [ [2065,9,6,1,0,0],[2065,9,6,3,0,0],'+02:00:00',[2,0,0],
           'WAST',1,[2066,4,3,23,59,59],[2066,4,4,1,59,59],
           '2065090601:00:00','2065090603:00:00','2066040323:59:59','2066040401:59:59' ],
+     ],
+   2066 =>
+     [
+        [ [2066,4,4,0,0,0],[2066,4,4,1,0,0],'+01:00:00',[1,0,0],
+          'WAT',0,[2066,9,5,0,59,59],[2066,9,5,1,59,59],
+          '2066040400:00:00','2066040401:00:00','2066090500:59:59','2066090501:59:59' ],
+        [ [2066,9,5,1,0,0],[2066,9,5,3,0,0],'+02:00:00',[2,0,0],
+          'WAST',1,[2067,4,2,23,59,59],[2067,4,3,1,59,59],
+          '2066090501:00:00','2066090503:00:00','2067040223:59:59','2067040301:59:59' ],
      ],
 );
 

@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::amsitk00;
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:33:48 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:46:09 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -937,6 +937,15 @@ END { undef $VERSION; }
         [ [2065,11,1,10,0,0],[2065,11,1,1,0,0],'-09:00:00',[-9,0,0],
           'AKST',0,[2066,3,14,10,59,59],[2066,3,14,1,59,59],
           '2065110110:00:00','2065110101:00:00','2066031410:59:59','2066031401:59:59' ],
+     ],
+   2066 =>
+     [
+        [ [2066,3,14,11,0,0],[2066,3,14,3,0,0],'-08:00:00',[-8,0,0],
+          'AKDT',1,[2066,11,7,9,59,59],[2066,11,7,1,59,59],
+          '2066031411:00:00','2066031403:00:00','2066110709:59:59','2066110701:59:59' ],
+        [ [2066,11,7,10,0,0],[2066,11,7,1,0,0],'-09:00:00',[-9,0,0],
+          'AKST',0,[2067,3,13,10,59,59],[2067,3,13,1,59,59],
+          '2066110710:00:00','2066110701:00:00','2067031310:59:59','2067031301:59:59' ],
      ],
 );
 

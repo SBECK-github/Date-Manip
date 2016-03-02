@@ -320,6 +320,10 @@ SEE ALSO
         Miscellaneous information about Date::Manip (who should use it;
         acknowledgments).
 
+    Date::Manip::History
+        Musings on the history of Date::Manip written around it's 20th
+        birthday.
+
     Date::Manip::Problems
         Common problems and instructions for reporting bugs.
 

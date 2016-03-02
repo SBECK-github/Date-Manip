@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -84,6 +84,7 @@
                      'America/Yakutat'                           ,1984,9999,
                      'America/Sitka'                             ,1984,9999,
                      'America/Anchorage'                         ,1984,9999,
+                     'America/Metlakatla'                        ,2016,9999,
                     ],
    'AKST'        => [
                      'America/Anchorage'                         ,1983,9999,
@@ -91,6 +92,7 @@
                      'America/Nome'                              ,1983,9999,
                      'America/Yakutat'                           ,1983,9999,
                      'America/Sitka'                             ,1983,9999,
+                     'America/Metlakatla'                        ,2015,9999,
                     ],
    'AKTST'       => [
                      'Asia/Aqtobe'                               ,1981,1990,
@@ -710,7 +712,6 @@
                      'America/Jamaica'                           ,1974,1983,
                      'America/Indiana/Tell_City'                 ,1969,1970,
                      'America/Santo_Domingo'                     ,1966,1967,
-                     'America/Cayman'                            ,2016,9999,
                     ],
    'EEST'        => [
                      'EET'                                       ,1977,9999,
@@ -822,7 +823,6 @@
                      'America/Menominee'                         ,1969,1973,
                      'America/Chicago'                           ,1936,1936,
                      'America/Moncton'                           ,1883,1902,
-                     'America/Cayman'                            ,1912,9999,
                     ],
    'EWT'         => [
                      'America/New_York'                          ,1942,1945,
@@ -1039,7 +1039,7 @@
                      'Asia/Jerusalem'                            ,1948,1948,
                     ],
    'IDT'         => [
-                     'Asia/Jerusalem'                            ,1940,2074,
+                     'Asia/Jerusalem'                            ,1940,2075,
                      'Asia/Gaza'                                 ,1974,1995,
                      'Asia/Hebron'                               ,1974,1995,
                      'Asia/Ho_Chi_Minh'                          ,1942,1975,
@@ -1056,14 +1056,14 @@
                      'Indian/Chagos'                             ,1906,9999,
 ],
    'IRDT'        => [
-                     'Asia/Tehran'                               ,1978,2037,
+                     'Asia/Tehran'                               ,1978,2075,
                     ],
    'IRKST'       => [
                      'Asia/Irkutsk'                              ,1981,2010,
                     ],
    'IRKT'        => [
                      'Asia/Irkutsk'                              ,1920,9999,
-                     'Asia/Chita'                                ,2014,9999,
+                     'Asia/Chita'                                ,2014,2016,
                     ],
    'IRST'        => [
                      'Asia/Tehran'                               ,1945,9999,
@@ -1148,7 +1148,6 @@
                      'Europe/Vilnius'                            ,1916,1919,
                      'America/Jamaica'                           ,1890,1912,
                      'America/Grand_Turk'                        ,1890,1912,
-                     'America/Cayman'                            ,1890,1912,
                     ],
    'KOST'        => [
                      'Pacific/Kosrae'                            ,1900,9999,
@@ -1352,7 +1351,6 @@
                      'America/Swift_Current'                     ,1905,1972,
                      'America/Regina'                            ,1905,1960,
                      'America/Mexico_City'                       ,1922,1932,
-                     'America/Santa_Isabel'                      ,1922,1930,
                      'America/Tijuana'                           ,1922,1930,
                      'Europe/Moscow'                             ,1917,1919,
                      'America/North_Dakota/Beulah'               ,1883,2010,
@@ -1486,7 +1484,6 @@
    'PDT'         => [
                      'America/Los_Angeles'                       ,1918,9999,
                      'America/Vancouver'                         ,1918,9999,
-                     'America/Santa_Isabel'                      ,1931,9999,
                      'America/Tijuana'                           ,1931,9999,
                      'America/Dawson'                            ,1980,9999,
                      'America/Whitehorse'                        ,1980,9999,
@@ -1565,7 +1562,6 @@
                      'America/Los_Angeles'                       ,1945,1945,
                      'America/Dawson_Creek'                      ,1945,1945,
                      'America/Juneau'                            ,1945,1945,
-                     'America/Santa_Isabel'                      ,1945,1945,
                      'America/Tijuana'                           ,1945,1945,
                      'America/Vancouver'                         ,1945,1945,
                      'America/Metlakatla'                        ,1945,1945,
@@ -1575,7 +1571,6 @@
    'PST'         => [
                      'America/Los_Angeles'                       ,1883,9999,
                      'America/Vancouver'                         ,1884,9999,
-                     'America/Santa_Isabel'                      ,1924,9999,
                      'America/Tijuana'                           ,1924,9999,
                      'America/Whitehorse'                        ,1967,9999,
                      'America/Dawson'                            ,1973,9999,
@@ -1587,7 +1582,7 @@
                      'America/Hermosillo'                        ,1949,1970,
                      'America/Mazatlan'                          ,1949,1970,
                      'America/Boise'                             ,1883,1923,
-                     'America/Metlakatla'                        ,1900,9999,
+                     'America/Metlakatla'                        ,1900,2015,
                      'America/Sitka'                             ,1900,1983,
                      'America/Creston'                           ,1916,1918,
                      'America/Fort_Nelson'                       ,1884,2015,
@@ -1597,7 +1592,6 @@
                      'America/Los_Angeles'                       ,1942,1945,
                      'America/Dawson_Creek'                      ,1942,1945,
                      'America/Juneau'                            ,1942,1945,
-                     'America/Santa_Isabel'                      ,1942,1945,
                      'America/Tijuana'                           ,1942,1945,
                      'America/Vancouver'                         ,1942,1945,
                      'America/Metlakatla'                        ,1942,1945,
@@ -1969,8 +1963,8 @@
                      'Asia/Yakutsk'                              ,1919,9999,
                      'Asia/Khandyga'                             ,1919,9999,
                      'Asia/Ust-Nera'                             ,1919,1981,
-                     'Asia/Chita'                                ,1919,2014,
-                     ],
+                     'Asia/Chita'                                ,1919,9999,
+                    ],
    'YDDT'        => [
                      'America/Whitehorse'                        ,1965,1965,
                      'America/Dawson'                            ,1965,1965,

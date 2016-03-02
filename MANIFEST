@@ -26,7 +26,6 @@ internal/dumps
 internal/gen_dm5abbrevs
 internal/langpod
 internal/leak.pl
-internal/manip.isp
 internal/module.isp
 internal/NOTES
 internal/TODO
@@ -55,6 +54,7 @@ lib/Date/Manip/DM5abbrevs.pm
 lib/Date/Manip/DM6.pm
 lib/Date/Manip/DM6.pod
 lib/Date/Manip/Examples.pod
+lib/Date/Manip/History.pod
 lib/Date/Manip/Holidays.pod
 lib/Date/Manip/Lang.pod
 lib/Date/Manip/Lang/catalan.pm
@@ -523,8 +523,6 @@ lib/Date/Manip/Offset/off424.pm
 lib/Date/Manip/Offset/off425.pm
 lib/Date/Manip/Offset/off426.pm
 lib/Date/Manip/Offset/off427.pm
-lib/Date/Manip/Offset/off428.pm
-lib/Date/Manip/Offset/off429.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -571,7 +569,6 @@ lib/Date/Manip/TZ/amcanc00.pm
 lib/Date/Manip/TZ/amcara00.pm
 lib/Date/Manip/TZ/amcata00.pm
 lib/Date/Manip/TZ/amcaye00.pm
-lib/Date/Manip/TZ/amcaym00.pm
 lib/Date/Manip/TZ/amcent00.pm
 lib/Date/Manip/TZ/amchic00.pm
 lib/Date/Manip/TZ/amchih00.pm
@@ -658,7 +655,6 @@ lib/Date/Manip/TZ/amsan_01.pm
 lib/Date/Manip/TZ/amsant00.pm
 lib/Date/Manip/TZ/amsant01.pm
 lib/Date/Manip/TZ/amsant02.pm
-lib/Date/Manip/TZ/amsant03.pm
 lib/Date/Manip/TZ/amsao_00.pm
 lib/Date/Manip/TZ/amscor00.pm
 lib/Date/Manip/TZ/amsitk00.pm

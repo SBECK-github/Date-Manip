@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::aschit00;
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:33:38 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:46:07 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -329,8 +329,14 @@ END { undef $VERSION; }
    2014 =>
      [
         [ [2014,10,25,16,0,0],[2014,10,26,0,0,0],'+08:00:00',[8,0,0],
-          'IRKT',0,[9999,12,31,0,0,0],[9999,12,31,8,0,0],
-          '2014102516:00:00','2014102600:00:00','9999123100:00:00','9999123108:00:00' ],
+          'IRKT',0,[2016,3,26,17,59,59],[2016,3,27,1,59,59],
+          '2014102516:00:00','2014102600:00:00','2016032617:59:59','2016032701:59:59' ],
+     ],
+   2016 =>
+     [
+        [ [2016,3,26,18,0,0],[2016,3,27,3,0,0],'+09:00:00',[9,0,0],
+          'YAKT',0,[9999,12,31,0,0,0],[9999,12,31,9,0,0],
+          '2016032618:00:00','2016032703:00:00','9999123100:00:00','9999123109:00:00' ],
      ],
 );
 

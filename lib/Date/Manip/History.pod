@@ -1,4 +1,4 @@
-# Copyright (c) 2015-2015 Sullivan Beck. All rights reserved.
+# Copyright (c) 2015-2016 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -18,7 +18,7 @@ The history of Date::Manip can be broken into several periods.
 
 =over 4
 
-=item 1995-1996
+=item Birth of Date::Manip (1995-1996)
 
 1995 was the year I really started using perl to automate some of
 my common tasks.  At the time, I was running programs using a number
@@ -37,7 +37,7 @@ one package.
 I kept it that way for about half a year.  By that time, I was thoroughly
 in love with perl and wanted to contribute.
 
-At the time, CPAN was just a fledgeling site, but in October, I released
+At the time, CPAN was just a fledgling site, but in October, I released
 my first package.  It wasn't really a module at that time... it was
 crudely put together and extremely limited use.  Even so, it got some
 very positive initial feedback which spurred the early growth.
@@ -45,7 +45,7 @@ very positive initial feedback which spurred the early growth.
 Soon, I had adopted many of the best practices of the day and converted
 it to a full-blown module.
 
-=item 1996-2001
+=item Active development (1996-2001)
 
 The next 5 years were extremely active.  Based on suggestions and requests,
 functionality increased dramatically, and before long, Date::Manip was
@@ -72,7 +72,7 @@ important contribution I have ever made.  I developed the notation for
 specifying recurring events, and no other notation has ever come close
 to matching it's power and flexibility.
 
-=item 2001-2008
+=item Minimal maintenance (2001-2008)
 
 During these years, I was able to devote time needed to maintain the
 existing module, but not to do major development.
@@ -87,7 +87,7 @@ object-oriented interface, and handled timezones.
 Although it took a while, over the next few years, it became the
 de facto standard for date handling in perl.
 
-=item 2009
+=item Rewrite (2009)
 
 In 2009, I decided it was time to rewrite Date::Manip .  Some people
 might see this as a waste of time due to the fact that DateTime existed,
@@ -108,7 +108,7 @@ parsing, and quite a few other features.
 
 Date::Manip was once again very much alive.
 
-=item 2010-2015
+=item Active maintenance (2010-2015)
 
 Although active development is fairly limited, primarily due to the fact
 that Date::Manip does pretty much everything that it was designed to do,
@@ -117,7 +117,7 @@ maintenance is very active at this point.
 I make regular releases to update the timezone information, fix bugs,
 and add the occasional new features.
 
-For the forseeable future, Date::Manip will remain active, and fully
+For the foreseeable future, Date::Manip will remain active, and fully
 capable of handling any common date operation.
 
 =back

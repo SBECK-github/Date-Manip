@@ -1379,12 +1379,6 @@ provides:
   Date::Manip::Offset::off427:
     file: off427.pm
     version: '6.53'
-  Date::Manip::Offset::off428:
-    file: off428.pm
-    version: '6.53'
-  Date::Manip::Offset::off429:
-    file: off429.pm
-    version: '6.53'
   Date::Manip::Recur:
     file: Recur.pm
     version: '6.53'
@@ -1513,9 +1507,6 @@ provides:
     version: '6.53'
   Date::Manip::TZ::amcaye00:
     file: amcaye00.pm
-    version: '6.53'
-  Date::Manip::TZ::amcaym00:
-    file: amcaym00.pm
     version: '6.53'
   Date::Manip::TZ::amcent00:
     file: amcent00.pm
@@ -1774,9 +1765,6 @@ provides:
     version: '6.53'
   Date::Manip::TZ::amsant02:
     file: amsant02.pm
-    version: '6.53'
-  Date::Manip::TZ::amsant03:
-    file: amsant03.pm
     version: '6.53'
   Date::Manip::TZ::amsao_00:
     file: amsao_00.pm
@@ -2602,4 +2590,4 @@ requires:
 resources:
   repository: git://github.com/SBECK-github/Date-Manip.git
 version: '6.53'
-x_serialization_backend: 'CPAN::Meta::YAML version 0.012'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

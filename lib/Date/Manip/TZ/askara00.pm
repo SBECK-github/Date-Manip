@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::askara00;
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:33:45 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:46:14 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -62,17 +62,17 @@ END { undef $VERSION; }
    1971 =>
      [
         [ [1971,3,25,19,0,0],[1971,3,26,0,0,0],'+05:00:00',[5,0,0],
-          'PKT',0,[2002,4,6,19,0,59],[2002,4,7,0,0,59],
-          '1971032519:00:00','1971032600:00:00','2002040619:00:59','2002040700:00:59' ],
+          'PKT',0,[2002,4,6,18,59,59],[2002,4,6,23,59,59],
+          '1971032519:00:00','1971032600:00:00','2002040618:59:59','2002040623:59:59' ],
      ],
    2002 =>
      [
-        [ [2002,4,6,19,1,0],[2002,4,7,1,1,0],'+06:00:00',[6,0,0],
-          'PKST',1,[2002,10,5,18,0,59],[2002,10,6,0,0,59],
-          '2002040619:01:00','2002040701:01:00','2002100518:00:59','2002100600:00:59' ],
-        [ [2002,10,5,18,1,0],[2002,10,5,23,1,0],'+05:00:00',[5,0,0],
+        [ [2002,4,6,19,0,0],[2002,4,7,1,0,0],'+06:00:00',[6,0,0],
+          'PKST',1,[2002,10,5,17,59,59],[2002,10,5,23,59,59],
+          '2002040619:00:00','2002040701:00:00','2002100517:59:59','2002100523:59:59' ],
+        [ [2002,10,5,18,0,0],[2002,10,5,23,0,0],'+05:00:00',[5,0,0],
           'PKT',0,[2008,5,31,18,59,59],[2008,5,31,23,59,59],
-          '2002100518:01:00','2002100523:01:00','2008053118:59:59','2008053123:59:59' ],
+          '2002100518:00:00','2002100523:00:00','2008053118:59:59','2008053123:59:59' ],
      ],
    2008 =>
      [

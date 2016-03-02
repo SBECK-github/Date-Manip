@@ -1882,14 +1882,6 @@ WriteMakefile(
                 file    => 'off427.pm',
                 version => '6.53',
              },
-             'Date::Manip::Offset::off428' => {
-                file    => 'off428.pm',
-                version => '6.53',
-             },
-             'Date::Manip::Offset::off429' => {
-                file    => 'off429.pm',
-                version => '6.53',
-             },
              'Date::Manip::Recur' => {
                 file    => 'Recur.pm',
                 version => '6.53',
@@ -2060,10 +2052,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amcaye00' => {
                 file    => 'amcaye00.pm',
-                version => '6.53',
-             },
-             'Date::Manip::TZ::amcaym00' => {
-                file    => 'amcaym00.pm',
                 version => '6.53',
              },
              'Date::Manip::TZ::amcent00' => {
@@ -2408,10 +2396,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amsant02' => {
                 file    => 'amsant02.pm',
-                version => '6.53',
-             },
-             'Date::Manip::TZ::amsant03' => {
-                file    => 'amsant03.pm',
                 version => '6.53',
              },
              'Date::Manip::TZ::amsao_00' => {
@@ -3521,6 +3505,11 @@ WriteMakefile(
                         'examples/dm_zdump',
 
                        ],
+
+   MAN1PODS => {
+      'examples/dm_date' => 'blib/man1/dm_date.1',
+      'examples/dm_zdump' => 'blib/man1/dm_zdump.1',
+   },
 
 
 );

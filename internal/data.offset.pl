@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -73,7 +73,7 @@ $def_off{0} = {
                                'America/Yellowknife'            ,0001,1935,
                                'America/Pangnirtung'            ,0001,1921,
                                'America/Cambridge_Bay'          ,0001,1920,
-                               'Antarctica/Troll'               ,0001,2074,
+                               'Antarctica/Troll'               ,0001,2075,
                                'Antarctica/Rothera'             ,0001,1976,
                                'Antarctica/Casey'               ,0001,1969,
                                'Antarctica/Davis'               ,0001,1969,
@@ -745,7 +745,7 @@ $def_off{0} = {
                                'Asia/Ho_Chi_Minh'               ,1942,1975,
                                'Asia/Khandyga'                  ,1919,1992,
                                'Asia/Ust-Nera'                  ,1919,1930,
-                               'Asia/Chita'                     ,1919,9999,
+                               'Asia/Chita'                     ,1919,2016,
                               ],
                '+08:04:00' => [
                                'Asia/Manila'                    ,1844,1899,
@@ -816,7 +816,7 @@ $def_off{0} = {
                                'Australia/Broken_Hill'          ,1896,1899,
                                'Asia/Khandyga'                  ,1930,9999,
                                'Asia/Ust-Nera'                  ,1930,1981,
-                               'Asia/Chita'                     ,1930,2011,
+                               'Asia/Chita'                     ,1930,9999,
                                'Asia/Taipei'                    ,1937,1945,
                                'Pacific/Bougainville'           ,1942,1945,
                                'Asia/Ho_Chi_Minh'               ,1945,1945,
@@ -1233,7 +1233,7 @@ $def_off{0} = {
                                'America/Cayenne'                ,0001,1911,
                               ],
                '-03:30:00' => [
-                               'America/St_Johns'               ,1935,2074,
+                               'America/St_Johns'               ,1935,2075,
                                'America/Paramaribo'             ,1945,1984,
                                'America/Goose_Bay'              ,1935,1966,
                                'America/Montevideo'             ,1920,1942,
@@ -1507,12 +1507,10 @@ $def_off{0} = {
                                'America/Chicago'                ,1936,1936,
                                'America/Moncton'                ,1883,1902,
                                'Pacific/Easter'                 ,2015,9999,
-                               'America/Cayman'                 ,1912,9999,
                               ],
                '-05:07:11' => [
                                'America/Jamaica'                ,0001,1912,
                                'America/Grand_Turk'             ,1890,1912,
-                               'America/Cayman'                 ,1890,1912,
                               ],
                '-05:08:12' => [
                                'America/Lima'                   ,0001,1890,
@@ -1537,9 +1535,6 @@ $def_off{0} = {
                               ],
                '-05:19:36' => [
                                'America/Panama'                 ,1890,1908,
-                              ],
-               '-05:25:32' => [
-                               'America/Cayman'                 ,0001,1890,
                               ],
                '-05:29:28' => [
                                'America/Havana'                 ,0001,1890,
@@ -1732,7 +1727,6 @@ $def_off{0} = {
                                'America/Swift_Current'          ,1905,1972,
                                'America/Regina'                 ,1905,1960,
                                'America/Mexico_City'            ,1922,1932,
-                               'America/Santa_Isabel'           ,1922,1930,
                                'America/Tijuana'                ,1922,1930,
                               ],
                '-07:01:00' => [
@@ -1759,9 +1753,6 @@ $def_off{0} = {
                '-07:33:52' => [
                                'America/Edmonton'               ,0001,1906,
                               ],
-               '-07:39:28' => [
-                               'America/Santa_Isabel'           ,0001,1922,
-                              ],
                '-07:44:49' => [
                                'America/Boise'                  ,0001,1883,
                               ],
@@ -1777,8 +1768,7 @@ $def_off{0} = {
                '-08:00:00' => [
                                'America/Los_Angeles'            ,1883,9999,
                                'America/Vancouver'              ,1884,9999,
-                               'America/Metlakatla'             ,1900,9999,
-                               'America/Santa_Isabel'           ,1924,9999,
+                               'America/Metlakatla'             ,1900,2015,
                                'America/Tijuana'                ,1924,9999,
                                'America/Whitehorse'             ,1967,9999,
                                'America/Dawson'                 ,1973,9999,
@@ -1831,6 +1821,7 @@ $def_off{0} = {
                                'I'                              ,0001,9999,
                                'America/Dawson'                 ,1900,1973,
                                'America/Whitehorse'             ,1900,1967,
+                               'America/Metlakatla'             ,2015,9999,
                               ],
                '-09:00:12' => [
                                'America/Whitehorse'             ,0001,1900,
@@ -2086,7 +2077,7 @@ $def_off{1} = {
                                'Asia/Jerusalem'                 ,1948,1948,
                               ],
                '+04:30:00' => [
-                               'Asia/Tehran'                    ,1979,2037,
+                               'Asia/Tehran'                    ,1979,2075,
                               ],
                '+04:31:19' => [
                                'Europe/Moscow'                  ,1918,1919,
@@ -2181,8 +2172,8 @@ $def_off{1} = {
                                'Asia/Chita'                     ,1981,2010,
                               ],
                '+10:30:00' => [
-                               'Australia/Adelaide'             ,1916,2074,
-                               'Australia/Broken_Hill'          ,1916,2074,
+                               'Australia/Adelaide'             ,1916,2075,
+                               'Australia/Broken_Hill'          ,1916,2075,
                                'Australia/Darwin'               ,1916,1944,
                               ],
                '+11:00:00' => [
@@ -2190,7 +2181,7 @@ $def_off{1} = {
                                'Australia/Currie'               ,1916,9999,
                                'Australia/Hobart'               ,1916,9999,
                                'Australia/Sydney'               ,1916,9999,
-                               'Australia/Lord_Howe'            ,1985,2074,
+                               'Australia/Lord_Howe'            ,1985,2075,
                                'Antarctica/Macquarie'           ,1916,2010,
                                'Asia/Vladivostok'               ,1981,2010,
                                'Asia/Sakhalin'                  ,1991,2010,
@@ -2226,7 +2217,7 @@ $def_off{1} = {
                                'Asia/Anadyr'                    ,1982,2009,
                               ],
                '+13:45:00' => [
-                               'Pacific/Chatham'                ,1974,2074,
+                               'Pacific/Chatham'                ,1974,2075,
                               ],
                '+14:00:00' => [
                                'Pacific/Apia'                   ,2011,9999,
@@ -2339,7 +2330,6 @@ $def_off{1} = {
                                'America/Pangnirtung'            ,1995,9999,
                                'America/Kentucky/Monticello'    ,2001,9999,
                                'America/Indiana/Petersburg'     ,2008,9999,
-                               'America/Cayman'                 ,2016,9999,
                                'America/Grand_Turk'             ,1979,2015,
                                'America/Cancun'                 ,1996,1998,
                                'America/Eirunepe'               ,1931,1994,
@@ -2423,7 +2413,6 @@ $def_off{1} = {
                '-07:00:00' => [
                                'America/Los_Angeles'            ,1918,9999,
                                'America/Vancouver'              ,1918,9999,
-                               'America/Santa_Isabel'           ,1931,9999,
                                'America/Tijuana'                ,1931,9999,
                                'America/Dawson'                 ,1965,9999,
                                'America/Whitehorse'             ,1965,9999,
@@ -2442,6 +2431,7 @@ $def_off{1} = {
                                'America/Sitka'                  ,1984,9999,
                                'America/Dawson'                 ,1918,1945,
                                'America/Whitehorse'             ,1918,1945,
+                               'America/Metlakatla'             ,2016,9999,
                               ],
                '-09:00:00' => [
                                'America/Adak'                   ,1984,9999,

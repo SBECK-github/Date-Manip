@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2015 Sullivan Beck. All rights reserved.
+# Copyright (c) 2009-2016 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -33,13 +33,20 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.54  (planned 2016-06-01)
 
-=head1 VERSION 6.53  (planned 2016-03-01)
+=head1 VERSION 6.53  2016-03-02
 
 =over 4
 
 =item Bug fixes
 
 Date::Manip::Delta::cmp had a bug in it's comparison.  Ian Gibbs.
+
+The secs_since_1970_GMT method was missing a test to see if it was
+a valid object.  RT 111915
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2016a)
 
 =item Documentation fixes
 

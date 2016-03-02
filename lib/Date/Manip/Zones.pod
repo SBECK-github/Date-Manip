@@ -1,13 +1,13 @@
 
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:48:25 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:56:28 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -98,7 +98,6 @@ database:
      America/Cancun                       amcanc00
      America/Caracas                      amcara00
      America/Cayenne                      amcaye00
-     America/Cayman                       amcaym00
      America/Chicago                      amchic00
      America/Chihuahua                    amchih00
      America/Costa_Rica                   amcost00
@@ -179,10 +178,9 @@ database:
      America/Regina                       amregi00
      America/Resolute                     amreso00
      America/Rio_Branco                   amrio_01
-     America/Santa_Isabel                 amsant00
-     America/Santarem                     amsant01
-     America/Santiago                     amsant02
-     America/Santo_Domingo                amsant03
+     America/Santarem                     amsant00
+     America/Santiago                     amsant01
+     America/Santo_Domingo                amsant02
      America/Sao_Paulo                    amsao_00
      America/Scoresbysund                 amscor00
      America/Sitka                        amsitk00
@@ -510,6 +508,7 @@ The zoneinfo database provides several standard aliases, including:
      America/Atka                         America/Adak
      America/Buenos_Aires                 America/Argentina/Buenos_Aires
      America/Catamarca                    America/Argentina/Catamarca
+     America/Cayman                       America/Panama
      America/Coral_Harbour                America/Atikokan
      America/Cordoba                      America/Argentina/Cordoba
      America/Dominica                     America/Port_of_Spain
@@ -529,6 +528,7 @@ The zoneinfo database provides several standard aliases, including:
      America/Montserrat                   America/Port_of_Spain
      America/Porto_Acre                   America/Rio_Branco
      America/Rosario                      America/Argentina/Cordoba
+     America/Santa_Isabel                 America/Tijuana
      America/Shiprock                     America/Denver
      America/St_Barthelemy                America/Port_of_Spain
      America/St_Kitts                     America/Port_of_Spain
@@ -686,6 +686,7 @@ default alias can be overridden as described above.
                                           America/Yakutat
                                           America/Sitka
                                           America/Anchorage
+                                          America/Metlakatla
      AKTT-5AKTST                          Asia/Aqtobe
      ALMT-6ALMST                          Asia/Almaty
      AMT-3AMST                            Asia/Yerevan
@@ -912,7 +913,6 @@ default alias can be overridden as described above.
                                           America/Cancun
                                           America/Jamaica
                                           America/Indiana/Tell_City
-                                          America/Cayman
      EST5EPT                              America/New_York
                                           America/Detroit
                                           America/Iqaluit
@@ -1023,7 +1023,6 @@ default alias can be overridden as described above.
      PMST3PMDT                            America/Miquelon
      PST8PDT                              America/Los_Angeles
                                           America/Vancouver
-                                          America/Santa_Isabel
                                           America/Tijuana
                                           America/Dawson
                                           America/Whitehorse
@@ -1036,7 +1035,6 @@ default alias can be overridden as described above.
      PST8PPT                              America/Los_Angeles
                                           America/Dawson_Creek
                                           America/Juneau
-                                          America/Santa_Isabel
                                           America/Tijuana
                                           America/Vancouver
                                           America/Metlakatla
@@ -1209,14 +1207,11 @@ Aliases include:
      Newfoundland Standard Time           America/St_Johns
      North Asia East Standard Time        Asia/Irkutsk
      North Asia Standard Time             Asia/Krasnoyarsk
-     PSM8PDM                              America/Santa_Isabel
      PST-8PDT                             Asia/Singapore
      PST8PDT#Canada                       America/Vancouver
-     PST8PDT#Mexico                       America/Santa_Isabel
      PWT0PST                              Europe/Lisbon
      Pacific SA Standard Time             America/Santiago
      Pacific Standard Time                America/Los_Angeles
-     Pacific Standard Time (Mexico)       America/Santa_Isabel
      Pacific/Johnston                     Pacific/Honolulu
      Pakistan Standard Time               Asia/Karachi
      Paraguay Standard Time               America/Asuncion
@@ -1337,6 +1332,7 @@ L<Date::Manip::TZ> module.
                         I
                         America/Dawson
                         America/Whitehorse
+                        America/Metlakatla
      0      -08:59:48   Pacific/Gambier
      0      -08:57:41   America/Juneau
      0      -08:46:18   America/Metlakatla
@@ -1348,7 +1344,6 @@ L<Date::Manip::TZ> module.
      0      -08:00:00   America/Los_Angeles
                         America/Vancouver
                         America/Metlakatla
-                        America/Santa_Isabel
                         America/Tijuana
                         America/Whitehorse
                         America/Dawson
@@ -1369,7 +1364,6 @@ L<Date::Manip::TZ> module.
      0      -07:48:04   America/Tijuana
      0      -07:46:04   America/Creston
      0      -07:44:49   America/Boise
-     0      -07:39:28   America/Santa_Isabel
      0      -07:33:52   America/Edmonton
      0      -07:28:18   America/Phoenix
      0      -07:23:52   America/Hermosillo
@@ -1402,7 +1396,6 @@ L<Date::Manip::TZ> module.
                         America/Swift_Current
                         America/Regina
                         America/Mexico_City
-                        America/Santa_Isabel
                         America/Tijuana
      0      -06:59:56   America/Denver
      0      -06:58:36   America/Regina
@@ -1490,7 +1483,6 @@ L<Date::Manip::TZ> module.
      0      -05:32:11   America/Detroit
      0      -05:29:36   America/Havana
      0      -05:29:28   America/Havana
-     0      -05:25:32   America/Cayman
      0      -05:19:36   America/Panama
      0      -05:19:20   America/Guayaquil
      0      -05:18:08   America/Panama
@@ -1501,7 +1493,6 @@ L<Date::Manip::TZ> module.
      0      -05:08:12   America/Lima
      0      -05:07:11   America/Jamaica
                         America/Grand_Turk
-                        America/Cayman
      0      -05:00:00   America/New_York
                         America/Nipigon
                         America/Toronto
@@ -1546,7 +1537,6 @@ L<Date::Manip::TZ> module.
                         America/Chicago
                         America/Moncton
                         Pacific/Easter
-                        America/Cayman
      0      -04:56:16   America/Bogota
      0      -04:56:02   America/New_York
      0      -04:49:20   America/Port-au-Prince
@@ -2366,9 +2356,9 @@ L<Date::Manip::TZ> module.
                         America/Sitka
                         America/Dawson
                         America/Whitehorse
+                        America/Metlakatla
      1      -07:00:00   America/Los_Angeles
                         America/Vancouver
-                        America/Santa_Isabel
                         America/Tijuana
                         America/Dawson
                         America/Whitehorse
@@ -2455,7 +2445,6 @@ L<Date::Manip::TZ> module.
                         America/Pangnirtung
                         America/Kentucky/Monticello
                         America/Indiana/Petersburg
-                        America/Cayman
                         America/Grand_Turk
                         America/Cancun
                         America/Eirunepe
@@ -2848,11 +2837,13 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Yakutat
                       America/Sitka
                       America/Anchorage
+                      America/Metlakatla
      AKST             America/Anchorage
                       America/Juneau
                       America/Nome
                       America/Yakutat
                       America/Sitka
+                      America/Metlakatla
      AKTST            Asia/Aqtobe
      AKTT             Asia/Aqtobe
      ALMST            Asia/Almaty
@@ -3288,7 +3279,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Jamaica
                       America/Indiana/Tell_City
                       America/Santo_Domingo
-                      America/Cayman
      EEST             EET
                       Europe/Istanbul
                       Asia/Beirut
@@ -3384,7 +3374,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Menominee
                       America/Chicago
                       America/Moncton
-                      America/Cayman
      EWT              America/New_York
                       America/Detroit
                       America/Iqaluit
@@ -3536,7 +3525,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Vilnius
                       America/Jamaica
                       America/Grand_Turk
-                      America/Cayman
      KOST             Pacific/Kosrae
      KRAST            Asia/Krasnoyarsk
                       Asia/Novokuznetsk
@@ -3662,7 +3650,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Swift_Current
                       America/Regina
                       America/Mexico_City
-                      America/Santa_Isabel
                       America/Tijuana
                       Europe/Moscow
                       America/North_Dakota/Beulah
@@ -3728,7 +3715,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      PDDT             America/Inuvik
      PDT              America/Los_Angeles
                       America/Vancouver
-                      America/Santa_Isabel
                       America/Tijuana
                       America/Dawson
                       America/Whitehorse
@@ -3769,7 +3755,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      PPT              America/Los_Angeles
                       America/Dawson_Creek
                       America/Juneau
-                      America/Santa_Isabel
                       America/Tijuana
                       America/Vancouver
                       America/Metlakatla
@@ -3777,7 +3762,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Fort_Nelson
      PST              America/Los_Angeles
                       America/Vancouver
-                      America/Santa_Isabel
                       America/Tijuana
                       America/Whitehorse
                       America/Dawson
@@ -3797,7 +3781,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Los_Angeles
                       America/Dawson_Creek
                       America/Juneau
-                      America/Santa_Isabel
                       America/Tijuana
                       America/Vancouver
                       America/Metlakatla

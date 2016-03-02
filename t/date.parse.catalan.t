@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-use utf8;
+#use utf8;
 use Test::Inter;
 $t = new Test::Inter 'date :: parse (Catalan)';
 $testdir = '';

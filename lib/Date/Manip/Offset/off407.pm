@@ -1,14 +1,14 @@
 package #
 Date::Manip::Offset::off407;
-# Copyright (c) 2008-2015 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov 25 11:44:44 EST 2015
-#    Data version: tzdata2015g
-#    Code version: tzcode2015g
+#    Generated on: Wed Mar  2 10:51:57 EST 2016
+#    Data version: tzdata2016a
+#    Code version: tzcode2016a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,23 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-09:58:16';
+$Offset        = '-10:00:00';
 
 %Offset        = (
    0 => [
+      'pacific/honolulu',
       'pacific/tahiti',
+      'pacific/rarotonga',
+      'america/adak',
+      'etc/gmt-10',
+      'k',
+      'pacific/kiritimati',
+      'america/anchorage',
+      ],
+   1 => [
+      'pacific/apia',
+      'america/adak',
+      'america/nome',
       ],
 );
 
