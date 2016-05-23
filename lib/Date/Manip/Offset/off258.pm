@@ -6,9 +6,9 @@ Date::Manip::Offset::off258;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:51:57 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 16:55:57 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,13 +28,46 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-02:30:00';
+$Offset        = '-02:00:00';
 
 %Offset        = (
+   0 => [
+      'atlantic/south_georgia',
+      'etc/gmt-2',
+      'america/noronha',
+      'america/scoresbysund',
+      'atlantic/cape_verde',
+      'atlantic/azores',
+      'b',
+      ],
    1 => [
-      'america/st_johns',
+      'america/sao_paulo',
       'america/montevideo',
+      'america/godthab',
+      'america/miquelon',
+      'america/argentina/buenos_aires',
+      'america/argentina/cordoba',
+      'america/argentina/tucuman',
+      'america/argentina/catamarca',
+      'america/argentina/jujuy',
+      'america/argentina/la_rioja',
+      'america/argentina/mendoza',
+      'america/argentina/rio_gallegos',
+      'america/argentina/salta',
+      'america/argentina/san_juan',
+      'america/argentina/san_luis',
+      'america/argentina/ushuaia',
+      'america/araguaina',
+      'america/bahia',
+      'america/fortaleza',
+      'america/maceio',
+      'america/recife',
+      'america/danmarkshavn',
+      'america/belem',
       'america/goose_bay',
+      'atlantic/stanley',
+      'america/pangnirtung',
+      'antarctica/palmer',
       ],
 );
 

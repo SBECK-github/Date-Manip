@@ -959,6 +959,19 @@ sub __zone {
          @isdst = (0,1);
       }
 
+      # We may pass in $zone and not $abbrev when it really should be
+      # $abbrev.
+
+      if ($zone  &&  ! $abbrev) {
+         if (exists $$self{'data'}{'Alias'}{$zone}) {
+            # no change
+         } elsif (exists $$self{'data'}{'MyAbbrev'}{$zone}  ||
+                  exists $$self{'data'}{'Abbrev'}{$zone}) {
+            $abbrev = $zone;
+            $zone   = '';
+         }
+      }
+
       # $zone
 
       if ($zone) {

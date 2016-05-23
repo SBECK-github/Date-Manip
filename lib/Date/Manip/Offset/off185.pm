@@ -6,9 +6,9 @@ Date::Manip::Offset::off185;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:51:56 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 16:55:57 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,43 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+10:14:52';
+$Offset        = '+10:00:00';
 
 %Offset        = (
    0 => [
+      'australia/melbourne',
+      'australia/brisbane',
+      'australia/lindeman',
+      'pacific/port_moresby',
+      'australia/currie',
+      'australia/hobart',
+      'australia/sydney',
+      'pacific/chuuk',
+      'pacific/guam',
+      'asia/magadan',
+      'asia/vladivostok',
+      'antarctica/dumontdurville',
+      'asia/sakhalin',
+      'asia/ust-nera',
+      'etc/gmt+10',
+      'w',
+      'asia/yakutsk',
+      'australia/lord_howe',
+      'australia/broken_hill',
+      'antarctica/macquarie',
+      'asia/khandyga',
+      'asia/chita',
       'asia/srednekolymsk',
+      'pacific/bougainville',
+      ],
+   1 => [
+      'asia/yakutsk',
+      'asia/choibalsan',
+      'asia/vladivostok',
+      'asia/seoul',
+      'asia/tokyo',
+      'asia/khandyga',
+      'asia/chita',
       ],
 );
 

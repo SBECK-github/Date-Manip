@@ -94,18 +94,6 @@
                      'America/Sitka'                             ,1983,9999,
                      'America/Metlakatla'                        ,2015,9999,
                     ],
-   'AKTST'       => [
-                     'Asia/Aqtobe'                               ,1981,1990,
-                    ],
-   'AKTT'        => [
-                     'Asia/Aqtobe'                               ,1924,1991,
-                    ],
-   'ALMST'       => [
-                     'Asia/Almaty'                               ,1981,2004,
-                    ],
-   'ALMT'        => [
-                     'Asia/Almaty'                               ,1924,9999,
-                    ],
    'AMST'        => [
                      'America/Campo_Grande'                      ,1931,9999,
                      'America/Cuiaba'                            ,1931,9999,
@@ -145,14 +133,6 @@
                      'America/Moncton'                           ,1945,1945,
                      'America/Pangnirtung'                       ,1945,1945,
                      'America/Puerto_Rico'                       ,1945,1945,
-                    ],
-   'AQTST'       => [
-                     'Asia/Aqtau'                                ,1992,2004,
-                     'Asia/Aqtobe'                               ,1992,2004,
-                    ],
-   'AQTT'        => [
-                     'Asia/Aqtau'                                ,1991,9999,
-                     'Asia/Aqtobe'                               ,1991,9999,
                     ],
    'ARST'        => [
                      'America/Argentina/Buenos_Aires'            ,1930,2009,
@@ -236,7 +216,7 @@
                       'Atlantic/Azores'                           ,1912,9999,
                    ],
    'AZST'        => [
-                     'Asia/Baku'                                 ,1991,9999,
+                     'Asia/Baku'                                 ,1991,2015,
                     ],
    'AZT'         => [
                      'Asia/Baku'                                 ,1991,9999,
@@ -517,8 +497,8 @@
                      'Pacific/Rarotonga'                         ,1901,9999,
                     ],
    'CLST'        => [
-                     'America/Santiago'                          ,1927,2015,
-                     'Antarctica/Palmer'                         ,1982,2015,
+                     'America/Santiago'                          ,1927,9999,
+                     'Antarctica/Palmer'                         ,1982,9999,
                     ],
    'CLT'         => [
                      'America/Santiago'                          ,1910,9999,
@@ -673,7 +653,7 @@
                      'E'                                         ,0001,9999,
                     ],
    'EASST'       => [
-                     'Pacific/Easter'                            ,1968,2015,
+                     'Pacific/Easter'                            ,1968,9999,
                     ],
    'EAST'        => [
                      'Pacific/Easter'                            ,1932,9999,
@@ -707,7 +687,7 @@
                      'America/Pangnirtung'                       ,1995,9999,
                      'America/Kentucky/Monticello'               ,2001,9999,
                      'America/Indiana/Petersburg'                ,2008,9999,
-                     'America/Port-au-Prince'                    ,1983,9999,
+                     'America/Port-au-Prince'                    ,1983,2015,
                      'America/Cancun'                            ,1996,1998,
                      'America/Jamaica'                           ,1974,1983,
                      'America/Indiana/Tell_City'                 ,1969,1970,
@@ -729,13 +709,13 @@
                      'Europe/Sofia'                              ,1979,9999,
                      'Europe/Riga'                               ,1989,9999,
                      'Europe/Tallinn'                            ,1989,9999,
-                     'Europe/Vilnius'                            ,1991,9999,
+                     'Europe/Vilnius'                            ,1989,9999,
                      'Europe/Zaporozhye'                         ,1991,9999,
                      'Europe/Kiev'                               ,1990,9999,
                      'Europe/Simferopol'                         ,1992,2013,
                      'Europe/Uzhgorod'                           ,1992,9999,
                      'Africa/Cairo'                              ,1940,2014,
-                     'Europe/Kaliningrad'                        ,1991,2010,
+                     'Europe/Kaliningrad'                        ,1989,2010,
                      'Europe/Minsk'                              ,1991,2010,
                      'Europe/Moscow'                             ,1991,1991,
                      'Europe/Warsaw'                             ,1919,1919,
@@ -764,7 +744,33 @@
                      'Europe/Chisinau'                           ,1931,9999,
                      'Europe/Uzhgorod'                           ,1991,9999,
                      'Africa/Tripoli'                            ,1958,9999,
-                     'Europe/Kaliningrad'                        ,1991,9999,
+                     'Europe/Kaliningrad'                        ,1989,9999,
+                     'Europe/Minsk'                              ,1924,2011,
+                     'Europe/Moscow'                             ,1922,1992,
+                     'Europe/Warsaw'                             ,1918,1922,
+                     'EET'                                       ,0001,9999,
+                     'Asia/Beirut'                               ,1879,9999,
+                     'Europe/Sofia'                              ,1894,9999,
+                     'Africa/Cairo'                              ,1900,9999,
+                     'Asia/Gaza'                                 ,1900,9999,
+                     'Asia/Hebron'                               ,1900,9999,
+                     'Europe/Istanbul'                           ,1910,9999,
+                     'Europe/Athens'                             ,1916,9999,
+                     'Asia/Damascus'                             ,1919,9999,
+                     'Europe/Vilnius'                            ,1920,9999,
+                     'Asia/Nicosia'                              ,1921,9999,
+                     'Europe/Helsinki'                           ,1921,9999,
+                     'Europe/Tallinn'                            ,1921,9999,
+                     'Europe/Kiev'                               ,1924,9999,
+                     'Europe/Simferopol'                         ,1924,2014,
+                     'Europe/Zaporozhye'                         ,1924,9999,
+                     'Europe/Riga'                               ,1926,9999,
+                     'Asia/Amman'                                ,1930,9999,
+                     'Europe/Bucharest'                          ,1931,9999,
+                     'Europe/Chisinau'                           ,1931,9999,
+                     'Europe/Uzhgorod'                           ,1991,9999,
+                     'Africa/Tripoli'                            ,1958,9999,
+                     'Europe/Kaliningrad'                        ,1989,9999,
                      'Europe/Minsk'                              ,1924,2011,
                      'Europe/Moscow'                             ,1922,1992,
                      'Europe/Warsaw'                             ,1918,1922,
@@ -862,9 +868,6 @@
                     ],
    'FNT'         => [
                      'America/Noronha'                           ,1914,9999,
-                    ],
-   'FORT'        => [
-                     'Asia/Aqtau'                                ,1924,1962,
                     ],
    'FRUST'       => [
                      'Asia/Bishkek'                              ,1981,1991,
@@ -1137,12 +1140,6 @@
    'KGT'         => [
                      'Asia/Bishkek'                              ,1991,9999,
                     ],
-   'KIZST'       => [
-                     'Asia/Qyzylorda'                            ,1981,1990,
-                    ],
-   'KIZT'        => [
-                     'Asia/Qyzylorda'                            ,1924,1991,
-                    ],
    'KMT'         => [
                      'Europe/Kiev'                               ,1879,1924,
                      'Europe/Vilnius'                            ,1916,1919,
@@ -1168,7 +1165,7 @@
                      'Europe/Samara'                             ,1981,1988,
                     ],
    'KUYT'        => [
-                     'Europe/Samara'                             ,1935,1991,
+                     'Europe/Samara'                             ,1935,1989,
                     ],
    'KWAT'        => [
                      'Pacific/Kwajalein'                         ,1969,1993,
@@ -1301,10 +1298,10 @@
    'MSD'         => [
                      'Europe/Moscow'                             ,1919,2010,
                      'Europe/Simferopol'                         ,1981,1996,
-                     'Europe/Kaliningrad'                        ,1981,1990,
-                     'Europe/Vilnius'                            ,1981,1990,
+                     'Europe/Kaliningrad'                        ,1981,1988,
+                     'Europe/Vilnius'                            ,1981,1988,
                      'Europe/Zaporozhye'                         ,1981,1990,
-                     'Europe/Chisinau'                           ,1981,1989,
+                     'Europe/Chisinau'                           ,1981,1990,
                      'Europe/Kiev'                               ,1981,1990,
                      'Europe/Minsk'                              ,1981,1989,
                      'Europe/Uzhgorod'                           ,1981,1989,
@@ -1318,8 +1315,8 @@
                      'Europe/Simferopol'                         ,1930,9999,
                      'Europe/Minsk'                              ,1930,9999,
                      'Europe/Zaporozhye'                         ,1930,1991,
-                     'Europe/Vilnius'                            ,1940,1991,
-                     'Europe/Kaliningrad'                        ,1945,1991,
+                     'Europe/Vilnius'                            ,1940,1989,
+                     'Europe/Kaliningrad'                        ,1945,1989,
                      'Europe/Kiev'                               ,1930,1990,
                      'Europe/Chisinau'                           ,1944,1990,
                      'Europe/Uzhgorod'                           ,1945,1990,
@@ -1469,12 +1466,6 @@
    'OMST'        => [
                      'Asia/Omsk'                                 ,1919,9999,
                     ],
-   'ORAST'       => [
-                     'Asia/Oral'                                 ,1992,2004,
-                    ],
-   'ORAT'        => [
-                     'Asia/Oral'                                 ,1991,9999,
-                    ],
    'P'           => [
                      'P'                                         ,0001,9999,
                     ],
@@ -1610,12 +1601,6 @@
    'QMT'         => [
                      'America/Guayaquil'                         ,1890,1931,
                     ],
-   'QYZST'       => [
-                     'Asia/Qyzylorda'                            ,1992,2004,
-                    ],
-   'QYZT'        => [
-                     'Asia/Qyzylorda'                            ,1991,9999,
-                    ],
    'R'           => [
                      'R'                                         ,0001,9999,
                     ],
@@ -1668,12 +1653,6 @@
                     ],
    'SGT'         => [
                      'Asia/Singapore'                            ,1965,9999,
-                    ],
-   'SHEST'       => [
-                     'Asia/Aqtau'                                ,1982,1990,
-                    ],
-   'SHET'        => [
-                     'Asia/Aqtau'                                ,1962,1991,
                     ],
    'SJMT'        => [
                      'America/Costa_Rica'                        ,1890,1921,
@@ -1776,12 +1755,6 @@
    'ULAT'        => [
                      'Asia/Ulaanbaatar'                          ,1905,9999,
                      'Asia/Choibalsan'                           ,1905,1983,
-                    ],
-   'URAST'       => [
-                     'Asia/Oral'                                 ,1981,1990,
-                    ],
-   'URAT'        => [
-                     'Asia/Oral'                                 ,1924,1991,
                     ],
    'UT'          => [
                      'UT'                                        ,0001,9999,

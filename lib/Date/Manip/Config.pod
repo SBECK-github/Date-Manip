@@ -49,6 +49,12 @@ with different configurations simultaneously, it is necessary to work
 with multiple L<Date::Manip::Base> objects. This is covered in the
 L<Date::Manip::Objects> document.
 
+An alternate method exists if you are using one of the functional
+interfaces.  To set a variable using the functional interface, use the
+call:
+
+   Date_Init("$var1=$val1");
+
 The third way to set config variables is to store them in a config
 file. The config file is read in by passing the appropriate values to
 the config method as described below.  A config file is a good way to
@@ -111,6 +117,10 @@ file is stored in F</home/foo/Manip.cnf>, you can load it by:
 
    $date->config("ConfigFile","/home/foo/Manip.cnf");
 
+or (if using a functional interface):
+
+   Date_Init("ConfigFile=/home/foo/Manip.cnf");
+
 NOTE: if you use business mode calculations, you must have a config
 file since this is the only place where you can define holidays.
 
@@ -145,6 +155,10 @@ the first option will end up being ignored since the Defaults config
 variable will set the language back to it's default value which is
 English.
 
+When using a functional interface, use:
+
+   Date_Init("Defaults=1");
+
 =item B<ConfigFile>
 
 The ConfigFile variable defines a config file which will be parsed for
@@ -168,6 +182,10 @@ but execution will continue.
 
 Multiple config files are safe, and a section may safely be split
 across multiple files.
+
+When using a functional interface, use:
+
+   Date_Init("ConfigFile=/tmp/file1");
 
 =item B<Language>
 
@@ -498,6 +516,11 @@ The following are equivalent:
     $date->config("tz","Europe/Rome");
     $date->config("setdate","now,Europe/Rome");
 
+or in the functional interface:
+
+    Date_Init("tz=Europe/Rome");
+    Date_Init("setdate=now,Europe/Rome");
+
 =item B<SetDate>
 
 The SetDate config variable is used to set the current date, time, or
@@ -510,6 +533,10 @@ Often, you may want to use the system time to get the date and time, but
 you want to work in another time zone. For this, use the call:
 
    $date->config("setdate","now,ZONE");
+
+or in the function interface:
+
+   Date_Init("setdate=now,ZONE");
 
 If it is currently
 

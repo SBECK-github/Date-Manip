@@ -6,9 +6,9 @@ Date::Manip::Offset::off131;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:51:56 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 16:55:57 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,40 +28,20 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+07:00:00';
+$Offset        = '+06:30:00';
 
 %Offset        = (
    0 => [
-      'indian/christmas',
-      'asia/ho_chi_minh',
-      'asia/bangkok',
-      'asia/novokuznetsk',
-      'asia/novosibirsk',
-      'asia/jakarta',
-      'asia/hovd',
-      'asia/pontianak',
-      'asia/omsk',
-      'asia/krasnoyarsk',
-      'etc/gmt+7',
-      't',
-      'antarctica/davis',
-      'asia/irkutsk',
-      'asia/choibalsan',
-      'asia/ulaanbaatar',
-      'asia/kuala_lumpur',
-      'asia/singapore',
+      'indian/cocos',
+      'asia/colombo',
+      'asia/dhaka',
+      'asia/kolkata',
+      'asia/rangoon',
       ],
    1 => [
-      'asia/omsk',
-      'asia/novokuznetsk',
-      'asia/novosibirsk',
-      'asia/dhaka',
-      'asia/almaty',
-      'asia/qyzylorda',
-      'asia/krasnoyarsk',
-      'asia/bishkek',
-      'asia/dushanbe',
-      'asia/tashkent',
+      'asia/colombo',
+      'asia/karachi',
+      'asia/kolkata',
       ],
 );
 

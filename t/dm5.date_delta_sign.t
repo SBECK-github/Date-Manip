@@ -10,6 +10,12 @@ BEGIN {
 }
 
 use Date::Manip;
+if ($] < 5.010  ||  $ENV{'DATE_MANIP_TEST_DM5'}) {
+   $t->feature("TEST_DM5",1);
+}
+
+$t->skip_all('Date::Manip 5.xx tests ignored (set DATE_MANIP_TEST_DM5 to test)',
+             'TEST_DM5');
 
 Date_Init("TZ=EST");
 $tests="

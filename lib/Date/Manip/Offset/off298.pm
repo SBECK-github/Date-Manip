@@ -6,9 +6,9 @@ Date::Manip::Offset::off298;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:51:57 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 16:55:57 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-04:20:52';
+$Offset        = '-04:14:24';
 
 %Offset        = (
    0 => [
-      'america/argentina/tucuman',
+      'america/halifax',
       ],
 );
 

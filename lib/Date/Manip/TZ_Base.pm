@@ -35,7 +35,7 @@ sub _config_var {
                    $var eq 'configfile')) {
       if ($var eq 'tz') {
          warn "WARNING: the TZ Date::Manip config variable is deprecated\n" .
-              "         and will be removed in March 2016.  Please use\n" .
+              "         and will be removed in March 2017.  Please use\n" .
               "         the SetDate or ForceDate config variables instead.\n";
       }
       return $self->_config_var_tz($var,$val);

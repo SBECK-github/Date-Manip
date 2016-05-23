@@ -6,9 +6,9 @@ Date::Manip::TZ::eumins00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:46:10 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 15:09:46 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -176,11 +176,11 @@ END { undef $VERSION; }
    1992 =>
      [
         [ [1992,3,28,22,0,0],[1992,3,29,1,0,0],'+03:00:00',[3,0,0],
-          'EEST',1,[1992,9,26,21,59,59],[1992,9,27,0,59,59],
-          '1992032822:00:00','1992032901:00:00','1992092621:59:59','1992092700:59:59' ],
-        [ [1992,9,26,22,0,0],[1992,9,27,0,0,0],'+02:00:00',[2,0,0],
+          'EEST',1,[1992,9,26,23,59,59],[1992,9,27,2,59,59],
+          '1992032822:00:00','1992032901:00:00','1992092623:59:59','1992092702:59:59' ],
+        [ [1992,9,27,0,0,0],[1992,9,27,2,0,0],'+02:00:00',[2,0,0],
           'EET',0,[1993,3,27,23,59,59],[1993,3,28,1,59,59],
-          '1992092622:00:00','1992092700:00:00','1993032723:59:59','1993032801:59:59' ],
+          '1992092700:00:00','1992092702:00:00','1993032723:59:59','1993032801:59:59' ],
      ],
    1993 =>
      [

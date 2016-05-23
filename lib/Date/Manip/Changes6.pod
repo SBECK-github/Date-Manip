@@ -33,6 +33,41 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.54  (planned 2016-06-01)
 
+=over 4
+
+=item Deprecation of Date::Manip 5.xx tests
+
+By default, the Date::Manip 5.xx tests will no longer run.  Changes to
+the timezone data can cause failures.  Since Date::Manip 5.xx is no longer
+supported in any way, these tests will no longer run on a system where
+6.xx can be run.  Richard Jelinek.
+
+=item Deprecation of TZ postponed
+
+The deprecation of the TZ variable has been postponed to March 2017.  I
+decided that 1 year was not enough notice (especially since not everyone
+will have updated Date::Manip since March 2015 when the warning was added.
+
+=item Bug fixes
+
+Changed requirement for ExtUtils::MakeMaker to 6.67_01.  RT 112286
+
+Fixed a bug where a timezone abbreviation was not parsed correctly when
+passed in as a value to the SetDate, ForceDate, or TZ config variables.
+Based on a report in perlmonks.org.
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2016d)
+
+=item Documentation fixes
+
+Fixed one more typo.  RT 114095
+
+Clarified the Config document.  Based on a report in perlmonks.org.
+
+=back
+
 =head1 VERSION 6.53  2016-03-02
 
 =over 4

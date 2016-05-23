@@ -311,7 +311,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Pangnirtung'                     ,1995,9999,
                        'America/Kentucky/Monticello'             ,2001,9999,
                        'America/Indiana/Petersburg'              ,2008,9999,
-                       'America/Port-au-Prince'                  ,1983,9999,
+                       'America/Port-au-Prince'                  ,1983,2015,
                        'America/Cancun'                          ,1996,1997,
                        'America/Jamaica'                         ,1974,1983,
                        'America/Indiana/Tell_City'               ,1969,1970,
@@ -375,12 +375,6 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'America/Anchorage'                       ,1984,9999,
                        'America/Metlakatla'                      ,2016,9999,
                       ],
-   'AKTT-5AKTST'   => [
-                       'Asia/Aqtobe'                             ,1982,1990,
-                      ],
-   'ALMT-6ALMST'   => [
-                       'Asia/Almaty'                             ,1981,2004,
-                      ],
    'AMT-3AMST'     => [
                        'Asia/Yerevan'                            ,1992,1994,
                       ],
@@ -403,13 +397,6 @@ foreach my $hpuxz (keys %hpux_zones) {
                       ],
    'ANAT-13ANAST'  => [
                        'Asia/Anadyr'                             ,1981,1981,
-                      ],
-   'AQTT-4AQTST'   => [
-                       'Asia/Aqtau'                              ,1995,2004,
-                      ],
-   'AQTT-5AQTST'   => [
-                       'Asia/Aqtobe'                             ,1992,2004,
-                       'Asia/Aqtau'                              ,1992,1994,
                       ],
    'ART3ARST'      => [
                        'America/Argentina/Buenos_Aires'          ,1974,2008,
@@ -477,7 +464,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Atlantic/Azores'                         ,1916,1965,
                       ],
    'AZT-4AZST'     => [
-                       'Asia/Baku'                               ,1996,9999,
+                       'Asia/Baku'                               ,1996,2015,
                       ],
    'BAKT-4BAKST'   => [
                        'Asia/Baku'                               ,1981,1990,
@@ -561,8 +548,8 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Asia/Choibalsan'                         ,1983,2006,
                       ],
    'CLT4CLST'      => [
-                       'America/Santiago'                        ,1946,2014,
-                       'Antarctica/Palmer'                       ,1982,2014,
+                       'America/Santiago'                        ,1946,9999,
+                       'Antarctica/Palmer'                       ,1982,9999,
                       ],
    'CLT5CLST'      => [
                        'America/Santiago'                        ,1928,1931,
@@ -594,7 +581,7 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Asia/Dushanbe'                           ,1981,1990,
                       ],
    'EAST6EASST'    => [
-                       'Pacific/Easter'                          ,1982,2014,
+                       'Pacific/Easter'                          ,1982,9999,
                       ],
    'EAST7EASST'    => [
                        'Pacific/Easter'                          ,1969,1981,
@@ -615,12 +602,12 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Europe/Sofia'                            ,1979,9999,
                        'Europe/Riga'                             ,1989,9999,
                        'Europe/Tallinn'                          ,1989,9999,
-                       'Europe/Vilnius'                          ,1991,9999,
+                       'Europe/Vilnius'                          ,1989,9999,
                        'Europe/Zaporozhye'                       ,1991,9999,
                        'Europe/Kiev'                             ,1992,9999,
                        'Europe/Simferopol'                       ,1992,2013,
                        'Europe/Uzhgorod'                         ,1992,9999,
-                       'Europe/Kaliningrad'                      ,1991,2010,
+                       'Europe/Kaliningrad'                      ,1989,2010,
                        'Europe/Minsk'                            ,1991,2010,
                        'Africa/Cairo'                            ,1940,2009,
                        'Europe/Moscow'                           ,1991,1991,
@@ -706,9 +693,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'KGT-5KGST'     => [
                        'Asia/Bishkek'                            ,1992,2004,
                       ],
-   'KIZT-5KIZST'   => [
-                       'Asia/Qyzylorda'                          ,1982,1990,
-                      ],
    'KRAT-6KRAST'   => [
                        'Asia/Krasnoyarsk'                        ,1991,1991,
                        'Asia/Novokuznetsk'                       ,1991,1991,
@@ -753,8 +737,8 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Europe/Moscow'                           ,1981,2010,
                        'Europe/Volgograd'                        ,1992,2010,
                        'Europe/Simferopol'                       ,1981,1996,
-                       'Europe/Kaliningrad'                      ,1981,1990,
-                       'Europe/Vilnius'                          ,1981,1990,
+                       'Europe/Kaliningrad'                      ,1981,1988,
+                       'Europe/Vilnius'                          ,1981,1988,
                        'Europe/Zaporozhye'                       ,1981,1990,
                        'Europe/Chisinau'                         ,1981,1989,
                        'Europe/Kiev'                             ,1981,1989,
@@ -799,9 +783,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'OMST-6OMSST'   => [
                        'Asia/Omsk'                               ,1981,2010,
                       ],
-   'ORAT-4ORAST'   => [
-                       'Asia/Oral'                               ,1992,2004,
-                      ],
    'PET5PEST'      => [
                        'America/Lima'                            ,1939,1994,
                       ],
@@ -833,9 +814,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'PYT4PYST'      => [
                        'America/Asuncion'                        ,1976,9999,
                       ],
-   'QYZT-6QYZST'   => [
-                       'Asia/Qyzylorda'                          ,1993,2004,
-                      ],
    'SAKT-10SAKST'  => [
                        'Asia/Sakhalin'                           ,1991,2010,
                       ],
@@ -853,9 +831,6 @@ foreach my $hpuxz (keys %hpux_zones) {
                       ],
    'SAST-2SAST'    => [
                        'Africa/Johannesburg'                     ,1943,1943,
-                      ],
-   'SHET-5SHEST'   => [
-                       'Asia/Aqtau'                              ,1982,1990,
                       ],
    'SVET-4SVEST'   => [
                        'Asia/Yekaterinburg'                      ,1991,1991,
@@ -881,12 +856,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'ULAT-8ULAST'   => [
                        'Asia/Ulaanbaatar'                        ,1983,9999,
                       ],
-   'URAT-4URAST'   => [
-                       'Asia/Oral'                               ,1989,1990,
-                      ],
-   'URAT-5URAST'   => [
-                       'Asia/Oral'                               ,1982,1988,
-                      ],
    'UYT3UYST'      => [
                        'America/Montevideo'                      ,1959,2014,
                       ],
@@ -898,10 +867,10 @@ foreach my $hpuxz (keys %hpux_zones) {
                        'Asia/Khandyga'                           ,2004,2010,
                       ],
    'VOLT-3VOLST'   => [
-                       'Europe/Volgograd'                        ,1989,1990,
+                       'Europe/Volgograd'                        ,1988,1990,
                       ],
    'VOLT-4VOLST'   => [
-                       'Europe/Volgograd'                        ,1981,1988,
+                       'Europe/Volgograd'                        ,1981,1987,
                       ],
    'VUT-11VUST'    => [
                        'Pacific/Efate'                           ,1984,1992,

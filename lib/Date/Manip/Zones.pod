@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:56:28 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 16:56:04 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -215,6 +215,7 @@ database:
      Asia/Baghdad                         asbagh00
      Asia/Baku                            asbaku00
      Asia/Bangkok                         asbang00
+     Asia/Barnaul                         asbarn00
      Asia/Beirut                          asbeir00
      Asia/Bishkek                         asbish00
      Asia/Brunei                          asbrun00
@@ -271,6 +272,7 @@ database:
      Asia/Tehran                          astehr00
      Asia/Thimphu                         asthim00
      Asia/Tokyo                           astoky00
+     Asia/Tomsk                           astoms00
      Asia/Ulaanbaatar                     asulaa00
      Asia/Urumqi                          asurum00
      Asia/Ust-Nera                        asustm00
@@ -303,6 +305,7 @@ database:
      EET                                  eet00
      Europe/Amsterdam                     euamst00
      Europe/Andorra                       euando00
+     Europe/Astrakhan                     euastr00
      Europe/Athens                        euathe00
      Europe/Belgrade                      eubelg00
      Europe/Berlin                        euberl00
@@ -317,6 +320,7 @@ database:
      Europe/Istanbul                      euista00
      Europe/Kaliningrad                   eukali00
      Europe/Kiev                          eukiev00
+     Europe/Kirov                         eukiro00
      Europe/Lisbon                        eulisb00
      Europe/London                        eulond00
      Europe/Luxembourg                    euluxe00
@@ -336,6 +340,7 @@ database:
      Europe/Stockholm                     eustoc00
      Europe/Tallinn                       eutall00
      Europe/Tirane                        eutira00
+     Europe/Ulyanovsk                     euulya00
      Europe/Uzhgorod                      euuzhg00
      Europe/Vienna                        euvien00
      Europe/Vilnius                       euviln00
@@ -671,6 +676,26 @@ default alias can be overridden as described above.
 
      ALTERNATE NAME                       TIME ZONE           
      -----------------------------------  --------------------
+     +02-2+03                             Europe/Ulyanovsk
+     +03-3+04                             Europe/Astrakhan
+                                          Europe/Kirov
+                                          Europe/Ulyanovsk
+     +04-4+05                             Asia/Oral
+                                          Asia/Aqtau
+                                          Asia/Aqtobe
+                                          Europe/Astrakhan
+                                          Europe/Kirov
+                                          Europe/Ulyanovsk
+     +05-5+06                             Asia/Aqtobe
+                                          Asia/Qyzylorda
+                                          Asia/Aqtau
+                                          Asia/Almaty
+                                          Asia/Oral
+     +06-6+07                             Asia/Barnaul
+                                          Asia/Tomsk
+                                          Asia/Almaty
+     +07-7+08                             Asia/Tomsk
+                                          Asia/Barnaul
      ACT5ACST                             America/Rio_Branco
                                           America/Eirunepe
      AEST-10AEDT                          Australia/Currie
@@ -687,8 +712,6 @@ default alias can be overridden as described above.
                                           America/Sitka
                                           America/Anchorage
                                           America/Metlakatla
-     AKTT-5AKTST                          Asia/Aqtobe
-     ALMT-6ALMST                          Asia/Almaty
      AMT-3AMST                            Asia/Yerevan
      AMT-4AMST                            Asia/Yerevan
      AMT4AMST                             America/Campo_Grande
@@ -700,9 +723,6 @@ default alias can be overridden as described above.
      ANAT-11ANAST                         Asia/Anadyr
      ANAT-12ANAST                         Asia/Anadyr
      ANAT-13ANAST                         Asia/Anadyr
-     AQTT-4AQTST                          Asia/Aqtau
-     AQTT-5AQTST                          Asia/Aqtobe
-                                          Asia/Aqtau
      ART3ARST                             America/Argentina/Buenos_Aires
                                           America/Argentina/Cordoba
                                           America/Argentina/Tucuman
@@ -944,7 +964,6 @@ default alias can be overridden as described above.
      JST-9JDT                             Asia/Tokyo
      KGT-5FRUST                           Asia/Bishkek
      KGT-5KGST                            Asia/Bishkek
-     KIZT-5KIZST                          Asia/Qyzylorda
      KRAT-6KRAST                          Asia/Krasnoyarsk
                                           Asia/Novokuznetsk
      KRAT-7KRAST                          Asia/Krasnoyarsk
@@ -1014,7 +1033,6 @@ default alias can be overridden as described above.
      NZST-12NZDT                          Pacific/Auckland
      OMST-5OMSST                          Asia/Omsk
      OMST-6OMSST                          Asia/Omsk
-     ORAT-4ORAST                          Asia/Oral
      PET5PEST                             America/Lima
      PETT-11PETST                         Asia/Kamchatka
      PETT-12PETST                         Asia/Kamchatka
@@ -1041,14 +1059,12 @@ default alias can be overridden as described above.
                                           America/Sitka
                                           America/Fort_Nelson
      PYT4PYST                             America/Asuncion
-     QYZT-6QYZST                          Asia/Qyzylorda
      SAKT-10SAKST                         Asia/Sakhalin
      SAKT-11SAKST                         Asia/Sakhalin
      SAMT-3SAMST                          Europe/Samara
      SAMT-4SAMST                          Europe/Samara
      SAMT-5SAMST                          Asia/Samarkand
      SAST-2SAST                           Africa/Johannesburg
-     SHET-5SHEST                          Asia/Aqtau
      SVET-4SVEST                          Asia/Yekaterinburg
      SVET-5SVEST                          Asia/Yekaterinburg
      TAST-6TASST                          Asia/Tashkent
@@ -1057,8 +1073,6 @@ default alias can be overridden as described above.
      TOT-13TOST                           Pacific/Tongatapu
      TRT-3TRST                            Europe/Istanbul
      ULAT-8ULAST                          Asia/Ulaanbaatar
-     URAT-4URAST                          Asia/Oral
-     URAT-5URAST                          Asia/Oral
      UYT3UYST                             America/Montevideo
      VLAT-10VLAST                         Asia/Vladivostok
                                           Asia/Khandyga
@@ -1536,7 +1550,6 @@ L<Date::Manip::TZ> module.
                         America/Santiago
                         America/Chicago
                         America/Moncton
-                        Pacific/Easter
      0      -04:56:16   America/Bogota
      0      -04:56:02   America/New_York
      0      -04:49:20   America/Port-au-Prince
@@ -1692,7 +1705,6 @@ L<Date::Manip::TZ> module.
                         Atlantic/Stanley
                         America/Asuncion
                         Antarctica/Palmer
-                        America/Santiago
      0      -02:34:04   America/Bahia
      0      -02:34:00   America/Fortaleza
      0      -02:26:08   Atlantic/South_Georgia
@@ -1920,6 +1932,7 @@ L<Date::Manip::TZ> module.
                         Africa/Windhoek
                         Europe/Moscow
                         Europe/Warsaw
+                        Europe/Ulyanovsk
      0      +02:02:04   Europe/Kiev
      0      +02:05:09   Africa/Cairo
      0      +02:10:08   Africa/Khartoum
@@ -1971,7 +1984,13 @@ L<Date::Manip::TZ> module.
                         Europe/Riga
                         Europe/Tallinn
                         Europe/Istanbul
+                        Europe/Kirov
+                        Europe/Ulyanovsk
+                        Europe/Astrakhan
      0      +03:06:52   Asia/Riyadh
+     0      +03:12:12   Europe/Astrakhan
+     0      +03:13:36   Europe/Ulyanovsk
+     0      +03:18:48   Europe/Kirov
      0      +03:19:24   Asia/Baku
      0      +03:20:20   Europe/Samara
      0      +03:21:04   Asia/Aqtau
@@ -2009,6 +2028,9 @@ L<Date::Manip::TZ> module.
                         Asia/Qyzylorda
                         Asia/Samarkand
                         Asia/Aqtobe
+                        Europe/Astrakhan
+                        Europe/Ulyanovsk
+                        Europe/Kirov
      0      +04:02:33   Asia/Yekaterinburg
      0      +04:21:52   Asia/Qyzylorda
      0      +04:27:53   Asia/Samarkand
@@ -2051,6 +2073,8 @@ L<Date::Manip::TZ> module.
                         Asia/Dhaka
                         Asia/Kolkata
      0      +05:31:40   Asia/Novosibirsk
+     0      +05:35:00   Asia/Barnaul
+     0      +05:39:51   Asia/Tomsk
      0      +05:41:16   Asia/Kathmandu
      0      +05:45:00   Asia/Kathmandu
      0      +05:48:48   Asia/Novokuznetsk
@@ -2083,6 +2107,8 @@ L<Date::Manip::TZ> module.
                         Asia/Urumqi
                         Asia/Hovd
                         Antarctica/Mawson
+                        Asia/Barnaul
+                        Asia/Tomsk
      0      +06:01:40   Asia/Dhaka
      0      +06:06:36   Asia/Hovd
      0      +06:11:26   Asia/Krasnoyarsk
@@ -2116,6 +2142,8 @@ L<Date::Manip::TZ> module.
                         Asia/Ulaanbaatar
                         Asia/Kuala_Lumpur
                         Asia/Singapore
+                        Asia/Barnaul
+                        Asia/Tomsk
      0      +07:02:52   Indian/Christmas
      0      +07:06:30   Asia/Ho_Chi_Minh
      0      +07:06:40   Asia/Ho_Chi_Minh
@@ -2631,6 +2659,7 @@ L<Date::Manip::TZ> module.
                         Africa/Johannesburg
                         Africa/Windhoek
                         Europe/Warsaw
+                        Europe/Ulyanovsk
      1      +03:31:19   Europe/Moscow
      1      +04:00:00   Europe/Moscow
                         Europe/Samara
@@ -2651,6 +2680,9 @@ L<Date::Manip::TZ> module.
                         Europe/Tallinn
                         Europe/Istanbul
                         Asia/Jerusalem
+                        Europe/Astrakhan
+                        Europe/Kirov
+                        Europe/Ulyanovsk
      1      +04:30:00   Asia/Tehran
      1      +04:31:19   Europe/Moscow
      1      +05:00:00   Asia/Baku
@@ -2665,6 +2697,11 @@ L<Date::Manip::TZ> module.
                         Europe/Volgograd
                         Asia/Tehran
                         Europe/Moscow
+                        Asia/Aqtobe
+                        Asia/Qyzylorda
+                        Europe/Astrakhan
+                        Europe/Kirov
+                        Europe/Ulyanovsk
      1      +06:00:00   Asia/Yekaterinburg
                         Asia/Karachi
                         Asia/Bishkek
@@ -2678,6 +2715,7 @@ L<Date::Manip::TZ> module.
                         Asia/Qyzylorda
                         Asia/Oral
                         Asia/Colombo
+                        Asia/Almaty
      1      +06:30:00   Asia/Colombo
                         Asia/Karachi
                         Asia/Kolkata
@@ -2686,11 +2724,12 @@ L<Date::Manip::TZ> module.
                         Asia/Novosibirsk
                         Asia/Dhaka
                         Asia/Almaty
-                        Asia/Qyzylorda
                         Asia/Krasnoyarsk
                         Asia/Bishkek
                         Asia/Dushanbe
                         Asia/Tashkent
+                        Asia/Barnaul
+                        Asia/Tomsk
      1      +07:20:00   Asia/Kuala_Lumpur
                         Asia/Singapore
      1      +08:00:00   Asia/Krasnoyarsk
@@ -2698,6 +2737,8 @@ L<Date::Manip::TZ> module.
                         Asia/Hovd
                         Asia/Novosibirsk
                         Asia/Irkutsk
+                        Asia/Tomsk
+                        Asia/Barnaul
      1      +08:20:00   Asia/Kuching
      1      +09:00:00   Asia/Irkutsk
                         Australia/Perth
@@ -2785,6 +2826,37 @@ most commonly used, I'm willing to entertain arguments for altering the order.
 
      ALIAS            TIME ZONE           
      ---------------  --------------------
+     +02              Europe/Ulyanovsk
+     +03              Europe/Kirov
+                      Europe/Ulyanovsk
+                      Europe/Astrakhan
+     +04              Europe/Astrakhan
+                      Europe/Ulyanovsk
+                      Europe/Kirov
+                      Asia/Aqtau
+                      Asia/Oral
+                      Asia/Aqtobe
+                      Asia/Qyzylorda
+     +05              Asia/Aqtau
+                      Asia/Aqtobe
+                      Asia/Oral
+                      Asia/Qyzylorda
+                      Asia/Almaty
+                      Europe/Astrakhan
+                      Europe/Kirov
+                      Europe/Ulyanovsk
+     +06              Asia/Almaty
+                      Asia/Qyzylorda
+                      Asia/Barnaul
+                      Asia/Tomsk
+                      Asia/Aqtobe
+                      Asia/Aqtau
+                      Asia/Oral
+     +07              Asia/Barnaul
+                      Asia/Tomsk
+                      Asia/Almaty
+     +08              Asia/Tomsk
+                      Asia/Barnaul
      A                A
      ACDT             Australia/Adelaide
                       Australia/Broken_Hill
@@ -2844,10 +2916,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Yakutat
                       America/Sitka
                       America/Metlakatla
-     AKTST            Asia/Aqtobe
-     AKTT             Asia/Aqtobe
-     ALMST            Asia/Almaty
-     ALMT             Asia/Almaty
      AMST             America/Campo_Grande
                       America/Cuiaba
                       Asia/Yerevan
@@ -2876,10 +2944,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Moncton
                       America/Pangnirtung
                       America/Puerto_Rico
-     AQTST            Asia/Aqtau
-                      Asia/Aqtobe
-     AQTT             Asia/Aqtau
-                      Asia/Aqtobe
      ARST             America/Argentina/Buenos_Aires
                       America/Argentina/Cordoba
                       America/Argentina/Tucuman
@@ -3391,7 +3455,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      FMT              Atlantic/Madeira
      FNST             America/Noronha
      FNT              America/Noronha
-     FORT             Asia/Aqtau
      FRUST            Asia/Bishkek
      FRUT             Asia/Bishkek
      G                G
@@ -3519,8 +3582,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      KDT              Asia/Seoul
      KGST             Asia/Bishkek
      KGT              Asia/Bishkek
-     KIZST            Asia/Qyzylorda
-     KIZT             Asia/Qyzylorda
      KMT              Europe/Kiev
                       Europe/Vilnius
                       America/Jamaica
@@ -3709,8 +3770,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      O                O
      OMSST            Asia/Omsk
      OMST             Asia/Omsk
-     ORAST            Asia/Oral
-     ORAT             Asia/Oral
      P                P
      PDDT             America/Inuvik
      PDT              America/Los_Angeles
@@ -3790,8 +3849,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      PYT              America/Asuncion
      Q                Q
      QMT              America/Guayaquil
-     QYZST            Asia/Qyzylorda
-     QYZT             Asia/Qyzylorda
      R                R
      RET              Indian/Reunion
      RMT              Europe/Riga
@@ -3813,8 +3870,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      SDT              Pacific/Apia
      SET              Europe/Stockholm
      SGT              Asia/Singapore
-     SHEST            Asia/Aqtau
-     SHET             Asia/Aqtau
      SJMT             America/Costa_Rica
      SMT              America/Santiago
                       Europe/Simferopol
@@ -3855,8 +3910,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      ULAST            Asia/Ulaanbaatar
      ULAT             Asia/Ulaanbaatar
                       Asia/Choibalsan
-     URAST            Asia/Oral
-     URAT             Asia/Oral
      UT               UT
      UTC              UTC
                       Antarctica/Troll

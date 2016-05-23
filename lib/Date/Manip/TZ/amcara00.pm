@@ -6,9 +6,9 @@ Date::Manip::TZ::amcara00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Mar  2 10:46:10 EST 2016
-#    Data version: tzdata2016a
-#    Code version: tzcode2016a
+#    Generated on: Mon May 23 15:09:47 CEST 2016
+#    Data version: tzdata2016d
+#    Code version: tzcode2016d
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -56,8 +56,14 @@ END { undef $VERSION; }
    2007 =>
      [
         [ [2007,12,9,7,0,0],[2007,12,9,2,30,0],'-04:30:00',[-4,-30,0],
-          'VET',0,[9999,12,31,0,0,0],[9999,12,30,19,30,0],
-          '2007120907:00:00','2007120902:30:00','9999123100:00:00','9999123019:30:00' ],
+          'VET',0,[2016,5,1,6,59,59],[2016,5,1,2,29,59],
+          '2007120907:00:00','2007120902:30:00','2016050106:59:59','2016050102:29:59' ],
+     ],
+   2016 =>
+     [
+        [ [2016,5,1,7,0,0],[2016,5,1,3,0,0],'-04:00:00',[-4,0,0],
+          'VET',0,[9999,12,31,0,0,0],[9999,12,30,20,0,0],
+          '2016050107:00:00','2016050103:00:00','9999123100:00:00','9999123020:00:00' ],
      ],
 );
 

@@ -86,7 +86,7 @@ Date::Manip::DM5abbrevs - A list of all timezone abbreviations
 This module is not intended to be used directly. Date::Manip 5.xx
 will load it as needed.
 
-This module contains all of the time zone abbrevations from
+This module contains all of the time zone abbreviations from
 Date::Manip 6.xx copied backwards to 5.xx to provide slightly
 better support for time zones.
 
