@@ -462,6 +462,9 @@ sub do_mods {
 
    # Create a list of all EST5EDT style time zone aliases.
    # These only apply during standard years.
+   #
+   # Also, we will ignore aliases when the abbreviations are
+   # offsets.
 
    my $alias2 = {};
  ZONE: foreach my $zone (keys %$data) {
@@ -489,6 +492,9 @@ sub do_mods {
          }
          $stdoff    =~ s/:00:00$//;
          $stdoff   *= -1;
+
+         next  if ($stdabb =~ /^[+-]?\d+$/  ||
+                   $dstabb =~ /^[+-]?\d+$/);
 
          my $alias  = "${stdabb}${stdoff}${dstabb}";
 
@@ -630,7 +636,7 @@ sub _do_mods_tzdata_mod {
                    $abb,$isdst,[@endUT],[@endLT]);
 
    $year2       = $endUT[0];
-   _do_mods_years($abbrev,$zone,$abb,"0001",$year2);
+   _do_mods_years($abbrev,$zone,$abb,"0001",$year2)  if ($abb !~ /^[+-]?\d*$/);
    $$data{$zone}{"0001"} = [ '', [$abb,$offset,$isdst] ];
 
    #
@@ -739,7 +745,7 @@ sub _do_mods_tzdata_mod {
          $$data{$zone}{$year} = [ '', [$abb,$offset,$isdst] ];
       }
 
-      _do_mods_years($abbrev,$zone,$abb,$year,$year2);
+      _do_mods_years($abbrev,$zone,$abb,$year,$year2)  if ($abb !~ /^[+-]?\d*$/);
    }
 
    ###
@@ -808,7 +814,8 @@ sub _do_mods_tzdata_mod {
             }
 
             $last{"rules"}{$mon}{"abb"}    = $abb;
-            _do_mods_years($abbrev,$zone,$abb,$keep_year+1,9999);
+            _do_mods_years($abbrev,$zone,$abb,$keep_year+1,9999)
+              if ($abb !~ /^[+-]?\d*$/);
             $didlast++;
          }
       }

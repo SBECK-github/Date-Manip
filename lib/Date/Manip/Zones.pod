@@ -5,7 +5,7 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 16:56:04 CEST 2016
+#    Generated on: Mon May 23 17:40:07 CEST 2016
 #    Data version: tzdata2016d
 #    Code version: tzcode2016d
 
@@ -676,26 +676,6 @@ default alias can be overridden as described above.
 
      ALTERNATE NAME                       TIME ZONE           
      -----------------------------------  --------------------
-     +02-2+03                             Europe/Ulyanovsk
-     +03-3+04                             Europe/Astrakhan
-                                          Europe/Kirov
-                                          Europe/Ulyanovsk
-     +04-4+05                             Asia/Oral
-                                          Asia/Aqtau
-                                          Asia/Aqtobe
-                                          Europe/Astrakhan
-                                          Europe/Kirov
-                                          Europe/Ulyanovsk
-     +05-5+06                             Asia/Aqtobe
-                                          Asia/Qyzylorda
-                                          Asia/Aqtau
-                                          Asia/Almaty
-                                          Asia/Oral
-     +06-6+07                             Asia/Barnaul
-                                          Asia/Tomsk
-                                          Asia/Almaty
-     +07-7+08                             Asia/Tomsk
-                                          Asia/Barnaul
      ACT5ACST                             America/Rio_Branco
                                           America/Eirunepe
      AEST-10AEDT                          Australia/Currie
@@ -2826,37 +2806,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
 
      ALIAS            TIME ZONE           
      ---------------  --------------------
-     +02              Europe/Ulyanovsk
-     +03              Europe/Kirov
-                      Europe/Ulyanovsk
-                      Europe/Astrakhan
-     +04              Europe/Astrakhan
-                      Europe/Ulyanovsk
-                      Europe/Kirov
-                      Asia/Aqtau
-                      Asia/Oral
-                      Asia/Aqtobe
-                      Asia/Qyzylorda
-     +05              Asia/Aqtau
-                      Asia/Aqtobe
-                      Asia/Oral
-                      Asia/Qyzylorda
-                      Asia/Almaty
-                      Europe/Astrakhan
-                      Europe/Kirov
-                      Europe/Ulyanovsk
-     +06              Asia/Almaty
-                      Asia/Qyzylorda
-                      Asia/Barnaul
-                      Asia/Tomsk
-                      Asia/Aqtobe
-                      Asia/Aqtau
-                      Asia/Oral
-     +07              Asia/Barnaul
-                      Asia/Tomsk
-                      Asia/Almaty
-     +08              Asia/Tomsk
-                      Asia/Barnaul
      A                A
      ACDT             Australia/Adelaide
                       Australia/Broken_Hill
@@ -3370,6 +3319,32 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Warsaw
                       Europe/Samara
      EET              EET
+                      Asia/Beirut
+                      Europe/Sofia
+                      Africa/Cairo
+                      Asia/Gaza
+                      Asia/Hebron
+                      Europe/Istanbul
+                      Europe/Athens
+                      Asia/Damascus
+                      Europe/Vilnius
+                      Asia/Nicosia
+                      Europe/Helsinki
+                      Europe/Tallinn
+                      Europe/Kiev
+                      Europe/Simferopol
+                      Europe/Zaporozhye
+                      Europe/Riga
+                      Asia/Amman
+                      Europe/Bucharest
+                      Europe/Chisinau
+                      Europe/Uzhgorod
+                      Africa/Tripoli
+                      Europe/Kaliningrad
+                      Europe/Minsk
+                      Europe/Moscow
+                      Europe/Warsaw
+                      EET
                       Asia/Beirut
                       Europe/Sofia
                       Africa/Cairo

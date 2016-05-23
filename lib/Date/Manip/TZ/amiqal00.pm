@@ -6,7 +6,7 @@ Date::Manip::TZ::amiqal00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 15:09:36 CEST 2016
+#    Generated on: Mon May 23 17:38:19 CEST 2016
 #    Data version: tzdata2016d
 #    Code version: tzcode2016d
 
