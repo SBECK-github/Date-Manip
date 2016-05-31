@@ -507,11 +507,10 @@ sub do_mods {
    }
 
    _yaml_write($data,  'tzdata/_data',0);
-   _yaml_write($abbrev,'tzdata/_abbrev_un',0);
    _yaml_write($alias2,'tzdata/_alias2_un',0);
 
-   $abbrev = _order_elements($abbrev,\%def_abbrev);
-   $alias2 = _order_elements($alias2,\%def_alias2);
+   $abbrev = _order_elements($abbrev);
+   $alias2 = _order_elements($alias2);
 
    _yaml_write($abbrev,'tzdata/_abbrev_or',0);
    _yaml_write($alias2,'tzdata/_alias2_or',0);
@@ -1190,11 +1189,11 @@ sub do_off {
       }
    }
 
-   # Convert %offest to a couple other formats that will be useful.
+   # Convert %offset to a couple other formats that will be useful.
 
    my %offset_or;
-   $offset_or{0} = _order_elements($offset_un{0},$def_off{0});
-   $offset_or{1} = _order_elements($offset_un{1},$def_off{1});
+   $offset_or{0} = _order_elements($offset_un{0});
+   $offset_or{1} = _order_elements($offset_un{1});
 
    my %offset2_or;
    foreach my $isdst (keys %offset_un) {
@@ -1221,6 +1220,9 @@ sub do_off {
 
    print "   module "," "x($len-length($i)),"$i / $num";
 
+   _warn_changes($offset_or{0},$def_off{0},15,12,33,"0");
+   _warn_changes($offset_or{1},$def_off{1},15,12,33,"1");
+
    system("rm -f $off_dir/*");
    foreach my $offset (sort keys %offset2_or) {
       $i++;
@@ -1230,15 +1232,6 @@ sub do_off {
       _do_off($offset,$offmod,\%offset_or);
    }
    print "\n";
-
-   my %def_off_un;
-   $def_off_un{0} = _unorder_elements($def_off{0});
-   $def_off_un{1} = _unorder_elements($def_off{1});
-
-   _warn_changes($offset_or{0},$offset_un{0},$def_off{0},$def_off_un{0},
-                 15,12,33,"0");
-   _warn_changes($offset_or{1},$offset_un{1},$def_off{1},$def_off_un{1},
-                 15,12,33,"1");
 
    _yaml_write(\%offmod,"tzdata/_offmod",0);
    _yaml_write(\%offset_un,"tzdata/_offset_un",0);
@@ -1611,8 +1604,7 @@ default alias can be overridden as described above.
 
    _print_pod_row($pod,1,   5,'ALTERNATE NAME',35,  2,'TIME ZONE',20);
 
-   my $def_alias2_un = _unorder_elements(\%def_alias2);
-   _warn_changes($alias2_or,$alias2_un,\%def_alias2,$def_alias2_un,3,16,42);
+   _warn_changes($alias2_or,\%def_alias2,3,16,42);
 
    foreach my $ele (sort keys %$alias2_or) {
       my @tmp = @{ $$alias2_or{$ele} };
@@ -1729,7 +1721,6 @@ sub _do_zones_abbrevs {
    my($out,$pod) = @_;
 
    my $abbrev_or = _yaml_read("tzdata/_abbrev_or");
-   my $abbrev_un = _yaml_read("tzdata/_abbrev_un");
 
    # Start the aliases output (both POD and module)
 
@@ -1774,8 +1765,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
 
    _print_pod_row($pod,1,   5,'ALIAS',15,  2,'TIME ZONE',20);
 
-   my $def_abbrev_un = _unorder_elements(\%def_abbrev);
-   _warn_changes($abbrev_or,$abbrev_un,\%def_abbrev,$def_abbrev_un,3,14,44);
+   _warn_changes($abbrev_or,\%def_abbrev,3,14,44);
 
    my (@abb) = sort keys %$abbrev_or;
    foreach my $abb (@abb) {
@@ -1894,96 +1884,24 @@ sub _print_mod_row {
 ############################################################################
 # DEALING WITH THE ORDER OF ELEMENTS
 
-# This takes a hash of the form:
-#   $in  = { ELE => [ SUBELE,YEAR1,YEAR2, SUBELE,YEAR1,YEAR2, ... ] }
-# and converts it to:
-#   $out = { ELE => SUBELE => [YEAR1,YEAR2] }
+# This takes a hash:
+#    $in  = { ELE => SUBELE => [YEAR1,YEAR2] }
+# and returns a hash of the form:
+#    $out = { ELE => [ SUBELE, YEAR1, YEAR2,
+#                      SUBELE, YEAR1, YEAR2, ... ] }
 #
-sub _unorder_elements {
+# The order of the elements sorted based on the range.
+#
+sub _order_elements {
    my($in) = @_;
    my $out;
 
    foreach my $ele (keys %$in) {
-      my @tmp = @{ $$in{$ele} };
-      while (@tmp) {
-         my $subele = shift(@tmp);
-         my $year1  = shift(@tmp);
-         my $year2  = shift(@tmp);
-
-         $$out{$ele}{$subele} = [ $year1,$year2 ];
-      }
-   }
-
-   return $out;
-}
-
-# This takes a hash of the form:
-#   $in  = { ELE => [ SUBELE,YEAR1,YEAR2, SUBELE,YEAR1,YEAR2, ... ] }
-# and an element and returns the subelements in the order given.
-#
-sub _order {
-   my($in,$ele) = @_;
-
-   return ()  if (! exists $$in{$ele});
-   my @tmp = @{ $$in{$ele} };
-   my @ret;
-   while (@tmp) {
-      my $subele = shift(@tmp);
-      my $year1  = shift(@tmp);
-      my $year2  = shift(@tmp);
-      push(@ret,$subele);
-   }
-
-   return @ret;
-}
-
-# This takes two hashes:
-#    $in  = { ELE => SUBELE => [YEAR1,YEAR2] }
-#    $def = { ELE => [ SUBELE,YEAR1,YEAR2, SUBELE,YEAR1,YEAR2, ... ] }
-# and converts $curr to be the same form as $def.
-#
-# The order of the elements is the same as in $def, but any new
-# elements are added at the end in an order returned by the the
-# function passed in as $sort_func (which is a function name.
-#
-sub _order_elements {
-   my($in,$def) = @_;
-   my $out;
-
-   my $def_un = _unorder_elements($def);
-   foreach my $ele (keys %$in) {
-      my @def = _order($def,$ele);
-      my @subele;
-
-      # Use the old order where possible
-
-      foreach my $subele (@def) {
-         next  if (! exists $$in{$ele}  ||
-                   ! exists $$in{$ele}{$subele});
-         push(@subele,$subele);
-      }
-
-      # Add any new elements to the end, but in the
-      # proper sorted order.
-
       my @in = _sort_by_years($$in{$ele});
 
-      foreach my $subele (@in) {
-         next  if (exists $$def_un{$ele}{$subele});
-         push(@subele,$subele);
-      }
-
       $$out{$ele} = [];
-      foreach my $subele (@subele) {
-         my($year1,$year2);
-
-         if (exists $$in{$ele}  &&
-             exists $$in{$ele}{$subele}) {
-            ($year1,$year2) = @{ $$in{$ele}{$subele} };
-         } else {
-            ($year1,$year2) = @{ $$def_un{$ele}{$subele} };
-         }
-
+      foreach my $subele (@in) {
+         my($year1,$year2) = @{ $$in{$ele}{$subele} };
          push(@{ $$out{$ele} },($subele,$year1,$year2));
       }
    }
@@ -1998,6 +1916,8 @@ sub _order_elements {
 # o  An element that is active now always comes before one that isn't
 #    active now.
 #       i.e. [2000-2020] < [1900-2000]  (now = 2010)
+#
+# o  A modern European timezone (WET, CET, EET) comes before others.
 #
 # o  An Antarctica element comes after one that is not Antarctica
 #
@@ -2023,6 +1943,7 @@ sub _sort_by_years {
 sub __sort_by_years {
    my($a,$b,$namea,$nameb) = @_;
 
+   # Find out which elements are currently active
    my $curra = ($$a[0] <= $curry  &&  $$a[1] >= $curry ? 1 : 0);
    my $currb = ($$b[0] <= $curry  &&  $$b[1] >= $curry ? 1 : 0);
 
@@ -2030,6 +1951,13 @@ sub __sort_by_years {
    # active now.
    if ($curra != $currb) {
       return -1  if ($curra);
+      return 1;
+   }
+
+   # A modern European timezone (WET, CET, EET) comes before others.
+   if      ($namea =~ /^(WET|CET|EET)$/) {
+      return -1;
+   } elsif ($nameb =~ /^(WET|CET|EET)$/) {
       return 1;
    }
 
@@ -2082,81 +2010,143 @@ sub __sort_by_years {
       return 1;
    }
 
+   # We'll order anything else as America < Europe < Asia < other
+   my ($posa,$posb);
+   if    ($namea =~ /^America/) { $posa = 1; }
+   elsif ($namea =~ /^Europe/)  { $posa = 2; }
+   elsif ($namea =~ /^Asia/)    { $posa = 3; }
+   else                         { $posa = 4; }
+   if    ($nameb =~ /^America/) { $posb = 1; }
+   elsif ($nameb =~ /^Europe/)  { $posb = 2; }
+   elsif ($nameb =~ /^Asia/)    { $posb = 3; }
+   else                         { $posb = 4; }
+   return ($posa <=> $posb)     if ($posa != $posb);
+
    # Alphabetize the rest
    return $namea cmp $nameb;
 }
 
-# This will warn if %curr is different than %old. They are both passed in
-# both ordered and unordered forms.
+# This will warn if %curr is different than %prev.
 #
 sub _warn_changes {
-   my($curr_or,$curr_un,$old_or,$old_un,$indent,$col1_len,$col2_len,$header) = @_;
+   my($curr,$prev,$indent,$col1_len,$col2_len,$header) = @_;
 
-   my %tmp = map { $_,1 } (keys %$curr_or, keys %$old_or);
+   my %tmp = map { $_,1 } (keys %$curr, keys %$prev);
 
    foreach my $ele (sort keys %tmp) {
 
-      if (! exists $$curr_or{$ele}) {
+      if (! exists $$curr{$ele}) {
 
          # If the element doesn't exist in the current set of
-         # elements, remove it from the old set.
+         # elements, remove it from the previous set.
 
-         warn "*** REMOVE ***\n";
-         warn "$header\n"  if (defined $header);
-         _warn_changes_ele($ele,$$old_or{$ele},$indent,$col1_len,$col2_len);
+         _warn_changes_ele($header,$ele,
+                           undef,$$prev{$ele},$indent,$col1_len,$col2_len);
 
-      } elsif (! exists $$old_or{$ele}) {
+      } elsif (! exists $$prev{$ele}) {
 
          # If the element doesn't exist in the old set, add it.
 
-         warn "*** NEW ELEMENT ***\n";
-         warn "$header\n"  if (defined $header);
-         _warn_changes_ele($ele,$$curr_or{$ele},$indent,$col1_len,$col2_len);
+         _warn_changes_ele($header,$ele,
+                           $$curr{$ele},undef,$indent,$col1_len,$col2_len);
+
+      } elsif (! ref($$prev{$ele})) {
+
+         # The previous element is defined as either a scalar:
+         #    PREV_FIRST
+         # The current first element must be the same.
+
+         if ($$curr{$ele}[0] ne $$prev{$ele}) {
+            _warn_changes_ele($header,$ele,
+                              $$curr{$ele},$$prev{$ele},
+                              $indent,$col1_len,$col2_len);
+         }
 
       } else {
 
-         # Compare the two. All elements must exist in both, and have
-         # the same years.
+         # The previous element may be defined as a listref:
+         #    [ OVERRIDE, PREV_FIRST ]
+         #
+         # This will warn if the current first element is not the
+         # same as PREV_FIRST.
+         #
+         # In the second case, it will also complain if OVERRIDE is not
+         # in the list.  Finally, it will reorder the list to move OVERRIDE
+         # to the start of the list.
 
-         my %tmp2    = map { $_,1 } (keys %{ $$curr_un{$ele} }, keys %{ $$old_un{$ele} });
-         my $changed = 0;
+         if ($$prev{$ele}[1] ne $$curr{$ele}[0]) {
+            _warn_changes_ele($header,$ele,
+                              $$curr{$ele},$$prev{$ele},
+                              $indent,$col1_len,$col2_len);
 
-         foreach my $subele (keys %tmp2) {
-            if (! exists $$curr_un{$ele}{$subele}  ||
-                ! exists $$old_un{$ele}{$subele}   ||
-                $$curr_un{$ele}{$subele}[0] != $$old_un{$ele}{$subele}[0]  ||
-                $$curr_un{$ele}{$subele}[1] != $$old_un{$ele}{$subele}[1]) {
-               $changed = 1;
-               last;
+         } else {
+            my @old = @{ $$curr{$ele} };
+            my @new;
+            my $found = 0;
+            while (@old) {
+               my $tz  = shift(@old);
+               my $y1  = shift(@old);
+               my $y2  = shift(@old);
+               if ($tz eq $$prev{$ele}[0]) {
+                  @new = ($tz,$y1,$y2,@new,@old);
+                  $found = 1;
+                  last;
+               } else {
+                  push(@new,$tz,$y1,$y2);
+               }
             }
-         }
-
-         if ($changed) {
-            warn "$header\n"  if (defined $header);
-            _warn_changes_ele($ele,$$curr_or{$ele},$indent,$col1_len,$col2_len);
+            if ($found) {
+               $$curr{$ele} = [@new];
+            } else {
+               _warn_changes_ele($header,$ele,
+                                 $$curr{$ele},$$prev{$ele}[1],
+                                 $indent,$col1_len,$col2_len);
+            }
          }
       }
    }
 }
 
 sub _warn_changes_ele {
-   my($ele,$curr,$indent,$col1_len,$col2_len) = @_;
+   my($header,$ele,$curr,$prev,$indent,$col1_len,$col2_len) = @_;
+
+   my $val;
+   if (! defined($curr)) {
+      warn "*** REMOVE ***\n";
+      if (ref($prev)) {
+         $val = "[ $$prev[0], $$prev[1] ]";
+      } else {
+         $val = $prev;
+      }
+   } elsif (! defined($prev)) {
+      warn "*** NEW ELEMENT ***\n";
+      $val = $$curr[0];
+   } else {
+      warn "*** CHANGE ELEMENT ***\n";
+      if (ref($prev)) {
+         $val = "[ $$prev[0] => $$curr[0] ]";
+      } else {
+         $val = $$curr[0];
+      }
+   }
+   warn "$header\n"  if (defined $header);
 
    $ele = "'$ele'";
-   warn " "x$indent, $ele," "x($col1_len-length($ele)),"=> [\n";
+   warn " "x$indent, $ele," "x($col1_len-length($ele)),"=> '$val'\n";
 
-   my @tmp = @$curr;
-   while (@tmp) {
-      my $subele = shift(@tmp);
-      my $year1  = shift(@tmp);
-      my $year2  = shift(@tmp);
-      my($col2)  = "'$subele'";
-      my($col3)  = ",$year1,$year2,";
+   if (defined($curr)) {
+      my @tmp = @$curr;
+      while (@tmp) {
+         my $subele = shift(@tmp);
+         my $year1  = shift(@tmp);
+         my $year2  = shift(@tmp);
+         my($col2)  = "'$subele'";
+         my($col3)  = ",$year1,$year2,";
 
-      warn " "x($indent + $col1_len + 4), $col2," "x($col2_len-length($col2)),"$col3\n";
+         warn "#"," "x($indent + $col1_len + 3), $col2,
+           " "x($col2_len-length($col2)),"$col3\n";
+      }
    }
-
-   warn " "x($indent + $col1_len + 3),"],\n";
 }
 
 ############################################################################

@@ -523,6 +523,11 @@ lib/Date/Manip/Offset/off424.pm
 lib/Date/Manip/Offset/off425.pm
 lib/Date/Manip/Offset/off426.pm
 lib/Date/Manip/Offset/off427.pm
+lib/Date/Manip/Offset/off428.pm
+lib/Date/Manip/Offset/off429.pm
+lib/Date/Manip/Offset/off430.pm
+lib/Date/Manip/Offset/off431.pm
+lib/Date/Manip/Offset/off432.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -695,6 +700,7 @@ lib/Date/Manip/TZ/asashg00.pm
 lib/Date/Manip/TZ/asbagh00.pm
 lib/Date/Manip/TZ/asbaku00.pm
 lib/Date/Manip/TZ/asbang00.pm
+lib/Date/Manip/TZ/asbarn00.pm
 lib/Date/Manip/TZ/asbeir00.pm
 lib/Date/Manip/TZ/asbish00.pm
 lib/Date/Manip/TZ/asbrun00.pm
@@ -751,6 +757,7 @@ lib/Date/Manip/TZ/astbil00.pm
 lib/Date/Manip/TZ/astehr00.pm
 lib/Date/Manip/TZ/asthim00.pm
 lib/Date/Manip/TZ/astoky00.pm
+lib/Date/Manip/TZ/astoms00.pm
 lib/Date/Manip/TZ/asulaa00.pm
 lib/Date/Manip/TZ/asurum00.pm
 lib/Date/Manip/TZ/asustm00.pm
@@ -814,6 +821,7 @@ lib/Date/Manip/TZ/etgmtp10.pm
 lib/Date/Manip/TZ/etgmtp11.pm
 lib/Date/Manip/TZ/euamst00.pm
 lib/Date/Manip/TZ/euando00.pm
+lib/Date/Manip/TZ/euastr00.pm
 lib/Date/Manip/TZ/euathe00.pm
 lib/Date/Manip/TZ/eubelg00.pm
 lib/Date/Manip/TZ/euberl00.pm
@@ -828,6 +836,7 @@ lib/Date/Manip/TZ/euhels00.pm
 lib/Date/Manip/TZ/euista00.pm
 lib/Date/Manip/TZ/eukali00.pm
 lib/Date/Manip/TZ/eukiev00.pm
+lib/Date/Manip/TZ/eukiro00.pm
 lib/Date/Manip/TZ/eulisb00.pm
 lib/Date/Manip/TZ/eulond00.pm
 lib/Date/Manip/TZ/euluxe00.pm
@@ -847,6 +856,7 @@ lib/Date/Manip/TZ/eusofi00.pm
 lib/Date/Manip/TZ/eustoc00.pm
 lib/Date/Manip/TZ/eutall00.pm
 lib/Date/Manip/TZ/eutira00.pm
+lib/Date/Manip/TZ/euulya00.pm
 lib/Date/Manip/TZ/euuzhg00.pm
 lib/Date/Manip/TZ/euvien00.pm
 lib/Date/Manip/TZ/euviln00.pm
@@ -979,6 +989,7 @@ t/date.calc.date_delta_business.4.t
 t/date.calc.date_delta_business.french.t
 t/date.calc.date_delta_exact.t
 t/date.cmp.t
+t/date.complete.t
 t/date.convert.t
 t/date.holiday.0.t
 t/date.holiday.1.t

@@ -1,7 +1,3 @@
-Make all the data.* files contain only the 1st value.  All others are sorted
-correctly automatically (and not stored).  When harvesting, it'll notify of
-new/removed elements.
-
 Add option to Recur: ignore holidays
    then flags like NBD ignore holidays (but count weekends)
 When calculating holidays, use this option by default to simplify

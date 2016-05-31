@@ -1882,6 +1882,26 @@ WriteMakefile(
                 file    => 'off427.pm',
                 version => '6.54',
              },
+             'Date::Manip::Offset::off428' => {
+                file    => 'off428.pm',
+                version => '6.54',
+             },
+             'Date::Manip::Offset::off429' => {
+                file    => 'off429.pm',
+                version => '6.54',
+             },
+             'Date::Manip::Offset::off430' => {
+                file    => 'off430.pm',
+                version => '6.54',
+             },
+             'Date::Manip::Offset::off431' => {
+                file    => 'off431.pm',
+                version => '6.54',
+             },
+             'Date::Manip::Offset::off432' => {
+                file    => 'off432.pm',
+                version => '6.54',
+             },
              'Date::Manip::Recur' => {
                 file    => 'Recur.pm',
                 version => '6.54',
@@ -2558,6 +2578,10 @@ WriteMakefile(
                 file    => 'asbang00.pm',
                 version => '6.54',
              },
+             'Date::Manip::TZ::asbarn00' => {
+                file    => 'asbarn00.pm',
+                version => '6.54',
+             },
              'Date::Manip::TZ::asbeir00' => {
                 file    => 'asbeir00.pm',
                 version => '6.54',
@@ -2780,6 +2804,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::astoky00' => {
                 file    => 'astoky00.pm',
+                version => '6.54',
+             },
+             'Date::Manip::TZ::astoms00' => {
+                file    => 'astoms00.pm',
                 version => '6.54',
              },
              'Date::Manip::TZ::asulaa00' => {
@@ -3034,6 +3062,10 @@ WriteMakefile(
                 file    => 'euando00.pm',
                 version => '6.54',
              },
+             'Date::Manip::TZ::euastr00' => {
+                file    => 'euastr00.pm',
+                version => '6.54',
+             },
              'Date::Manip::TZ::euathe00' => {
                 file    => 'euathe00.pm',
                 version => '6.54',
@@ -3088,6 +3120,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::eukiev00' => {
                 file    => 'eukiev00.pm',
+                version => '6.54',
+             },
+             'Date::Manip::TZ::eukiro00' => {
+                file    => 'eukiro00.pm',
                 version => '6.54',
              },
              'Date::Manip::TZ::eulisb00' => {
@@ -3164,6 +3200,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::eutira00' => {
                 file    => 'eutira00.pm',
+                version => '6.54',
+             },
+             'Date::Manip::TZ::euulya00' => {
+                file    => 'euulya00.pm',
                 version => '6.54',
              },
              'Date::Manip::TZ::euuzhg00' => {

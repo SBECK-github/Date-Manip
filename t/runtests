@@ -16,11 +16,6 @@ if [ "$RELEASE_TESTING" != "0" ]; then
    export RELEASE_TESTING
 fi
 
-if [ "$DATE_MANIP_TEST_DM5" != "0" ]; then
-   DATE_MANIP_TEST_DM5=1
-   export DATE_MANIP_TEST_DM5
-fi
-
 if [ "$1" = "-T" ]; then
    taint="-T -I../lib -I."
    shift

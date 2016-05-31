@@ -43,6 +43,7 @@ perl -I../lib date.calc.date_delta_business.4.t 1
 perl -I../lib date.calc.date_delta_business.french.t 1
 perl -I../lib date.calc.date_delta_exact.t 1
 perl -I../lib date.cmp.t 1
+perl -I../lib date.complete.t 1
 perl -I../lib date.convert.t 1
 perl -I../lib date.holiday.0.t 1
 perl -I../lib date.holiday.1.t 1
