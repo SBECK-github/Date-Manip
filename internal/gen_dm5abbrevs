@@ -18,7 +18,7 @@ use Date::Manip::Zones;
 use Date::Manip::TZ;
 
 our($VERSION);
-$VERSION='6.54';
+$VERSION='6.55';
 
 our($DEBUG);
 $DEBUG = 0;
@@ -101,7 +101,7 @@ use strict;
 use warnings;
 
 our(\$VERSION);
-\$VERSION='6.54';
+\$VERSION='6.55';
 
 END {
    my \$tmp;
