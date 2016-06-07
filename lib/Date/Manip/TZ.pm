@@ -424,9 +424,12 @@ sub _get_curr_zone {
          }
          my $var = shift(@methods);
          print "$var] "  if ($debug);
-         if (defined $$::var) {
-            push(@zone,$$::var);
-            print "$$::var\n"  if ($debug);
+         no strict "refs";
+         my $val = ${ "::$var" };
+         use strict "refs";
+         if (defined $val) {
+            push(@zone,$val);
+            print "$val\n"  if ($debug);
          } else {
             print "undef\n"  if ($debug);
          }

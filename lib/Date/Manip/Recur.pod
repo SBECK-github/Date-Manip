@@ -251,6 +251,9 @@ For example,
 
 refers to an event that occurs every 1 day, 12 hours.
 
+The format of the interval is very simple.  It is colon separated digits
+only.  No other characters are allowed.
+
 The portion of the frequency that occur after an asterisk is called
 the recurrence time (or rtime), and refers to a specific value (or
 values) for that type of time element (i.e. exactly as it would appear

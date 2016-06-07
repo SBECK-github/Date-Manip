@@ -45,6 +45,8 @@ $tests="
 
 1:2:3:4:5:6:7 => 1 2 3 4 5 6 7 *
 
+1:02:3:4:5:6:7 => 1 2 3 4 5 6 7 *
+
 1:2:3:4:5:6
    => 
    '[frequency] Invalid frequency string'
@@ -67,17 +69,21 @@ $tests="
 
 1:2:0:0*5,8:6:7 => 1 2 0 0 * 5,8 6 7
 
+1:2:0:0*5-5,8:6:7 => 1 2 0 0 * 5,8 6 7
+
+1:2:0:0*05,8:6:7 => 1 2 0 0 * 5,8 6 7
+
 1:2:0:0*5-8,11:6:7 => 1 2 0 0 * 5,6,7,8,11 6 7
 
 1:2:0*0:5-8,11:6:7 => 1 2 * 0 0 5,6,7,8,11 6 7
 
 1:2:0:0*5-8,11:-1:7
    => 
-   '[frequency] Negative values allowed for day/week'
+   '[frequency] Negative values only allowed for day/week'
 
 1:2:0:0*5-8,11:-3--1:7
    => 
-   '[frequency] Negative values allowed for day/week'
+   '[frequency] Negative values only allowed for day/week'
 
 1:2*-1--3:0:5-8,11:1:7
    => 
@@ -87,6 +93,44 @@ $tests="
 
 1:2*2--2:0:5-8,11:1:7 => 1 2 * 2--2 0 5,6,7,8,11 1 7
 
+1*-1:1:1:1:1:1
+   => '[frequency] Month of year must be 1-12 (zero/negative not allowed)'
+
+1*13:1:1:1:1:1
+   => '[frequency] Month of year must be 1-12'
+
+1*1:-6:0:1:1:1
+   => '[frequency] Week of month must be 1-5 or -1 to -5'
+
+1*1:6:0:1:1:1
+   => '[frequency] Week of month must be 1-5 or -1 to -5'
+
+1*0:-54:0:1:1:1
+   => '[frequency] Week of year must be 1-53 or -1 to -53'
+
+1*0:54:0:1:1:1
+   => '[frequency] Week of year must be 1-53 or -1 to -53'
+
+1*1:6:0:1:1:1
+   => '[frequency] Week of month must be 1-5 or -1 to -5'
+
+1*0:0:367:1:1:1
+   => '[frequency] Day of year must be 1-366 or -1 to -366'
+
+1*0:0:-367:1:1:1
+   => '[frequency] Day of year must be 1-366 or -1 to -366'
+
+1*1:0:32:1:1:1
+   => '[frequency] Day of month must be 1-31 or -1 to -31'
+
+1*1:0:-32:1:1:1
+   => '[frequency] Day of month must be 1-31 or -1 to -31'
+
+1*0:1:-1:1:1:1
+   => '[frequency] Day of week must be 1-7 (zero/negative not allowed)'
+
+1*0:1:8:1:1:1
+   => '[frequency] Day of week must be 1-7'
 ";
 
 $t->tests(func  => \&test,

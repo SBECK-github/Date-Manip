@@ -362,6 +362,10 @@ sub frequency {
    # to 1.
 
    if (@int) {
+      for my $i (@int) {
+         $i += 0;
+      }
+
       TEST_INT: {
          for my $i (@int) {
             last TEST_INT if ($i);
@@ -370,8 +374,8 @@ sub frequency {
       }
    }
 
-   # If @int contains 2 or 3 elements, move a trailing 0 to the start
-   # of @rtime.
+   # If @int contains 2 or 3 elements and ends in 0, move the trailing
+   # 0 to the start of @rtime.
    #
    #   Y:M:0 * D:H:MN:S  =>  Y:M * 0:D:H:MN:S
 
@@ -380,6 +384,50 @@ sub frequency {
           ($int[$#int] == 0)) {
       pop(@int);
       unshift(@rtime,0);
+   }
+
+   # We need to know what the valid values of M, W, and D are.
+   #
+   # Month can be:
+   #    moy     : 1 to 12                  (month of the year)
+   #
+   # Week can be:
+   #    woy     : 1 to 53  or  -1 to -53   (week of the year)
+   #    wom     : 1 to 5   or  -1 to -5    (week of the month)
+   #
+   # Day can be:
+   #    doy     : 1 to 366 or  -1 to -366  (day of the year)
+   #    dom     : 1 to 31  or  -1 to -31   (day of the month)
+   #    dow     : 1 to 7                   (day of the week)
+   #
+   # Other values must be zero or positive.
+
+   my($mtype,$wtype,$dtype) = ('','','');
+   my @f = (@int,@rtime);
+   my $m = $f[1];
+   my $w = $f[2];
+   my $d = $f[3];
+
+   if ($d  &&  @int < 4) {
+      if ($w) {
+         $dtype = 'dow';
+      } elsif ($m) {
+         $dtype = 'dom';
+      } else {
+         $dtype = 'doy';
+      }
+   }
+
+   if ($w  &&  @int < 3) {
+      if ($m) {
+         $wtype = 'wom';
+      } else {
+         $wtype = 'woy';
+      }
+   }
+
+   if ($m  &&  @int < 2) {
+      $mtype = 'moy';
    }
 
    # Test the format of @rtime.
@@ -410,13 +458,13 @@ sub frequency {
 
       foreach my $vals (@rfield) {
          if ($vals =~ $rrangerx) {
-            my ($num1,$num2) = ($1,$2);
+            my ($num1,$num2) = ($1+0,$2+0);
 
-            if ( ($num1 < 0  ||  $num2 < 0)  &&
-                 ($type ne 'w'  &&  $type ne 'd') ) {
-               $$self{'err'} = "[frequency] Negative values allowed for day/week";
-               return 1;
-            }
+            my $err = $self->_frequency_values($num1,$type,$mtype,$wtype,$dtype);
+            return $err  if ($err);
+
+            $err    = $self->_frequency_values($num2,$type,$mtype,$wtype,$dtype);
+            return $err  if ($err);
 
             if ( ($num1 > 0  &&  $num2 > 0)  ||
                  ($num1 < 0  &&  $num2 < 0) ) {
@@ -430,11 +478,11 @@ sub frequency {
             }
 
          } else {
-            if ($vals < 0  &&
-                 ($type ne 'w'  &&  $type ne 'd') ) {
-               $$self{'err'} = "[frequency] Negative values allowed for day/week";
-               return 1;
-            }
+            $vals += 0;
+
+            my $err = $self->_frequency_values($vals,$type,$mtype,$wtype,$dtype);
+            return $err  if ($err);
+
             push(@val,$vals);
          }
       }
@@ -491,6 +539,90 @@ sub frequency {
 
    } else {
       $$self{'data'}{'noint'} = 1;
+   }
+
+   return 0;
+}
+
+sub _frequency_values {
+   my($self,$num,$type,$mtype,$wtype,$dtype) = @_;
+   my $err;
+
+   if ($type eq 'm') {
+      if ($mtype eq 'moy') {
+         if ($num < 1) {
+            $$self{'err'} = "[frequency] Month of year must be 1-12 (zero/negative not allowed)";
+            return 1;
+         } elsif ($num > 12) {
+            $$self{'err'} = "[frequency] Month of year must be 1-12";
+            return 1;
+         }
+      }
+      return 0;
+   }
+
+   if ($type eq 'w') {
+      if ($wtype eq 'woy') {
+         if ($num == 0) {
+            $$self{'err'} = "[frequency] Week of year must be nonzero";
+            return 1;
+
+         } elsif ($num > 53  ||  $num < -53) {
+            $$self{'err'} = "[frequency] Week of year must be 1-53 or -1 to -53";
+            return 1;
+         }
+
+      } elsif ($wtype eq 'wom') {
+         if ($num == 0) {
+            $$self{'err'} = "[frequency] Week of month must be nonzero";
+            return 1;
+
+         } elsif ($num > 5  ||  $num < -5) {
+            $$self{'err'} = "[frequency] Week of month must be 1-5 or -1 to -5";
+            return 1;
+         }
+
+      }
+      return 0;
+   }
+
+   if ($type eq 'd') {
+      if ($dtype eq 'dow') {
+         if ($num < 1) {
+            $$self{'err'} = "[frequency] Day of week must be 1-7 (zero/negative not allowed)";
+            return 1;
+         } elsif ($num > 7) {
+            $$self{'err'} = "[frequency] Day of week must be 1-7";
+            return 1;
+         }
+
+      } elsif ($dtype eq 'dom') {
+         if ($num == 0) {
+            $$self{'err'} = "[frequency] Day of month must be nonzero";
+            return 1;
+
+         } elsif ($num > 31  ||  $num < -31) {
+            $$self{'err'} = "[frequency] Day of month must be 1-31 or -1 to -31";
+            return 1;
+         }
+
+      } elsif ($dtype eq 'doy') {
+         if ($num == 0) {
+            $$self{'err'} = "[frequency] Day of year must be nonzero";
+            return 1;
+
+         } elsif ($num > 366  ||  $num < -366) {
+            $$self{'err'} = "[frequency] Day of year must be 1-366 or -1 to -366";
+            return 1;
+         }
+
+      }
+      return 0;
+   }
+
+   if ($num < 0) {
+      $$self{'err'} = "[frequency] Negative values only allowed for day/week";
+      return 1;
    }
 
    return 0;
@@ -1125,7 +1257,7 @@ sub _rx {
             $rx eq 'rnum'   ||
             $rx eq 'rrange') {
 
-      my $num    = '\-?\d+';
+      my $num    = '[+-]?\d+';
       my $range  = "$num\-$num";
       my $val    = "(?:$range|$num)";
       my $vals   = "$val(?:,$val)*";
