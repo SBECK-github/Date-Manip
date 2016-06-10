@@ -57,9 +57,9 @@ sub _init_cache {
    # ds1_mon     => {Y}{M} = N    days since 1BC for Y/M/1
    # dow_mon     => {Y}{M} = DOW  day of week of Y/M/1
 
-   $$self{'cache'}{'ly'}      = {}  if (! exists $$self{'cache'}{'ly'});
-   $$self{'cache'}{'ds1_mon'} = {}  if (! exists $$self{'cache'}{'ds1_mon'});
-   $$self{'cache'}{'dow_mon'} = {}  if (! exists $$self{'cache'}{'dow_mon'});
+   $$self{'cache'}{'ly'}      = {};
+   $$self{'cache'}{'ds1_mon'} = {};
+   $$self{'cache'}{'dow_mon'} = {};
 
    return;
 }

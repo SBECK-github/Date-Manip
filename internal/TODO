@@ -27,6 +27,8 @@ Add ability to supply holidays via. a list rather than a config file.
 
 03/01/2017  TZ
 
+Delete Obj.pm line 89 block
+
 ########################################################################
 # +1 significant release
 ########################################################################

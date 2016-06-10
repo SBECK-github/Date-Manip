@@ -44,24 +44,14 @@ sub new {
    # Get the class of the new object
 
    if (exists $classes{ $args[0] }) {
+
       # $obj = new CLASS
       $class = shift(@args);
 
-   } elsif (ref($args[0])) {
+   } else {
+
       # $obj->new
       $class = ref($args[0]);
-
-   } else {
-      warn "ERROR: [new] first argument must be a Date::Manip class/object\n";
-      return undef;
-   }
-
-   # Get an old object
-
-   if (ref($args[0])) {
-      # $old->new
-      # new CLASS $old
-      $old = shift(@args);
    }
 
    # Find out if there are any config options (which will be the
@@ -69,6 +59,14 @@ sub new {
 
    if (@args  &&  ref($args[$#args]) eq 'ARRAY') {
       @opts = @{ pop(@args) };
+   }
+
+   # Get an old object
+
+   if (ref($args[0]) =~ /^Date::Manip/) {
+      # $old->new
+      # new CLASS $old
+      $old = shift(@args);
    }
 
    # Additional arguments will be passed to parse.
@@ -83,10 +81,13 @@ sub new {
       } elsif (ref($old) eq 'Date::Manip::TZ') {
          $tz   = $old;
          $base = $$tz{'base'};
-      } elsif (ref($old) eq 'ARRAY') {
-         my %old = @$old;
-         $tz   = $old{'tz'};
-         $base = $$tz{'base'};
+
+      # *** I think this is useless code, deprecate
+      # } elsif (ref($old) eq 'ARRAY') {
+      #    my %old = @$old;
+      #    $tz   = $old{'tz'};
+      #    $base = $$tz{'base'};
+
       } else {
          $tz   = $$old{'tz'};
          $base = $$tz{'base'};
@@ -103,7 +104,7 @@ sub new {
    # Create Base/TZ objects if necessary
 
    if ($base  &&  @opts) {
-      $base = dclone($base);
+      $base = _clone($base);
       $tz   = new Date::Manip::TZ $base  if ($tz);
    }
 
@@ -111,15 +112,13 @@ sub new {
    if ($class eq 'Date::Manip::Base') {
       if ($base) {
          # new Date::Manip::Base $base
+         #
+         # We have to clone it (which we already did if @opts was given)
+         #
          if (@opts) {
             $new = $base;
          } else {
-            # dclone doesn't handle regexps
-            my $tmp = $$base{'data'}{'rx'};
-            delete $$base{'data'}{'rx'};
-            $new  = dclone($base);
-            $$base{'data'}{'rx'} = $tmp;
-            $$new{'data'}{'rx'}  = $tmp;
+            $new = _clone($base);
          }
          $init = 0;
       }
@@ -130,7 +129,7 @@ sub new {
          if (@opts) {
             $new = $tz;
          } else {
-            $new  = dclone($tz);
+            $new = _clone($tz);
          }
          $init = 0;
       } elsif (! $base) {
@@ -159,13 +158,54 @@ sub new {
    return $new;
 }
 
+# This clones an object.  Currently, it only clones a Base or TZ
+# object, but dclone can't handle stored regexps so we have to copy
+# them manually.
+#
+sub _clone {
+   my($obj) = @_;
+
+   if (ref($obj) eq 'Date::Manip::Base') {
+
+      my $tmp              = $$obj{'data'}{'rx'};
+      delete $$obj{'data'}{'rx'};
+      my $new              = dclone($obj);
+      $$obj{'data'}{'rx'}  = $tmp;
+      $$new{'data'}{'rx'}  = $tmp;
+      return $new;
+
+   } else {
+
+      my $base = $$obj{'base'};
+      delete $$obj{'base'};
+
+      my @rx = qw(namerx zonerx abbrx offrx zrx offabbrx orrparrx);
+      my @tmp;
+      foreach my $rx (@rx) {
+         push(@tmp,$$obj{'data'}{$rx});
+         delete $$obj{'data'}{$rx};
+      }
+
+      my $new  = dclone($obj);
+
+      foreach my $rx (@rx) {
+         my $r = shift(@tmp);
+         $$obj{'data'}{$rx}  = $r;
+         $$new{'data'}{$rx} = $r;
+      }
+
+      $$obj{'base'} = $base;
+      $$new{'base'} = $base;
+      return $new;
+   }
+}
+
+# Only called if extra @args exist
 sub _init_args {
    my($self) = @_;
 
    my @args = @{ $$self{'args'} };
-   if (@args) {
-      warn "WARNING: [new] invalid arguments: @args\n";
-   }
+   warn "WARNING: [new] invalid arguments: @args\n";
 
    return;
 }
@@ -265,10 +305,13 @@ sub get_config {
    if (@args) {
       my @ret;
       foreach my $var (@args) {
+         # uncoverable branch false
          if (exists $$base{'data'}{'sections'}{'conf'}{lc($var)}) {
             push @ret,$$base{'data'}{'sections'}{'conf'}{lc($var)};
          } else {
+            # uncoverable statement
             warn "ERROR: [config] invalid config variable: $var\n";
+            # uncoverable statement
             return '';
          }
       }

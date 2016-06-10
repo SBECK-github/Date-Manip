@@ -38,6 +38,22 @@ incompatible. These are marked with an exclamation mark (!).
 The C<$::TZ> variable was not getting interpreted correctly when searching
 for a timezone.  RT 114949.
 
+=item Fixed bug where recurrences were not parsed correctly
+
+Passing in incorrect values for a field was not trapped in all cases
+and it led to problems.  All values passed in to a recurrence are now
+correctly checked.  Albert Hilazo
+
+=item Fixed a bug in some methods of creating new objects
+
+Some methods of creating new objects based on existing objects did not
+correctly use the existing object.  Bug has never been reported, but was
+discovered when adding tests to get 100% coverage.
+
+=item Test fixes
+
+Added a number of new tests based on Devel::Cover.
+
 =back
 
 =head1 VERSION 6.54  2016-05-31
