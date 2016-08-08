@@ -10,6 +10,10 @@ my $dir  = getcwd;
 $dir     =~ /Date-Manip-([0-9.]+)/;
 my $vers = $1;
 
+if (! defined $vers) {
+   $t->skip_all("CWD failed [$dir, $testdir]");
+}
+
 use Date::Manip;
 if (DateManipVersion() >= 6.00) {
    $t->feature("DM6",1);

@@ -1,3 +1,4 @@
+.cover
 .travis.yml
 Changes
 examples/dm_date
@@ -1118,6 +1119,7 @@ t/New_Years.1.cnf
 t/New_Years.2.cnf
 t/New_Years.3.cnf
 t/New_Years.4.cnf
+t/obj.t
 t/OldEvents.cnf
 t/orig.convtz.t
 t/orig.date_isholiday.t

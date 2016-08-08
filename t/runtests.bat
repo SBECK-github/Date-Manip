@@ -160,6 +160,7 @@ perl -I../lib dm5.recur_0.t 1
 perl -I../lib dm5.recur_1.t 1
 perl -I../lib dm5.settime.t 1
 perl -I../lib dm5.unixdate.t 1
+perl -I../lib obj.t 1
 perl -I../lib orig.convtz.t 1
 perl -I../lib orig.date_isholiday.t 1
 perl -I../lib orig.datecalc.date_date.t 1

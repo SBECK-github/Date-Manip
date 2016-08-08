@@ -73,7 +73,7 @@ A date and delta can be combined to yield a date that is the
 given amount of time before or after it.
 
 C<$date1> and C<$delta> are L<Date::Manip::Date> and L<Date::Manip::Delta>
-objects respectively. A new L<Date::Manip::Dateyyyy> object is produced.
+objects respectively. A new L<Date::Manip::Date> object is produced.
 If either C<$date1> or C<$delta> are invalid, the new date object will have
 an error associated with it.
 
