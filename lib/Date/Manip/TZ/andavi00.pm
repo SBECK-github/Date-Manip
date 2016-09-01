@@ -6,9 +6,9 @@ Date::Manip::TZ::andavi00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:38:20 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:12:38 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -32,7 +32,7 @@ END { undef $VERSION; }
    1    =>
      [
         [ [1,1,2,0,0,0],[1,1,2,0,0,0],'+00:00:00',[0,0,0],
-          'zzz',0,[1957,1,12,23,59,59],[1957,1,12,23,59,59],
+          '-00',0,[1957,1,12,23,59,59],[1957,1,12,23,59,59],
           '0001010200:00:00','0001010200:00:00','1957011223:59:59','1957011223:59:59' ],
      ],
    1957 =>
@@ -44,7 +44,7 @@ END { undef $VERSION; }
    1964 =>
      [
         [ [1964,10,31,17,0,0],[1964,10,31,17,0,0],'+00:00:00',[0,0,0],
-          'zzz',0,[1969,1,31,23,59,59],[1969,1,31,23,59,59],
+          '-00',0,[1969,1,31,23,59,59],[1969,1,31,23,59,59],
           '1964103117:00:00','1964103117:00:00','1969013123:59:59','1969013123:59:59' ],
      ],
    1969 =>

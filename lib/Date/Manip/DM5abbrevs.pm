@@ -17,7 +17,7 @@ Date::Manip::DM5abbrevs - A list of all timezone abbreviations
 This module is not intended to be used directly. Date::Manip 5.xx
 will load it as needed.
 
-This module contains all of the time zone abbrevations from
+This module contains all of the time zone abbreviations from
 Date::Manip 6.xx copied backwards to 5.xx to provide slightly
 better support for time zones.
 
@@ -87,18 +87,12 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       ahst   -1000
       akdt   -0800
       akst   -0900
-      aktst  +0600
-      aktt   +0500
-      almst  +0700
-      almt   +0600
       amst   -0300
       amt    -0400
       anast  +1200
       anat   +1200
       ant    -0430
       apt    -0300
-      aqtst  +0500
-      aqtt   +0500
       arst   -0200
       art    -0300
       ashst  +0500
@@ -152,7 +146,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       ckhst  -0930
       ckt    -1000
       clst   -0300
-      clt    -0300
+      clt    -0400
       cmt    +0155
       cost   -0400
       cot    -0500
@@ -171,7 +165,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       dust   +0600
       e      -0500
       easst  -0500
-      east   -0500
+      east   -0600
       eat    +0300
       ect    -0500
       eddt   -0300
@@ -192,7 +186,6 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       fkt    -0400
       fnst   -0100
       fnt    -0200
-      fort   +0500
       frust  +0600
       frut   +0600
       g      -0700
@@ -251,7 +244,7 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       irkt   +0800
       irst   +0330
       isst   +0000
-      ist    +0200
+      ist    +0530
       javt   +0720
       jcst   +0900
       jdt    +1000
@@ -262,14 +255,12 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       kdt    +1000
       kgst   +0600
       kgt    +0600
-      kizst  +0600
-      kizt   +0500
       kost   +1100
       krast  +0800
       krat   +0700
       kst    +0900
       kuyst  +0500
-      kuyt   +0300
+      kuyt   +0400
       kwat   -1200
       l      -1100
       lhdt   +1100
@@ -314,10 +305,8 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       nest   +0120
       net    +0020
       nfst   +1230
-      nft    +1130
+      nft    +1100
       nmt    +1112
-      novst  +0700
-      novt   +0600
       npt    +0545
       nrt    +1200
       nst    -0330
@@ -329,8 +318,6 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       o      +0200
       omsst  +0700
       omst   +0600
-      orast  +0500
-      orat   +0500
       p      +0300
       pddt   -0600
       pdt    -0700
@@ -357,8 +344,6 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       pyt    -0400
       q      +0400
       qmt    -0514
-      qyzst  +0700
-      qyzt   +0600
       r      +0500
       ret    +0400
       rott   -0300
@@ -373,8 +358,6 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       sdmt   -0440
       sdt    -1000
       sgt    +0800
-      shest  +0600
-      shet   +0500
       smt    +0216
       sret   +1100
       srt    -0300
@@ -404,8 +387,6 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       u      +0800
       ulast  +0900
       ulat   +0800
-      urast  +0500
-      urat   +0400
       ut     +0000
       utc    +0000
       uyhst  -0230
@@ -478,18 +459,12 @@ The following timezones are defined:
       AHST   -1000
       AKDT   -0800
       AKST   -0900
-      AKTST  +0600
-      AKTT   +0500
-      ALMST  +0700
-      ALMT   +0600
       AMST   -0300
       AMT    -0400
       ANAST  +1200
       ANAT   +1200
       ANT    -0430
       APT    -0300
-      AQTST  +0500
-      AQTT   +0500
       ARST   -0200
       ART    -0300
       ASHST  +0500
@@ -547,7 +522,7 @@ The following timezones are defined:
       CKT    -1000
       CLDT   -0300
       CLST   -0300
-      CLT    -0300
+      CLT    -0400
       CMT    +0155
       COST   -0400
       COT    -0500
@@ -567,7 +542,7 @@ The following timezones are defined:
       E      -0500
       EADT   +1100
       EASST  -0500
-      EAST   -0500
+      EAST   -0600
       EAT    +0300
       ECT    -0500
       EDDT   -0300
@@ -590,7 +565,6 @@ The following timezones are defined:
       FKT    -0400
       FNST   -0100
       FNT    -0200
-      FORT   +0500
       FRUST  +0600
       FRUT   +0600
       FST    +0200
@@ -654,7 +628,7 @@ The following timezones are defined:
       IRKT   +0800
       IRST   +0330
       ISST   +0000
-      IST    +0200
+      IST    +0530
       IT     +0330
       JAVT   +0720
       JCST   +0900
@@ -666,14 +640,12 @@ The following timezones are defined:
       KDT    +1000
       KGST   +0600
       KGT    +0600
-      KIZST  +0600
-      KIZT   +0500
       KOST   +1100
       KRAST  +0800
       KRAT   +0700
       KST    +0900
       KUYST  +0500
-      KUYT   +0300
+      KUYT   +0400
       KWAT   -1200
       L      -1100
       LHDT   +1100
@@ -722,10 +694,8 @@ The following timezones are defined:
       NEST   +0120
       NET    +0020
       NFST   +1230
-      NFT    +1130
+      NFT    +1100
       NMT    +1112
-      NOVST  +0700
-      NOVT   +0600
       NPT    +0545
       NRT    +1200
       NST    -0330
@@ -739,8 +709,6 @@ The following timezones are defined:
       O      +0200
       OMSST  +0700
       OMST   +0600
-      ORAST  +0500
-      ORAT   +0500
       P      +0300
       PDDT   -0600
       PDT    -0700
@@ -767,8 +735,6 @@ The following timezones are defined:
       PYT    -0400
       Q      +0400
       QMT    -0514
-      QYZST  +0700
-      QYZT   +0600
       R      +0500
       RET    +0400
       ROK    +0900
@@ -785,8 +751,6 @@ The following timezones are defined:
       SDMT   -0440
       SDT    -1000
       SGT    +0800
-      SHEST  +0600
-      SHET   +0500
       SMT    +0216
       SRET   +1100
       SRT    -0300
@@ -817,8 +781,6 @@ The following timezones are defined:
       U      +0800
       ULAST  +0900
       ULAT   +0800
-      URAST  +0500
-      URAT   +0400
       UT     +0000
       UTC    +0000
       UYHST  -0230

@@ -6,9 +6,9 @@ Date::Manip::Offset::off050;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:03 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -35,9 +35,9 @@ $Offset        = '+02:00:00';
       'eet',
       'asia/beirut',
       'europe/sofia',
-      'africa/cairo',
       'asia/gaza',
       'asia/hebron',
+      'africa/cairo',
       'africa/johannesburg',
       'africa/maputo',
       'europe/istanbul',
@@ -45,27 +45,27 @@ $Offset        = '+02:00:00';
       'asia/jerusalem',
       'asia/damascus',
       'europe/vilnius',
-      'asia/nicosia',
       'europe/helsinki',
       'europe/tallinn',
+      'asia/nicosia',
       'europe/kiev',
       'europe/zaporozhye',
       'europe/riga',
       'asia/amman',
       'europe/bucharest',
       'europe/chisinau',
+      'europe/kaliningrad',
       'africa/tripoli',
       'europe/uzhgorod',
       'etc/gmt+2',
       'o',
       'europe/simferopol',
-      'europe/kaliningrad',
       'europe/minsk',
       'africa/khartoum',
       'africa/windhoek',
       'europe/moscow',
-      'europe/warsaw',
       'europe/ulyanovsk',
+      'europe/warsaw',
       ],
    1 => [
       'cet',
@@ -93,9 +93,10 @@ $Offset        = '+02:00:00';
       'europe/andorra',
       'africa/ceuta',
       'africa/windhoek',
+      'antarctica/troll',
+      'africa/tripoli',
       'africa/tunis',
       'europe/vilnius',
-      'africa/tripoli',
       'europe/lisbon',
       'africa/ndjamena',
       'africa/algiers',
@@ -111,7 +112,6 @@ $Offset        = '+02:00:00';
       'europe/athens',
       'europe/kiev',
       'europe/zaporozhye',
-      'antarctica/troll',
       ],
 );
 

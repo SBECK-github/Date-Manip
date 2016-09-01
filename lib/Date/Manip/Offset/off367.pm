@@ -6,9 +6,9 @@ Date::Manip::Offset::off367;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:04 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -43,13 +43,13 @@ $Offset        = '-06:00:00';
       'america/costa_rica',
       'america/el_salvador',
       'america/tegucigalpa',
-      'america/cancun',
       'america/matamoros',
       'america/merida',
       'america/monterrey',
       'america/bahia_banderas',
       'america/mexico_city',
       'america/managua',
+      'america/resolute',
       'america/rankin_inlet',
       'america/regina',
       'america/swift_current',
@@ -60,10 +60,10 @@ $Offset        = '-06:00:00';
       'america/north_dakota/beulah',
       'etc/gmt-6',
       'f',
+      'america/cancun',
       'america/indiana/petersburg',
       'america/indiana/vincennes',
       'america/indiana/winamac',
-      'america/resolute',
       'america/cambridge_bay',
       'america/kentucky/monticello',
       'america/iqaluit',

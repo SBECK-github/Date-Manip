@@ -51,10 +51,10 @@ ywt =>
 
 +06:30:00 stdonly =>
    Indian/Cocos
+   Asia/Rangoon
    Asia/Colombo
    Asia/Dhaka
    Asia/Kolkata
-   Asia/Rangoon
 
 +06:30:00 dstonly =>
    Asia/Colombo
@@ -63,10 +63,10 @@ ywt =>
 
 +06:30:00 std =>
    Indian/Cocos
+   Asia/Rangoon
    Asia/Colombo
    Asia/Dhaka
    Asia/Kolkata
-   Asia/Rangoon
    Asia/Karachi
 
 +06:30:00 dst =>
@@ -74,8 +74,8 @@ ywt =>
    Asia/Karachi
    Asia/Kolkata
    Indian/Cocos
-   Asia/Dhaka
    Asia/Rangoon
+   Asia/Dhaka
 
 #
 # Abbrev/offset tests
@@ -104,23 +104,23 @@ dstonly
 stdonly
    =>
    Atlantic/South_Georgia
-   Etc/GMT-2
    America/Noronha
+   Etc/GMT-2
+   B
    America/Scoresbysund
    Atlantic/Cape_Verde
    Atlantic/Azores
-   B
 
 -02:00
 stdonly
    =>
    Atlantic/South_Georgia
-   Etc/GMT-2
    America/Noronha
+   Etc/GMT-2
+   B
    America/Scoresbysund
    Atlantic/Cape_Verde
    Atlantic/Azores
-   B
 
 [ 2001 01 01 00 00 00 ]                   => America/New_York
 

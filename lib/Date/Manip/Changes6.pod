@@ -29,7 +29,7 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.56  (planned 2016-12-01)
 
-=head1 VERSION 6.55  (planned 2016-09-01)
+=head1 VERSION 6.55  2016-09-01
 
 =over 4
 
@@ -49,6 +49,10 @@ correctly checked.  Albert Hilazo
 Some methods of creating new objects based on existing objects did not
 correctly use the existing object.  Bug has never been reported, but was
 discovered when adding tests to get 100% coverage.
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2016f)
 
 =item Test fixes
 

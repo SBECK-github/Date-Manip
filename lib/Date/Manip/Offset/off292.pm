@@ -6,9 +6,9 @@ Date::Manip::Offset::off292;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:04 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -39,16 +39,18 @@ $Offset        = '-04:00:00';
       'america/moncton',
       'america/martinique',
       'america/port_of_spain',
-      'america/campo_grande',
       'america/boa_vista',
+      'america/campo_grande',
       'america/cuiaba',
       'america/manaus',
       'america/porto_velho',
       'america/thule',
+      'america/santiago',
       'atlantic/bermuda',
       'america/asuncion',
       'america/barbados',
       'america/la_paz',
+      'america/caracas',
       'america/curacao',
       'america/goose_bay',
       'america/santo_domingo',
@@ -56,14 +58,12 @@ $Offset        = '-04:00:00';
       'america/grand_turk',
       'etc/gmt-4',
       'd',
-      'america/santiago',
       'antarctica/palmer',
       'america/eirunepe',
       'america/rio_branco',
       'atlantic/stanley',
       'america/argentina/san_luis',
       'america/santarem',
-      'america/caracas',
       'america/argentina/catamarca',
       'america/argentina/la_rioja',
       'america/argentina/mendoza',
@@ -94,11 +94,11 @@ $Offset        = '-04:00:00';
       'america/indiana/vevay',
       'america/indiana/vincennes',
       'america/indiana/winamac',
-      'america/port-au-prince',
       'america/pangnirtung',
       'america/kentucky/monticello',
       'america/indiana/petersburg',
       'america/grand_turk',
+      'america/port-au-prince',
       'america/cancun',
       'america/eirunepe',
       'america/lima',

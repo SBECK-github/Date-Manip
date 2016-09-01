@@ -6,9 +6,9 @@ Date::Manip::Offset::off021;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:06 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:03 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -63,8 +63,8 @@ $Offset        = '+01:00:00';
       'africa/windhoek',
       'etc/gmt+1',
       'n',
-      'europe/vilnius',
       'africa/tripoli',
+      'europe/vilnius',
       'europe/lisbon',
       'europe/uzhgorod',
       'africa/casablanca',
@@ -86,10 +86,11 @@ $Offset        = '+01:00:00';
       'europe/lisbon',
       'europe/london',
       'europe/dublin',
+      'africa/casablanca',
       'atlantic/madeira',
+      'africa/el_aaiun',
       'atlantic/canary',
       'atlantic/faroe',
-      'africa/casablanca',
       'africa/algiers',
       'africa/ceuta',
       'europe/gibraltar',
@@ -98,7 +99,6 @@ $Offset        = '+01:00:00';
       'europe/paris',
       'europe/brussels',
       'europe/luxembourg',
-      'africa/el_aaiun',
       ],
 );
 

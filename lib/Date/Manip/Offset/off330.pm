@@ -6,9 +6,9 @@ Date::Manip::Offset::off330;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:04 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,10 +38,11 @@ $Offset        = '-05:00:00';
       'america/lima',
       'america/panama',
       'america/thunder_bay',
-      'america/grand_turk',
       'america/jamaica',
       'america/nassau',
       'america/bogota',
+      'america/eirunepe',
+      'america/rio_branco',
       'america/detroit',
       'america/port-au-prince',
       'america/havana',
@@ -55,19 +56,18 @@ $Offset        = '-05:00:00';
       'america/kentucky/louisville',
       'america/indiana/vincennes',
       'america/indiana/petersburg',
+      'america/cancun',
       'america/pangnirtung',
       'america/kentucky/monticello',
-      'america/resolute',
       'etc/gmt-5',
       'e',
-      'america/eirunepe',
-      'america/rio_branco',
+      'america/grand_turk',
+      'america/resolute',
       'america/indiana/knox',
       'america/indiana/tell_city',
       'america/rankin_inlet',
       'america/santo_domingo',
       'america/cambridge_bay',
-      'america/cancun',
       'america/managua',
       'pacific/galapagos',
       'america/merida',
@@ -86,6 +86,7 @@ $Offset        = '-05:00:00';
       'america/mexico_city',
       'america/rankin_inlet',
       'america/resolute',
+      'pacific/easter',
       'america/matamoros',
       'america/monterrey',
       'america/north_dakota/center',
@@ -93,7 +94,6 @@ $Offset        = '-05:00:00';
       'america/north_dakota/new_salem',
       'america/bahia_banderas',
       'america/north_dakota/beulah',
-      'pacific/easter',
       'america/cancun',
       'america/indiana/petersburg',
       'america/indiana/vincennes',

@@ -6,9 +6,9 @@ Date::Manip::Offset::off000;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:06 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:03 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -35,8 +35,8 @@ $Offset        = '+00:00:00';
       'wet',
       'europe/london',
       'atlantic/faroe',
-      'africa/abidjan',
       'europe/lisbon',
+      'africa/abidjan',
       'africa/casablanca',
       'europe/dublin',
       'africa/accra',
@@ -51,6 +51,7 @@ $Offset        = '+00:00:00';
       'ut',
       'utc',
       'z',
+      'antarctica/troll',
       'atlantic/azores',
       'africa/ceuta',
       'africa/algiers',
@@ -69,16 +70,15 @@ $Offset        = '+00:00:00';
       'america/yellowknife',
       'america/pangnirtung',
       'america/cambridge_bay',
-      'antarctica/troll',
-      'antarctica/rothera',
       'antarctica/casey',
       'antarctica/davis',
+      'antarctica/dumontdurville',
+      'antarctica/macquarie',
+      'antarctica/mawson',
       'antarctica/palmer',
+      'antarctica/rothera',
       'antarctica/syowa',
       'antarctica/vostok',
-      'antarctica/dumontdurville',
-      'antarctica/mawson',
-      'antarctica/macquarie',
       ],
    1 => [
       'atlantic/azores',

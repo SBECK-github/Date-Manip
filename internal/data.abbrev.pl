@@ -253,8 +253,6 @@
    'NFST'        => 'Pacific/Norfolk',
    'NFT'         => 'Pacific/Norfolk',
    'NMT'         => 'Pacific/Norfolk',
-   'NOVST'       => 'Asia/Novosibirsk',
-   'NOVT'        => 'Asia/Novosibirsk',
    'NPT'         => 'Asia/Kathmandu',
    'NRT'         => 'Pacific/Nauru',
    'NST'         => 'America/St_Johns',

@@ -6,9 +6,9 @@ Date::Manip::Offset::off267;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:04 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -51,18 +51,18 @@ $Offset        = '-03:00:00';
       'america/argentina/rio_gallegos',
       'america/argentina/salta',
       'america/argentina/san_juan',
+      'america/argentina/san_luis',
       'america/argentina/tucuman',
       'america/argentina/ushuaia',
       'america/miquelon',
+      'atlantic/stanley',
       'america/paramaribo',
       'america/santarem',
       'etc/gmt-3',
       'c',
       'antarctica/rothera',
-      'america/argentina/san_luis',
       'america/danmarkshavn',
       'america/guyana',
-      'atlantic/stanley',
       'america/asuncion',
       'antarctica/palmer',
       ],
@@ -70,16 +70,16 @@ $Offset        = '-03:00:00';
       'america/halifax',
       'america/glace_bay',
       'america/moncton',
-      'america/argentina/san_luis',
       'america/campo_grande',
       'america/cuiaba',
-      'atlantic/stanley',
-      'america/goose_bay',
       'america/santiago',
+      'america/goose_bay',
       'atlantic/bermuda',
       'america/asuncion',
       'america/thule',
       'antarctica/palmer',
+      'atlantic/stanley',
+      'america/argentina/san_luis',
       'america/argentina/buenos_aires',
       'america/argentina/catamarca',
       'america/argentina/cordoba',

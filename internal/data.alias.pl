@@ -342,8 +342,6 @@ foreach my $hpuxz (keys %hpux_zones) {
    'MSK-3MSD'      => 'Europe/Moscow',
    'MST7MPT'       => [ 'America/Denver' => 'America/Boise' ],
    'NCT-11NCST'    => 'Pacific/Noumea',
-   'NOVT-6NOVST'   => 'Asia/Novosibirsk',
-   'NOVT-7NOVST'   => 'Asia/Novosibirsk',
    'NST11NPT'      => 'America/Adak',
    'NZST-12NZDT'   => 'Pacific/Auckland',
    'OMST-5OMSST'   => 'Asia/Omsk',

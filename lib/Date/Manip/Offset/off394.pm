@@ -6,9 +6,9 @@ Date::Manip::Offset::off394;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:04 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -34,13 +34,14 @@ $Offset        = '-08:00:00';
    0 => [
       'america/los_angeles',
       'america/vancouver',
-      'america/metlakatla',
       'america/tijuana',
       'america/whitehorse',
       'america/dawson',
       'pacific/pitcairn',
       'etc/gmt-8',
       'h',
+      'america/fort_nelson',
+      'america/metlakatla',
       'america/juneau',
       'america/sitka',
       'america/inuvik',
@@ -50,7 +51,6 @@ $Offset        = '-08:00:00';
       'america/mazatlan',
       'america/boise',
       'america/creston',
-      'america/fort_nelson',
       ],
    1 => [
       'america/juneau',
@@ -58,9 +58,9 @@ $Offset        = '-08:00:00';
       'america/anchorage',
       'america/nome',
       'america/sitka',
+      'america/metlakatla',
       'america/dawson',
       'america/whitehorse',
-      'america/metlakatla',
       ],
 );
 

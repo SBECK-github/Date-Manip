@@ -6,9 +6,9 @@ Date::Manip::Offset::off136;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon May 23 17:39:07 CEST 2016
-#    Data version: tzdata2016d
-#    Code version: tzcode2016d
+#    Generated on: Fri Aug 19 08:14:03 EDT 2016
+#    Data version: tzdata2016f
+#    Code version: tzcode2016f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -35,36 +35,36 @@ $Offset        = '+07:00:00';
       'indian/christmas',
       'asia/ho_chi_minh',
       'asia/bangkok',
+      'asia/barnaul',
+      'asia/krasnoyarsk',
       'asia/novokuznetsk',
       'asia/novosibirsk',
+      'asia/tomsk',
       'asia/jakarta',
       'asia/hovd',
       'asia/pontianak',
-      'asia/omsk',
-      'asia/krasnoyarsk',
       'etc/gmt+7',
       't',
       'antarctica/davis',
+      'asia/omsk',
       'asia/irkutsk',
       'asia/choibalsan',
       'asia/ulaanbaatar',
       'asia/kuala_lumpur',
       'asia/singapore',
-      'asia/barnaul',
-      'asia/tomsk',
       ],
    1 => [
       'asia/omsk',
+      'asia/barnaul',
       'asia/novokuznetsk',
       'asia/novosibirsk',
+      'asia/tomsk',
       'asia/dhaka',
       'asia/almaty',
       'asia/krasnoyarsk',
       'asia/bishkek',
       'asia/dushanbe',
       'asia/tashkent',
-      'asia/barnaul',
-      'asia/tomsk',
       ],
 );
 
