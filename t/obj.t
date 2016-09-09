@@ -16,6 +16,7 @@ if (! defined $vers) {
    $vers = DateManipVersion();
 }
 
+$ENV{'TZ'} = 'America/Chicago';
 use Date::Manip;
 if (DateManipVersion() >= 6.00) {
    $t->feature("DM6",1);
@@ -391,7 +392,7 @@ o0109  new  Base o0101  [ defaults 1 ]
 
 - version o0002    => $vers
 
-- version o0002 1  => '$vers [america/new_york]'
+- version o0002 1  => '$vers [america/chicago]'
 
 ";
 
