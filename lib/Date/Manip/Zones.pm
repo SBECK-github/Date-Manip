@@ -18,7 +18,7 @@ use warnings;
 require 5.010000;
 
 our ($VERSION);
-$VERSION='6.56';
+$VERSION='6.57';
 END { undef $VERSION; }
 
 our ($TzdataVersion,$TzcodeVersion,
