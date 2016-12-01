@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:14:48 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 12:20:38 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -212,6 +212,7 @@ database:
      Asia/Aqtau                           asaqta00
      Asia/Aqtobe                          asaqto00
      Asia/Ashgabat                        asashg00
+     Asia/Atyrau                          asatyr00
      Asia/Baghdad                         asbagh00
      Asia/Baku                            asbaku00
      Asia/Bangkok                         asbang00
@@ -227,6 +228,7 @@ database:
      Asia/Dili                            asdili00
      Asia/Dubai                           asduba00
      Asia/Dushanbe                        asdush00
+     Asia/Famagusta                       asfama00
      Asia/Gaza                            asgaza00
      Asia/Hebron                          ashebr00
      Asia/Ho_Chi_Minh                     asho_c00
@@ -258,7 +260,6 @@ database:
      Asia/Pyongyang                       aspyon00
      Asia/Qatar                           asqata00
      Asia/Qyzylorda                       asqyzy00
-     Asia/Rangoon                         asrang00
      Asia/Riyadh                          asriya00
      Asia/Sakhalin                        assakh00
      Asia/Samarkand                       assama00
@@ -278,6 +279,7 @@ database:
      Asia/Ust-Nera                        asustm00
      Asia/Vladivostok                     asvlad00
      Asia/Yakutsk                         asyaku00
+     Asia/Yangon                          asyang00
      Asia/Yekaterinburg                   asyeka00
      Asia/Yerevan                         asyere00
      Atlantic/Azores                      atazor00
@@ -335,6 +337,7 @@ database:
      Europe/Riga                          euriga00
      Europe/Rome                          eurome00
      Europe/Samara                        eusama00
+     Europe/Saratov                       eusara00
      Europe/Simferopol                    eusimf00
      Europe/Sofia                         eusofi00
      Europe/Stockholm                     eustoc00
@@ -560,6 +563,7 @@ The zoneinfo database provides several standard aliases, including:
      Asia/Macao                           Asia/Macau
      Asia/Muscat                          Asia/Dubai
      Asia/Phnom_Penh                      Asia/Bangkok
+     Asia/Rangoon                         Asia/Yangon
      Asia/Saigon                          Asia/Ho_Chi_Minh
      Asia/Tel_Aviv                        Asia/Jerusalem
      Asia/Thimbu                          Asia/Thimphu
@@ -692,17 +696,12 @@ default alias can be overridden as described above.
                                           America/Sitka
                                           America/Yakutat
                                           America/Metlakatla
-     AMT-3AMST                            Asia/Yerevan
-     AMT-4AMST                            Asia/Yerevan
      AMT4AMST                             America/Campo_Grande
                                           America/Cuiaba
                                           America/Boa_Vista
                                           America/Manaus
                                           America/Porto_Velho
                                           America/Santarem
-     ANAT-11ANAST                         Asia/Anadyr
-     ANAT-12ANAST                         Asia/Anadyr
-     ANAT-13ANAST                         Asia/Anadyr
      ART3ARST                             America/Argentina/Buenos_Aires
                                           America/Argentina/Cordoba
                                           America/Argentina/Tucuman
@@ -729,7 +728,6 @@ default alias can be overridden as described above.
                                           America/Argentina/Tucuman
                                           America/Argentina/Ushuaia
                                           Antarctica/Palmer
-     ASHT-5ASHST                          Asia/Ashgabat
      AST-3ADT                             Asia/Baghdad
      AST4ADT                              America/Halifax
                                           America/Glace_Bay
@@ -750,8 +748,6 @@ default alias can be overridden as described above.
      AWST-8AWDT                           Australia/Perth
      AZOT1AZOST                           Atlantic/Azores
      AZOT2AZOST                           Atlantic/Azores
-     AZT-4AZST                            Asia/Baku
-     BAKT-4BAKST                          Asia/Baku
      BDT-6BDST                            Asia/Dhaka
      BRT3BRST                             America/Sao_Paulo
                                           America/Araguaina
@@ -861,11 +857,9 @@ default alias can be overridden as described above.
                                           America/Menominee
                                           America/Rainy_River
                                           America/Winnipeg
-     DUST-6DUSST                          Asia/Dushanbe
      EAST6EASST                           Pacific/Easter
      EAST7EASST                           Pacific/Easter
      EET-2EEST                            EET
-                                          Europe/Istanbul
                                           Asia/Beirut
                                           Asia/Damascus
                                           Europe/Athens
@@ -883,14 +877,14 @@ default alias can be overridden as described above.
                                           Europe/Zaporozhye
                                           Europe/Kiev
                                           Europe/Uzhgorod
+                                          Europe/Istanbul
+                                          Asia/Famagusta
                                           Europe/Simferopol
                                           Europe/Kaliningrad
                                           Europe/Minsk
                                           Africa/Cairo
                                           Europe/Moscow
                                           Europe/Warsaw
-     EET-2EET                             Asia/Gaza
-                                          Asia/Hebron
      EGT1EGST                             America/Scoresbysund
      EST5EDT                              America/New_York
                                           America/Nipigon
@@ -923,9 +917,6 @@ default alias can be overridden as described above.
      FKT3FKST                             Atlantic/Stanley
      FKT4FKST                             Atlantic/Stanley
      FNT2FNST                             America/Noronha
-     FRUT-6FRUST                          Asia/Bishkek
-     GET-3GEST                            Asia/Tbilisi
-     GET-4GEST                            Asia/Tbilisi
      GMT0BST                              Europe/London
                                           Europe/Gibraltar
                                           Europe/Dublin
@@ -933,8 +924,6 @@ default alias can be overridden as described above.
      HKT-8HKST                            Asia/Hong_Kong
      HOVT-7HOVST                          Asia/Hovd
      HST10HDT                             America/Adak
-     IRKT-7IRKST                          Asia/Irkutsk
-     IRKT-8IRKST                          Asia/Irkutsk
      IST-2EEST                            Asia/Gaza
                                           Asia/Hebron
      IST-2IDT                             Asia/Jerusalem
@@ -942,19 +931,8 @@ default alias can be overridden as described above.
                                           Asia/Hebron
      IST1ISST                             Atlantic/Reykjavik
      JST-9JDT                             Asia/Tokyo
-     KGT-5FRUST                           Asia/Bishkek
-     KGT-5KGST                            Asia/Bishkek
-     KRAT-6KRAST                          Asia/Krasnoyarsk
-     KRAT-7KRAST                          Asia/Krasnoyarsk
      KST-9KDT                             Asia/Seoul
-     KUYT-4KUYST                          Europe/Samara
      MADT1MADST                           Atlantic/Madeira
-     MAGT-10MAGST                         Asia/Magadan
-                                          Asia/Srednekolymsk
-                                          Asia/Ust-Nera
-     MAGT-11MAGST                         Asia/Magadan
-                                          Asia/Srednekolymsk
-                                          Asia/Ust-Nera
      MET-1MEST                            MET
      MOT-8MOST                            Asia/Macau
      MSK-3CEST                            Europe/Minsk
@@ -963,10 +941,8 @@ default alias can be overridden as described above.
                                           Europe/Tallinn
                                           Europe/Vilnius
      MSK-3MSD                             Europe/Moscow
-                                          Europe/Volgograd
                                           Europe/Simferopol
                                           Europe/Zaporozhye
-                                          Europe/Samara
                                           Europe/Chisinau
                                           Europe/Kiev
                                           Europe/Minsk
@@ -1006,11 +982,7 @@ default alias can be overridden as described above.
      NST11NPT                             America/Adak
                                           America/Nome
      NZST-12NZDT                          Pacific/Auckland
-     OMST-5OMSST                          Asia/Omsk
-     OMST-6OMSST                          Asia/Omsk
      PET5PEST                             America/Lima
-     PETT-11PETST                         Asia/Kamchatka
-     PETT-12PETST                         Asia/Kamchatka
      PHT-8PHST                            Asia/Manila
      PKT-5PKST                            Asia/Karachi
      PMST3PMDT                            America/Miquelon
@@ -1034,26 +1006,9 @@ default alias can be overridden as described above.
                                           America/Tijuana
                                           America/Vancouver
      PYT4PYST                             America/Asuncion
-     SAKT-10SAKST                         Asia/Sakhalin
-     SAKT-11SAKST                         Asia/Sakhalin
-     SAMT-3SAMST                          Europe/Samara
-     SAMT-4SAMST                          Europe/Samara
-     SAMT-5SAMST                          Asia/Samarkand
      SAST-2SAST                           Africa/Johannesburg
-     SVET-4SVEST                          Asia/Yekaterinburg
-     SVET-5SVEST                          Asia/Yekaterinburg
-     TAST-6TASST                          Asia/Tashkent
-     TBIT-4TBIST                          Asia/Tbilisi
-     TJT-5DUSST                           Asia/Dushanbe
-     TOT-13TOST                           Pacific/Tongatapu
-     TRT-3TRST                            Europe/Istanbul
      ULAT-8ULAST                          Asia/Ulaanbaatar
      UYT3UYST                             America/Montevideo
-     VLAT-10VLAST                         Asia/Vladivostok
-                                          Asia/Khandyga
-     VLAT-9VLAST                          Asia/Vladivostok
-     VOLT-3VOLST                          Europe/Volgograd
-     VOLT-4VOLST                          Europe/Volgograd
      VUT-11VUST                           Pacific/Efate
      WART4WARST                           America/Argentina/Mendoza
                                           America/Argentina/Jujuy
@@ -1077,14 +1032,6 @@ default alias can be overridden as described above.
      WGT3WGST                             America/Godthab
                                           America/Danmarkshavn
      WSST-13WSDT                          Pacific/Apia
-     YAKT-8YAKST                          Asia/Chita
-                                          Asia/Khandyga
-                                          Asia/Yakutsk
-     YAKT-9YAKST                          Asia/Chita
-                                          Asia/Yakutsk
-                                          Asia/Khandyga
-     YEKT-5YEKST                          Asia/Yekaterinburg
-     YERT-4YERST                          Asia/Yerevan
      YST9YDT                              America/Yakutat
                                           America/Dawson
                                           America/Whitehorse
@@ -1186,7 +1133,7 @@ Aliases include:
      Morocco Standard Time                Africa/Casablanca
      Mountain Standard Time               America/Denver
      Mountain Standard Time (Mexico)      America/Chihuahua
-     Myanmar Standard Time                Asia/Rangoon
+     Myanmar Standard Time                Asia/Yangon
      N. Central Asia Standard Time        Asia/Novosibirsk
      NST3:30NDT                           America/St_Johns
      NST3:30NDT#Canada                    America/St_Johns
@@ -1882,7 +1829,6 @@ L<Date::Manip::TZ> module.
                         Africa/Cairo
                         Africa/Johannesburg
                         Africa/Maputo
-                        Europe/Istanbul
                         Europe/Athens
                         Asia/Jerusalem
                         Asia/Damascus
@@ -1899,6 +1845,8 @@ L<Date::Manip::TZ> module.
                         Europe/Kaliningrad
                         Africa/Tripoli
                         Europe/Uzhgorod
+                        Europe/Istanbul
+                        Asia/Famagusta
                         Etc/GMT+2
                         O
                         Europe/Simferopol
@@ -1913,6 +1861,7 @@ L<Date::Manip::TZ> module.
      0      +02:10:08   Africa/Khartoum
      0      +02:10:20   Africa/Maputo
      0      +02:13:28   Asia/Nicosia
+     0      +02:15:48   Asia/Famagusta
      0      +02:16:00   Europe/Simferopol
      0      +02:16:24   Europe/Simferopol
      0      +02:17:52   Asia/Gaza
@@ -1943,7 +1892,10 @@ L<Date::Manip::TZ> module.
                         Europe/Simferopol
                         Asia/Riyadh
                         Asia/Qatar
+                        Europe/Istanbul
                         Africa/Khartoum
+                        Asia/Famagusta
+                        Europe/Saratov
                         Europe/Ulyanovsk
                         Europe/Astrakhan
                         Etc/GMT+3
@@ -1961,7 +1913,7 @@ L<Date::Manip::TZ> module.
                         Europe/Riga
                         Europe/Tallinn
                         Europe/Vilnius
-                        Europe/Istanbul
+     0      +03:04:18   Europe/Saratov
      0      +03:06:52   Asia/Riyadh
      0      +03:12:12   Europe/Astrakhan
      0      +03:13:36   Europe/Ulyanovsk
@@ -1972,6 +1924,7 @@ L<Date::Manip::TZ> module.
      0      +03:25:24   Asia/Oral
      0      +03:25:44   Asia/Tehran
      0      +03:26:08   Asia/Qatar
+     0      +03:27:44   Asia/Atyrau
      0      +03:30:00   Asia/Tehran
      0      +03:41:12   Asia/Dubai
      0      +03:41:48   Indian/Mahe
@@ -1986,6 +1939,7 @@ L<Date::Manip::TZ> module.
                         Asia/Dubai
                         Europe/Astrakhan
                         Europe/Samara
+                        Europe/Saratov
                         Europe/Ulyanovsk
                         Asia/Baku
                         Asia/Tbilisi
@@ -1997,6 +1951,7 @@ L<Date::Manip::TZ> module.
                         Europe/Moscow
                         Europe/Simferopol
                         Asia/Aqtau
+                        Asia/Atyrau
                         Asia/Oral
                         Asia/Yekaterinburg
                         Asia/Aqtobe
@@ -2023,6 +1978,7 @@ L<Date::Manip::TZ> module.
                         Asia/Aqtau
                         Asia/Aqtobe
                         Asia/Ashgabat
+                        Asia/Atyrau
                         Asia/Oral
                         Asia/Samarkand
                         Asia/Yekaterinburg
@@ -2080,6 +2036,7 @@ L<Date::Manip::TZ> module.
                         Asia/Tashkent
                         Asia/Aqtau
                         Asia/Aqtobe
+                        Asia/Atyrau
                         Asia/Oral
                         Asia/Samarkand
                         Asia/Hovd
@@ -2087,10 +2044,10 @@ L<Date::Manip::TZ> module.
      0      +06:01:40   Asia/Dhaka
      0      +06:06:36   Asia/Hovd
      0      +06:11:26   Asia/Krasnoyarsk
-     0      +06:24:40   Asia/Rangoon
+     0      +06:24:40   Asia/Yangon
      0      +06:27:40   Indian/Cocos
      0      +06:30:00   Indian/Cocos
-                        Asia/Rangoon
+                        Asia/Yangon
                         Asia/Colombo
                         Asia/Dhaka
                         Asia/Kolkata
@@ -2205,8 +2162,8 @@ L<Date::Manip::TZ> module.
                         Asia/Kuching
                         Asia/Makassar
                         Asia/Pontianak
-                        Asia/Rangoon
                         Asia/Singapore
+                        Asia/Yangon
                         Pacific/Bougainville
                         Asia/Ho_Chi_Minh
                         Asia/Manila
@@ -2281,6 +2238,7 @@ L<Date::Manip::TZ> module.
                         Pacific/Norfolk
                         Etc/GMT+11
                         X
+                        Antarctica/Casey
                         Antarctica/Macquarie
                         Asia/Ust-Nera
                         Asia/Vladivostok
@@ -2289,7 +2247,6 @@ L<Date::Manip::TZ> module.
                         Asia/Khandyga
                         Pacific/Kwajalein
                         Pacific/Majuro
-                        Antarctica/Casey
      0      +11:05:48   Pacific/Noumea
      0      +11:06:28   Pacific/Wake
      0      +11:07:40   Pacific/Nauru
@@ -2604,7 +2561,6 @@ L<Date::Manip::TZ> module.
                         Europe/Zaporozhye
      1      +02:36:34   Europe/Riga
      1      +03:00:00   EET
-                        Europe/Istanbul
                         Asia/Beirut
                         Asia/Damascus
                         Europe/Athens
@@ -2623,6 +2579,8 @@ L<Date::Manip::TZ> module.
                         Europe/Kiev
                         Europe/Zaporozhye
                         Europe/Uzhgorod
+                        Europe/Istanbul
+                        Asia/Famagusta
                         Africa/Cairo
                         Europe/Simferopol
                         Europe/Kaliningrad
@@ -2637,6 +2595,7 @@ L<Date::Manip::TZ> module.
                         Europe/Warsaw
      1      +03:31:19   Europe/Moscow
      1      +04:00:00   Europe/Moscow
+                        Europe/Saratov
                         Europe/Volgograd
                         Europe/Astrakhan
                         Europe/Kirov
@@ -2667,6 +2626,7 @@ L<Date::Manip::TZ> module.
                         Asia/Tbilisi
                         Asia/Oral
                         Asia/Aqtau
+                        Asia/Atyrau
                         Asia/Aqtobe
                         Asia/Ashgabat
                         Asia/Qyzylorda
@@ -2674,6 +2634,7 @@ L<Date::Manip::TZ> module.
                         Europe/Astrakhan
                         Europe/Kirov
                         Europe/Ulyanovsk
+                        Europe/Saratov
                         Europe/Volgograd
                         Asia/Tehran
                         Europe/Moscow
@@ -2682,6 +2643,7 @@ L<Date::Manip::TZ> module.
                         Asia/Bishkek
                         Asia/Aqtobe
                         Asia/Qyzylorda
+                        Asia/Atyrau
                         Asia/Aqtau
                         Asia/Samarkand
                         Asia/Almaty
@@ -2770,8 +2732,8 @@ L<Date::Manip::TZ> module.
                         Asia/Kamchatka
                         Asia/Anadyr
      1      +13:45:00   Pacific/Chatham
-     1      +14:00:00   Pacific/Apia
-                        Pacific/Tongatapu
+     1      +14:00:00   Pacific/Tongatapu
+                        Pacific/Apia
                         Asia/Anadyr
 
 
@@ -2862,7 +2824,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Metlakatla
      AMST             America/Campo_Grande
                       America/Cuiaba
-                      Asia/Yerevan
                       America/Boa_Vista
                       America/Manaus
                       America/Porto_Velho
@@ -2872,15 +2833,12 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Cuiaba
                       America/Manaus
                       America/Porto_Velho
-                      Asia/Yerevan
                       America/Eirunepe
                       America/Rio_Branco
                       America/Santarem
                       Europe/Amsterdam
                       America/Asuncion
                       Europe/Athens
-     ANAST            Asia/Anadyr
-     ANAT             Asia/Anadyr
      ANT              America/Curacao
      APT              America/Halifax
                       America/Blanc-Sablon
@@ -2914,8 +2872,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Argentina/Tucuman
                       America/Argentina/Ushuaia
                       Antarctica/Palmer
-     ASHST            Asia/Ashgabat
-     ASHT             Asia/Ashgabat
      AST              America/Blanc-Sablon
                       America/Puerto_Rico
                       America/Glace_Bay
@@ -2937,7 +2893,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Miquelon
      AWDT             Australia/Perth
      AWST             Australia/Perth
-                      Antarctica/Casey
      AWT              America/Halifax
                       America/Blanc-Sablon
                       America/Glace_Bay
@@ -2947,11 +2902,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      AZOMT            Atlantic/Azores
      AZOST            Atlantic/Azores
      AZOT             Atlantic/Azores
-     AZST             Asia/Baku
-     AZT              Asia/Baku
      B                B
-     BAKST            Asia/Baku
-     BAKT             Asia/Baku
      BDST             Asia/Dhaka
                       Europe/Gibraltar
                       Europe/London
@@ -2998,13 +2949,12 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Dublin
      BTT              Asia/Thimphu
      BURT             Asia/Dhaka
-                      Asia/Rangoon
+                      Asia/Yangon
                       Asia/Kolkata
      C                C
      CANT             Atlantic/Canary
      CAPT             America/Anchorage
      CAST             Africa/Khartoum
-                      Antarctica/Casey
      CAT              Africa/Maputo
                       Africa/Khartoum
                       Africa/Windhoek
@@ -3077,7 +3027,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Gibraltar
                       Europe/Andorra
                       Africa/Ceuta
-                      Antarctica/Troll
                       Africa/Tripoli
                       Africa/Tunis
                       Europe/Vilnius
@@ -3252,11 +3201,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      ChST             Pacific/Guam
      D                D
      DACT             Asia/Dhaka
-     DAVT             Antarctica/Davis
-     DDUT             Antarctica/DumontDUrville
      DMT              Europe/Dublin
-     DUSST            Asia/Dushanbe
-     DUST             Asia/Dushanbe
      E                E
      EASST            Pacific/Easter
      EAST             Pacific/Easter
@@ -3288,15 +3233,14 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Indiana/Tell_City
                       America/Santo_Domingo
      EEST             EET
-                      Europe/Istanbul
                       Asia/Beirut
                       Asia/Damascus
                       Europe/Athens
                       Europe/Bucharest
                       Europe/Chisinau
-                      Europe/Helsinki
                       Asia/Gaza
                       Asia/Hebron
+                      Europe/Helsinki
                       Asia/Amman
                       Asia/Nicosia
                       Europe/Sofia
@@ -3306,12 +3250,13 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Kiev
                       Europe/Zaporozhye
                       Europe/Uzhgorod
+                      Europe/Istanbul
+                      Asia/Famagusta
                       Africa/Cairo
                       Europe/Simferopol
                       Europe/Kaliningrad
                       Europe/Minsk
                       Europe/Moscow
-                      Europe/Samara
                       Europe/Warsaw
      EET              EET
                       Asia/Beirut
@@ -3319,7 +3264,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Asia/Gaza
                       Asia/Hebron
                       Africa/Cairo
-                      Europe/Istanbul
                       Europe/Athens
                       Asia/Damascus
                       Europe/Vilnius
@@ -3335,6 +3279,8 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Africa/Tripoli
                       Europe/Kaliningrad
                       Europe/Uzhgorod
+                      Europe/Istanbul
+                      Asia/Famagusta
                       Europe/Simferopol
                       Europe/Minsk
                       Europe/Moscow
@@ -3389,8 +3335,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Thunder_Bay
                       America/Toronto
      F                F
-     FET              Europe/Kaliningrad
-                      Europe/Minsk
      FFMT             America/Martinique
      FJST             Pacific/Fiji
      FJT              Pacific/Fiji
@@ -3399,14 +3343,10 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      FMT              Atlantic/Madeira
      FNST             America/Noronha
      FNT              America/Noronha
-     FRUST            Asia/Bishkek
-     FRUT             Asia/Bishkek
      G                G
      GALT             Pacific/Galapagos
      GAMT             Pacific/Gambier
      GBGT             America/Guyana
-     GEST             Asia/Tbilisi
-     GET              Asia/Tbilisi
      GFT              America/Cayenne
      GHST             Africa/Accra
      GILT             Pacific/Tarawa
@@ -3473,19 +3413,14 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Asia/Gaza
                       Asia/Hebron
                       Asia/Ho_Chi_Minh
-     IHST             Asia/Colombo
      IMT              Asia/Irkutsk
                       Europe/Istanbul
                       Europe/Sofia
      IOT              Indian/Chagos
      IRDT             Asia/Tehran
-     IRKST            Asia/Irkutsk
-     IRKT             Asia/Irkutsk
-                      Asia/Chita
      IRST             Asia/Tehran
      ISST             Atlantic/Reykjavik
-     IST              Asia/Colombo
-                      Europe/Dublin
+     IST              Europe/Dublin
                       Asia/Jerusalem
                       Asia/Kolkata
                       Asia/Gaza
@@ -3497,14 +3432,12 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Asia/Dhaka
      JAVT             Asia/Jakarta
      JCST             Asia/Tokyo
-                      Asia/Sakhalin
                       Asia/Pyongyang
                       Asia/Seoul
      JDT              Asia/Tokyo
      JMT              Asia/Jerusalem
      JST              Asia/Tokyo
                       Asia/Pyongyang
-                      Asia/Sakhalin
                       Asia/Seoul
                       Asia/Taipei
                       Asia/Hong_Kong
@@ -3514,8 +3447,8 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Asia/Kuching
                       Asia/Makassar
                       Asia/Pontianak
-                      Asia/Rangoon
                       Asia/Singapore
+                      Asia/Yangon
                       Pacific/Bougainville
                       Asia/Ho_Chi_Minh
                       Asia/Manila
@@ -3524,43 +3457,29 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      K                K
      KART             Asia/Karachi
      KDT              Asia/Seoul
-     KGST             Asia/Bishkek
-     KGT              Asia/Bishkek
      KMT              Europe/Kiev
                       Europe/Vilnius
                       America/Grand_Turk
                       America/Jamaica
      KOST             Pacific/Kosrae
-     KRAST            Asia/Krasnoyarsk
-     KRAT             Asia/Krasnoyarsk
      KST              Asia/Seoul
                       Asia/Pyongyang
-     KUYST            Europe/Samara
-     KUYT             Europe/Samara
      KWAT             Pacific/Kwajalein
      L                L
      LHDT             Australia/Lord_Howe
      LHST             Australia/Lord_Howe
      LINT             Pacific/Kiritimati
-     LKT              Asia/Colombo
      LRT              Africa/Monrovia
      LST              Europe/Riga
      M                M
      MADMT            Atlantic/Madeira
      MADST            Atlantic/Madeira
      MADT             Atlantic/Madeira
-     MAGST            Asia/Magadan
-                      Asia/Srednekolymsk
-                      Asia/Ust-Nera
-     MAGT             Asia/Magadan
-                      Asia/Srednekolymsk
-                      Asia/Ust-Nera
      MALST            Asia/Singapore
                       Asia/Kuala_Lumpur
      MALT             Asia/Kuala_Lumpur
                       Asia/Singapore
      MART             Pacific/Marquesas
-     MAWT             Antarctica/Mawson
      MDDT             America/Cambridge_Bay
                       America/Yellowknife
      MDST             Europe/Moscow
@@ -3586,7 +3505,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      MHT              Pacific/Kwajalein
                       Pacific/Majuro
      MIST             Antarctica/Macquarie
-     MMT              Asia/Rangoon
+     MMT              Asia/Yangon
                       Indian/Maldives
                       America/Managua
                       Asia/Makassar
@@ -3608,12 +3527,10 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Swift_Current
                       America/Yellowknife
      MSD              Europe/Moscow
-                      Europe/Volgograd
                       Europe/Simferopol
                       Europe/Chisinau
                       Europe/Kiev
                       Europe/Zaporozhye
-                      Europe/Samara
                       Europe/Minsk
                       Europe/Uzhgorod
                       Europe/Kaliningrad
@@ -3621,11 +3538,9 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Tallinn
                       Europe/Vilnius
      MSK              Europe/Moscow
-                      Europe/Minsk
                       Europe/Simferopol
-                      Europe/Volgograd
+                      Europe/Minsk
                       Europe/Zaporozhye
-                      Europe/Samara
                       Europe/Kiev
                       Europe/Chisinau
                       Europe/Uzhgorod
@@ -3633,7 +3548,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Tallinn
                       Europe/Vilnius
                       Europe/Kaliningrad
-     MSM              Europe/Moscow
      MST              America/Denver
                       America/Phoenix
                       America/Creston
@@ -3706,8 +3620,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      NZMT             Pacific/Auckland
      NZST             Pacific/Auckland
      O                O
-     OMSST            Asia/Omsk
-     OMST             Asia/Omsk
      P                P
      PDDT             America/Inuvik
      PDT              America/Los_Angeles
@@ -3723,8 +3635,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Boise
      PEST             America/Lima
      PET              America/Lima
-     PETST            Asia/Kamchatka
-     PETT             Asia/Kamchatka
      PGT              Pacific/Port_Moresby
                       Pacific/Bougainville
      PHOT             Pacific/Enderbury
@@ -3745,7 +3655,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Paris
                       Africa/Algiers
                       Europe/Prague
-                      Antarctica/DumontDUrville
      PNT              Pacific/Pitcairn
      PONT             Pacific/Pohnpei
      PPMT             America/Port-au-Prince
@@ -3790,16 +3699,9 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      R                R
      RET              Indian/Reunion
      RMT              Europe/Riga
-                      Asia/Rangoon
+                      Asia/Yangon
                       Europe/Rome
-     ROTT             Antarctica/Rothera
      S                S
-     SAKST            Asia/Sakhalin
-     SAKT             Asia/Sakhalin
-     SAMST            Europe/Samara
-                      Asia/Samarkand
-     SAMT             Europe/Samara
-                      Asia/Samarkand
      SAST             Africa/Johannesburg
                       Africa/Windhoek
      SBT              Pacific/Guadalcanal
@@ -3814,35 +3716,17 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Atlantic/Stanley
                       Asia/Kuala_Lumpur
                       Asia/Singapore
-     SRET             Asia/Srednekolymsk
      SRT              America/Paramaribo
      SST              Pacific/Pago_Pago
                       Pacific/Apia
-     STAT             Europe/Volgograd
-     SVEST            Asia/Yekaterinburg
-     SVET             Asia/Yekaterinburg
      SWAT             Africa/Windhoek
-     SYOT             Antarctica/Syowa
      T                T
      TAHT             Pacific/Tahiti
-     TASST            Asia/Tashkent
-     TAST             Asia/Tashkent
-                      Asia/Samarkand
-     TBIST            Asia/Tbilisi
-     TBIT             Asia/Tbilisi
      TBMT             Asia/Tbilisi
-     TFT              Indian/Kerguelen
-     TJT              Asia/Dushanbe
      TKT              Pacific/Fakaofo
      TLT              Asia/Dili
-     TMT              Asia/Ashgabat
-                      Asia/Tehran
+     TMT              Asia/Tehran
                       Europe/Tallinn
-     TOST             Pacific/Tongatapu
-     TOT              Pacific/Tongatapu
-     TRST             Europe/Istanbul
-     TRT              Europe/Istanbul
-     TSAT             Europe/Volgograd
      TVT              Pacific/Funafuti
      U                U
      ULAST            Asia/Ulaanbaatar
@@ -3850,24 +3734,11 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Asia/Choibalsan
      UT               UT
      UTC              UTC
-                      Antarctica/Troll
      UYHST            America/Montevideo
      UYST             America/Montevideo
      UYT              America/Montevideo
-     UZST             Asia/Samarkand
-                      Asia/Tashkent
-     UZT              Asia/Samarkand
-                      Asia/Tashkent
      V                V
      VET              America/Caracas
-     VLAST            Asia/Vladivostok
-                      Asia/Khandyga
-     VLAT             Asia/Vladivostok
-                      Asia/Ust-Nera
-                      Asia/Khandyga
-     VOLST            Europe/Volgograd
-     VOLT             Europe/Volgograd
-     VOST             Antarctica/Vostok
      VUST             Pacific/Efate
      VUT              Pacific/Efate
      W                W
@@ -3945,23 +3816,12 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      X                X
      XJT              Asia/Urumqi
      Y                Y
-     YAKST            Asia/Chita
-                      Asia/Yakutsk
-                      Asia/Khandyga
-     YAKT             Asia/Chita
-                      Asia/Khandyga
-                      Asia/Yakutsk
-                      Asia/Ust-Nera
      YDDT             America/Whitehorse
                       America/Dawson
      YDT              America/Yakutat
                       America/Juneau
                       America/Dawson
                       America/Whitehorse
-     YEKST            Asia/Yekaterinburg
-     YEKT             Asia/Yekaterinburg
-     YERST            Asia/Yerevan
-     YERT             Asia/Yerevan
      YPT              America/Whitehorse
                       America/Dawson
                       America/Yakutat

@@ -6,9 +6,9 @@ Date::Manip::TZ::anmaws00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:12:34 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 11:59:53 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,13 +38,13 @@ END { undef $VERSION; }
    1954 =>
      [
         [ [1954,2,13,0,0,0],[1954,2,13,6,0,0],'+06:00:00',[6,0,0],
-          'MAWT',0,[2009,10,17,19,59,59],[2009,10,18,1,59,59],
+          '+06',0,[2009,10,17,19,59,59],[2009,10,18,1,59,59],
           '1954021300:00:00','1954021306:00:00','2009101719:59:59','2009101801:59:59' ],
      ],
    2009 =>
      [
         [ [2009,10,17,20,0,0],[2009,10,18,1,0,0],'+05:00:00',[5,0,0],
-          'MAWT',0,[9999,12,31,0,0,0],[9999,12,31,5,0,0],
+          '+05',0,[9999,12,31,0,0,0],[9999,12,31,5,0,0],
           '2009101720:00:00','2009101801:00:00','9999123100:00:00','9999123105:00:00' ],
      ],
 );

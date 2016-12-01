@@ -77,12 +77,12 @@ Asia/Karachi
 stdonly
 Asia/Dhaka
 Asia/Kolkata
-Asia/Rangoon
+Asia/Yangon
    =>
    0
    Asia/Dhaka
    Asia/Kolkata
-   Asia/Rangoon
+   Asia/Yangon
    1
    Asia/Colombo
    Asia/Karachi

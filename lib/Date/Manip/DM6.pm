@@ -269,6 +269,11 @@ sub _Delta_Format_old {
          if ($in =~ s/^([^%]+)//) {
             $out .= $1;
 
+         } elsif ($in =~ /^%[yMwdhms][yMwdhms][yMwdhms]/) {
+            # It's one of the new formats so don't modify it.
+            $in   =~ s/^%//;
+            $out .= '%';
+
          } elsif ($in =~ s/^%([yMwdhms])([dht])//) {
             my($field,$scope) = ($1,$2);
             $out .= '%';

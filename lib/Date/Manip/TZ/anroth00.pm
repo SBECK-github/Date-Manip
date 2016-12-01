@@ -6,9 +6,9 @@ Date::Manip::TZ::anroth00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:12:42 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 11:59:54 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1976 =>
      [
         [ [1976,12,1,0,0,0],[1976,11,30,21,0,0],'-03:00:00',[-3,0,0],
-          'ROTT',0,[9999,12,31,0,0,0],[9999,12,30,21,0,0],
+          '-03',0,[9999,12,31,0,0,0],[9999,12,30,21,0,0],
           '1976120100:00:00','1976113021:00:00','9999123100:00:00','9999123021:00:00' ],
      ],
 );

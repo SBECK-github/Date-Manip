@@ -6,9 +6,9 @@ Date::Manip::Offset::off253;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:14:04 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 12:04:54 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-01:28:00';
+$Offset        = '-01:07:36';
 
 %Offset        = (
    0 => [
-      'atlantic/reykjavik',
+      'atlantic/madeira',
       ],
 );
 

@@ -6,9 +6,9 @@ Date::Manip::Offset::off110;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:14:03 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 12:04:53 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,49 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+05:00:00';
+$Offset        = '+04:53:30';
 
 %Offset        = (
    0 => [
-      'asia/dushanbe',
-      'asia/tashkent',
-      'asia/aqtau',
-      'asia/aqtobe',
-      'asia/ashgabat',
-      'asia/oral',
-      'asia/samarkand',
-      'asia/yekaterinburg',
-      'indian/kerguelen',
-      'asia/karachi',
-      'indian/maldives',
-      'etc/gmt+5',
-      'r',
-      'antarctica/mawson',
-      'asia/bishkek',
-      'asia/qyzylorda',
-      'indian/chagos',
       'asia/omsk',
-      'asia/almaty',
-      'antarctica/davis',
-      ],
-   1 => [
-      'asia/baku',
-      'asia/yerevan',
-      'europe/samara',
-      'indian/mauritius',
-      'asia/tbilisi',
-      'asia/oral',
-      'asia/aqtau',
-      'asia/aqtobe',
-      'asia/ashgabat',
-      'asia/qyzylorda',
-      'asia/yekaterinburg',
-      'europe/astrakhan',
-      'europe/kirov',
-      'europe/ulyanovsk',
-      'europe/volgograd',
-      'asia/tehran',
-      'europe/moscow',
       ],
 );
 

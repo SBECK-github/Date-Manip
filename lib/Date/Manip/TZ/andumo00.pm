@@ -6,9 +6,9 @@ Date::Manip::TZ::andumo00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:12:41 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 11:59:52 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1947 =>
      [
         [ [1947,1,1,0,0,0],[1947,1,1,10,0,0],'+10:00:00',[10,0,0],
-          'PMT',0,[1952,1,13,13,59,59],[1952,1,13,23,59,59],
+          '+10',0,[1952,1,13,13,59,59],[1952,1,13,23,59,59],
           '1947010100:00:00','1947010110:00:00','1952011313:59:59','1952011323:59:59' ],
      ],
    1952 =>
@@ -50,7 +50,7 @@ END { undef $VERSION; }
    1956 =>
      [
         [ [1956,11,1,0,0,0],[1956,11,1,10,0,0],'+10:00:00',[10,0,0],
-          'DDUT',0,[9999,12,31,0,0,0],[9999,12,31,10,0,0],
+          '+10',0,[9999,12,31,0,0,0],[9999,12,31,10,0,0],
           '1956110100:00:00','1956110110:00:00','9999123100:00:00','9999123110:00:00' ],
      ],
 );

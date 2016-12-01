@@ -22,8 +22,8 @@ sub test {
   @d = $obj->list_events($obj2,"dates");
   @ret = ();
   foreach $d (@d) {
-     ($d,@name) = @$d;
-     $v = $d->value();
+     ($x,@name) = @$d;
+     $v = $x->value();
      push(@ret,$v,@name);
   }
   return @ret;

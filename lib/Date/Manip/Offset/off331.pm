@@ -6,9 +6,9 @@ Date::Manip::Offset::off331;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:14:04 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 12:04:54 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,12 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-05:07:11';
+$Offset        = '-04:56:02';
 
 %Offset        = (
    0 => [
-      'america/jamaica',
-      'america/grand_turk',
+      'america/new_york',
       ],
 );
 

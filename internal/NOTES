@@ -123,7 +123,9 @@ NOTE 3: If you get a LAST RULE in Jan/Dec line, check it out.  A zone
 is doing time changes in Jan or Dec.  Make sure it won't cause any
 problems.
 
-Currently, Pacific/Fiji warns, but it's safe.
+Currently, the following warn (but are safe):
+    Pacific/Fiji
+    Pacific/Tongatapu
 
 #########################################################################
 Clean up stuff that shouldn't be in the manifest

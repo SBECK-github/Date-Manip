@@ -6,9 +6,9 @@ Date::Manip::TZ::ansyow00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:12:36 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 11:59:54 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1957 =>
      [
         [ [1957,1,29,0,0,0],[1957,1,29,3,0,0],'+03:00:00',[3,0,0],
-          'SYOT',0,[9999,12,31,0,0,0],[9999,12,31,3,0,0],
+          '+03',0,[9999,12,31,0,0,0],[9999,12,31,3,0,0],
           '1957012900:00:00','1957012903:00:00','9999123100:00:00','9999123103:00:00' ],
      ],
 );

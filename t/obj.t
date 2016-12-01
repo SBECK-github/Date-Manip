@@ -5,20 +5,23 @@ $t = new Test::Inter 'object';
 $testdir = '';
 $testdir = $t->testdir();
 
-use Cwd;
-my $dir  = getcwd;
-$dir     =~ /Date-Manip-([0-9.]+)/;
-my $vers = $1;
+$ENV{'TZ'} = 'America/Chicago';
+use Date::Manip;
 
-# Travis-CI renames the directory to just Date-Manip (no version) so this
-# test cannot be done.
-if (! defined $vers) {
+use Cwd;
+my $vers;
+if ($ENV{'RELEASE_TESTING'}) {
+   my $dir  = getcwd;
+   $dir     =~ /Date-Manip-([0-9.]+)/;
+   $vers = $1;
+} else {
+   # We'll only test the directory/version on my machine.
+   # In some instances elsewhere, the install directory in renamed
+   # unpredicatbly, so we won't do this test there.
    $vers = DateManipVersion();
 }
 
-$ENV{'TZ'} = 'America/Chicago';
-use Date::Manip;
-if (DateManipVersion() >= 6.00) {
+if ($vers >= 6.00) {
    $t->feature("DM6",1);
 }
 
@@ -387,6 +390,8 @@ o0109  new  Base o0101  [ defaults 1 ]
 - version o0001    => $vers
 
 - version o0001 1  => $vers
+
+- version o0002 1  => '$vers [america/chicago]'
 
 - config  o0002 setdate now,america/new_york => 0
 

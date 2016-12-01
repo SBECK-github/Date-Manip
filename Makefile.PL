@@ -1902,6 +1902,18 @@ WriteMakefile(
                 file    => 'off432.pm',
                 version => '6.57',
              },
+             'Date::Manip::Offset::off433' => {
+                file    => 'off433.pm',
+                version => '6.57',
+             },
+             'Date::Manip::Offset::off434' => {
+                file    => 'off434.pm',
+                version => '6.57',
+             },
+             'Date::Manip::Offset::off435' => {
+                file    => 'off435.pm',
+                version => '6.57',
+             },
              'Date::Manip::Recur' => {
                 file    => 'Recur.pm',
                 version => '6.57',
@@ -2566,6 +2578,10 @@ WriteMakefile(
                 file    => 'asashg00.pm',
                 version => '6.57',
              },
+             'Date::Manip::TZ::asatyr00' => {
+                file    => 'asatyr00.pm',
+                version => '6.57',
+             },
              'Date::Manip::TZ::asbagh00' => {
                 file    => 'asbagh00.pm',
                 version => '6.57',
@@ -2624,6 +2640,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::asdush00' => {
                 file    => 'asdush00.pm',
+                version => '6.57',
+             },
+             'Date::Manip::TZ::asfama00' => {
+                file    => 'asfama00.pm',
                 version => '6.57',
              },
              'Date::Manip::TZ::asgaza00' => {
@@ -2750,10 +2770,6 @@ WriteMakefile(
                 file    => 'asqyzy00.pm',
                 version => '6.57',
              },
-             'Date::Manip::TZ::asrang00' => {
-                file    => 'asrang00.pm',
-                version => '6.57',
-             },
              'Date::Manip::TZ::asriya00' => {
                 file    => 'asriya00.pm',
                 version => '6.57',
@@ -2828,6 +2844,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::asyaku00' => {
                 file    => 'asyaku00.pm',
+                version => '6.57',
+             },
+             'Date::Manip::TZ::asyang00' => {
+                file    => 'asyang00.pm',
                 version => '6.57',
              },
              'Date::Manip::TZ::asyeka00' => {
@@ -3180,6 +3200,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::eusama00' => {
                 file    => 'eusama00.pm',
+                version => '6.57',
+             },
+             'Date::Manip::TZ::eusara00' => {
+                file    => 'eusara00.pm',
                 version => '6.57',
              },
              'Date::Manip::TZ::eusimf00' => {

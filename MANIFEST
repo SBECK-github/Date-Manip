@@ -529,6 +529,9 @@ lib/Date/Manip/Offset/off429.pm
 lib/Date/Manip/Offset/off430.pm
 lib/Date/Manip/Offset/off431.pm
 lib/Date/Manip/Offset/off432.pm
+lib/Date/Manip/Offset/off433.pm
+lib/Date/Manip/Offset/off434.pm
+lib/Date/Manip/Offset/off435.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -698,6 +701,7 @@ lib/Date/Manip/TZ/asanad00.pm
 lib/Date/Manip/TZ/asaqta00.pm
 lib/Date/Manip/TZ/asaqto00.pm
 lib/Date/Manip/TZ/asashg00.pm
+lib/Date/Manip/TZ/asatyr00.pm
 lib/Date/Manip/TZ/asbagh00.pm
 lib/Date/Manip/TZ/asbaku00.pm
 lib/Date/Manip/TZ/asbang00.pm
@@ -713,6 +717,7 @@ lib/Date/Manip/TZ/asdhak00.pm
 lib/Date/Manip/TZ/asdili00.pm
 lib/Date/Manip/TZ/asduba00.pm
 lib/Date/Manip/TZ/asdush00.pm
+lib/Date/Manip/TZ/asfama00.pm
 lib/Date/Manip/TZ/asgaza00.pm
 lib/Date/Manip/TZ/ashebr00.pm
 lib/Date/Manip/TZ/asho_c00.pm
@@ -744,7 +749,6 @@ lib/Date/Manip/TZ/aspont00.pm
 lib/Date/Manip/TZ/aspyon00.pm
 lib/Date/Manip/TZ/asqata00.pm
 lib/Date/Manip/TZ/asqyzy00.pm
-lib/Date/Manip/TZ/asrang00.pm
 lib/Date/Manip/TZ/asriya00.pm
 lib/Date/Manip/TZ/assakh00.pm
 lib/Date/Manip/TZ/assama00.pm
@@ -764,6 +768,7 @@ lib/Date/Manip/TZ/asurum00.pm
 lib/Date/Manip/TZ/asustm00.pm
 lib/Date/Manip/TZ/asvlad00.pm
 lib/Date/Manip/TZ/asyaku00.pm
+lib/Date/Manip/TZ/asyang00.pm
 lib/Date/Manip/TZ/asyeka00.pm
 lib/Date/Manip/TZ/asyere00.pm
 lib/Date/Manip/TZ/atazor00.pm
@@ -852,6 +857,7 @@ lib/Date/Manip/TZ/euprag00.pm
 lib/Date/Manip/TZ/euriga00.pm
 lib/Date/Manip/TZ/eurome00.pm
 lib/Date/Manip/TZ/eusama00.pm
+lib/Date/Manip/TZ/eusara00.pm
 lib/Date/Manip/TZ/eusimf00.pm
 lib/Date/Manip/TZ/eusofi00.pm
 lib/Date/Manip/TZ/eustoc00.pm

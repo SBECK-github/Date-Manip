@@ -6,9 +6,9 @@ Date::Manip::Offset::off050;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:14:03 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 12:04:53 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -40,7 +40,6 @@ $Offset        = '+02:00:00';
       'africa/cairo',
       'africa/johannesburg',
       'africa/maputo',
-      'europe/istanbul',
       'europe/athens',
       'asia/jerusalem',
       'asia/damascus',
@@ -57,6 +56,8 @@ $Offset        = '+02:00:00';
       'europe/kaliningrad',
       'africa/tripoli',
       'europe/uzhgorod',
+      'europe/istanbul',
+      'asia/famagusta',
       'etc/gmt+2',
       'o',
       'europe/simferopol',

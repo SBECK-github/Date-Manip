@@ -6,9 +6,9 @@ Date::Manip::TZ::anvost00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Aug 19 08:12:37 EDT 2016
-#    Data version: tzdata2016f
-#    Code version: tzcode2016f
+#    Generated on: Thu Dec  1 11:59:57 EST 2016
+#    Data version: tzdata2016j
+#    Code version: tzcode2016j
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1957 =>
      [
         [ [1957,12,16,0,0,0],[1957,12,16,6,0,0],'+06:00:00',[6,0,0],
-          'VOST',0,[9999,12,31,0,0,0],[9999,12,31,6,0,0],
+          '+06',0,[9999,12,31,0,0,0],[9999,12,31,6,0,0],
           '1957121600:00:00','1957121606:00:00','9999123100:00:00','9999123106:00:00' ],
      ],
 );
