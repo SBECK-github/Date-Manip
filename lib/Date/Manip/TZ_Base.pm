@@ -12,7 +12,7 @@ use strict;
 use IO::File;
 
 our ($VERSION);
-$VERSION='6.57';
+$VERSION='6.58';
 END { undef $VERSION; }
 
 ########################################################################
