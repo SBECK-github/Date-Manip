@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::afnair00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:53 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:27 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -44,13 +44,13 @@ END { undef $VERSION; }
    1929 =>
      [
         [ [1929,12,31,21,0,0],[1929,12,31,23,30,0],'+02:30:00',[2,30,0],
-          'BEAT',0,[1939,12,31,21,29,59],[1939,12,31,23,59,59],
+          '+0230',0,[1939,12,31,21,29,59],[1939,12,31,23,59,59],
           '1929123121:00:00','1929123123:30:00','1939123121:29:59','1939123123:59:59' ],
      ],
    1939 =>
      [
         [ [1939,12,31,21,30,0],[1940,1,1,0,15,0],'+02:45:00',[2,45,0],
-          'BEAUT',0,[1959,12,31,21,14,59],[1959,12,31,23,59,59],
+          '+0245',0,[1959,12,31,21,14,59],[1959,12,31,23,59,59],
           '1939123121:30:00','1940010100:15:00','1959123121:14:59','1959123123:59:59' ],
      ],
    1959 =>

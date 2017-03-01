@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::euzapo00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:54 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:16 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1879 =>
      [
         [ [1879,12,31,21,39,20],[1879,12,31,23,59,20],'+02:20:00',[2,20,0],
-          'CUT',0,[1924,5,1,21,39,59],[1924,5,1,23,59,59],
+          '+0220',0,[1924,5,1,21,39,59],[1924,5,1,23,59,59],
           '1879123121:39:20','1879123123:59:20','1924050121:39:59','1924050123:59:59' ],
      ],
    1924 =>
@@ -850,6 +850,15 @@ END { undef $VERSION; }
         [ [2066,10,31,1,0,0],[2066,10,31,3,0,0],'+02:00:00',[2,0,0],
           'EET',0,[2067,3,27,0,59,59],[2067,3,27,2,59,59],
           '2066103101:00:00','2066103103:00:00','2067032700:59:59','2067032702:59:59' ],
+     ],
+   2067 =>
+     [
+        [ [2067,3,27,1,0,0],[2067,3,27,4,0,0],'+03:00:00',[3,0,0],
+          'EEST',1,[2067,10,30,0,59,59],[2067,10,30,3,59,59],
+          '2067032701:00:00','2067032704:00:00','2067103000:59:59','2067103003:59:59' ],
+        [ [2067,10,30,1,0,0],[2067,10,30,3,0,0],'+02:00:00',[2,0,0],
+          'EET',0,[2068,3,25,0,59,59],[2068,3,25,2,59,59],
+          '2067103001:00:00','2067103003:00:00','2068032500:59:59','2068032502:59:59' ],
      ],
 );
 

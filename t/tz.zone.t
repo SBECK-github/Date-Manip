@@ -83,7 +83,21 @@ ywt =>
 
 -05:00:00 EDT =>
 
--05:00:00 CLT => America/Santiago
+BST =>
+   Europe/London
+   America/Adak
+   America/Nome
+   Europe/Gibraltar
+   Europe/Dublin
+
++01:00:00 BST =>
+   Europe/London
+   Europe/Gibraltar
+   Europe/Dublin
+
+-11:00:00 BST =>
+   America/Adak
+   America/Nome
 
 #
 # Mixed data
@@ -133,8 +147,6 @@ stdonly
 [ 2001 01 01 00 00 00 ] -12:00:00 dstonly =>
 
 [ 1980 01 01 00 00 00 ] +07:30:00         => Asia/Kuala_Lumpur Asia/Singapore
-
-[ 1980 01 01 00 00 00 ] +07:30:00 MALT    => Asia/Kuala_Lumpur
 
 #
 # HPUX zones

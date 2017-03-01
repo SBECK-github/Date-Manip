@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::atcana00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:57 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:20 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,7 +38,7 @@ END { undef $VERSION; }
    1922 =>
      [
         [ [1922,3,1,1,1,36],[1922,3,1,0,1,36],'-01:00:00',[-1,0,0],
-          'CANT',0,[1946,9,30,1,59,59],[1946,9,30,0,59,59],
+          '-01',0,[1946,9,30,1,59,59],[1946,9,30,0,59,59],
           '1922030101:01:36','1922030100:01:36','1946093001:59:59','1946093000:59:59' ],
      ],
    1946 =>
@@ -829,6 +829,15 @@ END { undef $VERSION; }
         [ [2066,10,31,1,0,0],[2066,10,31,1,0,0],'+00:00:00',[0,0,0],
           'WET',0,[2067,3,27,0,59,59],[2067,3,27,0,59,59],
           '2066103101:00:00','2066103101:00:00','2067032700:59:59','2067032700:59:59' ],
+     ],
+   2067 =>
+     [
+        [ [2067,3,27,1,0,0],[2067,3,27,2,0,0],'+01:00:00',[1,0,0],
+          'WEST',1,[2067,10,30,0,59,59],[2067,10,30,1,59,59],
+          '2067032701:00:00','2067032702:00:00','2067103000:59:59','2067103001:59:59' ],
+        [ [2067,10,30,1,0,0],[2067,10,30,1,0,0],'+00:00:00',[0,0,0],
+          'WET',0,[2068,3,25,0,59,59],[2068,3,25,0,59,59],
+          '2067103001:00:00','2067103001:00:00','2068032500:59:59','2068032500:59:59' ],
      ],
 );
 

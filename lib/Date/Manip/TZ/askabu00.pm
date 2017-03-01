@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::askabu00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:52 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:25 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,13 +38,13 @@ END { undef $VERSION; }
    1889 =>
      [
         [ [1889,12,31,19,23,12],[1889,12,31,23,23,12],'+04:00:00',[4,0,0],
-          'AFT',0,[1944,12,31,19,59,59],[1944,12,31,23,59,59],
+          '+04',0,[1944,12,31,19,59,59],[1944,12,31,23,59,59],
           '1889123119:23:12','1889123123:23:12','1944123119:59:59','1944123123:59:59' ],
      ],
    1944 =>
      [
         [ [1944,12,31,20,0,0],[1945,1,1,0,30,0],'+04:30:00',[4,30,0],
-          'AFT',0,[9999,12,31,0,0,0],[9999,12,31,4,30,0],
+          '+0430',0,[9999,12,31,0,0,0],[9999,12,31,4,30,0],
           '1944123120:00:00','1945010100:30:00','9999123100:00:00','9999123104:30:00' ],
      ],
 );

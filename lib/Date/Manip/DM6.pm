@@ -1,5 +1,5 @@
 package Date::Manip::DM6;
-# Copyright (c) 1995-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 1995-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -447,16 +447,26 @@ sub DateCalc {
 
    my $obj3;
    if ($usemode) {
-      $mode = 0  if (! $mode);
-      if     ($mode == 3) {
-          $mode = 'business';
-      } elsif ($mode == 2) {
-         $mode = 'bapprox';
-      } elsif ($mode) {
-         $mode = 'approx';
+      $mode = 'exact'  if (! $mode);
+      my %tmp = ('0'       => 'exact',
+                 '1'       => 'approx',
+                 '2'       => 'bapprox',
+                 '3'       => 'business',
+                 'exact'   => 'exact',
+                 'semi'    => 'semi',
+                 'approx'  => 'approx',
+                 'business'=> 'business',
+                 'bsemi'   => 'bsemi',
+                 'bapprox' => 'bapprox',
+                );
+
+      if (exists $tmp{$mode}) {
+         $mode = $tmp{$mode};
       } else {
-         $mode = 'exact';
+         $$errref = 3  if ($ref);
+         return '';
       }
+
       $obj3 = $obj1->calc($obj2,$mode);
    } else {
       $obj3 = $obj1->calc($obj2);

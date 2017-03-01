@@ -1914,6 +1914,10 @@ WriteMakefile(
                 file    => 'off435.pm',
                 version => '6.58',
              },
+             'Date::Manip::Offset::off436' => {
+                file    => 'off436.pm',
+                version => '6.58',
+             },
              'Date::Manip::Recur' => {
                 file    => 'Recur.pm',
                 version => '6.58',
@@ -2376,6 +2380,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::ampuer00' => {
                 file    => 'ampuer00.pm',
+                version => '6.58',
+             },
+             'Date::Manip::TZ::ampunt00' => {
+                file    => 'ampunt00.pm',
                 version => '6.58',
              },
              'Date::Manip::TZ::amrain00' => {

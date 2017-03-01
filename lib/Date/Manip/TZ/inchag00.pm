@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::inchag00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:52 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:20 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,13 +38,13 @@ END { undef $VERSION; }
    1906 =>
      [
         [ [1906,12,31,19,10,20],[1907,1,1,0,10,20],'+05:00:00',[5,0,0],
-          'IOT',0,[1995,12,31,18,59,59],[1995,12,31,23,59,59],
+          '+05',0,[1995,12,31,18,59,59],[1995,12,31,23,59,59],
           '1906123119:10:20','1907010100:10:20','1995123118:59:59','1995123123:59:59' ],
      ],
    1995 =>
      [
         [ [1995,12,31,19,0,0],[1996,1,1,1,0,0],'+06:00:00',[6,0,0],
-          'IOT',0,[9999,12,31,0,0,0],[9999,12,31,6,0,0],
+          '+06',0,[9999,12,31,0,0,0],[9999,12,31,6,0,0],
           '1995123119:00:00','1996010101:00:00','9999123100:00:00','9999123106:00:00' ],
      ],
 );

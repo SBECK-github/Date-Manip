@@ -126,10 +126,6 @@ Free up the '%u', '%h', and '%X' printf formats. Reserve '%X' for
 # TO CONSIDER
 ########################################################################
 
-Multilingual parsing:  Yuri Nikulin
-   language=english,french
-   regexps then support both languages
-
 Special date formats in language file:
    extra{LABEL} = [ ... ]         extra words of type LABEL
    offset_date =>

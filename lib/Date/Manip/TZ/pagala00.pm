@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::pagala00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:51 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:17 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,14 +38,26 @@ END { undef $VERSION; }
    1931 =>
      [
         [ [1931,1,1,5,58,24],[1931,1,1,0,58,24],'-05:00:00',[-5,0,0],
-          'ECT',0,[1986,1,1,4,59,59],[1985,12,31,23,59,59],
+          '-05',0,[1986,1,1,4,59,59],[1985,12,31,23,59,59],
           '1931010105:58:24','1931010100:58:24','1986010104:59:59','1985123123:59:59' ],
      ],
    1986 =>
      [
         [ [1986,1,1,5,0,0],[1985,12,31,23,0,0],'-06:00:00',[-6,0,0],
-          'GALT',0,[9999,12,31,0,0,0],[9999,12,30,18,0,0],
-          '1986010105:00:00','1985123123:00:00','9999123100:00:00','9999123018:00:00' ],
+          '-06',0,[1992,11,28,5,59,59],[1992,11,27,23,59,59],
+          '1986010105:00:00','1985123123:00:00','1992112805:59:59','1992112723:59:59' ],
+     ],
+   1992 =>
+     [
+        [ [1992,11,28,6,0,0],[1992,11,28,1,0,0],'-05:00:00',[-5,0,0],
+          '-05',1,[1993,2,5,4,59,59],[1993,2,4,23,59,59],
+          '1992112806:00:00','1992112801:00:00','1993020504:59:59','1993020423:59:59' ],
+     ],
+   1993 =>
+     [
+        [ [1993,2,5,5,0,0],[1993,2,4,23,0,0],'-06:00:00',[-6,0,0],
+          '-06',0,[9999,12,31,0,0,0],[9999,12,30,18,0,0],
+          '1993020505:00:00','1993020423:00:00','9999123100:00:00','9999123018:00:00' ],
      ],
 );
 

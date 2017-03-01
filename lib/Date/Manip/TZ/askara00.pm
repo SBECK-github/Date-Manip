@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::askara00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:56 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:17 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,25 +38,25 @@ END { undef $VERSION; }
    1906 =>
      [
         [ [1906,12,31,19,31,48],[1907,1,1,1,1,48],'+05:30:00',[5,30,0],
-          'IST',0,[1942,8,31,18,29,59],[1942,8,31,23,59,59],
+          '+0530',0,[1942,8,31,18,29,59],[1942,8,31,23,59,59],
           '1906123119:31:48','1907010101:01:48','1942083118:29:59','1942083123:59:59' ],
      ],
    1942 =>
      [
         [ [1942,8,31,18,30,0],[1942,9,1,1,0,0],'+06:30:00',[6,30,0],
-          'IST',1,[1945,10,14,17,29,59],[1945,10,14,23,59,59],
+          '+0630',1,[1945,10,14,17,29,59],[1945,10,14,23,59,59],
           '1942083118:30:00','1942090101:00:00','1945101417:29:59','1945101423:59:59' ],
      ],
    1945 =>
      [
         [ [1945,10,14,17,30,0],[1945,10,14,23,0,0],'+05:30:00',[5,30,0],
-          'IST',0,[1951,9,29,18,29,59],[1951,9,29,23,59,59],
+          '+0530',0,[1951,9,29,18,29,59],[1951,9,29,23,59,59],
           '1945101417:30:00','1945101423:00:00','1951092918:29:59','1951092923:59:59' ],
      ],
    1951 =>
      [
         [ [1951,9,29,18,30,0],[1951,9,29,23,30,0],'+05:00:00',[5,0,0],
-          'KART',0,[1971,3,25,18,59,59],[1971,3,25,23,59,59],
+          '+05',0,[1971,3,25,18,59,59],[1971,3,25,23,59,59],
           '1951092918:30:00','1951092923:30:00','1971032518:59:59','1971032523:59:59' ],
      ],
    1971 =>

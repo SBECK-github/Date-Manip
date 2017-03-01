@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2016 Sullivan Beck. All rights reserved.
+# Copyright (c) 2009-2017 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -33,7 +33,27 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.59  (planned 2017-06-01)
 
-=head1 VERSION 6.58  (planned 2017-03-01)
+=head1 VERSION 6.58  2017-03-01
+
+=over 4
+
+=item Better support for $mode in DateCalc.
+
+DateCalc (in DM6) did not support all values for $mode.  Now it does.
+
+=item Bug fixes
+
+Parsing a date like 01/02/2016 and calling printf with %e gave '02' instead
+of ' 2'.  RT 119787.
+
+Fixed a problem where the tzdata method of determining the timezone was
+producing an error which wasn't correct.  Reported on GitHub by John.
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2017a)
+
+=back
 
 =head1 VERSION 6.57  2016-12-01
 

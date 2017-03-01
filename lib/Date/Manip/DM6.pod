@@ -1,4 +1,4 @@
-# Copyright (c) 1995-2016 Sullivan Beck. All rights reserved.
+# Copyright (c) 1995-2017 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -333,7 +333,8 @@ to force the delta to be either business or non-business mode deltas.
 If $mode is 0 or 1, the delta(s) will be non-business. Otherwise,
 they will be business deltas. If $mode is passed in, it will be used
 only if the business or non-business state was not explicitly set in
-the delta.
+the delta.  $mode can also be any of the modes discussed in
+the Date::Manip::Calc documentation.
 
 If two dates are passed in, $mode is used to determine the type of
 calculation.  By default, an exact delta is produced.  If $mode is 1,
@@ -342,9 +343,11 @@ approximate (bapprox) mode calculation is done.  If $mode is 3, a
 exact business mode delta is produced.
 
 If \$err is passed in, it is set to:
+
    1 is returned if $d1 is not a delta or date
    2 is returned if $d2 is not a delta or date
    3 if any other error occurs.
+
 This argument is optional, but if included, it must come before $mode.
 
 Nothing is returned if an error occurs.

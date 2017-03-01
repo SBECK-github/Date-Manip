@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::asoral00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:50 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:23 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -37,15 +37,15 @@ END { undef $VERSION; }
      ],
    1924 =>
      [
-        [ [1924,5,1,20,34,36],[1924,5,2,0,34,36],'+04:00:00',[4,0,0],
-          '+04',0,[1930,6,20,19,59,59],[1930,6,20,23,59,59],
-          '1924050120:34:36','1924050200:34:36','1930062019:59:59','1930062023:59:59' ],
+        [ [1924,5,1,20,34,36],[1924,5,1,23,34,36],'+03:00:00',[3,0,0],
+          '+03',0,[1930,6,20,20,59,59],[1930,6,20,23,59,59],
+          '1924050120:34:36','1924050123:34:36','1930062020:59:59','1930062023:59:59' ],
      ],
    1930 =>
      [
-        [ [1930,6,20,20,0,0],[1930,6,21,1,0,0],'+05:00:00',[5,0,0],
+        [ [1930,6,20,21,0,0],[1930,6,21,2,0,0],'+05:00:00',[5,0,0],
           '+05',0,[1981,3,31,18,59,59],[1981,3,31,23,59,59],
-          '1930062020:00:00','1930062101:00:00','1981033118:59:59','1981033123:59:59' ],
+          '1930062021:00:00','1930062102:00:00','1981033118:59:59','1981033123:59:59' ],
      ],
    1981 =>
      [

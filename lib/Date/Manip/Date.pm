@@ -1,5 +1,5 @@
 package Date::Manip::Date;
-# Copyright (c) 1995-2016 Sullivan Beck. All rights reserved.
+# Copyright (c) 1995-2017 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -984,7 +984,7 @@ sub _parse_check {
       $$self{'err'} = "[$caller] Invalid date";
       return 1;
    }
-   my $date   = [$y,$m,$d,$h,$mn,$s];
+   my $date   = [$y+0,$m+0,$d+0,$h+0,$mn+0,$s+0];
 
    #
    # We need to check that the date is valid in a timezone.  The

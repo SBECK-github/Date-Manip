@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::asyang00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:57 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:23 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -44,19 +44,19 @@ END { undef $VERSION; }
    1919 =>
      [
         [ [1919,12,31,17,35,20],[1920,1,1,0,5,20],'+06:30:00',[6,30,0],
-          'BURT',0,[1942,4,30,17,29,59],[1942,4,30,23,59,59],
+          '+0630',0,[1942,4,30,17,29,59],[1942,4,30,23,59,59],
           '1919123117:35:20','1920010100:05:20','1942043017:29:59','1942043023:59:59' ],
      ],
    1942 =>
      [
         [ [1942,4,30,17,30,0],[1942,5,1,2,30,0],'+09:00:00',[9,0,0],
-          'JST',0,[1945,5,2,14,59,59],[1945,5,2,23,59,59],
+          '+09',0,[1945,5,2,14,59,59],[1945,5,2,23,59,59],
           '1942043017:30:00','1942050102:30:00','1945050214:59:59','1945050223:59:59' ],
      ],
    1945 =>
      [
         [ [1945,5,2,15,0,0],[1945,5,2,21,30,0],'+06:30:00',[6,30,0],
-          'MMT',0,[9999,12,31,0,0,0],[9999,12,31,6,30,0],
+          '+0630',0,[9999,12,31,0,0,0],[9999,12,31,6,30,0],
           '1945050215:00:00','1945050221:30:00','9999123100:00:00','9999123106:30:00' ],
      ],
 );

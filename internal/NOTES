@@ -69,11 +69,11 @@ CURR_YEAR is the current year.
    ./internal/tzdata -l           : to get a list of all the zones that need modules
    ./internal/tzdata -d           : to dump all zones
    ./internal/tzdata -m           : to create the individual zone modules
-                                    *** see NOTE 3 below ***
+                                    *** see NOTE 2 below ***
    ./internal/tzdata -o           : to create the individual offset modules
-                                    *** see NOTE 2 below ***
+                                    *** see NOTE 3 below ***
    ./internal/tzdata -z           : to create the main Zone module
-                                    *** see NOTE 2 below ***
+                                    *** see NOTE 3 below ***
 
 Run the following to double check every timezone in zoneinfo against the
 Date::Manip version:
@@ -100,7 +100,16 @@ not report problems due to differences in operating systems, or packages that
 are installed on your system. If you discover a bug in tzdata, I am interested
 in knowing about it however.
 
-NOTE 2: These steps often require manual intervention described
+NOTE 2: If you get a LAST RULE in Jan/Dec line, check it out.  A zone
+is doing time changes in Jan or Dec.  Make sure it won't cause any
+problems.  Provided it's not early in the day of Jan 1 or late in the day
+of Dec 31, it'll be fine.
+
+Currently, the following warn (but have been cleared as safe):
+    Pacific/Fiji
+    Pacific/Tongatapu
+
+NOTE 3: These steps often require manual intervention described
 below. After the intervention, rerun the command to make sure no
 output is produced.
 
@@ -119,13 +128,8 @@ to the data.offset.pl file.
 If the '-z' option produces any output, the entries need to be added
 to the data.alias.pl or data.abbrev.pl file.
 
-NOTE 3: If you get a LAST RULE in Jan/Dec line, check it out.  A zone
-is doing time changes in Jan or Dec.  Make sure it won't cause any
+After adding a new value, rerun the command to make sure there are no more
 problems.
-
-Currently, the following warn (but are safe):
-    Pacific/Fiji
-    Pacific/Tongatapu
 
 #########################################################################
 Clean up stuff that shouldn't be in the manifest
@@ -154,7 +158,7 @@ Before every release, spellcheck the documents:
 Update the copyright
 
    y=`date '+%Y'`
-   for i in `find . -type f | egrep -v '.svn' | xargs egrep -l 'Copyright \(c\) ....\-.... Sullivan Beck'` ;do
+   for i in `find . -type f | egrep -v '.git' | xargs egrep -l 'Copyright \(c\) ....\-.... Sullivan Beck'` ;do
      sed -e "s,\(Copyright (c) ....\)\-.... \(Sullivan Beck\),\1-$y \2," $i > z
      mv z $i
    done

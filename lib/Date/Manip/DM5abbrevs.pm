@@ -1,5 +1,5 @@
 package Date::Manip::DM5abbrevs;
-# Copyright (c) 2003-2016 Sullivan Beck. All rights reserved.
+# Copyright (c) 2003-2017 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
@@ -75,111 +75,48 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       a      -0100
       acdt   +1030
       acst   +0930
-      act    -0500
-      acwdt  +0945
-      acwst  +0845
       addt   -0200
       adt    -0300
       aedt   +1100
       aest   +1000
-      aft    +0430
       ahdt   -0900
       ahst   -1000
       akdt   -0800
       akst   -0900
-      amst   -0300
-      amt    -0400
-      ant    -0430
-      apt    -0300
-      arst   -0200
-      art    -0300
+      apt    -0900
       ast    -0400
       awdt   +0900
       awst   +0800
       awt    -0300
-      azomt  +0000
-      azost  +0000
-      azot   -0100
       b      -0200
-      bdst   +0700
-      bdt    +0600
-      beat   +0230
-      beaut  +0245
-      bnt    +0800
-      bort   +0800
-      bortst +0820
-      bot    -0400
-      brst   -0200
-      brt    -0300
+      bdst   +0200
+      bdt    -1000
       bst    +0100
-      btt    +0600
-      burt   +0630
       c      -0300
-      cant   -0100
-      capt   -0900
       cast   +0300
       cat    +0200
-      cawt   -0900
-      cct    +0630
       cddt   -0400
       cdt    -0500
       cemt   +0300
       cest   +0200
       cet    +0100
-      cgst   -0100
-      cgt    -0200
-      chadt  +1345
-      chast  +1245
-      chdt   -0530
-      chost  +0900
-      chot   +0800
       chst   +1000
-      chut   +1000
-      ckhst  -0930
-      ckt    -1000
-      clst   -0300
-      clt    -0400
       cmt    +0155
-      cost   -0400
-      cot    -0500
       cpt    -0500
       cst    -0600
-      cut    +0220
-      cvst   -0100
-      cvt    -0100
       cwt    -0500
-      cxt    +0700
       d      -0400
-      dact   +0600
       e      -0500
-      easst  -0500
-      east   -0600
       eat    +0300
-      ect    -0500
       eddt   -0300
       edt    -0400
       eest   +0300
       eet    +0200
-      egst   +0000
-      egt    -0100
-      ehdt   -0430
       ept    -0400
       est    -0500
       ewt    -0400
       f      -0600
-      fjst   +1300
-      fjt    +1200
-      fkst   -0300
-      fkt    -0400
-      fnst   -0100
-      fnt    -0200
       g      -0700
-      galt   -0600
-      gamt   -0900
-      gbgt   -0345
-      gft    -0300
-      ghst   +0020
-      gilt   +1200
       gmt    +0000
       gmt+1  +0100
       gmt+10 +1000
@@ -207,79 +144,38 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       gmt-7  -0700
       gmt-8  -0800
       gmt-9  -0900
-      gst    -0200
-      gyt    -0400
+      gst    +1000
       h      -0800
       hdt    -0900
       hkst   +0900
       hkt    +0800
-      hovst  +0800
-      hovt   +0700
       hst    -1000
       i      -0900
-      ict    +0700
       iddt   +0400
       idt    +0300
-      iot    +0600
-      irdt   +0430
-      irst   +0330
-      isst   +0000
       ist    +0100
-      javt   +0720
-      jcst   +0900
       jdt    +1000
       jst    +0900
-      jwst   +0800
       k      -1000
-      kart   +0500
       kdt    +1000
-      kost   +1100
       kst    +0900
-      kwat   -1200
       l      -1100
-      lhdt   +1100
-      lhst   +1030
-      lint   +1400
       m      -1200
-      madmt  +0100
-      madst  +0000
-      madt   -0100
-      malst  +0720
-      malt   +0730
-      mart   -0930
       mddt   -0500
       mdt    -0600
       mest   +0200
       met    +0100
-      mht    +1200
-      mist   +1100
-      mmt    +0630
-      most   +0900
-      mot    +0800
+      mmt    +0454
       mpt    -0600
       msd    +0400
       msk    +0300
       mst    -0700
-      must   +0500
-      mut    +0400
-      mvt    +0500
       mwt    -0600
-      myt    +0800
       n      +0100
-      ncst   +1200
-      nct    +1100
       nddt   -0130
       ndt    -0230
-      negt   -0330
-      nest   +0120
-      net    +0020
-      nfst   +1230
-      nft    +1100
-      nmt    +1112
-      npt    +0545
-      nrt    +1200
+      npt    -1000
       nst    -0330
-      nut    -1100
       nwt    -1000
       nzdt   +1300
       nzmt   +1130
@@ -288,77 +184,37 @@ $Date::Manip::DM5::Abbrevs = join(' ',qw(
       p      +0300
       pddt   -0600
       pdt    -0700
-      pest   -0400
-      pet    -0500
-      pgt    +1000
-      phot   +1300
-      phst   +0900
-      pht    +0800
       pkst   +0600
       pkt    +0500
-      pmdt   -0200
-      pmst   -0300
-      pnt    -0830
-      pont   +1100
       ppmt   -0449
       ppt    -0700
       pst    -0800
-      pwt    +0900
-      pyst   -0300
-      pyt    -0400
+      pwt    -0700
       q      +0400
       qmt    -0514
       r      +0500
-      ret    +0400
       s      +0600
       sast   +0200
-      sbt    +1100
-      sct    +0400
       sdmt   -0440
-      sdt    -1000
-      sgt    +0800
       smt    +0216
-      srt    -0300
       sst    -1100
-      swat   +0130
       t      +0700
-      taht   -1000
-      tkt    +1300
-      tlt    +0900
       tmt    +0139
-      tvt    +1200
       u      +0800
-      ulast  +0900
-      ulat   +0800
       ut     +0000
       utc    +0000
-      uyhst  -0230
-      uyst   -0200
-      uyt    -0300
       v      +0900
-      vet    -0430
-      vust   +1200
-      vut    +1100
       w      +1000
-      wakt   +1200
-      warst  -0300
-      wart   -0400
       wast   +0200
       wat    +0100
       wemt   +0200
       west   +0100
       wet    +0000
-      wft    +1200
-      wgst   -0200
-      wgt    -0300
       wib    +0700
       wit    +0900
       wita   +0800
       wmt    +0124
-      wsdt   +1400
-      wsst   +1300
       x      +1100
-      xjt    +0600
       y      +1200
       yddt   -0700
       ydt    -0800
@@ -377,121 +233,58 @@ The following timezones are defined:
       A      -0100
       ACDT   +1030
       ACST   +0930
-      ACT    -0500
-      ACWDT  +0945
-      ACWST  +0845
       ADDT   -0200
       ADT    -0300
       AEDT   +1100
       AEST   +1000
-      AFT    +0430
       AHDT   -0900
       AHST   -1000
       AKDT   -0800
       AKST   -0900
-      AMST   -0300
-      AMT    -0400
-      ANT    -0430
-      APT    -0300
-      ARST   -0200
-      ART    -0300
+      APT    -0900
       AST    -0400
       AT     -0200
       AWDT   +0900
       AWST   +0800
       AWT    -0300
-      AZOMT  +0000
-      AZOST  +0000
-      AZOT   -0100
       B      -0200
-      BDST   +0700
-      BDT    +0600
-      BEAT   +0230
-      BEAUT  +0245
-      BNT    +0800
-      BORT   +0800
-      BORTST +0820
-      BOT    -0400
-      BRST   -0200
-      BRT    -0300
+      BDST   +0200
+      BDT    -1000
       BST    +0100
       BT     +0300
-      BTT    +0600
-      BURT   +0630
       C      -0300
       CADT   +1030
-      CANT   -0100
-      CAPT   -0900
       CAST   +0300
       CAT    +0200
-      CAWT   -0900
-      CCT    +0630
       CDDT   -0400
       CDT    -0500
       CEMT   +0300
       CEST   +0200
       CET    +0100
-      CGST   -0100
-      CGT    -0200
-      CHADT  +1345
-      CHAST  +1245
-      CHDT   -0530
-      CHOST  +0900
-      CHOT   +0800
       CHST   +1000
-      CHUT   +1000
-      CKHST  -0930
-      CKT    -1000
       CLDT   -0300
-      CLST   -0300
-      CLT    -0400
       CMT    +0155
-      COST   -0400
-      COT    -0500
       CPT    -0500
       CST    -0600
-      CUT    +0220
-      CVST   -0100
-      CVT    -0100
       CWT    -0500
-      CXT    +0700
       D      -0400
-      DACT   +0600
       E      -0500
       EADT   +1100
-      EASST  -0500
-      EAST   -0600
       EAT    +0300
-      ECT    -0500
       EDDT   -0300
       EDT    -0400
       EEST   +0300
       EET    +0200
       EETDST +0300
       EETEDT +0300
-      EGST   +0000
-      EGT    -0100
-      EHDT   -0430
       EPT    -0400
       EST    -0500
       EWT    -0400
       F      -0600
-      FJST   +1300
-      FJT    +1200
-      FKST   -0300
-      FKT    -0400
-      FNST   -0100
-      FNT    -0200
       FST    +0200
       FWT    +0100
       G      -0700
-      GALT   -0600
-      GAMT   -0900
       GB     +0100
-      GBGT   -0345
-      GFT    -0300
-      GHST   +0020
-      GILT   +1200
       GMT    +0000
       GMT+1  +0100
       GMT+10 +1000
@@ -519,49 +312,26 @@ The following timezones are defined:
       GMT-7  -0700
       GMT-8  -0800
       GMT-9  -0900
-      GST    -0200
-      GYT    -0400
+      GST    +1000
       H      -0800
       HDT    -0900
       HKST   +0900
       HKT    +0800
-      HOVST  +0800
-      HOVT   +0700
       HST    -1000
       I      -0900
-      ICT    +0700
       IDDT   +0400
       IDLE   +1200
       IDLW   -1200
       IDT    +0300
-      IOT    +0600
-      IRDT   +0430
-      IRST   +0330
-      ISST   +0000
       IST    +0100
       IT     +0330
-      JAVT   +0720
-      JCST   +0900
       JDT    +1000
       JST    +0900
-      JWST   +0800
       K      -1000
-      KART   +0500
       KDT    +1000
-      KOST   +1100
       KST    +0900
-      KWAT   -1200
       L      -1100
-      LHDT   +1100
-      LHST   +1030
-      LINT   +1400
       M      -1200
-      MADMT  +0100
-      MADST  +0000
-      MADT   -0100
-      MALST  +0720
-      MALT   +0730
-      MART   -0930
       MDDT   -0500
       MDT    -0600
       MEST   +0200
@@ -570,36 +340,18 @@ The following timezones are defined:
       METDST +0200
       MEWT   +0100
       MEZ    +0100
-      MHT    +1200
-      MIST   +1100
-      MMT    +0630
-      MOST   +0900
-      MOT    +0800
+      MMT    +0454
       MPT    -0600
       MSD    +0400
       MSK    +0300
       MST    -0700
-      MUST   +0500
-      MUT    +0400
-      MVT    +0500
       MWT    -0600
-      MYT    +0800
       N      +0100
-      NCST   +1200
-      NCT    +1100
       NDDT   -0130
       NDT    -0230
-      NEGT   -0330
-      NEST   +0120
-      NET    +0020
-      NFST   +1230
-      NFT    +1100
-      NMT    +1112
-      NPT    +0545
-      NRT    +1200
+      NPT    -1000
       NST    -0330
       NT     -1100
-      NUT    -1100
       NWT    -1000
       NZDT   +1300
       NZMT   +1130
@@ -609,80 +361,40 @@ The following timezones are defined:
       P      +0300
       PDDT   -0600
       PDT    -0700
-      PEST   -0400
-      PET    -0500
-      PGT    +1000
-      PHOT   +1300
-      PHST   +0900
-      PHT    +0800
       PKST   +0600
       PKT    +0500
-      PMDT   -0200
-      PMST   -0300
-      PNT    -0830
-      PONT   +1100
       PPMT   -0449
       PPT    -0700
       PST    -0800
-      PWT    +0900
-      PYST   -0300
-      PYT    -0400
+      PWT    -0700
       Q      +0400
       QMT    -0514
       R      +0500
-      RET    +0400
       ROK    +0900
       S      +0600
       SAST   +0200
       SAT    -0400
-      SBT    +1100
-      SCT    +0400
       SDMT   -0440
-      SDT    -1000
-      SGT    +0800
       SMT    +0216
-      SRT    -0300
       SST    -1100
-      SWAT   +0130
       SWT    +0100
       T      +0700
-      TAHT   -1000
-      TKT    +1300
-      TLT    +0900
       TMT    +0139
-      TVT    +1200
       U      +0800
-      ULAST  +0900
-      ULAT   +0800
       UT     +0000
       UTC    +0000
-      UYHST  -0230
-      UYST   -0200
-      UYT    -0300
       V      +0900
-      VET    -0430
-      VUST   +1200
-      VUT    +1100
       W      +1000
-      WAKT   +1200
-      WARST  -0300
-      WART   -0400
       WAST   +0200
       WAT    +0100
       WEMT   +0200
       WEST   +0100
       WET    +0000
-      WFT    +1200
-      WGST   -0200
-      WGT    -0300
       WIB    +0700
       WIT    +0900
       WITA   +0800
       WMT    +0124
-      WSDT   +1400
-      WSST   +1300
       X      +1100
-      XJT    +0600
       Y      +1200
       YDDT   -0700
       YDT    -0800

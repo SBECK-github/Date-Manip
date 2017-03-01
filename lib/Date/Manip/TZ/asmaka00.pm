@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::asmaka00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:49 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:26 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -44,13 +44,13 @@ END { undef $VERSION; }
    1932 =>
      [
         [ [1932,10,31,16,2,24],[1932,11,1,0,2,24],'+08:00:00',[8,0,0],
-          'WITA',0,[1942,2,8,15,59,59],[1942,2,8,23,59,59],
+          '+08',0,[1942,2,8,15,59,59],[1942,2,8,23,59,59],
           '1932103116:02:24','1932110100:02:24','1942020815:59:59','1942020823:59:59' ],
      ],
    1942 =>
      [
         [ [1942,2,8,16,0,0],[1942,2,9,1,0,0],'+09:00:00',[9,0,0],
-          'JST',0,[1945,9,22,14,59,59],[1945,9,22,23,59,59],
+          '+09',0,[1945,9,22,14,59,59],[1945,9,22,23,59,59],
           '1942020816:00:00','1942020901:00:00','1945092214:59:59','1945092223:59:59' ],
      ],
    1945 =>

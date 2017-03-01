@@ -1,14 +1,14 @@
 package #
 Date::Manip::Offset::off295;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 12:04:54 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:11:12 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -58,7 +58,7 @@ $Offset        = '-04:00:00';
       'america/grand_turk',
       'etc/gmt-4',
       'd',
-      'antarctica/palmer',
+      'america/punta_arenas',
       'america/eirunepe',
       'america/rio_branco',
       'atlantic/stanley',
@@ -78,6 +78,7 @@ $Offset        = '-04:00:00';
       'america/miquelon',
       'america/argentina/buenos_aires',
       'america/cayenne',
+      'antarctica/palmer',
       ],
    1 => [
       'america/new_york',
@@ -103,12 +104,14 @@ $Offset        = '-04:00:00';
       'america/eirunepe',
       'america/lima',
       'america/bogota',
+      'america/guayaquil',
       'america/rio_branco',
       'america/jamaica',
       'america/indiana/tell_city',
       'america/santo_domingo',
       'america/rankin_inlet',
       'america/resolute',
+      'america/punta_arenas',
       'america/santiago',
       ],
 );

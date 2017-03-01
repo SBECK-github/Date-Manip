@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::amcara00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:53 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:24 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -44,25 +44,25 @@ END { undef $VERSION; }
    1912 =>
      [
         [ [1912,2,12,4,27,40],[1912,2,11,23,57,40],'-04:30:00',[-4,-30,0],
-          'VET',0,[1965,1,1,4,29,59],[1964,12,31,23,59,59],
+          '-0430',0,[1965,1,1,4,29,59],[1964,12,31,23,59,59],
           '1912021204:27:40','1912021123:57:40','1965010104:29:59','1964123123:59:59' ],
      ],
    1965 =>
      [
         [ [1965,1,1,4,30,0],[1965,1,1,0,30,0],'-04:00:00',[-4,0,0],
-          'VET',0,[2007,12,9,6,59,59],[2007,12,9,2,59,59],
+          '-04',0,[2007,12,9,6,59,59],[2007,12,9,2,59,59],
           '1965010104:30:00','1965010100:30:00','2007120906:59:59','2007120902:59:59' ],
      ],
    2007 =>
      [
         [ [2007,12,9,7,0,0],[2007,12,9,2,30,0],'-04:30:00',[-4,-30,0],
-          'VET',0,[2016,5,1,6,59,59],[2016,5,1,2,29,59],
+          '-0430',0,[2016,5,1,6,59,59],[2016,5,1,2,29,59],
           '2007120907:00:00','2007120902:30:00','2016050106:59:59','2016050102:29:59' ],
      ],
    2016 =>
      [
         [ [2016,5,1,7,0,0],[2016,5,1,3,0,0],'-04:00:00',[-4,0,0],
-          'VET',0,[9999,12,31,0,0,0],[9999,12,30,20,0,0],
+          '-04',0,[9999,12,31,0,0,0],[9999,12,30,20,0,0],
           '2016050107:00:00','2016050103:00:00','9999123100:00:00','9999123020:00:00' ],
      ],
 );

@@ -25,26 +25,22 @@ $obj->config("forcedate","now,America/New_York");
 
 $tests="
 
-BRT reset =>
-   America/Sao_Paulo
-   America/Araguaina
-   America/Bahia
-   America/Belem
-   America/Fortaleza
-   America/Maceio
-   America/Recife
-   America/Santarem
+EWT reset =>
+   America/New_York
+   America/Detroit
+   America/Iqaluit
+   America/Nipigon
+   America/Thunder_Bay
+   America/Toronto
 
-BRT
-America/Sao_Paulo
-America/Santarem
-America/Araguaina
-America/Bahia
+EWT
+America/New_York
+America/Iqaluit
+America/Thunder_Bay
    =>
-   America/Sao_Paulo
-   America/Santarem
-   America/Araguaina
-   America/Bahia
+   America/New_York
+   America/Iqaluit
+   America/Thunder_Bay
 ";
 
 $t->tests(func  => \&test,

@@ -1,14 +1,14 @@
 package #
 Date::Manip::TZ::papitc00;
-# Copyright (c) 2008-2016 Sullivan Beck.  All rights reserved.
+# Copyright (c) 2008-2017 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Dec  1 11:59:51 EST 2016
-#    Data version: tzdata2016j
-#    Code version: tzcode2016j
+#    Generated on: Wed Mar  1 10:08:23 EST 2017
+#    Data version: tzdata2017a
+#    Code version: tzcode2017a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -38,13 +38,13 @@ END { undef $VERSION; }
    1901 =>
      [
         [ [1901,1,1,8,40,20],[1901,1,1,0,10,20],'-08:30:00',[-8,-30,0],
-          'PNT',0,[1998,4,27,8,29,59],[1998,4,26,23,59,59],
+          '-0830',0,[1998,4,27,8,29,59],[1998,4,26,23,59,59],
           '1901010108:40:20','1901010100:10:20','1998042708:29:59','1998042623:59:59' ],
      ],
    1998 =>
      [
         [ [1998,4,27,8,30,0],[1998,4,27,0,30,0],'-08:00:00',[-8,0,0],
-          'PST',0,[9999,12,31,0,0,0],[9999,12,30,16,0,0],
+          '-08',0,[9999,12,31,0,0,0],[9999,12,30,16,0,0],
           '1998042708:30:00','1998042700:30:00','9999123100:00:00','9999123016:00:00' ],
      ],
 );
