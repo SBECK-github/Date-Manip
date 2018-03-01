@@ -273,7 +273,7 @@ foreach my $hpuxz (keys %hpux_zones) {
    'AST4APT'       => 'America/Blanc-Sablon',
    'AWST-8AWDT'    => 'Australia/Perth',
    'BST11BDT'      => 'America/Adak',
-   'CAT-2CAST'     => 'Africa/Khartoum',
+   'CAT-2CAST'     => 'Africa/Juba',
    'CET-1CEST'     => 'CET',
    'CET-1WEMT'     => 'Europe/Monaco',
    'CET-1WEST'     => 'Europe/Luxembourg',
