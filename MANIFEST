@@ -1078,7 +1078,9 @@ t/delta.is.t
 t/delta.parse.fract.t
 t/delta.parse.t
 t/delta.printf.t
-t/delta.set.t
+t/delta.set.1.t
+t/delta.set.2.t
+t/delta.set.3.t
 t/delta.type.t
 t/delta.value.t
 t/dm5.convtz.t

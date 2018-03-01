@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use Test::Inter;
-$t = new Test::Inter 'delta :: set';
+$t = new Test::Inter 'delta :: set (old)';
 $testdir = '';
 $testdir = $t->testdir();
 
@@ -41,11 +41,11 @@ delta    [ -10 20 30 ]                          => 0 0 0 0 -9 -39 -30
 
 delta    [ -10 20 30 ]             nonormalize  => 0 0 0 0 -10 20 30
 
-delta    [ 10 -70 -130 +90 ]                    => 0 0 1 3 -72 -8 -30
+delta    [ 10 -70 -130 +90 ]                    => 0 0 0 6 23 51 30
 
 delta    [ 10 -70 -130 +90 ]       nonormalize  => 0 0 0 10 -70 -130 90
 
-delta    [ 1 13 2 10 -70 -130 90 ]              => 2 1 3 3 -72 -8 -30
+delta    [ 1 13 2 10 -70 -130 90 ]              => 2 1 2 6 23 51 30
 
 #
 
@@ -63,13 +63,13 @@ standard [ 1 13 2 10 -70 -130 90 ] nonormalize  => 1 13 2 10 -70 -130 90
 
 m        25                        nonormalize  => 1 13 2 10 -70 25 90
 
-m        -135                                   => 2 1 3 3 -72 -13 -30
+m        -135                                   => 2 1 2 6 23 46 30
 
 #
 
 standard [ 1 13 2 10 -70 -130 90 ] nonormalize  => 1 13 2 10 -70 -130 90
 
-M        14                                     => 2 2 3 3 -72 -8 -30
+M        14                                     => 2 2 2 6 23 51 30
 
 ";
 
