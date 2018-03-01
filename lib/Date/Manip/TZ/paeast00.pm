@@ -6,9 +6,9 @@ Date::Manip::TZ::paeast00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue May 30 10:43:19 EDT 2017
-#    Data version: tzdata2017b
-#    Code version: tzcode2017b
+#    Generated on: Thu Mar  1 10:33:48 EST 2018
+#    Data version: tzdata2018c
+#    Code version: tzcode2018c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -934,6 +934,15 @@ END { undef $VERSION; }
         [ [2067,8,14,4,0,0],[2067,8,13,23,0,0],'-05:00:00',[-5,0,0],
           '-05',1,[2068,5,13,2,59,59],[2068,5,12,21,59,59],
           '2067081404:00:00','2067081323:00:00','2068051302:59:59','2068051221:59:59' ],
+     ],
+   2068 =>
+     [
+        [ [2068,5,13,3,0,0],[2068,5,12,21,0,0],'-06:00:00',[-6,0,0],
+          '-06',0,[2068,8,12,3,59,59],[2068,8,11,21,59,59],
+          '2068051303:00:00','2068051221:00:00','2068081203:59:59','2068081121:59:59' ],
+        [ [2068,8,12,4,0,0],[2068,8,11,23,0,0],'-05:00:00',[-5,0,0],
+          '-05',1,[2069,5,12,2,59,59],[2069,5,11,21,59,59],
+          '2068081204:00:00','2068081123:00:00','2069051202:59:59','2069051121:59:59' ],
      ],
 );
 

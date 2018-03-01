@@ -102,7 +102,7 @@ changes), a day is not an exactly known field.
 For business calculations, a day IS an exactly known field.  Since
 business mode ignores daylight saving time, the length of the day can
 be calculated based on the config variables listed above.  So, for
-example, if the work day is 08:00-17:00, the lenth of the day is 9
+example, if the work day is 08:00-17:00, the length of the day is 9
 hours.  The length of the week is still unknown since some work weeks
 may have fewer days than others due to holidays.
 
@@ -277,7 +277,7 @@ missing fields default to the value 0.
 
 The delta string may also be specified using common field
 abbreviations.  This is described below in the
-L<"ADDITONAL DELTA NOTATIONS"> section.
+L<"ADDITIONAL DELTA NOTATIONS"> section.
 
 =item B<input>
 
@@ -334,7 +334,7 @@ unchanged (unless the B<mode> option is also passed in).
 Also, when setting the entire delta, signs are not carried from
 one field to another, so [-1,2,...] is equivalent to [-1,+2,...].
 
-By default, a delta is normalized, but setting the B<nonrom> key to
+By default, a delta is normalized, but setting the B<nonorm> key to
 a true value will not do that.
 
 For backwards compatibility, B<normal> can be used in place of B<standard>,
@@ -437,12 +437,12 @@ a business and non-business delta.
 
 =back
 
-=head1 ADDITIONAL DELTA NOTATONS
+=head1 ADDITIONAL DELTA NOTATIONS
 
 When parsing a delta, the string may be specified with the field spelled
 out, rather than using the colon separated fields.
 
-This exapanded notation has the fields spelled out in some language
+This expanded notation has the fields spelled out in some language
 specific form:
 
    Examples:

@@ -51,7 +51,7 @@ if ($EU_MM_V < 6.64) {
 
 WriteMakefile(
    NAME             => "Date::Manip",
-   VERSION          => "6.70",
+   VERSION          => "6.71",
    ABSTRACT         => "Date manipulation routines",
    LICENSE          => "perl",
    ($EU_MM_V >= 6.48
@@ -76,99 +76,99 @@ WriteMakefile(
              },
              'Date::Manip::Base' => {
                 file    => 'lib/Date/Manip/Base.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::DM5' => {
                 file    => 'lib/Date/Manip/DM5.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::DM5abbrevs' => {
                 file    => 'lib/Date/Manip/DM5abbrevs.pm',
-                version => '6.70',
+                version => '6.61',
              },
              'Date::Manip::DM6' => {
                 file    => 'lib/Date/Manip/DM6.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Date' => {
                 file    => 'lib/Date/Manip/Date.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Delta' => {
                 file    => 'lib/Date/Manip/Delta.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::catalan' => {
                 file    => 'lib/Date/Manip/Lang/catalan.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::danish' => {
                 file    => 'lib/Date/Manip/Lang/danish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::dutch' => {
                 file    => 'lib/Date/Manip/Lang/dutch.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::english' => {
                 file    => 'lib/Date/Manip/Lang/english.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::finnish' => {
                 file    => 'lib/Date/Manip/Lang/finnish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::french' => {
                 file    => 'lib/Date/Manip/Lang/french.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::german' => {
                 file    => 'lib/Date/Manip/Lang/german.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::index' => {
                 file    => 'lib/Date/Manip/Lang/index.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::italian' => {
                 file    => 'lib/Date/Manip/Lang/italian.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::norwegian' => {
                 file    => 'lib/Date/Manip/Lang/norwegian.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::polish' => {
                 file    => 'lib/Date/Manip/Lang/polish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::portugue' => {
                 file    => 'lib/Date/Manip/Lang/portugue.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::romanian' => {
                 file    => 'lib/Date/Manip/Lang/romanian.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::russian' => {
                 file    => 'lib/Date/Manip/Lang/russian.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::spanish' => {
                 file    => 'lib/Date/Manip/Lang/spanish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::swedish' => {
                 file    => 'lib/Date/Manip/Lang/swedish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Lang::turkish' => {
                 file    => 'lib/Date/Manip/Lang/turkish.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Obj' => {
                 file    => 'lib/Date/Manip/Obj.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Offset::off000' => {
                 file    => 'lib/Date/Manip/Offset/off000.pm',
@@ -1918,13 +1918,25 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off436.pm',
                 version => '6.61',
              },
+             'Date::Manip::Offset::off437' => {
+                file    => 'lib/Date/Manip/Offset/off437.pm',
+                version => '6.61',
+             },
+             'Date::Manip::Offset::off438' => {
+                file    => 'lib/Date/Manip/Offset/off438.pm',
+                version => '6.61',
+             },
+             'Date::Manip::Offset::off439' => {
+                file    => 'lib/Date/Manip/Offset/off439.pm',
+                version => '6.61',
+             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::TZ' => {
                 file    => 'lib/Date/Manip/TZ.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::TZ::a00' => {
                 file    => 'lib/Date/Manip/TZ/a00.pm',
@@ -1966,6 +1978,10 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/afjoha00.pm',
                 version => '6.61',
              },
+             'Date::Manip::TZ::afjuba00' => {
+                file    => 'lib/Date/Manip/TZ/afjuba00.pm',
+                version => '6.61',
+             },
              'Date::Manip::TZ::afkhar00' => {
                 file    => 'lib/Date/Manip/TZ/afkhar00.pm',
                 version => '6.61',
@@ -1988,6 +2004,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::afndja00' => {
                 file    => 'lib/Date/Manip/TZ/afndja00.pm',
+                version => '6.61',
+             },
+             'Date::Manip::TZ::afsao_00' => {
+                file    => 'lib/Date/Manip/TZ/afsao_00.pm',
                 version => '6.61',
              },
              'Date::Manip::TZ::aftrip00' => {
@@ -3540,15 +3560,15 @@ WriteMakefile(
              },
              'Date::Manip::TZ_Base' => {
                 file    => 'lib/Date/Manip/TZ_Base.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::TZdata' => {
                 file    => 'lib/Date/Manip/TZdata.pm',
-                version => '6.70',
+                version => '6.71',
              },
              'Date::Manip::Zones' => {
                 file    => 'lib/Date/Manip/Zones.pm',
-                version => '6.70',
+                version => '6.61',
              },
 
           },

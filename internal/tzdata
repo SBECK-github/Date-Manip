@@ -20,7 +20,7 @@ use strict;
 use warnings;
 
 our $VERSION;
-$VERSION='6.70';
+$VERSION='6.71';
 
 our ($dmb);
 $dmb = new Date::Manip::Base;
@@ -330,7 +330,7 @@ sub do_dump {
       my($module,$type) = @{ $module{$zone} };
       next  if ($type ne "tzdata");
       system("cd tzdata; " .
-             "tmp/etc/zdump -c $test_year -v $zone > dump/$module");
+             "./zdump -c $test_year -v $zone > dump/$module");
    }
    print "\n";
 }

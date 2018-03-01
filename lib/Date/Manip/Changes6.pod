@@ -33,7 +33,7 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.71 (planned 2018-06-01)
 
-=head1 VERSION 6.70 (planned 2018-03-01)
+=head1 VERSION 6.70 (2018-03-01)
 
 =over 4
 
@@ -52,6 +52,8 @@ The convert function continues to support converting from a less exact
 type to a more exact type, but this is deprecated and will be removed in
 version 7.00.
 
+This was prompted by a bug reported by Ian Gibbs.
+
 =item B<(*) (!) Deprecated some parts of Date::Manip::Delta>
 
 The options passed to the B<set> and B<parse> methods have changed.  The
@@ -69,7 +71,7 @@ The deprecation of the TZ variable has been postponed to version 7.00.
 
 I converted some of the functions to use faster algorithms.  Previously, the
 steps were worked out using logical time/calendar based calculations.  These
-were replaced with non-intutitive numerical calculations that gave the same
+were replaced with non-intuitive numerical calculations that gave the same
 result faster.
 
 =item Changed behavior if timezone not determined
@@ -84,9 +86,14 @@ The list of what what is provided did not include the path to the file
 providing each module.  I've fixed the Makefile.PL as well as the META
 files.  Graham Knop (GitHub #13)
 
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2018c)
+
 =item Documentation fixes
 
-Fixed a typo in the Holidays man page.  Kim Border.
+Rewrote Date::Manip::Delta page to reflect changes, and clean up the
+documentation in general.
 
 =back
 

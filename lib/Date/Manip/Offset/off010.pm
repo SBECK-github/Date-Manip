@@ -6,9 +6,9 @@ Date::Manip::Offset::off010;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Tue May 30 10:44:03 EDT 2017
-#    Data version: tzdata2017b
-#    Code version: tzcode2017b
+#    Generated on: Thu Mar  1 10:38:03 EST 2018
+#    Data version: tzdata2018c
+#    Code version: tzcode2018c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+00:29:46';
+$Offset        = '+00:29:32';
 
 %Offset        = (
    0 => [
-      'europe/zurich',
+      'europe/monaco',
       ],
 );
 
