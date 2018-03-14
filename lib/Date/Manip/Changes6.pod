@@ -33,6 +33,17 @@ incompatible. These are marked with an exclamation mark (!).
 
 =head1 VERSION 6.71 (planned 2018-06-01)
 
+=over 4
+
+=item Changes file supported
+
+It was requested that I include a valid Changes file.  I wrote a
+simple script to convert the Change6.pod file into a valid Change
+file.  The Changes6.pod file is still the canonical source of this
+information!  Suggested by H.Merijn Brand
+
+=back
+
 =head1 VERSION 6.70 (2018-03-01)
 
 =over 4
@@ -723,15 +734,23 @@ Spelling error fixed.  RT 80621
 
 =head1 VERSION 6.36 (2012-10-31)
 
+=over 4
+
+=item Fix version numbers
+
 This was an interim release to fix the version numbers (6.35 was
 released with all of the version numbers 6.34).
 
+=back
+
 =head1 VERSION 6.35 (2012-10-31)
 
-This was an interim release to fix the problem with the PATH being
-replaced.
-
 =over 4
+
+=item Fix PATH
+
+This version was an interim release to fix the problem with the PATH being
+replaced.
 
 =item Removed dependency on YAML
 
@@ -1521,11 +1540,13 @@ SetDate/ForceDate in effect.>
 
 =head1 VERSION 6.00 (2009-11-23)
 
+=over 4
+
+=item First release of the 6.xx series
+
 Date::Manip 6.00 is a total rethink of the module, and a nearly complete
 rewrite. Please refer to the Date::Manip::Changes5to6 document for a list
 of incompatible changes.
-
-=over 4
 
 =item Reorganization
 
