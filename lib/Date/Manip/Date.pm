@@ -19,6 +19,7 @@ use warnings;
 use strict;
 use integer;
 use utf8;
+use Carp;
 use IO::File;
 use Storable qw(dclone);
 #use re 'debug';
@@ -2628,16 +2629,16 @@ sub value {
 sub cmp {
    my($self,$date) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [cmp] Arguments must be valid dates: date1\n";
+      carp "WARNING: [cmp] Arguments must be valid dates: date1";
       return undef;
    }
 
    if (! ref($date) eq 'Date::Manip::Date') {
-      warn "WARNING: [cmp] Argument must be a Date::Manip::Date object\n";
+      carp "WARNING: [cmp] Argument must be a Date::Manip::Date object";
       return undef;
    }
    if ($$date{'err'}  ||  ! $$date{'data'}{'set'}) {
-      warn "WARNING: [cmp] Arguments must be valid dates: date2\n";
+      carp "WARNING: [cmp] Arguments must be valid dates: date2";
       return undef;
    }
 
@@ -3894,7 +3895,7 @@ sub secs_since_1970_GMT {
    }
 
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [secs_since_1970_GMT] Object must contain a valid date\n";
+      carp "WARNING: [secs_since_1970_GMT] Object must contain a valid date";
       return undef;
    }
 
@@ -3906,7 +3907,7 @@ sub secs_since_1970_GMT {
 sub week_of_year {
    my($self,$first) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [week_of_year] Object must contain a valid date\n";
+      carp "WARNING: [week_of_year] Object must contain a valid date";
       return undef;
    }
 
@@ -3947,7 +3948,7 @@ sub week_of_year {
 sub complete {
    my($self,$field) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [complete] Object must contain a valid date\n";
+      carp "WARNING: [complete] Object must contain a valid date";
       return undef;
    }
 
@@ -3985,7 +3986,7 @@ sub complete {
 sub convert {
    my($self,$zone) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [convert] Object must contain a valid date\n";
+      carp "WARNING: [convert] Object must contain a valid date";
       return 1;
    }
    my $dmt = $$self{'tz'};
@@ -4026,7 +4027,7 @@ sub convert {
 sub is_business_day {
    my($self,$checktime) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [is_business_day] Object must contain a valid date\n";
+      carp "WARNING: [is_business_day] Object must contain a valid date";
       return undef;
    }
    my $date             = $$self{'data'}{'date'};
@@ -4100,7 +4101,7 @@ sub list_holidays {
 sub holiday {
    my($self) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [holiday] Object must contain a valid date\n";
+      carp "WARNING: [holiday] Object must contain a valid date";
       return undef;
    }
    my $dmt = $$self{'tz'};
@@ -4134,7 +4135,7 @@ sub holiday {
 sub next_business_day {
    my($self,$off,$checktime) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [next_business_day] Object must contain a valid date\n";
+      carp "WARNING: [next_business_day] Object must contain a valid date";
       return undef;
    }
    my $date                  = $$self{'data'}{'date'};
@@ -4147,7 +4148,7 @@ sub next_business_day {
 sub prev_business_day {
    my($self,$off,$checktime) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [prev_business_day] Object must contain a valid date\n";
+      carp "WARNING: [prev_business_day] Object must contain a valid date";
       return undef;
    }
    my $date                  = $$self{'data'}{'date'};
@@ -4199,7 +4200,7 @@ sub __nextprev_business_day {
 sub nearest_business_day {
    my($self,$tomorrow) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [nearest_business_day] Object must contain a valid date\n";
+      carp "WARNING: [nearest_business_day] Object must contain a valid date";
       return undef;
    }
 
@@ -4307,7 +4308,7 @@ sub _holiday_objs {
             #    Jun 13 1972 = Some Holiday
 
             if (exists $$dmb{'data'}{'holidays'}{'hols'}{$name}{$y+0}) {
-               warn "WARNING: Holiday defined twice for one year: $name [$y]\n";
+               carp "WARNING: Holiday defined twice for one year: $name [$y]";
                next LINE;
             }
 
@@ -4335,7 +4336,7 @@ sub _holiday_objs {
       }
       $recur->err(1);
 
-      warn "WARNING: invalid holiday description: $string\n";
+      carp "WARNING: invalid holiday description: $string";
    }
    return;
 }
@@ -4441,7 +4442,7 @@ BEGIN {
    sub printf {
       my($self,@in) = @_;
       if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-         warn "WARNING: [printf] Object must contain a valid date\n";
+         carp "WARNING: [printf] Object must contain a valid date";
          return undef;
       }
 
@@ -4756,7 +4757,7 @@ BEGIN {
 sub list_events {
    my($self,@args) = @_;
    if ($$self{'err'}  ||  ! $$self{'data'}{'set'}) {
-      warn "WARNING: [list_events] Object must contain a valid date\n";
+      carp "WARNING: [list_events] Object must contain a valid date";
       return undef;
    }
    my $dmt = $$self{'tz'};
@@ -4777,7 +4778,7 @@ sub list_events {
    } elsif (@args  &&  $#args==0  &&  $args[0]==0) {
       $day  = 1;
    } elsif (@args) {
-      warn "ERROR: [list_events] unknown argument list\n";
+      carp "ERROR: [list_events] unknown argument list";
       return [];
    }
 
@@ -5074,7 +5075,7 @@ sub _event_objs {
          my $r = $self->new_recur();
          $err  = $r->parse($event[0]);
          if ($err) {
-            warn "ERROR: invalid event definition (must be Date, YMD, YM, or Recur)\n"
+            carp "ERROR: invalid event definition (must be Date, YMD, YM, or Recur)\n"
                . "       $string\n";
             next;
          }
@@ -5109,11 +5110,11 @@ sub _event_objs {
             my $d2 = $self->new_date();
             $err   = $d2->parse_date($o2);
             if ($err) {
-               warn "ERROR: invalid event definition (must be YMD;YMD or YM;YM)\n"
+               carp "ERROR: invalid event definition (must be YMD;YMD or YM;YM)\n"
                   . "       $string\n";
                next;
             } elsif ($$d1{'data'}{'def'}[0] ne $$d2{'data'}{'def'}[0]) {
-               warn "ERROR: invalid event definition (YMD;YM or YM;YMD not allowed)\n"
+               carp "ERROR: invalid event definition (YMD;YM or YM;YMD not allowed)\n"
                   . "       $string\n";
                next;
             }
@@ -5149,7 +5150,7 @@ sub _event_objs {
             if (! $err) {
                # Date;Date
                if ($$d1{'data'}{'def'}[0] ne $$d2{'data'}{'def'}[0]) {
-                  warn "ERROR: invalid event definition (year must be absent or\n"
+                  carp "ERROR: invalid event definition (year must be absent or\n"
                      . "       included in both dats in Date;Date)\n"
                      . "       $string\n";
                   next;
@@ -5178,7 +5179,7 @@ sub _event_objs {
             $err    = $del->parse($o2);
 
             if ($err) {
-               warn "ERROR: invalid event definition (must be Date;Date or\n"
+               carp "ERROR: invalid event definition (must be Date;Date or\n"
                   . "       Date;Delta) $string\n";
                next;
             }
@@ -5214,7 +5215,7 @@ sub _event_objs {
          }
 
          if ($err) {
-            warn "ERROR: invalid event definition (must be Date;Date, YMD;YMD, "
+            carp "ERROR: invalid event definition (must be Date;Date, YMD;YMD, "
               .  "       YM;YM, Date;Delta, or Recur;Delta)\n"
               . "        $string\n";
             next;
@@ -5240,7 +5241,7 @@ sub _event_objs {
          }
 
       } else {
-         warn "ERROR: invalid event definition\n"
+         carp "ERROR: invalid event definition\n"
             . "       $string\n";
          next;
       }
