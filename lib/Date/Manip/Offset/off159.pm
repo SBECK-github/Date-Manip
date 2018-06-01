@@ -6,9 +6,9 @@ Date::Manip::Offset::off159;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Mar  1 10:38:03 EST 2018
-#    Data version: tzdata2018c
-#    Code version: tzcode2018c
+#    Generated on: Wed May 30 14:51:33 EDT 2018
+#    Data version: tzdata2018e
+#    Code version: tzcode2018e
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -48,6 +48,7 @@ $Offset        = '+08:00:00';
       'asia/singapore',
       'etc/gmt+8',
       'u',
+      'antarctica/casey',
       'asia/chita',
       'asia/krasnoyarsk',
       'asia/dili',
@@ -57,7 +58,6 @@ $Offset        = '+08:00:00';
       'asia/ho_chi_minh',
       'asia/jakarta',
       'asia/ust-nera',
-      'antarctica/casey',
       ],
    1 => [
       'asia/hovd',

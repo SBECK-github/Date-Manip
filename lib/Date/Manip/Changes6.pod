@@ -55,6 +55,10 @@ information!  Requested by H. Merijn Brand
 On MacOS X High Sierra, some of the timezone files were symlinks,
 but not properly followed.  This was fixed by Stu Tomlinson (GitHub #15).
 
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2018e)
+
 =item Documentation fixes
 
 Minor fix provided by Mohammad S Anwar (GitHub #17)
