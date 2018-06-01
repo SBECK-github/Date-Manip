@@ -570,6 +570,7 @@ sub _get_curr_zone {
          }
          my $file    = shift(@methods);
          my $dir     = shift(@methods);
+         print "$file $dir"  if ($debug);
 
          my $z;
          if (-f $file  &&  -d $dir) {
@@ -717,7 +718,7 @@ sub _get_curr_zone {
       if (-l $localtime) {
          return _zoneinfo_file_name_to_zone(
                                             Cwd::abs_path($localtime),
-                                            $zoneinfo,
+                                            Cwd::abs_path($zoneinfo),
                                            );
       }
 
