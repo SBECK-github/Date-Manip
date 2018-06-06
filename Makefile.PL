@@ -3568,7 +3568,7 @@ WriteMakefile(
              },
              'Date::Manip::Zones' => {
                 file    => 'lib/Date/Manip/Zones.pm',
-                version => '6.61',
+                version => '6.72',
              },
 
           },
@@ -3593,8 +3593,8 @@ WriteMakefile(
     : ()),
 
    EXE_FILES        => [
-                        'examples/dm_date',
                         'examples/dm_zdump',
+                        'examples/dm_date',
 
                        ],
 
