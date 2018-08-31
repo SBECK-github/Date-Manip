@@ -1,4 +1,5 @@
 .cover
+.travis.yml
 Changes
 examples/dm_date
 examples/dm_zdump
