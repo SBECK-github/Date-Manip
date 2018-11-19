@@ -110,6 +110,7 @@ sub _init {
                                    'command',  '/bin/date +%Z',
                                    'command',  '/usr/bin/date +%Z',
                                    'command',  '/usr/local/bin/date +%Z',
+                                   'command',  '/usr/bin/env -i -- date +%Z',
                                    qw(cmdfield /bin/date -2
                                       cmdfield /usr/bin/date -2
                                       cmdfield /usr/local/bin/date -2
@@ -117,6 +118,7 @@ sub _init {
                                    'command',  '/bin/date +%z',
                                    'command',  '/usr/bin/date +%z',
                                    'command',  '/usr/local/bin/date +%z',
+                                   'command', '/usr/bin/env -i -- date +%z',
                                    'gmtoff'
                                   ];
 
