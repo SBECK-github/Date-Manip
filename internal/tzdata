@@ -20,7 +20,7 @@ use strict;
 use warnings;
 
 our $VERSION;
-$VERSION='6.75';
+$VERSION='6.76';
 
 our ($dmb);
 $dmb = new Date::Manip::Base;
