@@ -101,7 +101,7 @@ use strict;
 use warnings;
 
 our(\$VERSION);
-\$VERSION='6.75';
+\$VERSION='$VERSION';
 
 END {
    my \$tmp;
