@@ -36,6 +36,7 @@ my %script_prereq = (
 my %test_prereq = (
    'Test::Inter'              => '0',
    'Test::More'               => '0',
+   'lib'                      => '0',
 );
 
 my %config_prereq = (
@@ -1930,6 +1931,26 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off439.pm',
                 version => '6.76',
              },
+             'Date::Manip::Offset::off440' => {
+                file    => 'lib/Date/Manip/Offset/off440.pm',
+                version => '6.76',
+             },
+             'Date::Manip::Offset::off441' => {
+                file    => 'lib/Date/Manip/Offset/off441.pm',
+                version => '6.76',
+             },
+             'Date::Manip::Offset::off442' => {
+                file    => 'lib/Date/Manip/Offset/off442.pm',
+                version => '6.76',
+             },
+             'Date::Manip::Offset::off443' => {
+                file    => 'lib/Date/Manip/Offset/off443.pm',
+                version => '6.76',
+             },
+             'Date::Manip::Offset::off444' => {
+                file    => 'lib/Date/Manip/Offset/off444.pm',
+                version => '6.76',
+             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.76',
@@ -2792,6 +2813,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::asqata00' => {
                 file    => 'lib/Date/Manip/TZ/asqata00.pm',
+                version => '6.76',
+             },
+             'Date::Manip::TZ::asqost00' => {
+                file    => 'lib/Date/Manip/TZ/asqost00.pm',
                 version => '6.76',
              },
              'Date::Manip::TZ::asqyzy00' => {
