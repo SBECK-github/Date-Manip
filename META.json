@@ -46,9 +46,12 @@
       },
       "test" : {
          "requires" : {
-            "Test::Inter" : "0",
+            "File::Basename" : "0",
+            "File::Find::Rule" : "0",
+            "Test::Inter" : "1.09",
             "Test::More" : "0",
-            "lib" : "0"
+            "Test::Pod" : "1.00",
+            "Test::Pod::Coverage" : "1.00"
          }
       }
    },
@@ -3587,5 +3590,5 @@
       }
    },
    "version" : "6.77",
-   "x_serialization_backend" : "JSON::PP version 4.00"
+   "x_serialization_backend" : "JSON::PP version 4.02"
 }
