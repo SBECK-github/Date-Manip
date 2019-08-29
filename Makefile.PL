@@ -34,12 +34,8 @@ my %script_prereq = (
 );
 
 my %test_prereq = (
-   'File::Basename'           => '0',
-   'File::Find::Rule'         => '0',
    'Test::Inter'              => '1.09',
    'Test::More'               => '0',
-   'Test::Pod'                => '1.00',
-   'Test::Pod::Coverage'      => '1.00',
 );
 
 my %config_prereq = (

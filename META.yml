@@ -4,16 +4,12 @@ author:
   - 'Sullivan Beck (sbeck@cpan.org)'
 build_requires:
   ExtUtils::MakeMaker: '0'
-  File::Basename: '0'
-  File::Find::Rule: '0'
   Test::Inter: '1.09'
   Test::More: '0'
-  Test::Pod: '1.00'
-  Test::Pod::Coverage: '1.00'
 configure_requires:
   ExtUtils::MakeMaker: 6.67_01
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 7.34, CPAN::Meta::Converter version 2.150010'
+generated_by: 'ExtUtils::MakeMaker version 7.36, CPAN::Meta::Converter version 2.150010'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
