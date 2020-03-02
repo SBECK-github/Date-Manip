@@ -25,7 +25,7 @@ use strict;
 use warnings;
 
 our($VERSION);
-$VERSION='6.80';
+$VERSION='6.81';
 
 our(%Lang);
 
