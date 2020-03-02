@@ -1,5 +1,5 @@
 package Date::Manip::Lang::french;
-# Copyright (c) 1996-2019 Sullivan Beck. All rights reserved.
+# Copyright (c) 1996-2020 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
