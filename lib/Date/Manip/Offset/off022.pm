@@ -6,9 +6,9 @@ Date::Manip::Offset::off022;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Dec  2 09:46:53 EST 2019
-#    Data version: tzdata2019c
-#    Code version: tzcode2019c
+#    Generated on: Mon Jun  1 10:35:57 EDT 2020
+#    Data version: tzdata2020a
+#    Code version: tzcode2020a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -63,9 +63,9 @@ $Offset        = '+01:00:00';
       'africa/casablanca',
       'africa/ceuta',
       'africa/el_aaiun',
-      'africa/sao_tome',
       'etc/gmt+1',
       'n',
+      'africa/sao_tome',
       'africa/tripoli',
       'europe/vilnius',
       'europe/lisbon',

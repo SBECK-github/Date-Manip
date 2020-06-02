@@ -6,9 +6,9 @@ Date::Manip::Offset::off274;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Dec  2 09:46:54 EST 2019
-#    Data version: tzdata2019c
-#    Code version: tzcode2019c
+#    Generated on: Mon Jun  1 10:35:58 EDT 2020
+#    Data version: tzdata2020a
+#    Code version: tzcode2020a
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -39,7 +39,7 @@ $Offset        = '-03:00:00';
       'america/fortaleza',
       'america/maceio',
       'america/recife',
-      'america/godthab',
+      'america/nuuk',
       'america/montevideo',
       'america/cayenne',
       'america/argentina/buenos_aires',

@@ -2206,10 +2206,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/amglac00.pm',
                 version => '6.82',
              },
-             'Date::Manip::TZ::amgodt00' => {
-                file    => 'lib/Date/Manip/TZ/amgodt00.pm',
-                version => '6.82',
-             },
              'Date::Manip::TZ::amgoos00' => {
                 file    => 'lib/Date/Manip/TZ/amgoos00.pm',
                 version => '6.82',
@@ -2380,6 +2376,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amnoro00' => {
                 file    => 'lib/Date/Manip/TZ/amnoro00.pm',
+                version => '6.82',
+             },
+             'Date::Manip::TZ::amnuuk00' => {
+                file    => 'lib/Date/Manip/TZ/amnuuk00.pm',
                 version => '6.82',
              },
              'Date::Manip::TZ::amojin00' => {
