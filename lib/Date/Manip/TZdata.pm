@@ -40,7 +40,6 @@ $Verbose      = 0;
                australasia
                europe
                northamerica
-               pacificnew
                southamerica
                etcetera
                backward
