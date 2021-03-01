@@ -27,6 +27,16 @@ For the most part, Date::Manip has remained backward compatible at
 every release, but occasionally, a change is made which is backward
 incompatible. These are marked with an exclamation mark (!).
 
+=head1 VERSION 6.85 (2021-03-01)
+
+=over 5
+
+=item Test fixes
+
+Missed some tests that were failing.
+
+=back
+
 =head1 VERSION 6.84 (2021-03-01)
 
 =over 5
