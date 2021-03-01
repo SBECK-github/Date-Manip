@@ -1,12 +1,12 @@
 package #
-Date::Manip::Offset::off009;
+Date::Manip::Offset::off445;
 # Copyright (c) 2008-2021 Sullivan Beck.  All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  1 14:20:50 EST 2021
+#    Generated on: Mon Mar  1 14:20:52 EST 2021
 #    Data version: tzdata2021a
 #    Code version: tzcode2021a
 
@@ -28,11 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+00:26:56';
+$Offset        = '-15:56:00';
 
 %Offset        = (
    0 => [
-      'africa/sao_tome',
+      'asia/manila',
       ],
 );
 

@@ -1,5 +1,5 @@
 package Date::Manip::Lang::catalan;
-# Copyright (c) 2003-2020 Sullivan Beck. All rights reserved.
+# Copyright (c) 2003-2021 Sullivan Beck. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
 
