@@ -6,9 +6,9 @@ Date::Manip::Offset::off232;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  1 14:20:51 EST 2021
-#    Data version: tzdata2021a
-#    Code version: tzcode2021a
+#    Generated on: Mon Nov 15 11:18:13 EST 2021
+#    Data version: tzdata2021e
+#    Code version: tzcode2021e
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -33,7 +33,7 @@ $Offset        = '+13:00:00';
 %Offset        = (
    0 => [
       'pacific/tongatapu',
-      'pacific/enderbury',
+      'pacific/kanton',
       'pacific/fakaofo',
       'pacific/apia',
       'asia/anadyr',

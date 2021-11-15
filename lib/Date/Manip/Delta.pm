@@ -19,6 +19,7 @@ use warnings;
 use strict;
 use utf8;
 use IO::File;
+use Carp;
 #use re 'debug';
 
 use Date::Manip::Base;
@@ -542,7 +543,7 @@ sub parse {
 sub printf {
    my($self,@in) = @_;
    if ($$self{'err'}) {
-      warn "WARNING: [printf] Object must contain a valid delta\n";
+      carp "WARNING: [printf] Object must contain a valid delta";
       return undef;
    }
 
@@ -1109,21 +1110,21 @@ sub cmp {
    my($self,$delta) = @_;
 
    if ($$self{'err'}) {
-      warn "WARNING: [cmp] Arguments must be valid deltas: delta1\n";
+      carp "WARNING: [cmp] Arguments must be valid deltas: delta1";
       return undef;
    }
 
    if (! ref($delta) eq 'Date::Manip::Delta') {
-      warn "WARNING: [cmp] Argument must be a Date::Manip::Delta object\n";
+      carp "WARNING: [cmp] Argument must be a Date::Manip::Delta object";
       return undef;
    }
    if ($$delta{'err'}) {
-      warn "WARNING: [cmp] Arguments must be valid deltas: delta2\n";
+      carp "WARNING: [cmp] Arguments must be valid deltas: delta2";
       return undef;
    }
 
    if ($$self{'data'}{'mode'} ne $$delta{'data'}{'mode'}) {
-      warn "WARNING: [cmp] Deltas must both be business or standard\n";
+      carp "WARNING: [cmp] Deltas must both be business or standard";
       return undef;
    }
 
