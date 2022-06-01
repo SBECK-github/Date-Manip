@@ -38,7 +38,6 @@ internal/unicode
 internal/windows.compare
 lib/Date/Manip.pm
 lib/Date/Manip.pod
-lib/Date/Manip/.Changes6.pod.swp
 lib/Date/Manip/Base.pm
 lib/Date/Manip/Base.pod
 lib/Date/Manip/Calc.pod
@@ -948,7 +947,6 @@ lib/Date/Manip/Zones.pod
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
-pm_to_blib
 README
 README.first
 t/.ppo.yaml
