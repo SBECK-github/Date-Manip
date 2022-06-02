@@ -25,7 +25,7 @@ END {
 }
 
 our ($VERSION);
-$VERSION='6.88';
+$VERSION='6.89';
 END { undef $VERSION; }
 
 %Dates         = (
