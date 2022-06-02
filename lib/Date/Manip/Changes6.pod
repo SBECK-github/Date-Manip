@@ -31,7 +31,18 @@ incompatible. These are marked with an exclamation mark (!).
 
 #=head1 VERSION 6.89 (expected 2022-09-01)
 
-=head1 VERSION 6.88 (expected 2022-06-01)
+=head1 VERSION 6.89 (2022-09-02)
+
+=over 5
+
+=item Packaging problem.
+
+I generated a broken MANIFEST file in the previous release.  Reported 
+in GitHub issue #39.
+
+=back
+
+=head1 VERSION 6.88 (2022-06-01)
 
 =over 5
 
@@ -44,7 +55,7 @@ Newest zoneinfo data (tzdata 2022a).
 
 =back
 
-=head1 VERSION 6.87 (expected 2022-03-01)
+=head1 VERSION 6.87 (2022-03-01)
 
 =over 5
 
