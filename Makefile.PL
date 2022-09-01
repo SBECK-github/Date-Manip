@@ -1818,114 +1818,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off411.pm',
                 version => '6.89',
              },
-             'Date::Manip::Offset::off412' => {
-                file    => 'lib/Date/Manip/Offset/off412.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off413' => {
-                file    => 'lib/Date/Manip/Offset/off413.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off414' => {
-                file    => 'lib/Date/Manip/Offset/off414.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off415' => {
-                file    => 'lib/Date/Manip/Offset/off415.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off416' => {
-                file    => 'lib/Date/Manip/Offset/off416.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off417' => {
-                file    => 'lib/Date/Manip/Offset/off417.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off418' => {
-                file    => 'lib/Date/Manip/Offset/off418.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off419' => {
-                file    => 'lib/Date/Manip/Offset/off419.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off420' => {
-                file    => 'lib/Date/Manip/Offset/off420.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off421' => {
-                file    => 'lib/Date/Manip/Offset/off421.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off422' => {
-                file    => 'lib/Date/Manip/Offset/off422.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off423' => {
-                file    => 'lib/Date/Manip/Offset/off423.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off424' => {
-                file    => 'lib/Date/Manip/Offset/off424.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off425' => {
-                file    => 'lib/Date/Manip/Offset/off425.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off426' => {
-                file    => 'lib/Date/Manip/Offset/off426.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off427' => {
-                file    => 'lib/Date/Manip/Offset/off427.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off428' => {
-                file    => 'lib/Date/Manip/Offset/off428.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off429' => {
-                file    => 'lib/Date/Manip/Offset/off429.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off430' => {
-                file    => 'lib/Date/Manip/Offset/off430.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off431' => {
-                file    => 'lib/Date/Manip/Offset/off431.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off432' => {
-                file    => 'lib/Date/Manip/Offset/off432.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off433' => {
-                file    => 'lib/Date/Manip/Offset/off433.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off434' => {
-                file    => 'lib/Date/Manip/Offset/off434.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off435' => {
-                file    => 'lib/Date/Manip/Offset/off435.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off436' => {
-                file    => 'lib/Date/Manip/Offset/off436.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off437' => {
-                file    => 'lib/Date/Manip/Offset/off437.pm',
-                version => '6.89',
-             },
-             'Date::Manip::Offset::off438' => {
-                file    => 'lib/Date/Manip/Offset/off438.pm',
-                version => '6.89',
-             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.89',
@@ -2538,10 +2430,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/antrol00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::anvost00' => {
-                file    => 'lib/Date/Manip/TZ/anvost00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::asalma00' => {
                 file    => 'lib/Date/Manip/TZ/asalma00.pm',
                 version => '6.89',
@@ -2592,10 +2480,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::asbish00' => {
                 file    => 'lib/Date/Manip/TZ/asbish00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::asbrun00' => {
-                file    => 'lib/Date/Manip/TZ/asbrun00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::aschit00' => {
@@ -2696,10 +2580,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::askras00' => {
                 file    => 'lib/Date/Manip/TZ/askras00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::askual00' => {
-                file    => 'lib/Date/Manip/TZ/askual00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::askuch00' => {
@@ -2872,10 +2752,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::atmade00' => {
                 file    => 'lib/Date/Manip/TZ/atmade00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::atreyk00' => {
-                file    => 'lib/Date/Manip/TZ/atreyk00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::atsout00' => {
@@ -3062,10 +2938,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/etgmtp11.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::euamst00' => {
-                file    => 'lib/Date/Manip/TZ/euamst00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::euando00' => {
                 file    => 'lib/Date/Manip/TZ/euando00.pm',
                 version => '6.89',
@@ -3102,10 +2974,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/euchis00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::eucope00' => {
-                file    => 'lib/Date/Manip/TZ/eucope00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::eudubl00' => {
                 file    => 'lib/Date/Manip/TZ/eudubl00.pm',
                 version => '6.89',
@@ -3126,12 +2994,12 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/eukali00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::eukiev00' => {
-                file    => 'lib/Date/Manip/TZ/eukiev00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::eukiro00' => {
                 file    => 'lib/Date/Manip/TZ/eukiro00.pm',
+                version => '6.89',
+             },
+             'Date::Manip::TZ::eukyiv00' => {
+                file    => 'lib/Date/Manip/TZ/eukyiv00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::eulisb00' => {
@@ -3140,10 +3008,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::eulond00' => {
                 file    => 'lib/Date/Manip/TZ/eulond00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::euluxe00' => {
-                file    => 'lib/Date/Manip/TZ/euluxe00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::eumadr00' => {
@@ -3158,16 +3022,8 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/eumins00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::eumona00' => {
-                file    => 'lib/Date/Manip/TZ/eumona00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::eumosc00' => {
                 file    => 'lib/Date/Manip/TZ/eumosc00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::euoslo00' => {
-                file    => 'lib/Date/Manip/TZ/euoslo00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::eupari00' => {
@@ -3200,10 +3056,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::eusofi00' => {
                 file    => 'lib/Date/Manip/TZ/eusofi00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::eustoc00' => {
-                file    => 'lib/Date/Manip/TZ/eustoc00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::eutall00' => {
@@ -3266,32 +3118,12 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/inchag00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::inchri00' => {
-                file    => 'lib/Date/Manip/TZ/inchri00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::incoco00' => {
-                file    => 'lib/Date/Manip/TZ/incoco00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::inkerg00' => {
-                file    => 'lib/Date/Manip/TZ/inkerg00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::inmahe00' => {
-                file    => 'lib/Date/Manip/TZ/inmahe00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::inmald00' => {
                 file    => 'lib/Date/Manip/TZ/inmald00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::inmaur00' => {
                 file    => 'lib/Date/Manip/TZ/inmaur00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::inreun00' => {
-                file    => 'lib/Date/Manip/TZ/inreun00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::k00' => {
@@ -3338,10 +3170,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/pachat00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::pachuu00' => {
-                file    => 'lib/Date/Manip/TZ/pachuu00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::paeast00' => {
                 file    => 'lib/Date/Manip/TZ/paeast00.pm',
                 version => '6.89',
@@ -3356,10 +3184,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::pafiji00' => {
                 file    => 'lib/Date/Manip/TZ/pafiji00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::pafuna00' => {
-                file    => 'lib/Date/Manip/TZ/pafuna00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::pagala00' => {
@@ -3398,10 +3222,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/pakwaj00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::pamaju00' => {
-                file    => 'lib/Date/Manip/TZ/pamaju00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::pamarq00' => {
                 file    => 'lib/Date/Manip/TZ/pamarq00.pm',
                 version => '6.89',
@@ -3434,10 +3254,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/papitc00.pm',
                 version => '6.89',
              },
-             'Date::Manip::TZ::papohn00' => {
-                file    => 'lib/Date/Manip/TZ/papohn00.pm',
-                version => '6.89',
-             },
              'Date::Manip::TZ::paport00' => {
                 file    => 'lib/Date/Manip/TZ/paport00.pm',
                 version => '6.89',
@@ -3456,14 +3272,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::patong00' => {
                 file    => 'lib/Date/Manip/TZ/patong00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::pawake00' => {
-                file    => 'lib/Date/Manip/TZ/pawake00.pm',
-                version => '6.89',
-             },
-             'Date::Manip::TZ::pawall00' => {
-                file    => 'lib/Date/Manip/TZ/pawall00.pm',
                 version => '6.89',
              },
              'Date::Manip::TZ::q00' => {
