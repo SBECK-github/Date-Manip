@@ -7,6 +7,7 @@ package Date::Manip::DM5;
 ###########################################################################
 
 use warnings;
+warnings::warnif('deprecated', 'Date::Manip::DM5 is deprecated and will be removed from the Date::Manip package starting in version 7.00');
 
 our($OS,%Lang,%Holiday,%Events,%Curr,%Cnf,%Zone,$VERSION,@ISA,@EXPORT);
 
