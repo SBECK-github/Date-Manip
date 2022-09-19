@@ -27,17 +27,27 @@ For the most part, Date::Manip has remained backward compatible at
 every release, but occasionally, a change is made which is backward
 incompatible. These are marked with an exclamation mark (!).
 
-#=head1 VERSION 7.00 (expected 2024-12-01)
+#=head1 VERSION 7.00 (expected 2024-09-01)
 #    Remove DM5
 #=head1 VERSION 6.99 (expected )
-#=head1 VERSION 6.98 (expected 2024-09-01)
-#=head1 VERSION 6.97 (expected 2024-06-01)
-#=head1 VERSION 6.96 (expected 2024-03-01)
-#=head1 VERSION 6.95 (expected 2023-12-01)
-#=head1 VERSION 6.94 (expected 2023-09-01)
-#=head1 VERSION 6.93 (expected 2023-06-01)
-#=head1 VERSION 6.92 (expected 2023-03-01)
-#=head1 VERSION 6.91 (expected 2022-12-01)
+#=head1 VERSION 6.98 (expected 2024-06-01)
+#=head1 VERSION 6.97 (expected 2024-03-01)
+#=head1 VERSION 6.96 (expected 2023-12-01)
+#=head1 VERSION 6.95 (expected 2023-09-01)
+#=head1 VERSION 6.94 (expected 2023-06-01)
+#=head1 VERSION 6.93 (expected 2023-03-01)
+#=head1 VERSION 6.92 (expected 2022-12-01)
+
+=head1 VERSION 6.91 (2022-09-19)
+
+=over 5
+
+=item Aliases from the tzdata files were not being included
+
+Aliases in the tzdata database were not being added to the timezone
+data.  Reported in GitHub issue #40.
+
+=back
 
 =head1 VERSION 6.90 (2022-09-01)
 

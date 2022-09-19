@@ -5,7 +5,7 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Sep  1 10:37:52 EDT 2022
+#    Generated on: Mon Sep 19 12:13:22 EDT 2022
 #    Data version: tzdata2022c
 #    Code version: tzcode2022c
 
@@ -969,24 +969,160 @@ Aliases include:
      AUS Central Standard Time            Australia/Darwin
      AUS Eastern Standard Time            Australia/Sydney
      Afghanistan Standard Time            Asia/Kabul
+     Africa/Accra                         Africa/Abidjan
+     Africa/Addis_Ababa                   Africa/Nairobi
+     Africa/Asmara                        Africa/Nairobi
+     Africa/Asmera                        Africa/Nairobi
+     Africa/Bamako                        Africa/Abidjan
+     Africa/Bangui                        Africa/Lagos
+     Africa/Banjul                        Africa/Abidjan
+     Africa/Blantyre                      Africa/Maputo
+     Africa/Brazzaville                   Africa/Lagos
+     Africa/Bujumbura                     Africa/Maputo
+     Africa/Conakry                       Africa/Abidjan
+     Africa/Dakar                         Africa/Abidjan
+     Africa/Dar_es_Salaam                 Africa/Nairobi
+     Africa/Djibouti                      Africa/Nairobi
+     Africa/Douala                        Africa/Lagos
+     Africa/Freetown                      Africa/Abidjan
+     Africa/Gaborone                      Africa/Maputo
+     Africa/Harare                        Africa/Maputo
+     Africa/Kampala                       Africa/Nairobi
+     Africa/Kigali                        Africa/Maputo
+     Africa/Kinshasa                      Africa/Lagos
+     Africa/Libreville                    Africa/Lagos
+     Africa/Lome                          Africa/Abidjan
+     Africa/Luanda                        Africa/Lagos
+     Africa/Lubumbashi                    Africa/Maputo
+     Africa/Lusaka                        Africa/Maputo
+     Africa/Malabo                        Africa/Lagos
+     Africa/Maseru                        Africa/Johannesburg
+     Africa/Mbabane                       Africa/Johannesburg
+     Africa/Mogadishu                     Africa/Nairobi
+     Africa/Niamey                        Africa/Lagos
+     Africa/Nouakchott                    Africa/Abidjan
+     Africa/Ouagadougou                   Africa/Abidjan
+     Africa/Porto-Novo                    Africa/Lagos
+     Africa/Timbuktu                      Africa/Abidjan
      Alaskan Standard Time                America/Anchorage
+     America/Anguilla                     America/Puerto_Rico
+     America/Antigua                      America/Puerto_Rico
+     America/Argentina/ComodRivadavia     America/Argentina/Catamarca
+     America/Aruba                        America/Puerto_Rico
+     America/Atikokan                     America/Panama
+     America/Atka                         America/Adak
+     America/Blanc-Sablon                 America/Puerto_Rico
+     America/Buenos_Aires                 America/Argentina/Buenos_Aires
+     America/Catamarca                    America/Argentina/Catamarca
+     America/Cayman                       America/Panama
+     America/Coral_Harbour                America/Panama
+     America/Cordoba                      America/Argentina/Cordoba
+     America/Creston                      America/Phoenix
+     America/Curacao                      America/Puerto_Rico
+     America/Dominica                     America/Puerto_Rico
+     America/Ensenada                     America/Tijuana
+     America/Fort_Wayne                   America/Indiana/Indianapolis
+     America/Godthab                      America/Nuuk
+     America/Grenada                      America/Puerto_Rico
+     America/Guadeloupe                   America/Puerto_Rico
+     America/Indianapolis                 America/Indiana/Indianapolis
+     America/Jujuy                        America/Argentina/Jujuy
+     America/Knox_IN                      America/Indiana/Knox
+     America/Kralendijk                   America/Puerto_Rico
+     America/Louisville                   America/Kentucky/Louisville
+     America/Lower_Princes                America/Puerto_Rico
+     America/Marigot                      America/Puerto_Rico
+     America/Mendoza                      America/Argentina/Mendoza
+     America/Montreal                     America/Toronto
+     America/Montserrat                   America/Puerto_Rico
+     America/Nassau                       America/Toronto
+     America/Port_of_Spain                America/Puerto_Rico
+     America/Porto_Acre                   America/Rio_Branco
+     America/Rosario                      America/Argentina/Cordoba
+     America/Santa_Isabel                 America/Tijuana
+     America/Shiprock                     America/Denver
+     America/St_Barthelemy                America/Puerto_Rico
+     America/St_Kitts                     America/Puerto_Rico
+     America/St_Lucia                     America/Puerto_Rico
+     America/St_Thomas                    America/Puerto_Rico
+     America/St_Vincent                   America/Puerto_Rico
+     America/Tortola                      America/Puerto_Rico
+     America/Virgin                       America/Puerto_Rico
+     Antarctica/DumontDUrville            Pacific/Port_Moresby
+     Antarctica/McMurdo                   Pacific/Auckland
+     Antarctica/South_Pole                Pacific/Auckland
+     Antarctica/Syowa                     Asia/Riyadh
+     Antarctica/Vostok                    Asia/Urumqi
      Arab Standard Time                   Asia/Riyadh
      Arabian Standard Time                Asia/Dubai
      Arabic Standard Time                 Asia/Baghdad
+     Arctic/Longyearbyen                  Europe/Berlin
      Argentina Standard Time              America/Argentina/Buenos_Aires
+     Asia/Aden                            Asia/Riyadh
+     Asia/Ashkhabad                       Asia/Ashgabat
+     Asia/Bahrain                         Asia/Qatar
+     Asia/Brunei                          Asia/Kuching
+     Asia/Calcutta                        Asia/Kolkata
+     Asia/Chongqing                       Asia/Shanghai
+     Asia/Chungking                       Asia/Shanghai
+     Asia/Dacca                           Asia/Dhaka
+     Asia/Harbin                          Asia/Shanghai
+     Asia/Istanbul                        Europe/Istanbul
+     Asia/Kashgar                         Asia/Urumqi
+     Asia/Katmandu                        Asia/Kathmandu
+     Asia/Kuala_Lumpur                    Asia/Singapore
+     Asia/Kuwait                          Asia/Riyadh
+     Asia/Macao                           Asia/Macau
+     Asia/Muscat                          Asia/Dubai
+     Asia/Phnom_Penh                      Asia/Bangkok
+     Asia/Rangoon                         Asia/Yangon
+     Asia/Saigon                          Asia/Ho_Chi_Minh
+     Asia/Tel_Aviv                        Asia/Jerusalem
+     Asia/Thimbu                          Asia/Thimphu
+     Asia/Ujung_Pandang                   Asia/Makassar
+     Asia/Ulan_Bator                      Asia/Ulaanbaatar
+     Asia/Vientiane                       Asia/Bangkok
      Atlantic Standard Time               America/Halifax
+     Atlantic/Faeroe                      Atlantic/Faroe
+     Atlantic/Jan_Mayen                   Europe/Berlin
+     Atlantic/Reykjavik                   Africa/Abidjan
+     Atlantic/St_Helena                   Africa/Abidjan
+     Australia/ACT                        Australia/Sydney
+     Australia/Canberra                   Australia/Sydney
+     Australia/Currie                     Australia/Hobart
+     Australia/LHI                        Australia/Lord_Howe
+     Australia/NSW                        Australia/Sydney
+     Australia/North                      Australia/Darwin
+     Australia/Queensland                 Australia/Brisbane
+     Australia/South                      Australia/Adelaide
+     Australia/Tasmania                   Australia/Hobart
+     Australia/Victoria                   Australia/Melbourne
+     Australia/West                       Australia/Perth
+     Australia/Yancowinna                 Australia/Broken_Hill
      Azerbaijan Standard Time             Asia/Baku
      Azores Standard Time                 Atlantic/Azores
      BRST3BRDT                            America/Sao_Paulo
      BRWST4BRWDT                          America/Campo_Grande
      Bahia Standard Time                  America/Bahia
      Bangladesh Standard Time             Asia/Dhaka
+     Brazil/Acre                          America/Rio_Branco
+     Brazil/DeNoronha                     America/Noronha
+     Brazil/East                          America/Sao_Paulo
+     Brazil/West                          America/Manaus
      CSM6CDM                              America/Mexico_City
      CST-9:30CDT                          Australia/Adelaide
      CST6CDT#Canada                       America/Winnipeg
      CST6CDT#Indiana                      America/Indiana/Indianapolis
      CST6CDT#Mexico                       America/Mexico_City
      Canada Central Standard Time         America/Regina
+     Canada/Atlantic                      America/Halifax
+     Canada/Central                       America/Winnipeg
+     Canada/Eastern                       America/Toronto
+     Canada/Mountain                      America/Edmonton
+     Canada/Newfoundland                  America/St_Johns
+     Canada/Pacific                       America/Vancouver
+     Canada/Saskatchewan                  America/Regina
+     Canada/Yukon                         America/Whitehorse
      Cape Verde Standard Time             Atlantic/Cape_Verde
      Caucasus Standard Time               Asia/Yerevan
      Cen. Australia Standard Time         Australia/Adelaide
@@ -998,7 +1134,10 @@ Aliases include:
      Central Pacific Standard Time        Pacific/Guadalcanal
      Central Standard Time                America/Chicago
      Central Standard Time (Mexico)       America/Mexico_City
+     Chile/Continental                    America/Santiago
+     Chile/EasterIsland                   Pacific/Easter
      China Standard Time                  Asia/Shanghai
+     Cuba                                 America/Havana
      Dateline Standard Time               Etc/GMT+12
      E. Africa Standard Time              Africa/Nairobi
      E. Australia Standard Time           Australia/Brisbane
@@ -1015,23 +1154,77 @@ Aliases include:
      EST5EST                              America/Indiana/Indianapolis
      EST6CDT                              America/Indiana/Indianapolis
      Eastern Standard Time                America/New_York
+     Egypt                                Africa/Cairo
      Egypt Standard Time                  Africa/Cairo
+     Eire                                 Europe/Dublin
      Ekaterinburg Standard Time           Asia/Yekaterinburg
-     Etc/UCT                              UTC
+     Etc/GMT+0                            Etc/GMT
+     Etc/GMT-0                            Etc/GMT
+     Etc/GMT0                             Etc/GMT
+     Etc/Greenwich                        Etc/GMT
+     Etc/UCT                              Etc/UTC
      Etc/UTC                              UTC
+     Etc/Universal                        Etc/UTC
+     Etc/Zulu                             Etc/UTC
+     Europe/Amsterdam                     Europe/Brussels
+     Europe/Belfast                       Europe/London
+     Europe/Bratislava                    Europe/Prague
+     Europe/Busingen                      Europe/Zurich
+     Europe/Copenhagen                    Europe/Berlin
+     Europe/Guernsey                      Europe/London
+     Europe/Isle_of_Man                   Europe/London
+     Europe/Jersey                        Europe/London
+     Europe/Kiev                          Europe/Kyiv
+     Europe/Ljubljana                     Europe/Belgrade
+     Europe/Luxembourg                    Europe/Brussels
+     Europe/Mariehamn                     Europe/Helsinki
+     Europe/Monaco                        Europe/Paris
+     Europe/Nicosia                       Asia/Nicosia
+     Europe/Oslo                          Europe/Berlin
+     Europe/Podgorica                     Europe/Belgrade
+     Europe/San_Marino                    Europe/Rome
+     Europe/Sarajevo                      Europe/Belgrade
+     Europe/Skopje                        Europe/Belgrade
+     Europe/Stockholm                     Europe/Berlin
+     Europe/Tiraspol                      Europe/Chisinau
+     Europe/Vaduz                         Europe/Zurich
+     Europe/Vatican                       Europe/Rome
+     Europe/Zagreb                        Europe/Belgrade
      Fiji Standard Time                   Pacific/Fiji
+     GB                                   Europe/London
+     GB-Eire                              Europe/London
      GMT                                  Etc/GMT
      GMT Standard Time                    Europe/London
+     GMT+0                                Etc/GMT
+     GMT-0                                Etc/GMT
+     GMT0                                 Etc/GMT
      GTB Standard Time                    Europe/Istanbul
      Georgian Standard Time               Asia/Tbilisi
      Greenland Standard Time              America/Nuuk
+     Greenwich                            Etc/GMT
      Hawaiian Standard Time               Pacific/Honolulu
+     Hongkong                             Asia/Hong_Kong
+     Iceland                              Africa/Abidjan
      India Standard Time                  Asia/Kolkata
+     Indian/Antananarivo                  Africa/Nairobi
+     Indian/Christmas                     Asia/Bangkok
+     Indian/Cocos                         Asia/Yangon
+     Indian/Comoro                        Africa/Nairobi
+     Indian/Kerguelen                     Indian/Maldives
+     Indian/Mahe                          Asia/Dubai
+     Indian/Mayotte                       Africa/Nairobi
+     Indian/Reunion                       Asia/Dubai
+     Iran                                 Asia/Tehran
      Iran Standard Time                   Asia/Tehran
+     Israel                               Asia/Jerusalem
      Israel Standard Time                 Asia/Jerusalem
+     Jamaica                              America/Jamaica
+     Japan                                Asia/Tokyo
      Jordan Standard Time                 Asia/Amman
      Kaliningrad Standard Time            Europe/Kaliningrad
      Korea Standard Time                  Asia/Seoul
+     Kwajalein                            Pacific/Kwajalein
+     Libya                                Africa/Tripoli
      MET-1METDST                          MET
      MEZ-1MESZ                            CET
      MSM7MDM                              America/Chihuahua
@@ -1041,6 +1234,9 @@ Aliases include:
      MXST6MXDT#Mexico                     America/Mexico_City
      Magadan Standard Time                Asia/Magadan
      Mauritius Standard Time              Indian/Mauritius
+     Mexico/BajaNorte                     America/Tijuana
+     Mexico/BajaSur                       America/Mazatlan
+     Mexico/General                       America/Mexico_City
      Middle East Standard Time            Asia/Beirut
      Montevideo Standard Time             America/Montevideo
      Morocco Standard Time                Africa/Casablanca
@@ -1050,19 +1246,40 @@ Aliases include:
      N. Central Asia Standard Time        Asia/Novosibirsk
      NST3:30NDT                           America/St_Johns
      NST3:30NDT#Canada                    America/St_Johns
+     NZ                                   Pacific/Auckland
+     NZ-CHAT                              Pacific/Chatham
      Namibia Standard Time                Africa/Windhoek
+     Navajo                               America/Denver
      Nepal Standard Time                  Asia/Kathmandu
      New Zealand Standard Time            Pacific/Auckland
      Newfoundland Standard Time           America/St_Johns
      North Asia East Standard Time        Asia/Irkutsk
      North Asia Standard Time             Asia/Krasnoyarsk
+     PRC                                  Asia/Shanghai
      PST8PDT#Canada                       America/Vancouver
      PWT0PST                              Europe/Lisbon
      Pacific SA Standard Time             America/Santiago
      Pacific Standard Time                America/Los_Angeles
+     Pacific/Chuuk                        Pacific/Port_Moresby
+     Pacific/Enderbury                    Pacific/Kanton
+     Pacific/Funafuti                     Pacific/Tarawa
      Pacific/Johnston                     Pacific/Honolulu
+     Pacific/Majuro                       Pacific/Tarawa
+     Pacific/Midway                       Pacific/Pago_Pago
+     Pacific/Pohnpei                      Pacific/Guadalcanal
+     Pacific/Ponape                       Pacific/Guadalcanal
+     Pacific/Saipan                       Pacific/Guam
+     Pacific/Samoa                        Pacific/Pago_Pago
+     Pacific/Truk                         Pacific/Port_Moresby
+     Pacific/Wake                         Pacific/Tarawa
+     Pacific/Wallis                       Pacific/Tarawa
+     Pacific/Yap                          Pacific/Port_Moresby
      Pakistan Standard Time               Asia/Karachi
      Paraguay Standard Time               America/Asuncion
+     Poland                               Europe/Warsaw
+     Portugal                             Europe/Lisbon
+     ROC                                  Asia/Taipei
+     ROK                                  Asia/Seoul
      Romance Standard Time                Europe/Paris
      Russian Standard Time                Europe/Moscow
      SA Eastern Standard Time             America/Cayenne
@@ -1071,6 +1288,7 @@ Aliases include:
      SAST-2                               Africa/Johannesburg
      SE Asia Standard Time                Asia/Bangkok
      Samoa Standard Time                  Pacific/Apia
+     Singapore                            Asia/Singapore
      Singapore Standard Time              Asia/Singapore
      South Africa Standard Time           Africa/Johannesburg
      Sri Lanka Standard Time              Asia/Colombo
@@ -1079,16 +1297,32 @@ Aliases include:
      Tasmania Standard Time               Australia/Hobart
      Tokyo Standard Time                  Asia/Tokyo
      Tonga Standard Time                  Pacific/Tongatapu
+     Turkey                               Europe/Istanbul
      Turkey Standard Time                 Europe/Istanbul
-     UCT                                  UTC
+     UCT                                  Etc/UTC
      US Eastern Standard Time             America/Indiana/Indianapolis
      US Mountain Standard Time            America/Phoenix
+     US/Alaska                            America/Anchorage
+     US/Aleutian                          America/Adak
+     US/Arizona                           America/Phoenix
+     US/Central                           America/Chicago
+     US/East-Indiana                      America/Indiana/Indianapolis
+     US/Eastern                           America/New_York
+     US/Hawaii                            Pacific/Honolulu
+     US/Indiana-Starke                    America/Indiana/Knox
+     US/Michigan                          America/Detroit
+     US/Mountain                          America/Denver
+     US/Pacific                           America/Los_Angeles
+     US/Samoa                             Pacific/Pago_Pago
+     UTC                                  Etc/UTC
      UTC+12                               Etc/GMT-12
      UTC-02                               Etc/GMT+2
      UTC-11                               Etc/GMT+11
      Ulaanbaatar Standard Time            Asia/Ulaanbaatar
+     Universal                            Etc/UTC
      Venezuela Standard Time              America/Caracas
      Vladivostok Standard Time            Asia/Vladivostok
+     W-SU                                 Europe/Moscow
      W. Australia Standard Time           Australia/Perth
      W. Central Africa Standard Time      Africa/Lagos
      W. Europe Standard Time              Europe/Berlin
@@ -1108,6 +1342,7 @@ Aliases include:
      West Asia Standard Time              Asia/Tashkent
      West Pacific Standard Time           Pacific/Port_Moresby
      Yakutsk Standard Time                Asia/Yakutsk
+     Zulu                                 Etc/UTC
 
 Periodically, we need to be able to determine a time zone based on an
 offset. In addition, the ISDST may be known, and a date/time may be

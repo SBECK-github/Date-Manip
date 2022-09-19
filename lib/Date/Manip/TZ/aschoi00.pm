@@ -6,7 +6,7 @@ Date::Manip::TZ::aschoi00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Thu Sep  1 10:29:03 EDT 2022
+#    Generated on: Mon Sep 19 12:13:12 EDT 2022
 #    Data version: tzdata2022c
 #    Code version: tzcode2022c
 
