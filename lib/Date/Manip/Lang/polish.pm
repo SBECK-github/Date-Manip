@@ -25,12 +25,12 @@ $Language = {
   at => ['o', 'u'],
   day_abb => [
     ['po', 'po.', 'pon.', 'pon'],
-    ['wt', 'wt.'],
-    ['śr', 'śr.', 'sr.', 'sr'],
+    ['wt', 'wt.', 'wto', 'wto.'],
+    ['śr', 'śr.', 'sr.', 'sr','śro', 'śro.', 'sro.', 'sro'],
     ['cz', 'cz.', 'czw.', 'czw'],
-    ['pi', 'pi.'],
-    ['so', 'so.'],
-    ['ni', 'ni.'],
+    ['pi', 'pi.', 'ptk', 'ptk.'],
+    ['so', 'so.', 'sob', 'sob.'],
+    ['ni', 'ni.', 'ndz', 'ndz.'],
   ],
   day_char => [['p'], ['w'], ['ś.', 'e'], ['c'], ['p'], ['s'], ['n']],
   day_name => [
@@ -91,7 +91,7 @@ $Language = {
   ],
   month_name => [
     ['stycznia'],
-    ['luty'],
+    ['luty','lutego'],
     ['marca'],
     ['kwietnia'],
     ['maja'],
