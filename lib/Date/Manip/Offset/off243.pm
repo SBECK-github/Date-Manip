@@ -6,9 +6,9 @@ Date::Manip::Offset::off243;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:18 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:32 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,13 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-02:22:52';
+$Offset        = '-02:30:00';
 
 %Offset        = (
-   0 => [
-      'america/maceio',
+   1 => [
+      'america/st_johns',
+      'america/montevideo',
+      'america/goose_bay',
       ],
 );
 

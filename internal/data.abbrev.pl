@@ -157,7 +157,7 @@
    'TMT'         => 'Asia/Tehran',
    'U'           => 'U',
    'UT'          => 'UT',
-   'UTC'         => 'UTC',
+   'UTC'         => 'Etc/UTC',
    'V'           => 'V',
    'W'           => 'W',
    'WAST'        => 'Africa/Ndjamena',

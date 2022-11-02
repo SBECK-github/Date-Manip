@@ -6,9 +6,9 @@ Date::Manip::Offset::off382;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:19 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:32 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,15 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-09:00:12';
+$Offset        = '-09:30:00';
 
 %Offset        = (
    0 => [
-      'america/whitehorse',
+      'pacific/marquesas',
+      ],
+   1 => [
+      'pacific/rarotonga',
+      'pacific/honolulu',
       ],
 );
 

@@ -6,9 +6,9 @@ Date::Manip::Offset::off041;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:18 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:32 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,12 +28,81 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+01:56:56';
+$Offset        = '+02:00:00';
 
 %Offset        = (
    0 => [
-      'europe/istanbul',
+      'eet',
+      'asia/beirut',
       'europe/sofia',
+      'asia/gaza',
+      'asia/hebron',
+      'africa/cairo',
+      'africa/johannesburg',
+      'africa/maputo',
+      'africa/windhoek',
+      'europe/athens',
+      'asia/jerusalem',
+      'europe/vilnius',
+      'europe/helsinki',
+      'europe/tallinn',
+      'asia/famagusta',
+      'asia/nicosia',
+      'europe/kyiv',
+      'europe/riga',
+      'africa/juba',
+      'africa/khartoum',
+      'europe/bucharest',
+      'europe/chisinau',
+      'europe/kaliningrad',
+      'africa/tripoli',
+      'asia/damascus',
+      'asia/amman',
+      'etc/gmt+2',
+      'o',
+      'europe/istanbul',
+      'europe/simferopol',
+      'europe/minsk',
+      'europe/moscow',
+      'europe/ulyanovsk',
+      'europe/warsaw',
+      ],
+   1 => [
+      'cet',
+      'europe/berlin',
+      'europe/brussels',
+      'europe/budapest',
+      'europe/malta',
+      'europe/prague',
+      'europe/rome',
+      'europe/vienna',
+      'europe/warsaw',
+      'met',
+      'europe/madrid',
+      'europe/paris',
+      'europe/tirane',
+      'europe/belgrade',
+      'europe/gibraltar',
+      'europe/zurich',
+      'europe/andorra',
+      'africa/ceuta',
+      'antarctica/troll',
+      'africa/tripoli',
+      'africa/tunis',
+      'europe/vilnius',
+      'europe/lisbon',
+      'africa/ndjamena',
+      'africa/algiers',
+      'europe/london',
+      'europe/kaliningrad',
+      'europe/tallinn',
+      'europe/chisinau',
+      'europe/minsk',
+      'europe/riga',
+      'europe/simferopol',
+      'europe/sofia',
+      'europe/athens',
+      'europe/kyiv',
       ],
 );
 

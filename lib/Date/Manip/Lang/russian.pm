@@ -16,7 +16,7 @@ our($VERSION);
 $VERSION='6.90';
 
 our($Language,@Encodings,$LangName,$YearAdded);
-@Encodings = qw(utf-8 koi8-r cp1251 perl);
+@Encodings = qw(utf-8 iso8859-5 koi8-r cp1251 perl);
 $LangName  = "Russian";
 $YearAdded = 2001;
 
@@ -60,7 +60,7 @@ $Language = {
   month_abb => [
     ['янв', 'янв.'],
     ['фев', 'фвр', 'февр.'],
-    ['мрт', 'марта', 'март'],
+    ['мрт', 'марта', 'март', 'мар'],
     ['апр', 'апр.'],
     ['май', 'мая'],
     ['июн', 'июня', 'июнь'],

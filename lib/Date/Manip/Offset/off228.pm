@@ -6,9 +6,9 @@ Date::Manip::Offset::off228;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:18 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:32 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,11 +28,25 @@ END {
    undef %Offset;
 }
 
-$Offset        = '-00:44:30';
+$Offset        = '-01:00:00';
 
 %Offset        = (
    0 => [
-      'africa/monrovia',
+      'atlantic/azores',
+      'atlantic/cape_verde',
+      'america/scoresbysund',
+      'etc/gmt-1',
+      'a',
+      'africa/el_aaiun',
+      'africa/bissau',
+      'atlantic/madeira',
+      'atlantic/canary',
+      ],
+   1 => [
+      'america/noronha',
+      'america/scoresbysund',
+      'atlantic/azores',
+      'atlantic/cape_verde',
       ],
 );
 

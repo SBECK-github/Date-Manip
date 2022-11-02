@@ -42,10 +42,15 @@ incompatible. These are marked with an exclamation mark (!).
 
 =over 5
 
-=item Aliases from the tzdata files were not being included
+=item Time zone fixes
 
 Aliases in the tzdata database were not being added to the timezone
 data.  Reported in GitHub issue #40.
+
+The UTC timezone is now named Etc/UTC instead of UTC to be in line
+with the aliases.
+
+Newest zoneinfo data (tzdata 2022f).
 
 =item Language fixes
 

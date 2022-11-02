@@ -6,9 +6,9 @@ Date::Manip::TZ::amtiju00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:11 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:41:26 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -32,14 +32,14 @@ END { undef $VERSION; }
    1    =>
      [
         [ [1,1,2,0,0,0],[1,1,1,16,11,56],'-07:48:04',[-7,-48,-4],
-          'LMT',0,[1922,1,1,7,59,59],[1922,1,1,0,11,55],
-          '0001010200:00:00','0001010116:11:56','1922010107:59:59','1922010100:11:55' ],
+          'LMT',0,[1922,1,1,6,59,59],[1921,12,31,23,11,55],
+          '0001010200:00:00','0001010116:11:56','1922010106:59:59','1921123123:11:55' ],
      ],
    1922 =>
      [
-        [ [1922,1,1,8,0,0],[1922,1,1,1,0,0],'-07:00:00',[-7,0,0],
+        [ [1922,1,1,7,0,0],[1922,1,1,0,0,0],'-07:00:00',[-7,0,0],
           'MST',0,[1924,1,1,6,59,59],[1923,12,31,23,59,59],
-          '1922010108:00:00','1922010101:00:00','1924010106:59:59','1923123123:59:59' ],
+          '1922010107:00:00','1922010100:00:00','1924010106:59:59','1923123123:59:59' ],
      ],
    1924 =>
      [

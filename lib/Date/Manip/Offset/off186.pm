@@ -6,9 +6,9 @@ Date::Manip::Offset::off186;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:18 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:32 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -28,44 +28,11 @@ END {
    undef %Offset;
 }
 
-$Offset        = '+11:00:00';
+$Offset        = '+11:07:40';
 
 %Offset        = (
    0 => [
-      'pacific/kosrae',
-      'pacific/efate',
-      'pacific/guadalcanal',
-      'pacific/noumea',
-      'asia/magadan',
-      'asia/srednekolymsk',
-      'asia/sakhalin',
-      'pacific/bougainville',
-      'pacific/norfolk',
-      'etc/gmt+11',
-      'x',
-      'antarctica/casey',
-      'asia/ust-nera',
-      'asia/vladivostok',
-      'asia/kamchatka',
-      'asia/anadyr',
-      'asia/khandyga',
-      'pacific/kwajalein',
-      ],
-   1 => [
-      'australia/melbourne',
-      'australia/hobart',
-      'australia/sydney',
-      'australia/lord_howe',
-      'antarctica/macquarie',
-      'asia/vladivostok',
-      'asia/sakhalin',
-      'asia/khandyga',
-      'australia/lindeman',
-      'australia/brisbane',
-      'asia/magadan',
-      'asia/srednekolymsk',
-      'asia/ust-nera',
-      'pacific/guam',
+      'pacific/nauru',
       ],
 );
 

@@ -1798,26 +1798,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off406.pm',
                 version => '6.90',
              },
-             'Date::Manip::Offset::off407' => {
-                file    => 'lib/Date/Manip/Offset/off407.pm',
-                version => '6.90',
-             },
-             'Date::Manip::Offset::off408' => {
-                file    => 'lib/Date/Manip/Offset/off408.pm',
-                version => '6.90',
-             },
-             'Date::Manip::Offset::off409' => {
-                file    => 'lib/Date/Manip/Offset/off409.pm',
-                version => '6.90',
-             },
-             'Date::Manip::Offset::off410' => {
-                file    => 'lib/Date/Manip/Offset/off410.pm',
-                version => '6.90',
-             },
-             'Date::Manip::Offset::off411' => {
-                file    => 'lib/Date/Manip/Offset/off411.pm',
-                version => '6.90',
-             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.90',
@@ -2210,10 +2190,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/amnew_01.pm',
                 version => '6.90',
              },
-             'Date::Manip::TZ::amnipi00' => {
-                file    => 'lib/Date/Manip/TZ/amnipi00.pm',
-                version => '6.90',
-             },
              'Date::Manip::TZ::amnome00' => {
                 file    => 'lib/Date/Manip/TZ/amnome00.pm',
                 version => '6.90',
@@ -2264,10 +2240,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::ampunt00' => {
                 file    => 'lib/Date/Manip/TZ/ampunt00.pm',
-                version => '6.90',
-             },
-             'Date::Manip::TZ::amrain00' => {
-                file    => 'lib/Date/Manip/TZ/amrain00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::amrank00' => {
@@ -2348,10 +2320,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amthul00' => {
                 file    => 'lib/Date/Manip/TZ/amthul00.pm',
-                version => '6.90',
-             },
-             'Date::Manip::TZ::amthun00' => {
-                file    => 'lib/Date/Manip/TZ/amthun00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::amtiju00' => {
@@ -2938,6 +2906,10 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/etgmtp11.pm',
                 version => '6.90',
              },
+             'Date::Manip::TZ::etutc00' => {
+                file    => 'lib/Date/Manip/TZ/etutc00.pm',
+                version => '6.90',
+             },
              'Date::Manip::TZ::euando00' => {
                 file    => 'lib/Date/Manip/TZ/euando00.pm',
                 version => '6.90',
@@ -3070,10 +3042,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/euulya00.pm',
                 version => '6.90',
              },
-             'Date::Manip::TZ::euuzhg00' => {
-                file    => 'lib/Date/Manip/TZ/euuzhg00.pm',
-                version => '6.90',
-             },
              'Date::Manip::TZ::euvien00' => {
                 file    => 'lib/Date/Manip/TZ/euvien00.pm',
                 version => '6.90',
@@ -3088,10 +3056,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::euwars00' => {
                 file    => 'lib/Date/Manip/TZ/euwars00.pm',
-                version => '6.90',
-             },
-             'Date::Manip::TZ::euzapo00' => {
-                file    => 'lib/Date/Manip/TZ/euzapo00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::euzuri00' => {
@@ -3296,10 +3260,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::ut00' => {
                 file    => 'lib/Date/Manip/TZ/ut00.pm',
-                version => '6.90',
-             },
-             'Date::Manip::TZ::utc00' => {
-                file    => 'lib/Date/Manip/TZ/utc00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::v00' => {

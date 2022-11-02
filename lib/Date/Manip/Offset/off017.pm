@@ -6,9 +6,9 @@ Date::Manip::Offset::off017;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Sep 19 12:13:18 EDT 2022
-#    Data version: tzdata2022c
-#    Code version: tzcode2022c
+#    Generated on: Wed Nov  2 14:43:31 EDT 2022
+#    Data version: tzdata2022f
+#    Code version: tzcode2022f
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -63,7 +63,6 @@ $Offset        = '+01:00:00';
       'africa/tripoli',
       'europe/vilnius',
       'europe/lisbon',
-      'europe/uzhgorod',
       'europe/london',
       'europe/kaliningrad',
       'europe/sofia',
@@ -74,7 +73,6 @@ $Offset        = '+01:00:00';
       'europe/riga',
       'europe/simferopol',
       'europe/kyiv',
-      'europe/zaporozhye',
       ],
    1 => [
       'wet',

@@ -207,7 +207,13 @@ sub parse {
 
          (@tmp) = $self->_parse_date($string,$dow,\$noupdate,%opts);
          if (@tmp) {
-            ($y,$m,$d,$dow) = @tmp;
+            my $dow2;
+            ($y,$m,$d,$dow2) = @tmp;
+            if ($dow2  &&  $dow  &&  $dow != $dow2) {
+               $$self{'err'} = '[parse] Day of week invalid';
+               last PARSE;
+            }
+            $dow = $dow2  if ($dow2);
             $default_time = 1;
             last PARSE;
          }
