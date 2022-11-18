@@ -56,6 +56,10 @@ Newest zoneinfo data (tzdata 2022f).
 
 Additions to the Polish translation.  GitHub issue #41.
 
+Additions to several languages.  GitHub issue #42.
+
+Added some support for per-language parsing rules to respond to GitHub issue #42.
+
 =back
 
 =head1 VERSION 6.90 (2022-09-01)

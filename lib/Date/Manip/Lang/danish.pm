@@ -21,6 +21,7 @@ $LangName  = "Danish";
 $YearAdded = 2001;
 
 $Language = {
+  _special_rules => { },
   ampm => [['FM', 'f.m.'], ['EM', 'e.m.']],
   at => ['klokken', 'kl', 'kl.'],
   day_abb => [['Man'], ['Tir'], ['Ons'], ['Tor'], ['Fre'], ['Lør', 'Lor'], ['Søn', 'Son']],

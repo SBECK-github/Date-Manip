@@ -21,6 +21,7 @@ $LangName  = "Polish";
 $YearAdded = 1998;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['o', 'u'],
   day_abb => [

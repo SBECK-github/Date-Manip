@@ -21,6 +21,7 @@ $LangName  = "Italian";
 $YearAdded = 1999;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'm.'], ['PM', 'p.']],
   at => ['alle'],
   day_abb => [['Lun'], ['Mar'], ['Mer'], ['Gio'], ['Ven'], ['Sab'], ['Dom']],

@@ -21,6 +21,7 @@ $LangName  = "Romanian";
 $YearAdded = 1999;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['la'],
   day_abb => [['lun', 'lu'], ['mar', 'ma'], ['mie', 'mi'], ['joi', 'jo'], ['vin', 'vi'], ['sâm', 'sam', 'sb'], ['dum', 'du']],

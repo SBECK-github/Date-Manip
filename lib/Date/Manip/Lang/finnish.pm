@@ -22,6 +22,7 @@ $LangName  = "Finnish";
 $YearAdded = 2012;
 
 $Language = {
+  _special_rules => { },
   ampm => [
     ['AM', 'A.M.', 'aamulla', 'aamupäivällä', 'aamupaivalla'],
     ['PM', 'P.M.', 'illalla', 'iltapäivällä', 'iltapaivalla'],
