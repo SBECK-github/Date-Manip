@@ -38,7 +38,6 @@ internal/unicode
 internal/windows.compare
 lib/Date/Manip.pm
 lib/Date/Manip.pod
-lib/Date/Manip/.Changes6.pod.swp
 lib/Date/Manip/Base.pm
 lib/Date/Manip/Base.pod
 lib/Date/Manip/Calc.pod
@@ -506,6 +505,7 @@ lib/Date/Manip/Offset/off403.pm
 lib/Date/Manip/Offset/off404.pm
 lib/Date/Manip/Offset/off405.pm
 lib/Date/Manip/Offset/off406.pm
+lib/Date/Manip/Offset/off407.pm
 lib/Date/Manip/Problems.pod
 lib/Date/Manip/Recur.pm
 lib/Date/Manip/Recur.pod
@@ -554,6 +554,7 @@ lib/Date/Manip/TZ/amcaye00.pm
 lib/Date/Manip/TZ/amcent00.pm
 lib/Date/Manip/TZ/amchic00.pm
 lib/Date/Manip/TZ/amchih00.pm
+lib/Date/Manip/TZ/amciud00.pm
 lib/Date/Manip/TZ/amcord00.pm
 lib/Date/Manip/TZ/amcost00.pm
 lib/Date/Manip/TZ/amcuia00.pm
@@ -612,7 +613,6 @@ lib/Date/Manip/TZ/amnoro00.pm
 lib/Date/Manip/TZ/amnuuk00.pm
 lib/Date/Manip/TZ/amojin00.pm
 lib/Date/Manip/TZ/ampana00.pm
-lib/Date/Manip/TZ/ampang00.pm
 lib/Date/Manip/TZ/ampara00.pm
 lib/Date/Manip/TZ/ampete00.pm
 lib/Date/Manip/TZ/amphoe00.pm

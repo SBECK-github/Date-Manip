@@ -157,7 +157,7 @@ stripped.
 
 =item remove_parens
 
-This will strip parenthese () from a string.
+This will strip parentheses () from a string.
 
 =item strip_word
 

@@ -6,9 +6,9 @@ Date::Manip::TZ::etutc00;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov  2 14:41:25 EDT 2022
-#    Data version: tzdata2022f
-#    Code version: tzcode2022f
+#    Generated on: Fri Dec  2 12:31:46 EST 2022
+#    Data version: tzdata2022g
+#    Code version: tzcode2022g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:

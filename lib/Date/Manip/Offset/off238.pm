@@ -6,9 +6,9 @@ Date::Manip::Offset::off238;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov  2 14:43:32 EDT 2022
-#    Data version: tzdata2022f
-#    Code version: tzcode2022f
+#    Generated on: Fri Dec  2 12:33:24 EST 2022
+#    Data version: tzdata2022g
+#    Code version: tzcode2022g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -36,13 +36,14 @@ $Offset        = '-02:00:00';
       'america/noronha',
       'etc/gmt-2',
       'b',
+      'america/nuuk',
       'america/scoresbysund',
       'atlantic/cape_verde',
       'atlantic/azores',
       ],
    1 => [
-      'america/nuuk',
       'america/miquelon',
+      'america/nuuk',
       'america/sao_paulo',
       'america/montevideo',
       'america/araguaina',
@@ -66,7 +67,6 @@ $Offset        = '-02:00:00';
       'america/belem',
       'america/goose_bay',
       'atlantic/stanley',
-      'america/pangnirtung',
       'antarctica/palmer',
       ],
 );

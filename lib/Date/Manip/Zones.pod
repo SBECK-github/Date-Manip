@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Wed Nov  2 14:43:37 EDT 2022
-#    Data version: tzdata2022f
-#    Code version: tzcode2022f
+#    Generated on: Fri Dec  2 12:34:19 EST 2022
+#    Data version: tzdata2022g
+#    Code version: tzcode2022g
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -99,6 +99,7 @@ database:
      America/Cayenne                      amcaye00
      America/Chicago                      amchic00
      America/Chihuahua                    amchih00
+     America/Ciudad_Juarez                amciud00
      America/Costa_Rica                   amcost00
      America/Cuiaba                       amcuia00
      America/Danmarkshavn                 amdanm00
@@ -160,7 +161,6 @@ database:
      America/Nuuk                         amnuuk00
      America/Ojinaga                      amojin00
      America/Panama                       ampana00
-     America/Pangnirtung                  ampang00
      America/Paramaribo                   ampara00
      America/Phoenix                      amphoe00
      America/Port-au-Prince               amport00
@@ -508,6 +508,7 @@ The zoneinfo database provides several standard aliases, including:
      America/Montserrat                   America/Puerto_Rico
      America/Nassau                       America/Toronto
      America/Nipigon                      America/Toronto
+     America/Pangnirtung                  America/Iqaluit
      America/Port_of_Spain                America/Puerto_Rico
      America/Porto_Acre                   America/Rio_Branco
      America/Rainy_River                  America/Winnipeg
@@ -703,13 +704,11 @@ default alias can be overridden as described above.
                                           Atlantic/Bermuda
                                           America/Goose_Bay
                                           America/Thule
-                                          America/Pangnirtung
                                           America/Barbados
                                           America/Martinique
      AST4APT                              America/Glace_Bay
                                           America/Halifax
                                           America/Moncton
-                                          America/Pangnirtung
                                           America/Puerto_Rico
      AWST-8AWDT                           Australia/Perth
      BST11BDT                             America/Adak
@@ -761,6 +760,7 @@ default alias can be overridden as described above.
                                           America/Resolute
                                           America/Matamoros
                                           America/North_Dakota/Center
+                                          America/Ojinaga
                                           America/North_Dakota/New_Salem
                                           America/North_Dakota/Beulah
                                           America/Mexico_City
@@ -776,7 +776,7 @@ default alias can be overridden as described above.
                                           America/Tegucigalpa
                                           America/Kentucky/Monticello
                                           America/Chihuahua
-                                          America/Ojinaga
+                                          America/Ciudad_Juarez
                                           America/Costa_Rica
                                           America/El_Salvador
                                           America/Indiana/Marengo
@@ -831,10 +831,9 @@ default alias can be overridden as described above.
                                           America/Indiana/Vevay
                                           America/Indiana/Vincennes
                                           America/Indiana/Winamac
-                                          America/Grand_Turk
                                           America/Iqaluit
+                                          America/Grand_Turk
                                           America/Port-au-Prince
-                                          America/Pangnirtung
                                           America/Kentucky/Monticello
                                           America/Indiana/Petersburg
                                           America/Cancun
@@ -876,10 +875,11 @@ default alias can be overridden as described above.
                                           Europe/Vilnius
      MST7MDT                              America/Denver
                                           America/Edmonton
+                                          America/Ciudad_Juarez
                                           America/Boise
                                           America/Cambridge_Bay
-                                          America/Inuvik
                                           America/Yellowknife
+                                          America/Inuvik
                                           America/Mazatlan
                                           America/Chihuahua
                                           America/Ojinaga
@@ -916,6 +916,7 @@ default alias can be overridden as described above.
                                           America/Metlakatla
                                           America/Juneau
                                           America/Sitka
+                                          America/Inuvik
                                           America/Dawson_Creek
                                           America/Boise
      PST8PPT                              America/Los_Angeles
@@ -1027,6 +1028,7 @@ Aliases include:
      America/Montserrat                   America/Puerto_Rico
      America/Nassau                       America/Toronto
      America/Nipigon                      America/Toronto
+     America/Pangnirtung                  America/Iqaluit
      America/Port_of_Spain                America/Puerto_Rico
      America/Porto_Acre                   America/Rio_Branco
      America/Rainy_River                  America/Winnipeg
@@ -1444,6 +1446,7 @@ L<Date::Manip::TZ> module.
      0      -07:23:52   America/Hermosillo
      0      -07:17:28   Pacific/Easter
      0      -07:11:20   America/Swift_Current
+     0      -07:05:56   America/Ciudad_Juarez
      0      -07:05:40   America/Mazatlan
      0      -07:04:20   America/Chihuahua
      0      -07:01:00   America/Bahia_Banderas
@@ -1451,6 +1454,7 @@ L<Date::Manip::TZ> module.
                         America/Phoenix
                         America/Edmonton
                         America/Cambridge_Bay
+                        America/Ciudad_Juarez
                         America/Hermosillo
                         America/Mazatlan
                         America/Boise
@@ -1511,6 +1515,7 @@ L<Date::Manip::TZ> module.
                         America/North_Dakota/Center
                         America/North_Dakota/New_Salem
                         America/North_Dakota/Beulah
+                        America/Ciudad_Juarez
                         Etc/GMT-6
                         F
                         America/Cancun
@@ -1520,7 +1525,6 @@ L<Date::Manip::TZ> module.
                         America/Cambridge_Bay
                         America/Kentucky/Monticello
                         America/Iqaluit
-                        America/Pangnirtung
                         America/Indiana/Marengo
                         America/Kentucky/Louisville
                         America/Indiana/Indianapolis
@@ -1583,7 +1587,6 @@ L<Date::Manip::TZ> module.
                         America/Indiana/Vincennes
                         America/Indiana/Petersburg
                         America/Cancun
-                        America/Pangnirtung
                         America/Kentucky/Monticello
                         Etc/GMT-5
                         E
@@ -1685,7 +1688,6 @@ L<Date::Manip::TZ> module.
                         America/Argentina/San_Juan
                         America/Argentina/Tucuman
                         America/Argentina/Ushuaia
-                        America/Pangnirtung
                         America/Argentina/Cordoba
                         America/Argentina/Jujuy
                         America/Argentina/Salta
@@ -1727,7 +1729,6 @@ L<Date::Manip::TZ> module.
                         America/Maceio
                         America/Recife
                         America/Sao_Paulo
-                        America/Nuuk
                         America/Montevideo
                         America/Cayenne
                         America/Argentina/Buenos_Aires
@@ -1747,6 +1748,7 @@ L<Date::Manip::TZ> module.
                         America/Paramaribo
                         America/Santarem
                         America/Punta_Arenas
+                        America/Nuuk
                         Etc/GMT-3
                         C
                         Antarctica/Palmer
@@ -1764,6 +1766,7 @@ L<Date::Manip::TZ> module.
                         America/Noronha
                         Etc/GMT-2
                         B
+                        America/Nuuk
                         America/Scoresbysund
                         Atlantic/Cape_Verde
                         Atlantic/Azores
@@ -1830,7 +1833,6 @@ L<Date::Manip::TZ> module.
                         Europe/Paris
                         Pacific/Kanton
                         America/Yellowknife
-                        America/Pangnirtung
                         America/Cambridge_Bay
                         Africa/Lagos
                         Antarctica/Casey
@@ -2403,10 +2405,12 @@ L<Date::Manip::TZ> module.
                         America/Juneau
                         America/Metlakatla
                         America/Sitka
+                        America/Inuvik
                         America/Dawson_Creek
                         America/Boise
      1      -06:00:00   America/Denver
                         America/Edmonton
+                        America/Ciudad_Juarez
                         America/Boise
                         America/Cambridge_Bay
                         America/Yellowknife
@@ -2435,6 +2439,7 @@ L<Date::Manip::TZ> module.
                         Pacific/Easter
                         America/Matamoros
                         America/North_Dakota/Center
+                        America/Ojinaga
                         America/North_Dakota/New_Salem
                         America/North_Dakota/Beulah
                         America/Mexico_City
@@ -2451,16 +2456,14 @@ L<Date::Manip::TZ> module.
                         America/Kentucky/Monticello
                         America/Cambridge_Bay
                         America/Iqaluit
-                        America/Pangnirtung
                         America/Chihuahua
-                        America/Ojinaga
+                        America/Ciudad_Juarez
                         Pacific/Galapagos
                         America/Costa_Rica
                         America/El_Salvador
                         America/Belize
                         America/Indiana/Marengo
                         America/Kentucky/Louisville
-                        America/Yellowknife
                         America/Indiana/Indianapolis
                         America/Indiana/Vevay
      1      -04:30:00   America/Santo_Domingo
@@ -2477,7 +2480,6 @@ L<Date::Manip::TZ> module.
                         America/Indiana/Winamac
                         America/Grand_Turk
                         America/Port-au-Prince
-                        America/Pangnirtung
                         America/Kentucky/Monticello
                         America/Indiana/Petersburg
                         America/Cancun
@@ -2489,8 +2491,6 @@ L<Date::Manip::TZ> module.
                         America/Jamaica
                         America/Indiana/Tell_City
                         America/Santo_Domingo
-                        America/Rankin_Inlet
-                        America/Resolute
                         America/Punta_Arenas
                         America/Santiago
      1      -03:32:36   America/La_Paz
@@ -2522,12 +2522,10 @@ L<Date::Manip::TZ> module.
                         America/Argentina/Ushuaia
                         America/Boa_Vista
                         America/Manaus
-                        America/Pangnirtung
                         America/Porto_Velho
                         America/Santarem
                         America/Barbados
                         America/Martinique
-                        America/Iqaluit
                         America/Puerto_Rico
                         America/Montevideo
                         Antarctica/Palmer
@@ -2536,8 +2534,8 @@ L<Date::Manip::TZ> module.
      1      -02:30:00   America/St_Johns
                         America/Montevideo
                         America/Goose_Bay
-     1      -02:00:00   America/Nuuk
-                        America/Miquelon
+     1      -02:00:00   America/Miquelon
+                        America/Nuuk
                         America/Sao_Paulo
                         America/Montevideo
                         America/Araguaina
@@ -2561,7 +2559,6 @@ L<Date::Manip::TZ> module.
                         America/Belem
                         America/Goose_Bay
                         Atlantic/Stanley
-                        America/Pangnirtung
                         Antarctica/Palmer
      1      -01:30:00   America/St_Johns
                         America/Montevideo
@@ -2841,14 +2838,12 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Australia/Darwin
                       Australia/Broken_Hill
      ADDT             America/Goose_Bay
-                      America/Pangnirtung
      ADT              America/Halifax
                       America/Glace_Bay
                       America/Moncton
                       Atlantic/Bermuda
                       America/Goose_Bay
                       America/Thule
-                      America/Pangnirtung
                       America/Barbados
                       America/Martinique
      AEDT             Australia/Melbourne
@@ -2886,7 +2881,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Anchorage
                       America/Glace_Bay
                       America/Moncton
-                      America/Pangnirtung
                       America/Puerto_Rico
      AST              America/Puerto_Rico
                       America/Glace_Bay
@@ -2899,7 +2893,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Goose_Bay
                       America/Santo_Domingo
                       America/Grand_Turk
-                      America/Pangnirtung
                       America/Miquelon
                       America/Anchorage
      AWDT             Australia/Perth
@@ -2908,7 +2901,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Anchorage
                       America/Glace_Bay
                       America/Moncton
-                      America/Pangnirtung
                       America/Puerto_Rico
      B                B
      BDST             Europe/Gibraltar
@@ -2938,8 +2930,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Africa/Juba
                       Africa/Khartoum
                       Africa/Windhoek
-     CDDT             America/Rankin_Inlet
-                      America/Resolute
      CDT              America/Chicago
                       America/Winnipeg
                       America/Indiana/Knox
@@ -2950,6 +2940,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Resolute
                       America/Matamoros
                       America/North_Dakota/Center
+                      America/Ojinaga
                       America/North_Dakota/New_Salem
                       America/North_Dakota/Beulah
                       America/Mexico_City
@@ -2966,9 +2957,8 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Kentucky/Monticello
                       America/Cambridge_Bay
                       America/Iqaluit
-                      America/Pangnirtung
                       America/Chihuahua
-                      America/Ojinaga
+                      America/Ciudad_Juarez
                       America/Costa_Rica
                       Asia/Shanghai
                       America/El_Salvador
@@ -3101,6 +3091,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/North_Dakota/Center
                       America/North_Dakota/New_Salem
                       America/North_Dakota/Beulah
+                      America/Ciudad_Juarez
                       America/Cancun
                       America/Indiana/Petersburg
                       America/Indiana/Vincennes
@@ -3108,7 +3099,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Cambridge_Bay
                       America/Kentucky/Monticello
                       America/Iqaluit
-                      America/Pangnirtung
                       America/Indiana/Marengo
                       America/Kentucky/Louisville
                       America/Indiana/Indianapolis
@@ -3138,7 +3128,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      EAT              Africa/Nairobi
                       Africa/Juba
                       Africa/Khartoum
-     EDDT             America/Iqaluit
      EDT              America/New_York
                       America/Toronto
                       America/Detroit
@@ -3148,10 +3137,9 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Indiana/Vevay
                       America/Indiana/Vincennes
                       America/Indiana/Winamac
-                      America/Grand_Turk
                       America/Iqaluit
+                      America/Grand_Turk
                       America/Port-au-Prince
-                      America/Pangnirtung
                       America/Kentucky/Monticello
                       America/Indiana/Petersburg
                       America/Cancun
@@ -3228,7 +3216,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Indiana/Vincennes
                       America/Indiana/Petersburg
                       America/Cancun
-                      America/Pangnirtung
                       America/Kentucky/Monticello
                       America/Resolute
                       America/Indiana/Knox
@@ -3335,15 +3322,14 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      L                L
      LST              Europe/Riga
      M                M
-     MDDT             America/Cambridge_Bay
-                      America/Yellowknife
      MDST             Europe/Moscow
      MDT              America/Denver
                       America/Edmonton
+                      America/Ciudad_Juarez
                       America/Boise
                       America/Cambridge_Bay
-                      America/Inuvik
                       America/Yellowknife
+                      America/Inuvik
                       America/Chihuahua
                       America/Mazatlan
                       America/Ojinaga
@@ -3399,6 +3385,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Phoenix
                       America/Edmonton
                       America/Cambridge_Bay
+                      America/Ciudad_Juarez
                       America/Hermosillo
                       America/Mazatlan
                       America/Boise
@@ -3451,7 +3438,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      NZST             Pacific/Auckland
      O                O
      P                P
-     PDDT             America/Inuvik
      PDT              America/Los_Angeles
                       America/Vancouver
                       America/Tijuana
@@ -3462,6 +3448,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Metlakatla
                       America/Sitka
                       Asia/Manila
+                      America/Inuvik
                       America/Dawson_Creek
                       America/Boise
      PKST             Asia/Karachi

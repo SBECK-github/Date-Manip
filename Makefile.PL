@@ -1798,6 +1798,10 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off406.pm',
                 version => '6.90',
              },
+             'Date::Manip::Offset::off407' => {
+                file    => 'lib/Date/Manip/Offset/off407.pm',
+                version => '6.90',
+             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.90',
@@ -1976,6 +1980,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amchih00' => {
                 file    => 'lib/Date/Manip/TZ/amchih00.pm',
+                version => '6.90',
+             },
+             'Date::Manip::TZ::amciud00' => {
+                file    => 'lib/Date/Manip/TZ/amciud00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::amcord00' => {
@@ -2208,10 +2216,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::ampana00' => {
                 file    => 'lib/Date/Manip/TZ/ampana00.pm',
-                version => '6.90',
-             },
-             'Date::Manip::TZ::ampang00' => {
-                file    => 'lib/Date/Manip/TZ/ampang00.pm',
                 version => '6.90',
              },
              'Date::Manip::TZ::ampara00' => {
