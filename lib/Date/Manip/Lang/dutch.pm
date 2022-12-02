@@ -21,6 +21,7 @@ $LangName  = "Dutch";
 $YearAdded = 1998;
 
 $Language = {
+  _special_rules => { },
   ampm => [
     [
       'am',

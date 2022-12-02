@@ -21,6 +21,7 @@ $LangName  = "German";
 $YearAdded = 1998;
 
 $Language = {
+  _special_rules => { 'remove_trailing_period' => 1 },
   ampm => [['FM', 'vorm.'], ['EM', 'nachm.']],
   at => ['um'],
   day_abb => [

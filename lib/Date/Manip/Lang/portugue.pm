@@ -21,16 +21,17 @@ $LangName  = "Portuguese";
 $YearAdded = 1999;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['as', 'às'],
   day_abb => [['seg'], ['ter'], ['qua'], ['qui'], ['sex'], ['sáb', 'sab'], ['dom']],
   day_char => [['Sg'], ['T'], ['Qa'], ['Qi'], ['Sx'], ['Sb'], ['D']],
   day_name => [
-    ['segunda', 'segunda-feira'],
-    ['terça', 'terca', 'terça-feira', 'terca-feira'],
-    ['quarta', 'quarta-feira'],
-    ['quinta', 'quinta-feira'],
-    ['sexta', 'sexta-feira'],
+    ['segunda', 'segunda-feira', 'segunda feira'],
+    ['terça', 'terca', 'terça-feira', 'terca-feira', 'terça feira', 'terca feira'],
+    ['quarta', 'quarta-feira', 'quarta feira'],
+    ['quinta', 'quinta-feira', 'quinta feira'],
+    ['sexta', 'sexta-feira', 'sexta feira'],
     ['sábado', 'sabado'],
     ['domingo'],
   ],

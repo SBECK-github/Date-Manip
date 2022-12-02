@@ -21,13 +21,14 @@ $LangName  = "Romanian";
 $YearAdded = 1999;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['la'],
-  day_abb => [['lun'], ['mar'], ['mie'], ['joi'], ['vin'], ['sâm', 'sam'], ['dum']],
+  day_abb => [['lun', 'lu'], ['mar', 'ma'], ['mie', 'mi'], ['joi', 'jo'], ['vin', 'vi'], ['sâm', 'sam', 'sb'], ['dum', 'du']],
   day_char => [['L'], ['Ma'], ['Mi'], ['J'], ['V'], ['S'], ['D']],
   day_name => [
     ['luni'],
-    ['marți', 'marti', 'marþi'],
+    ['marți', 'marti', 'marþi', 'marţi'],
     ['miercuri'],
     ['joi'],
     ['vineri'],
@@ -49,15 +50,15 @@ $Language = {
   month_abb => [
     ['ian'],
     ['feb', 'febr'],
-    ['mart'],
+    ['mart', 'mar'],
     ['apr'],
     ['mai'],
     ['iun'],
     ['iul'],
     ['aug'],
-    ['sept'],
+    ['sept', 'sep'],
     ['oct'],
-    ['nov'],
+    ['nov', 'noi'],
     ['dec'],
   ],
   month_name => [

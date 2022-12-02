@@ -21,16 +21,17 @@ $LangName  = "Polish";
 $YearAdded = 1998;
 
 $Language = {
+  _special_rules => { },
   ampm => [['AM', 'A.M.'], ['PM', 'P.M.']],
   at => ['o', 'u'],
   day_abb => [
     ['po', 'po.', 'pon.', 'pon'],
-    ['wt', 'wt.'],
-    ['śr', 'śr.', 'sr.', 'sr'],
+    ['wt', 'wt.', 'wto', 'wto.'],
+    ['śr', 'śr.', 'sr.', 'sr','śro', 'śro.', 'sro.', 'sro'],
     ['cz', 'cz.', 'czw.', 'czw'],
-    ['pi', 'pi.'],
-    ['so', 'so.'],
-    ['ni', 'ni.'],
+    ['pi', 'pi.', 'ptk', 'ptk.', 'pią'],
+    ['so', 'so.', 'sob', 'sob.'],
+    ['ni', 'ni.', 'ndz', 'ndz.', 'nie'],
   ],
   day_char => [['p'], ['w'], ['ś.', 'e'], ['c'], ['p'], ['s'], ['n']],
   day_name => [
@@ -90,18 +91,18 @@ $Language = {
     ['gru', 'gru.'],
   ],
   month_name => [
-    ['stycznia'],
-    ['luty'],
-    ['marca'],
-    ['kwietnia'],
+    ['stycznia', 'styczeń'],
+    ['luty','lutego'],
+    ['marca', 'marzec'],
+    ['kwietnia', 'kwiecień'],
     ['maja'],
-    ['czerwca'],
-    ['lipca'],
-    ['sierpnia'],
-    ['września', 'wrzesnia'],
-    ['października', 'pazdziernika'],
-    ['listopada'],
-    ['grudnia'],
+    ['czerwca', 'czerwiec'],
+    ['lipca', 'lipiec'],
+    ['sierpnia', 'sierpień'],
+    ['września', 'wrzesnia', 'wrzesień'],
+    ['października', 'pazdziernika', 'październik'],
+    ['listopada', 'listopad'],
+    ['grudnia', 'grudzień'],
   ],
   nextprev => [
     [
