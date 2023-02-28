@@ -762,7 +762,8 @@ sub _zoneinfo_file_name_to_zone {
    my($file,$zoneinfo) = @_;
    require File::Spec;
    my $zone = File::Spec->abs2rel($file,$zoneinfo);
-   return $zone  if (exists $Date::Manip::Zones::ZoneNames{lc($zone)});
+   return $zone  if (exists $Date::Manip::Zones::ZoneNames{lc($zone)} ||
+                     exists $Date::Manip::Zones::Alias{lc($zone)});
    return;
 }
 
