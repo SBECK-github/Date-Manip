@@ -2352,10 +2352,6 @@
          "file" : "lib/Date/Manip/TZ/amyaku00.pm",
          "version" : "6.92"
       },
-      "Date::Manip::TZ::amyell00" : {
-         "file" : "lib/Date/Manip/TZ/amyell00.pm",
-         "version" : "6.92"
-      },
       "Date::Manip::TZ::ancase00" : {
          "file" : "lib/Date/Manip/TZ/ancase00.pm",
          "version" : "6.92"
