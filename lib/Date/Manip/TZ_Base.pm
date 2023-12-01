@@ -13,7 +13,7 @@ use IO::File;
 use Carp;
 
 our ($VERSION);
-$VERSION='6.93';
+$VERSION='6.94';
 END { undef $VERSION; }
 
 ########################################################################
