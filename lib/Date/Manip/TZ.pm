@@ -1584,7 +1584,9 @@ sub _convert {
    if (ref($date)) {
       @date = @$date;
    } else {
-      @date = @{ $dmb->split('date',$date) };
+      my $split = $dmb->split('date',$date);
+      return (4)  if (! defined $split);
+      @date = @$split;
       $date = [@date];
    }
 
