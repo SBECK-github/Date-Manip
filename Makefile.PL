@@ -2398,6 +2398,10 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/antrol00.pm',
                 version => '6.94',
              },
+             'Date::Manip::TZ::anvost00' => {
+                file    => 'lib/Date/Manip/TZ/anvost00.pm',
+                version => '6.94',
+             },
              'Date::Manip::TZ::asalma00' => {
                 file    => 'lib/Date/Manip/TZ/asalma00.pm',
                 version => '6.94',
