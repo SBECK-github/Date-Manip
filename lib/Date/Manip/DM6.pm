@@ -802,7 +802,10 @@ sub Date_DaysInYear {
 
 sub Date_WeekOfYear {
    my($m,$d,$y,$first) = @_;
-   my($yy,$ww) = $dmb->_week_of_year($first,[$y,$m,$d]);
+   my $currfirst = $dmb->_config('firstday');
+   $dmb->config('firstday',$first);
+   my($yy,$ww) = $dmb->week_of_year([$y,$m,$d]);
+   $dmb->config('firstday',$currfirst);
    return 0   if ($yy<$y);
    return 53  if ($yy>$y);
    return $ww;
