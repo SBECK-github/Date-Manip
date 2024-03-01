@@ -267,12 +267,12 @@ of a week is that it is the first week containing January 4, so the default
 value of this variable is 'jan4'.
 
 If the value is 'dowX' (where X is a digit 1-7), then the first week
-of the year is the one that contains the first occurence of the DoW
+of the year is the one that contains the first occurrence of the DoW
 given (X=1 is Monday, X=7 is Sunday).  So, if you want the first week
 to be the one that contains the first Monday of the year, use 'dow1'.
 
 If the value is 'firstday', then the first week of the year is the one
-that contains the first occurence of the DoW given in the FirstDay
+that contains the first occurrence of the DoW given in the FirstDay
 config variable.
 
 =item B<Printable>

@@ -57,6 +57,10 @@ information).
 
 Reported in GitHub #48
 
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2024a).
+
 =back
 
 =head1 VERSION 6.94 (2024-01-09)

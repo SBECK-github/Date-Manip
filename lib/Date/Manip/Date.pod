@@ -687,8 +687,8 @@ an error code is set).
 
    $wkno = $date->week_of_year([$first]);
 
-This figures out the week number for the date storedin $date.  It uses
-the config varables FirstDay and Week1ofYear to determine this.  For
+This figures out the week number for the date stored in $date.  It uses
+the config variables FirstDay and Week1ofYear to determine this.  For
 historical reasons, an argument $first may be passed in.  It must be
 between 1 and 7 and refers to the first day of the week and overrides
 whatever the FirstDay variable is set to.
@@ -1854,11 +1854,11 @@ are used, but the formats are replaced with their POSIX value:
 
    %g   Identical to %g but only has the last two digits of the year.
 
-   %W   Similar to the %W format descirbed above, but with Monday
+   %W   Similar to the %W format described above, but with Monday
         being the first day of the week and the first Monday in the
         year being the first day of the first week.
 
-   %V   Similar to the %W format descirbed above, but strictly adheres
+   %V   Similar to the %W format described above, but strictly adheres
         to the ISO 8601 week definition where the first week of
         the week is Monday and the first week of the year contains
         Jan 4.
