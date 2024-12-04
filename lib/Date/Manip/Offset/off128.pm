@@ -6,9 +6,9 @@ Date::Manip::Offset::off128;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Fri Mar  1 11:05:45 EST 2024
-#    Data version: tzdata2024a
-#    Code version: tzcode2024a
+#    Generated on: Wed Dec  4 14:48:49 EST 2024
+#    Data version: tzdata2024b
+#    Code version: tzcode2024b
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -47,7 +47,6 @@ $Offset        = '+07:00:00';
       'antarctica/davis',
       'asia/omsk',
       'asia/irkutsk',
-      'asia/choibalsan',
       'asia/ulaanbaatar',
       'asia/singapore',
       'antarctica/vostok',

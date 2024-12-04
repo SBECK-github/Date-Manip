@@ -1798,10 +1798,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off406.pm',
                 version => '6.96',
              },
-             'Date::Manip::Offset::off407' => {
-                file    => 'lib/Date/Manip/Offset/off407.pm',
-                version => '6.96',
-             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.96',
@@ -2458,10 +2454,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/aschit00.pm',
                 version => '6.96',
              },
-             'Date::Manip::TZ::aschoi00' => {
-                file    => 'lib/Date/Manip/TZ/aschoi00.pm',
-                version => '6.96',
-             },
              'Date::Manip::TZ::ascolo00' => {
                 file    => 'lib/Date/Manip/TZ/ascolo00.pm',
                 version => '6.96',
@@ -2786,20 +2778,12 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/c00.pm',
                 version => '6.96',
              },
-             'Date::Manip::TZ::cet00' => {
-                file    => 'lib/Date/Manip/TZ/cet00.pm',
-                version => '6.96',
-             },
              'Date::Manip::TZ::d00' => {
                 file    => 'lib/Date/Manip/TZ/d00.pm',
                 version => '6.96',
              },
              'Date::Manip::TZ::e00' => {
                 file    => 'lib/Date/Manip/TZ/e00.pm',
-                version => '6.96',
-             },
-             'Date::Manip::TZ::eet00' => {
-                file    => 'lib/Date/Manip/TZ/eet00.pm',
                 version => '6.96',
              },
              'Date::Manip::TZ::etgmt00' => {
@@ -3106,10 +3090,6 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/TZ/m00.pm',
                 version => '6.96',
              },
-             'Date::Manip::TZ::met00' => {
-                file    => 'lib/Date/Manip/TZ/met00.pm',
-                version => '6.96',
-             },
              'Date::Manip::TZ::n00' => {
                 file    => 'lib/Date/Manip/TZ/n00.pm',
                 version => '6.96',
@@ -3272,10 +3252,6 @@ WriteMakefile(
              },
              'Date::Manip::TZ::w00' => {
                 file    => 'lib/Date/Manip/TZ/w00.pm',
-                version => '6.96',
-             },
-             'Date::Manip::TZ::wet00' => {
-                file    => 'lib/Date/Manip/TZ/wet00.pm',
                 version => '6.96',
              },
              'Date::Manip::TZ::x00' => {

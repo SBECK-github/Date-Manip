@@ -274,6 +274,9 @@ sub define_abbrev {
 
    $$self{'data'}{'MyAbbrev'}{$abbrev} = [ @z ];
    $$self{'data'}{'abbrx'}             = undef;
+   # Some abbreviations are timezone aliases, so get rid of them (if any)
+   # so this abbreviation won't falsely identify as another timezone.
+   delete $$self{'data'}{'Alias'}{$abbrev};
    return ();
 }
 
@@ -902,9 +905,6 @@ sub zone {
 
          } elsif (exists $$self{'data'}{'MyAbbrev'}{$arg}  ||
                   exists $$self{'data'}{'Abbrev'}{$arg}) {
-            return undef  if ($abbrev);
-            $abbrev       = $arg;
-         } elsif (exists $$self{'data'}{'Abbrev'}{$arg}) {
             return undef  if ($abbrev);
             $abbrev       = $arg;
 
