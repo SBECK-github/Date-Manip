@@ -1798,6 +1798,10 @@ WriteMakefile(
                 file    => 'lib/Date/Manip/Offset/off406.pm',
                 version => '6.98',
              },
+             'Date::Manip::Offset::off407' => {
+                file    => 'lib/Date/Manip/Offset/off407.pm',
+                version => '6.98',
+             },
              'Date::Manip::Recur' => {
                 file    => 'lib/Date/Manip/Recur.pm',
                 version => '6.98',
@@ -1988,6 +1992,10 @@ WriteMakefile(
              },
              'Date::Manip::TZ::amcost00' => {
                 file    => 'lib/Date/Manip/TZ/amcost00.pm',
+                version => '6.98',
+             },
+             'Date::Manip::TZ::amcoyh00' => {
+                file    => 'lib/Date/Manip/TZ/amcoyh00.pm',
                 version => '6.98',
              },
              'Date::Manip::TZ::amcuia00' => {
