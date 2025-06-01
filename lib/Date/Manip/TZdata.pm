@@ -14,7 +14,7 @@ use integer;
 use warnings;
 
 our $VERSION;
-$VERSION='6.98';
+$VERSION='6.99';
 END { undef $VERSION; }
 
 ###############################################################################
