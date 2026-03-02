@@ -14,7 +14,7 @@ use Storable qw(dclone);
 use Carp;
 
 our ($VERSION);
-$VERSION='6.99';
+$VERSION='7.00';
 END { undef $VERSION; }
 
 ########################################################################
