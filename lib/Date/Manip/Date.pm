@@ -94,6 +94,13 @@ sub input {
 # DATE PARSING
 ########################################################################
 
+# The longest string the parsers will look at.  The time matching
+# regexp is applied unanchored, so the cost of failing to match grows
+# with the square of the length of an interior whitespace run.  Real
+# date strings are well under 100 characters.
+
+our $MAXLENGTH = 256;
+
 sub parse {
    my($self,$instring,@opts) = @_;
    $self->_init();
@@ -101,6 +108,11 @@ sub parse {
 
    if (! $instring) {
       $$self{'err'} = '[parse] Empty date string';
+      return 1;
+   }
+
+   if (length($instring) > $MAXLENGTH) {
+      $$self{'err'} = '[parse] Date string too long';
       return 1;
    }
 
@@ -379,6 +391,11 @@ sub parse_time {
 
    if (! $string) {
       $$self{'err'} = '[parse_time] Empty time string';
+      return 1;
+   }
+
+   if (length($string) > $MAXLENGTH) {
+      $$self{'err'} = '[parse_time] Time string too long';
       return 1;
    }
 
