@@ -32,6 +32,28 @@ incompatible. These are marked with an exclamation mark (!).
 #    Remove TZ variable
 #    Remove Jan1Week1 variable
 
+=head1 VERSION 7.00 (expected 2026-09-01)
+
+=over 5
+
+=item Not a major release
+
+This is NOT a major release change.  It is simply a bump of one minor version
+from 6.99.  There are no current plans for another major release.
+
+=item CPAN email contact removed
+
+As of April, CPAN no longer forwards emails, so the old cpan.org email address
+is no longer a supported contact method and has been removed. 
+
+Reported in GitHub #53
+
+=item Time zone fixes
+
+Newest zoneinfo data (tzdata 2026c).
+
+=back
+
 =head1 VERSION 6.99 (2026-03-02)
 
 =over 5
@@ -2110,6 +2132,6 @@ modify it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Sullivan Beck (sbeck@cpan.org)
+Sullivan Beck (https://github.com/SBECK-github/)
 
 =cut

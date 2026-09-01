@@ -6,9 +6,9 @@ Date::Manip::Offset::off368;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  2 13:07:46 EST 2026
-#    Data version: tzdata2026a
-#    Code version: tzcode2026a
+#    Generated on: Tue Sep  1 12:20:36 EDT 2026
+#    Data version: tzdata2026c
+#    Code version: tzcode2026c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -33,9 +33,9 @@ $Offset        = '-08:00:00';
 %Offset        = (
    0 => [
       'america/los_angeles',
-      'america/vancouver',
       'america/tijuana',
       'pacific/pitcairn',
+      'america/vancouver',
       'etc/gmt-8',
       'h',
       'america/whitehorse',

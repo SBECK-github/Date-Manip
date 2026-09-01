@@ -57,7 +57,7 @@ WriteMakefile(
    ($EU_MM_V >= 6.48
     ? (MIN_PERL_VERSION => "5.006")
     : ()),
-   AUTHOR           => "Sullivan Beck (sbeck\@cpan.org)",
+   AUTHOR           => "Sullivan Beck (https://github.com/SBECK-github/)",
    "dist"           => {COMPRESS=>"gzip",SUFFIX=>"gz"},
    PL_FILES         => {},
    PREREQ_PM        => \%module_prereq,

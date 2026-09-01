@@ -303,6 +303,6 @@ modify it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Sullivan Beck (sbeck@cpan.org)
+Sullivan Beck (https://github.com/SBECK-github/)
 
 =cut

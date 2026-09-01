@@ -1,5 +1,5 @@
 Written by:
-   Sullivan Beck (sbeck@cpan.org)
+   Sullivan Beck (https://github.com/SBECK-github/)
 Any suggestions, bug reports, or donations :-) should be sent to me.
 
 This describes the changes made to the Date::Manip module in the 6.xx
@@ -14,6 +14,22 @@ Also, the Changes document is automatically generated from the document:
        Date::Manip::Changes6
 and that document should be considered the canonical source for all change
 related information.
+
+7.00  expected 2026-09-01
+  -  Not a major release
+         This is NOT a major release change. It is simply a bump of one
+         minor version from 6.99. There are no current plans for another
+         major release.
+
+  -  CPAN email contact removed
+         As of April, CPAN no longer forwards emails, so the old cpan.org
+         email address is no longer a supported contact method and has been
+         removed.
+
+         Reported in GitHub #53
+
+  -  Time zone fixes
+         Newest zoneinfo data (tzdata 2026c).
 
 6.99  2026-03-02
   -  Time zone fixes

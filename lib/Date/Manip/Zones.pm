@@ -5,9 +5,9 @@ package Date::Manip::Zones;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  2 13:07:52 EST 2026
-#    Data version: tzdata2026a
-#    Code version: tzcode2026a
+#    Generated on: Tue Sep  1 12:20:39 EDT 2026
+#    Data version: tzdata2026c
+#    Code version: tzcode2026c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -37,8 +37,8 @@ END {
    undef %Offmod;
 }
 
-$TzdataVersion = 'tzdata2026a';
-$TzcodeVersion = 'tzcode2026a';
+$TzdataVersion = 'tzdata2026c';
+$TzcodeVersion = 'tzcode2026c';
 $FirstDate     = '0001010200:00:00';
 $LastDate      = '9999123100:00:00';
 $LastYear      = '2096';
@@ -2136,6 +2136,7 @@ $LastYear      = '2096';
                      'america/north_dakota/center',
                      'america/north_dakota/new_salem',
                      'america/north_dakota/beulah',
+                     'america/edmonton',
                      'america/ciudad_juarez',
                      'america/cancun',
                      'america/indiana/petersburg',
@@ -2367,11 +2368,11 @@ $LastYear      = '2096';
   'm'           => [ 'm' ],
   'mdst'        => [ 'europe/moscow' ],
   'mdt'         => [ 'america/denver',
-                     'america/edmonton',
                      'america/ciudad_juarez',
                      'america/boise',
                      'america/cambridge_bay',
                      'america/inuvik',
+                     'america/edmonton',
                      'america/chihuahua',
                      'america/mazatlan',
                      'america/ojinaga',
@@ -2427,7 +2428,6 @@ $LastYear      = '2096';
                      'europe/kaliningrad' ],
   'mst'         => [ 'america/denver',
                      'america/phoenix',
-                     'america/edmonton',
                      'america/cambridge_bay',
                      'america/ciudad_juarez',
                      'america/hermosillo',
@@ -2438,6 +2438,8 @@ $LastYear      = '2096';
                      'america/fort_nelson',
                      'america/dawson',
                      'america/whitehorse',
+                     'america/vancouver',
+                     'america/edmonton',
                      'america/chihuahua',
                      'america/ojinaga',
                      'america/north_dakota/beulah',
@@ -2482,8 +2484,8 @@ $LastYear      = '2096';
   'o'           => [ 'o' ],
   'p'           => [ 'p' ],
   'pdt'         => [ 'america/los_angeles',
-                     'america/vancouver',
                      'america/tijuana',
+                     'america/vancouver',
                      'america/dawson',
                      'america/whitehorse',
                      'america/fort_nelson',
@@ -2516,9 +2518,9 @@ $LastYear      = '2096';
                      'america/tijuana',
                      'america/vancouver' ],
   'pst'         => [ 'america/los_angeles',
-                     'america/vancouver',
                      'asia/manila',
                      'america/tijuana',
+                     'america/vancouver',
                      'america/whitehorse',
                      'america/dawson',
                      'america/metlakatla',

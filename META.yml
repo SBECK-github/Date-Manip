@@ -1,7 +1,7 @@
 ---
 abstract: 'Date manipulation routines'
 author:
-  - 'Sullivan Beck (sbeck@cpan.org)'
+  - 'Sullivan Beck (https://github.com/SBECK-github/)'
 build_requires:
   ExtUtils::MakeMaker: '0'
   Test::Inter: '1.09'

@@ -5,9 +5,9 @@
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  2 13:07:52 EST 2026
-#    Data version: tzdata2026a
-#    Code version: tzcode2026a
+#    Generated on: Tue Sep  1 12:20:39 EDT 2026
+#    Data version: tzdata2026c
+#    Code version: tzcode2026c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -880,11 +880,11 @@ default alias can be overridden as described above.
                                           Europe/Tallinn
                                           Europe/Vilnius
      MST7MDT                              America/Denver
-                                          America/Edmonton
                                           America/Ciudad_Juarez
                                           America/Boise
                                           America/Cambridge_Bay
                                           America/Inuvik
+                                          America/Edmonton
                                           America/Mazatlan
                                           America/Chihuahua
                                           America/Ojinaga
@@ -913,8 +913,8 @@ default alias can be overridden as described above.
      PKT-5PKST                            Asia/Karachi
      PST-8PDT                             Asia/Manila
      PST8PDT                              America/Los_Angeles
-                                          America/Vancouver
                                           America/Tijuana
+                                          America/Vancouver
                                           America/Dawson
                                           America/Whitehorse
                                           America/Fort_Nelson
@@ -1480,9 +1480,9 @@ L<Date::Manip::TZ> module.
      0      -08:10:47   America/Fort_Nelson
      0      -08:00:56   America/Dawson_Creek
      0      -08:00:00   America/Los_Angeles
-                        America/Vancouver
                         America/Tijuana
                         Pacific/Pitcairn
+                        America/Vancouver
                         Etc/GMT-8
                         H
                         America/Whitehorse
@@ -1508,7 +1508,6 @@ L<Date::Manip::TZ> module.
      0      -07:01:00   America/Bahia_Banderas
      0      -07:00:00   America/Denver
                         America/Phoenix
-                        America/Edmonton
                         America/Cambridge_Bay
                         America/Ciudad_Juarez
                         America/Hermosillo
@@ -1519,6 +1518,8 @@ L<Date::Manip::TZ> module.
                         America/Fort_Nelson
                         America/Dawson
                         America/Whitehorse
+                        America/Vancouver
+                        America/Edmonton
                         Etc/GMT-7
                         G
                         America/Chihuahua
@@ -1571,6 +1572,7 @@ L<Date::Manip::TZ> module.
                         America/North_Dakota/Center
                         America/North_Dakota/New_Salem
                         America/North_Dakota/Beulah
+                        America/Edmonton
                         Etc/GMT-6
                         F
                         America/Ciudad_Juarez
@@ -1866,18 +1868,18 @@ L<Date::Manip::TZ> module.
                         Europe/Lisbon
                         Africa/Abidjan
                         Africa/Sao_Tome
+                        Africa/Casablanca
                         Atlantic/Canary
                         Atlantic/Madeira
                         Africa/Monrovia
                         Africa/Bissau
+                        Africa/El_Aaiun
                         America/Danmarkshavn
                         Etc/GMT
                         Etc/UTC
                         UT
                         Z
                         Antarctica/Troll
-                        Africa/Casablanca
-                        Africa/El_Aaiun
                         Atlantic/Azores
                         Africa/Ceuta
                         Africa/Algiers
@@ -1938,8 +1940,8 @@ L<Date::Manip::TZ> module.
                         Europe/Andorra
                         Europe/Gibraltar
                         Europe/Dublin
-                        Africa/Casablanca
                         Africa/Ceuta
+                        Africa/Casablanca
                         Africa/El_Aaiun
                         Etc/GMT+1
                         N
@@ -2452,8 +2454,8 @@ L<Date::Manip::TZ> module.
                         America/Dawson
                         America/Whitehorse
      1      -07:00:00   America/Los_Angeles
-                        America/Vancouver
                         America/Tijuana
+                        America/Vancouver
                         America/Dawson
                         America/Whitehorse
                         America/Fort_Nelson
@@ -2464,11 +2466,11 @@ L<Date::Manip::TZ> module.
                         America/Dawson_Creek
                         America/Boise
      1      -06:00:00   America/Denver
-                        America/Edmonton
                         America/Ciudad_Juarez
                         America/Boise
                         America/Cambridge_Bay
                         America/Inuvik
+                        America/Edmonton
                         America/Chihuahua
                         America/Mazatlan
                         America/Ojinaga
@@ -3142,6 +3144,7 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/North_Dakota/Center
                       America/North_Dakota/New_Salem
                       America/North_Dakota/Beulah
+                      America/Edmonton
                       America/Ciudad_Juarez
                       America/Cancun
                       America/Indiana/Petersburg
@@ -3373,11 +3376,11 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      M                M
      MDST             Europe/Moscow
      MDT              America/Denver
-                      America/Edmonton
                       America/Ciudad_Juarez
                       America/Boise
                       America/Cambridge_Bay
                       America/Inuvik
+                      America/Edmonton
                       America/Chihuahua
                       America/Mazatlan
                       America/Ojinaga
@@ -3433,7 +3436,6 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       Europe/Kaliningrad
      MST              America/Denver
                       America/Phoenix
-                      America/Edmonton
                       America/Cambridge_Bay
                       America/Ciudad_Juarez
                       America/Hermosillo
@@ -3444,6 +3446,8 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Fort_Nelson
                       America/Dawson
                       America/Whitehorse
+                      America/Vancouver
+                      America/Edmonton
                       America/Chihuahua
                       America/Ojinaga
                       America/North_Dakota/Beulah
@@ -3488,8 +3492,8 @@ most commonly used, I'm willing to entertain arguments for altering the order.
      O                O
      P                P
      PDT              America/Los_Angeles
-                      America/Vancouver
                       America/Tijuana
+                      America/Vancouver
                       America/Dawson
                       America/Whitehorse
                       America/Fort_Nelson
@@ -3522,9 +3526,9 @@ most commonly used, I'm willing to entertain arguments for altering the order.
                       America/Tijuana
                       America/Vancouver
      PST              America/Los_Angeles
-                      America/Vancouver
                       Asia/Manila
                       America/Tijuana
+                      America/Vancouver
                       America/Whitehorse
                       America/Dawson
                       America/Metlakatla

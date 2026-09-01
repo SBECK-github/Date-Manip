@@ -1,7 +1,7 @@
 {
    "abstract" : "Date manipulation routines",
    "author" : [
-      "Sullivan Beck (sbeck@cpan.org)"
+      "Sullivan Beck (https://github.com/SBECK-github/)"
    ],
    "dynamic_config" : 1,
    "generated_by" : "ExtUtils::MakeMaker version 7.76, CPAN::Meta::Converter version 2.150010",

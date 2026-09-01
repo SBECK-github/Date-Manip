@@ -6,9 +6,9 @@ Date::Manip::Offset::off343;
 
 # This file was automatically generated.  Any changes to this file will
 # be lost the next time 'tzdata' is run.
-#    Generated on: Mon Mar  2 13:07:46 EST 2026
-#    Data version: tzdata2026a
-#    Code version: tzcode2026a
+#    Generated on: Tue Sep  1 12:20:36 EDT 2026
+#    Data version: tzdata2026c
+#    Code version: tzcode2026c
 
 # This module contains data from the zoneinfo time zone database.  The original
 # data was obtained from the URL:
@@ -59,6 +59,7 @@ $Offset        = '-06:00:00';
       'america/north_dakota/center',
       'america/north_dakota/new_salem',
       'america/north_dakota/beulah',
+      'america/edmonton',
       'etc/gmt-6',
       'f',
       'america/ciudad_juarez',
@@ -79,11 +80,11 @@ $Offset        = '-06:00:00';
       ],
    1 => [
       'america/denver',
-      'america/edmonton',
       'america/ciudad_juarez',
       'america/boise',
       'america/cambridge_bay',
       'america/inuvik',
+      'america/edmonton',
       'america/chihuahua',
       'america/mazatlan',
       'america/ojinaga',

@@ -451,8 +451,8 @@ encourage the use of the OO interface whenever possible.
 
 =head1 BUGS AND QUESTIONS
 
-If you find a bug in Date::Manip, please let me know.  The best ways to
-contact me are:
+If you find a bug in Date::Manip, please let me know.  As CPAN has removed
+email support, the only supported way to submit a bug is via ticket:
 
 =over 4
 
@@ -465,18 +465,6 @@ L<https://github.com/SBECK-github/Date-Manip>
 
 This is the preferred method.  Please submit problems requests as GitHub issues
 if at all possible.
-
-=item Direct email
-
-You are welcome to send it directly to me by email.  The email address
-to use is:  sbeck@cpan.org.
-
-There is some discussion of discontinuing CPAN email, so please use
-this as a last resort.  The GitHub method is strongly preferred.
-Also, because cpan.org addresses are published, they are used by a lot
-of spammers and phishers.  Please include the name of the perl module
-in the subject line of ALL messages sent to my cpan.org address or it
-will likely be overlooked.
 
 =back
 
@@ -538,6 +526,6 @@ modify it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Sullivan Beck (sbeck@cpan.org)
+Sullivan Beck (https://github.com/SBECK-github/)
 
 =cut

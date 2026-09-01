@@ -205,6 +205,14 @@ Filter and GD are still maintained but by new authors.
 So, it seems like we're down to 4 packages that are actively maintained by
 the original author that are older than Date::Manip.
 
+2026 Update:
+
+It appears that we are down to 2.  libwww-perl has changed ownership and Quota
+is inactive, so we are down to:
+
+   ILYAZ  MathPari     23-Jan-1995
+   MEWP   sybperl      02-Oct-1995
+
 =head1 SEE ALSO
 
 L<Date::Manip>        - main module documentation
@@ -216,6 +224,6 @@ modify it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Sullivan Beck (sbeck@cpan.org)
+Sullivan Beck (https://github.com/SBECK-github/)
 
 =cut
