@@ -17,7 +17,7 @@ require Date::Manip::Lang::index;
 $| = 1;
 
 our $VERSION;
-$VERSION='7.00';
+$VERSION='7.01';
 
 ##############################################################################
 # GLOBAL VARIABLES

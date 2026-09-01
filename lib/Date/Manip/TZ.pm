@@ -26,7 +26,7 @@ use Data::Dumper;
 use Carp;
 
 our $VERSION;
-$VERSION='7.00';
+$VERSION='7.01';
 END { undef $VERSION; }
 
 # To get rid of a 'used only once' warnings.
