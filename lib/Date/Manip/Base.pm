@@ -603,6 +603,15 @@ sub check {
    my($self,$date) = @_;
    my($y,$m,$d,$h,$mn,$s) = @$date;
 
+   # The range tests below numify each field, and numifying truncates a
+   # string at the first character which is not an ASCII digit, so a
+   # field such as "202\x{664}" would pass them as 202.  Require ASCII
+   # digits.
+
+   foreach my $val ($y,$m,$d) {
+      return 0  if (! defined($val)  ||  $val !~ /^[0-9]+$/);
+   }
+
    return 0  if (! $self->check_time([$h,$mn,$s])  ||
                  $y<1  ||  $y>9999  ||
                  $m<1  ||  $m>12);
@@ -617,7 +626,7 @@ sub check_time {
    my($self,$hms) = @_;
    my($h,$mn,$s) = @$hms;
 
-   return 0  if ("$h:$mn:$s" !~ /^\d\d?:\d\d?:\d\d?$/o  ||
+   return 0  if ("$h:$mn:$s" !~ /^[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$/o  ||
                  $h > 24  ||  $mn > 59  ||  $s > 59  ||
                  ($h == 24  &&  ($mn  ||  $s)));
    return 1;
